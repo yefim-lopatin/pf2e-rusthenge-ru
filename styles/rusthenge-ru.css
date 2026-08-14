@@ -1,24 +1,109 @@
-.rusthenge-ru-pdf p,
-.rusthenge-ru-controls p,
-.rusthenge-ru-controls li {
+.rusthenge .rusthenge-ru-content,
+.rusthenge-wrapper .rusthenge-ru-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.rusthenge .rusthenge-ru-content p,
+.rusthenge .rusthenge-ru-content li,
+.rusthenge-wrapper .rusthenge-ru-content p,
+.rusthenge-wrapper .rusthenge-ru-content li {
   hyphens: auto;
   line-height: 1.45;
   text-wrap: pretty;
 }
 
-.rusthenge-ru-source {
-  color: var(--color-text-subtle, #666);
-  font-size: var(--font-size-12, 0.75rem);
-  text-align: right;
+.rusthenge .rusthenge-ru-content h1,
+.rusthenge .rusthenge-ru-content h2,
+.rusthenge .rusthenge-ru-content h3,
+.rusthenge-wrapper .rusthenge-ru-content h1,
+.rusthenge-wrapper .rusthenge-ru-content h2,
+.rusthenge-wrapper .rusthenge-ru-content h3 {
+  hyphens: none;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.rusthenge .rusthenge-ru-content .chapter-heading,
+.rusthenge-wrapper .rusthenge-ru-content .chapter-heading {
+  font-size: clamp(2.25rem, 7vw, 3.6em);
+}
+
+.rusthenge .rusthenge-ru-content .split,
+.rusthenge-wrapper .rusthenge-ru-content .split {
+  align-items: baseline;
+  column-gap: 1rem;
+  flex-wrap: wrap;
+  row-gap: 0.2rem;
+}
+
+.rusthenge .rusthenge-ru-content .split > *,
+.rusthenge-wrapper .rusthenge-ru-content .split > * {
+  min-width: 0;
+}
+
+.rusthenge .rusthenge-ru-summary-aside,
+.rusthenge-wrapper .rusthenge-ru-summary-aside {
+  background: #f5efe0;
+  border-inline-start: 4px solid #a74332;
+  box-sizing: border-box;
+  float: none;
+  margin: 0.75rem 0 1rem;
+  padding: 0.65rem 0.85rem;
+  width: 100%;
+}
+
+.rusthenge aside.rusthenge-ru-sidebar,
+.rusthenge-wrapper aside.rusthenge-ru-sidebar {
+  box-sizing: border-box;
+  max-height: none;
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
+
+.rusthenge .rusthenge-ru-content .encounter .header,
+.rusthenge-wrapper .rusthenge-ru-content .encounter .header {
+  min-height: 5.5rem;
+}
+
+.rusthenge .rusthenge-ru-content .encounter .link,
+.rusthenge-wrapper .rusthenge-ru-content .encounter .link {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.rusthenge .rusthenge-ru-content .handout,
+.rusthenge-wrapper .rusthenge-ru-content .handout {
+  box-sizing: border-box;
+  max-width: calc(100% + 5em);
 }
 
 .rusthenge-ru-controls {
-  border-top: 1px solid var(--color-border-light-2);
-  margin-top: 1rem;
-  padding-top: 0.5rem;
+  border-block-start: 1px solid color-mix(in srgb, #a74332 55%, transparent);
+  clear: both;
+  margin-block-start: 1rem;
+  padding-block-start: 0.5rem;
 }
 
 .rusthenge-ru-controls summary {
+  color: #7e5142;
   cursor: pointer;
   font-weight: 600;
+}
+
+.rusthenge-ru-control-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-block-start: 0.5rem;
+}
+
+.rusthenge .rusthenge-ru-content::after,
+.rusthenge-wrapper .rusthenge-ru-content::after {
+  clear: both;
+  content: "";
+  display: table;
 }
