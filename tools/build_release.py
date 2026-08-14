@@ -14,6 +14,7 @@ MODULE_ID = "pf2e-rusthenge-ru"
 INCLUDE = [
     "module.json",
     "README.md",
+    "NOTICE.md",
     "scripts",
     "styles",
     "translations",

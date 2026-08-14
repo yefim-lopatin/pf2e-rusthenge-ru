@@ -1,12 +1,13 @@
 {
   "id": "pf2e-rusthenge-ru",
   "type": "module",
-  "title": "Pathfinder Adventure: Растхендж — русский перевод",
-  "description": "<p>Личный русский перевод официального модуля Pathfinder Adventure: Rusthenge. Модуль содержит только данные локализации Babele и требует установленный официальный модуль.</p>",
-  "version": "0.1.1",
+  "title": "Растхендж — неофициальный русский перевод",
+  "description": "<p>Бесплатный неофициальный русский Babele-перевод Rusthenge. Требует законно приобретённый официальный модуль. Не опубликован, не одобрен и не утверждён Paizo.</p>",
+  "version": "0.2.0",
   "authors": [
     {
-      "name": "Yefim Lopatin"
+      "name": "Yefim Lopatin",
+      "url": "https://github.com/yefim-lopatin"
     },
     {
       "name": "RpgLeshiy",
@@ -66,5 +67,8 @@
   ],
   "styles": [
     "styles/rusthenge-ru.css"
-  ]
+  ],
+  "url": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru",
+  "manifest": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/latest/download/module.json",
+  "download": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/download/v0.2.0/pf2e-rusthenge-ru.zip"
 }
