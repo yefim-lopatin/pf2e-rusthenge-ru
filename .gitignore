@@ -1,0 +1,9 @@
+.DS_Store
+.work/
+dist/
+*.pdf
+*.ldb
+*.log
+LOCK
+CURRENT
+MANIFEST-*

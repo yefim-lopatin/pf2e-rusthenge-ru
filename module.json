@@ -1,0 +1,70 @@
+{
+  "id": "pf2e-rusthenge-ru",
+  "type": "module",
+  "title": "Pathfinder Adventure: Растхендж — русский перевод",
+  "description": "<p>Личный русский перевод официального модуля Pathfinder Adventure: Rusthenge. Модуль содержит только данные локализации Babele и требует установленный официальный модуль.</p>",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Yefim Lopatin"
+    },
+    {
+      "name": "RpgLeshiy",
+      "url": "https://boosty.to/rpgleshiy"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14.361",
+    "verified": "14.365",
+    "maximum": "14"
+  },
+  "relationships": {
+    "requires": [
+      {
+        "id": "pf2e-rusthenge",
+        "type": "module",
+        "compatibility": {
+          "minimum": "14.1.0",
+          "verified": "14.1.0"
+        }
+      },
+      {
+        "id": "babele",
+        "type": "module",
+        "compatibility": {
+          "minimum": "2.9.1",
+          "verified": "2.9.1"
+        }
+      },
+      {
+        "id": "pf2e-ru",
+        "type": "module",
+        "compatibility": {
+          "minimum": "2.2.0",
+          "verified": "2.2.0"
+        }
+      },
+      {
+        "id": "ru-ru",
+        "type": "module"
+      }
+    ],
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "8.4.0",
+          "verified": "8.4.0",
+          "maximum": "8.999.999"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/register.js"
+  ],
+  "styles": [
+    "styles/rusthenge-ru.css"
+  ]
+}

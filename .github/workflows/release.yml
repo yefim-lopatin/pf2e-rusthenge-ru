@@ -1,0 +1,32 @@
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate translation
+        run: python3 tools/validate_translation.py
+
+      - name: Build module archive
+        run: python3 tools/build_release.py --tag "${GITHUB_REF_NAME}"
+
+      - name: Create private GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "${GITHUB_REF_NAME}"
+          dist/module.json
+          dist/pf2e-rusthenge-ru.zip
+          --generate-notes
+          --title "Растхендж ${GITHUB_REF_NAME}"
