@@ -31,6 +31,7 @@
       "translatedName": "Краткое содержание",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "cd5d9bb4317fcffde346f9cb9f102e2197c8725eaf842434a1592c5bcaca51e2",
       "pdfPage": 5,
       "alignmentPage": 5,
       "alignmentScore": 0.5823,
@@ -42,12 +43,13 @@
       "sourceName": "Rusthenge",
       "translatedName": "Растхендж",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag]",
-        "@UUID[JournalEntry.pf2sa06403therus]",
-        "@UUID[JournalEntry.pf2sa06404ressur]",
-        "@UUID[JournalEntry.pf2sa06405advent]"
+        "@UUID[JournalEntry.pf2sa06402messag]{Message in the Night}",
+        "@UUID[JournalEntry.pf2sa06403therus]{The Rusted Ruin}",
+        "@UUID[JournalEntry.pf2sa06404ressur]{Resurrection of Rust}",
+        "@UUID[JournalEntry.pf2sa06405advent]{Adventure Toolbox}"
       ],
-      "technicalHash": "e2877d7074759ba95cdf37566289ac67fcc695b74e7dabb453785e5198e85c5f",
+      "technicalHash": "b5ebdb625dfb3f713018798f799404e136f987e644eb93065c2d0ca054232bb9",
+      "htmlHash": "b0d27e0e4c4e54afe76b9b203b06e0dc2d896f8ac46f33f2fa106142c645162a",
       "pdfPage": 7,
       "alignmentPage": 7,
       "alignmentScore": 0.4112,
@@ -59,9 +61,10 @@
       "sourceName": "Landing",
       "translatedName": "Стартовая страница",
       "technicalTokens": [
-        "@UUID[Macro.OgpGrBEI2nchZQUC]"
+        "@UUID[Macro.OgpGrBEI2nchZQUC]{Landing Picker}"
       ],
-      "technicalHash": "03d5746dc1070844b72cd14aa3bc2eb8a052032e4da4521f0524506f686c96f5",
+      "technicalHash": "d64ffb99f22ad6b6ac449f5c50306aa2fff86c3b3710a0d8537b66438ac9c561",
+      "htmlHash": "2ea5c60fd3138ba7042b816057b57bff22fb62c05fec87cabea3e0350e0b3a96",
       "pdfPage": 5,
       "alignmentPage": 5,
       "alignmentScore": 0.5823,
@@ -73,11 +76,12 @@
       "sourceName": "Tunnel to Rusthenge",
       "translatedName": "Туннель в Растхендж",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03therusteddoo00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03therusteddoo00]{D1}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@Check[survival|dc:15|traits:secret,concentrate,exploration,move,skill,action:track|name:Track]"
       ],
-      "technicalHash": "c62e12918fc1deee2f9a0849ec092e2e7dcb5c692fe53291fde373f265854eb7",
+      "technicalHash": "2480ea09d48bf0049f32b0c30fd79c5d4ba80184511ccef4c38449407bbf5cd9",
+      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
       "pdfPage": 29,
       "alignmentPage": 29,
       "alignmentScore": 0.7556,
@@ -90,10 +94,11 @@
       "translatedName": "Защищённое хранилище",
       "technicalTokens": [
         "@Check[religion|dc:25|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
-        "@UUID[Actor.Q3ciH3AHZlb1Dc3E]",
-        "@UUID[Actor.MIYeIfCPevjN1DeE]"
+        "@UUID[Actor.Q3ciH3AHZlb1Dc3E]{Gorumite Acolytes (3)}",
+        "@UUID[Actor.MIYeIfCPevjN1DeE]{Secure Storage}"
       ],
-      "technicalHash": "b2285399aa6fc7891f2e5309dd8347d14ab5749b04ba6ab3a011142250c5f6e1",
+      "technicalHash": "3c6d99ba54db5849304e440a876fa744a9349d8398ea28132886f210bd561d76",
+      "htmlHash": "8f33f43c79c32b527517837635f4f8e6abee255e422920e261de0fa5e4863acb",
       "pdfPage": 29,
       "alignmentPage": 29,
       "alignmentScore": 0.6713,
@@ -105,17 +110,18 @@
       "sourceName": "Basement",
       "translatedName": "Подвал",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02clinic00000000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02clinic00000000]{C5}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}",
         "@Check[thievery|dc:25|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02smithy00000000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
-        "@UUID[Actor.AvjfX6ybUeejKsjJ]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03therusteddoo00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]",
-        "@UUID[Actor.5uoigpUArRCSWArQ]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02smithy00000000]{C6}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
+        "@UUID[Actor.AvjfX6ybUeejKsjJ]{Esipils (2)}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03therusteddoo00]{D1}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
+        "@UUID[Actor.5uoigpUArRCSWArQ]{Azomi}"
       ],
-      "technicalHash": "41652f30b2845461fb2eb79836fd00a6a5f9fbe3f2421a1b58f98f525cda9dd3",
+      "technicalHash": "46a8a8328c3978c6d395f4f1c61a22baa53460ab52d980f1734edc874c8346c1",
+      "htmlHash": "cc743ca514e59a6fa8991064fca2e864e630ca2255c5da6f5fdc98bab109f55d",
       "pdfPage": 29,
       "alignmentPage": 29,
       "alignmentScore": 0.5886,
@@ -127,12 +133,13 @@
       "sourceName": "Rooftop Range",
       "translatedName": "Стрельбище на крыше",
       "technicalTokens": [
-        "@UUID[Actor.4ajJbWhiX1V5jrCg]",
-        "@UUID[Actor.gAJ1BMcE2QW86yXd]",
-        "@UUID[Actor.TOxjJfmAB5MdXlCQ]",
-        "@UUID[Actor.5q8BrmM40NdrnwkF]"
+        "@UUID[Actor.4ajJbWhiX1V5jrCg]{Severed Heads (3)}",
+        "@UUID[Actor.gAJ1BMcE2QW86yXd]{Roof Barrels}",
+        "@UUID[Actor.TOxjJfmAB5MdXlCQ]{Captain Perrios’s Head}",
+        "@UUID[Actor.5q8BrmM40NdrnwkF]{Janis' Reward}"
       ],
-      "technicalHash": "cc10da8fba49939298735dbb2052e8601cc46066b4f8f949f1924c267148fd12",
+      "technicalHash": "b749bb20d068f893eb6f8a1e27b5bfa6de4141c8640dfa3e2acd6ca77b884c0f",
+      "htmlHash": "49c751c6ca09b476c2b535a4faf37decb9f3f5f5be5a4ad5d47c03bbb5c21f45",
       "pdfPage": 28,
       "alignmentPage": 28,
       "alignmentScore": 0.5964,
@@ -144,10 +151,11 @@
       "sourceName": "Ramparts",
       "translatedName": "Боевая галерея",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02outerguardst00]",
-        "@UUID[Actor.ynwsdhrMNPRQ9i2b]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02outerguardst00]{Outer Guard Stations}",
+        "@UUID[Actor.ynwsdhrMNPRQ9i2b]{Arrows}"
       ],
-      "technicalHash": "f2d35e021c11a1ae9781d7e18489588aff35ad1047d4c0da5907b2065b27287d",
+      "technicalHash": "4a4b62a6b43193086d65e17f094d5d5277341c3bdf521cfaf7e44f86096c5d1f",
+      "htmlHash": "b7c89a6a2001b3a234df3204fcdde81b44dcef1748b43f76f044685c5470190a",
       "pdfPage": 28,
       "alignmentPage": 28,
       "alignmentScore": 0.6389,
@@ -159,10 +167,11 @@
       "sourceName": "Defensive Battery",
       "translatedName": "Оборонительная батарея",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02seniorbarrac00]",
-        "@UUID[Actor.jIu5ZSe8z6kiTNW4]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02seniorbarrac00]{C15}",
+        "@UUID[Actor.jIu5ZSe8z6kiTNW4]{Weapon Racks}"
       ],
-      "technicalHash": "fd260ae8d7dac4be0749b9cc84bdfc1f69c9eaad8c61e7d874914e2105ca896a",
+      "technicalHash": "f1a32d8b5b3841ab0ba5e084e4189467bd13d6957ee1c4b623f980f7506ebe36",
+      "htmlHash": "50347e680fec278b8c93ede043db92ff8079cd07afcb10c935a5e38f2f51fe12",
       "pdfPage": 28,
       "alignmentPage": 28,
       "alignmentScore": 0.6709,
@@ -174,13 +183,14 @@
       "sourceName": "Junior Barracks",
       "translatedName": "Младшая казарма",
       "technicalTokens": [
-        "@UUID[Actor.5uoigpUArRCSWArQ]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02basement000000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]",
-        "@UUID[Actor.uS508NYwcJmolEC1]"
+        "@UUID[Actor.5uoigpUArRCSWArQ]{Azomi}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02basement000000]{C20}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
+        "@UUID[Actor.uS508NYwcJmolEC1]{Junior Barracks}"
       ],
-      "technicalHash": "2d50a7a60db26a010bacbce99b6e98b1cd52982670119e1cfb49243c9aa407c0",
+      "technicalHash": "4aac281109426f80cf41009c5dd8caa509bb09e36f1e901cd103e9175bc6c386",
+      "htmlHash": "bdc7de05fda1857a67022d8aa8dea8269f975c2b717b997e96199ed0e46fb7bc",
       "pdfPage": 27,
       "alignmentPage": 27,
       "alignmentScore": 0.7647,
@@ -192,10 +202,11 @@
       "sourceName": "Speaking to Vanda",
       "translatedName": "В15. Старшая Казарма / Сурово 1",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingwith00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingwith00]{Speaking with Trygve}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}"
       ],
-      "technicalHash": "f4d6a4be8d98776e93c0fab6d9329a519eeb9e19652bf3e204a6216bdfc3aef5",
+      "technicalHash": "4ec62783675166644250aa19bbce0f11e7b08e00db565cdf07d4e493dbcb6f88",
+      "htmlHash": "14e63ac1413dfd76c82725de124414cf95c146b7112dcce5508a667681a5d39d",
       "pdfPage": 27,
       "alignmentPage": 27,
       "alignmentScore": 0.3944,
@@ -207,13 +218,14 @@
       "sourceName": "Senior Barracks",
       "translatedName": "Старшая казарма",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02duelingbalco00]",
-        "@UUID[Actor.2oPEtkvvaxGA01x1]",
-        "@UUID[Actor.ZQvl42Dvguf3p9VW]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]",
-        "@UUID[Actor.vADTRwg50q0Dzhbu]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02duelingbalco00]{C14}",
+        "@UUID[Actor.2oPEtkvvaxGA01x1]{Vanda}",
+        "@UUID[Actor.ZQvl42Dvguf3p9VW]{Fallen Acolytes (2)}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}",
+        "@UUID[Actor.vADTRwg50q0Dzhbu]{Footlockers}"
       ],
-      "technicalHash": "8a48f39f30f62daa3da507e4236bed893225e30d829a0b4f859a49d6fdb7dc51",
+      "technicalHash": "a014c767460a43678049071f5ed702ec1cd40fbe274e07cc7e8a95c455613288",
+      "htmlHash": "e5b90eb95f1083ec60778b024cf87570fbcb0c8d33f35dfa25750b9f88777ac5",
       "pdfPage": 26,
       "alignmentPage": 27,
       "alignmentScore": 0.3944,
@@ -225,11 +237,12 @@
       "sourceName": "Dueling Balcony",
       "translatedName": "Балкон для дуэлей",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02seniorbarrac00]",
-        "@UUID[Actor.6ZXHXgTdZu16aHRH]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02seniorbarrac00]{C15}",
+        "@UUID[Actor.6ZXHXgTdZu16aHRH]{Sand}",
         "@Check[perception|dc:14|traits:concentrate,exploration,secret,action:search|name:Search]"
       ],
-      "technicalHash": "d10bd07763b010502af8a832943baa62ca7164bbde9c5a7dd6a905a7a269856a",
+      "technicalHash": "5ba2b5387f529d8625e3b79a8ca5d5d47f4484655dc5c6aed70e0b23d0474455",
+      "htmlHash": "05703fcbc64da7a59306f394437e0f962ba5597521abe31b38f91e535d10e57f",
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.6552,
@@ -241,9 +254,10 @@
       "sourceName": "Upstairs Hall",
       "translatedName": "Верхний холл",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stairwell00000]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stairwell00000]{C10}"
       ],
-      "technicalHash": "f6945634f7bda3fc1b55234f27f9c8444add51009ba18f9479467b6e67829e3c",
+      "technicalHash": "5f777c81423eb1ab30ddd14a26d59e8ba8b695c7c33fb10543913e8f74220b06",
+      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.6087,
@@ -256,6 +270,7 @@
       "translatedName": "Склад",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.8824,
@@ -267,10 +282,11 @@
       "sourceName": "Duel Preparation",
       "translatedName": "Подготовка к дуэли",
       "technicalTokens": [
-        "@UUID[Actor.t1fmdlwEuYN3DeZe]",
-        "@UUID[Actor.WS5wRNaginlvJO2B]"
+        "@UUID[Actor.t1fmdlwEuYN3DeZe]{Mannequin}",
+        "@UUID[Actor.WS5wRNaginlvJO2B]{Rusty Mannequin}"
       ],
-      "technicalHash": "3658315f73de918b35ce1e0781283321f904819a2c486a8621114c96c84750b6",
+      "technicalHash": "0a60385be91bd814401f9cdf91fddcfd4d085a7447b7a09b6d0f56c134091f3c",
+      "htmlHash": "9504d3aa2b6fd6341c31cb95282b6b2b5be4fdb0f0f5dd5fe2eb7b85751e4856",
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.7015,
@@ -282,9 +298,10 @@
       "sourceName": "Stairwell",
       "translatedName": "Лестница",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02upstairshall00]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02upstairshall00]{C13}"
       ],
-      "technicalHash": "206e08c2b71adebadfba66b091fcb5f17f26cccd9e61130854ce244ef7db22bd",
+      "technicalHash": "c5dc5d8a5434bb5c17b00e25090bbce554256f7160a6baa28ae87bc028c1b12a",
+      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
       "pdfPage": 25,
       "alignmentPage": 24,
       "alignmentScore": 1.0,
@@ -296,9 +313,10 @@
       "sourceName": "Kitchen",
       "translatedName": "Кухня",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
       ],
-      "technicalHash": "0b841cbc777828b355cbc79f775f778b345343179970e115c8750998f1cc3086",
+      "technicalHash": "e649456aedb4983df03a235d00eb603cf0d084b25143115a37b23be58ab1652f",
+      "htmlHash": "bc5cfbef4f45287eec51c2cb86c8783abe201f0f4b23f42e88227a00f6bc597a",
       "pdfPage": 25,
       "alignmentPage": 25,
       "alignmentScore": 0.4471,
@@ -310,11 +328,12 @@
       "sourceName": "Inner Guard Stations",
       "translatedName": "Внутренние посты стражи",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02mainentrance00]",
-        "@UUID[Actor.ZP8VIsUB0EpmRUqs]",
-        "@UUID[Actor.CNts6wCHzwUhy8SK]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02mainentrance00]{C3}",
+        "@UUID[Actor.ZP8VIsUB0EpmRUqs]{West Guard Station}",
+        "@UUID[Actor.CNts6wCHzwUhy8SK]{East Guard Station}"
       ],
-      "technicalHash": "0a0e9c07f3b983007fc515a4036d2a6fdfe7adb74ba22c28043ac42779b06cf1",
+      "technicalHash": "d125e5f90e905fe4f963f5367a0bd261ccc8bf3b65df845c398610085f043833",
+      "htmlHash": "52de3a3fbe473cfcfb5f7d1f46300c490f27936810e0e42980c553575f96fbe5",
       "pdfPage": 25,
       "alignmentPage": 25,
       "alignmentScore": 0.7143,
@@ -326,11 +345,12 @@
       "sourceName": "Outer Guard Stations",
       "translatedName": "Внешние посты стражи",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ramparts000000]",
-        "@UUID[Actor.om6TSYlSODDuKqQI]",
-        "@UUID[Actor.ZHHiYsgBC2ZU8Su9]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ramparts000000]{C18}",
+        "@UUID[Actor.om6TSYlSODDuKqQI]{Barrel}",
+        "@UUID[Actor.ZHHiYsgBC2ZU8Su9]{Beacon Shot Barrel}"
       ],
-      "technicalHash": "c8b9de41fd25d4588e6493512d0969f7a91c9e8a28b4226a105ee102d9d8ef66",
+      "technicalHash": "161dea7279a72022ac25145fd48e94af041a5bfeafb53c3215224093d6d7c323",
+      "htmlHash": "7453ef638cad3e47c2e726ee0c16a615173c363d3ef818dbb175ca3fa29fe1b9",
       "pdfPage": 25,
       "alignmentPage": 25,
       "alignmentScore": 0.8974,
@@ -342,11 +362,12 @@
       "sourceName": "Speaking with Trygve",
       "translatedName": "В5. Клиника",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@Check[occultism|dc:16|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}"
       ],
-      "technicalHash": "50eea30a644be4b0c5342459228a6b27408dd8e865fa8464eeab108eec8cd417",
+      "technicalHash": "31ea657e46632ab356c099192b7d9ec5afca5397279ff393bbced84980466ea6",
+      "htmlHash": "964c3963ff41304b7b59ddeab8fd55efdf525fd010a36bc705cb12f6b5ba7990",
       "pdfPage": 24,
       "alignmentPage": 24,
       "alignmentScore": 0.6765,
@@ -358,14 +379,15 @@
       "sourceName": "Smithy",
       "translatedName": "Кузница",
       "technicalTokens": [
-        "@UUID[Actor.WV7XAaNpm5w8kVZW]",
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
+        "@UUID[Actor.WV7XAaNpm5w8kVZW]{Trygve}",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@Check[diplomacy|dc:15]",
         "@Check[gorum-lore|dc:15]",
         "@Check[religion|dc:15]",
-        "@UUID[Actor.23tLrEUVgLELGQ96]"
+        "@UUID[Actor.23tLrEUVgLELGQ96]{Wall}"
       ],
-      "technicalHash": "6e4f9edd443f38609baacb840ee178cf61e519338a0f74320531ee83e0ad2600",
+      "technicalHash": "f57fdd1fba5d5a2048123a81a05958b99e79fb26e0faddb5e74a83931b52a860",
+      "htmlHash": "0f05625d7fa6c1f20e166b1719287a57da93bf963278474d9f951f2bfab06b07",
       "pdfPage": 24,
       "alignmentPage": 25,
       "alignmentScore": 0.4218,
@@ -377,10 +399,11 @@
       "sourceName": "Clinic",
       "translatedName": "Лечебница",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02basement000000]",
-        "@UUID[Actor.lcY8NVur4ZFjfw7e]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02basement000000]{C20}",
+        "@UUID[Actor.lcY8NVur4ZFjfw7e]{Shelves}"
       ],
-      "technicalHash": "be602675bcc343c2dfd754118ae108286029496b1509ab882d280e4a1c061537",
+      "technicalHash": "3e02c5bb28e93c5b0455049789c4255b2b926a4cbe5df4d084662dce6e282876",
+      "htmlHash": "8763f51cf2074d6ffb54126e778823849fe4aace955a7284b74dccc845a5eb3f",
       "pdfPage": 24,
       "alignmentPage": 24,
       "alignmentScore": 0.6765,
@@ -392,11 +415,12 @@
       "sourceName": "Worship Hall",
       "translatedName": "Зал поклонений",
       "technicalTokens": [
-        "@UUID[Actor.ZQvl42Dvguf3p9VW]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02mainentrance00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]"
+        "@UUID[Actor.ZQvl42Dvguf3p9VW]{Fallen Acolytes (2)}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02mainentrance00]{C3}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]{C1}"
       ],
-      "technicalHash": "8605102773f3b86688432c373c2fcfb4f7f4505356653bd83968ec4c8d5156ee",
+      "technicalHash": "c6a5f599e220c22a03cf6ae6040c22230026a0df4fec7e0478e8e2545cce3793",
+      "htmlHash": "4e8ecf12e4faa2c60503d06ce914d6b1f62647371f6bf9ba08e1e15f2a60786f",
       "pdfPage": 24,
       "alignmentPage": 24,
       "alignmentScore": 0.6569,
@@ -408,9 +432,10 @@
       "sourceName": "Main Entrance",
       "translatedName": "Главный вход",
       "technicalTokens": [
-        "@UUID[Actor.9CqQbPyKUk3G39o2]"
+        "@UUID[Actor.9CqQbPyKUk3G39o2]{Rusty Floor Spikes}"
       ],
-      "technicalHash": "70c64ab5cc0cda7b5bc8b51b412bd934dbfd78b8390bdf9d2c71795a62f38fce",
+      "technicalHash": "6e56b64949c934a49dc5273b32aaec5b8f7428b837fd734f98c64b09508e2a54",
+      "htmlHash": "e809183d81fdd12c7fd094f48d4365eb965d274f748cb8a6f9590375db7c5ff5",
       "pdfPage": 23,
       "alignmentPage": 23,
       "alignmentScore": 0.7154,
@@ -424,9 +449,10 @@
       "technicalTokens": [
         "@Check[perception|dc:17]",
         "@Check[medicine|dc:15]",
-        "@UUID[Actor.lCNsglj9xoQfBl3p]"
+        "@UUID[Actor.lCNsglj9xoQfBl3p]{Ida}"
       ],
-      "technicalHash": "660ec8cbddef0f0d177e0382f0e1b52407b523a3c06908021956ce22161e2862",
+      "technicalHash": "bfde48344711fdc2cde7f843489097d0f5d8496c4af4ad2e21fe9000082eb71d",
+      "htmlHash": "e33ef75c1e06d3bbcaae8cfb35ac627c4c3e7fb3ea8c188db98099ba80316849",
       "pdfPage": 23,
       "alignmentPage": 23,
       "alignmentScore": 0.6458,
@@ -438,12 +464,13 @@
       "sourceName": "Courtyard",
       "translatedName": "Внутренний двор",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02streamoutlet00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02streamoutlet00]{B8}",
         "@Check[athletics|dc:15]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]{C4}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}"
       ],
-      "technicalHash": "582a187c2237fc40b90f009a11117649dad2c3e1aad7c9973f856ceb5c615c42",
+      "technicalHash": "222a06a615c96783e8c9df8ec67cae795b2101bb77f89e34d2949e7455320a6b",
+      "htmlHash": "8b6172df988d046aa5fe2fa31388d52bfe98d2eb71321c0de61e47e89e38e827",
       "pdfPage": 23,
       "alignmentPage": 23,
       "alignmentScore": 0.75,
@@ -459,18 +486,19 @@
         "@Check[athletics|dc:30|traits:attack,skill,action:force-open|name:Force Open]",
         "@Check[athletics|dc:20|traits:move,skill,action:climb|name:Climb]",
         "@Check[reflex|dc:20|basic:true]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rooftoprange00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rooftoprange00]{C19}",
         "@Check[architecture-lore|dc:15]",
         "@Check[perception|dc:20]",
-        "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rooftoprange00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02duelingbalco00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stables0000000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02streamoutlet00]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]",
+        "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]{Climb}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rooftoprange00]{C19}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02duelingbalco00]{C14}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stables0000000]{C2}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02streamoutlet00]{B8}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]{Artisan's Toolkit}",
         "@Check[crafting|dc:15]"
       ],
-      "technicalHash": "ce9bb7d08a122d752743ca163290366640999be70136a7ec4db92099fe130c53",
+      "technicalHash": "26a6b261ae3fb4c253b8165b5c25e7515677f2cb5e19ce6120d001eae48b8b13",
+      "htmlHash": "f957f4aa733a595971049b99dbafdc64ed9921aa8367d14b781e4cbbd20d6b6f",
       "pdfPage": 22,
       "alignmentPage": 22,
       "alignmentScore": 0.4985,
@@ -485,6 +513,7 @@
         "@UUID[Compendium.pf2e.spells-srd.Item.ynm8JIU3sc3qUMpa]"
       ],
       "technicalHash": "bf456ef27ede08d44bad24c05f6a3d91692bcf56b816316f979718e6261576fc",
+      "htmlHash": "dd4e05e59fc5f2392b5965a40cd8b2c4377d6ec100f63455b7c0e85ae2b0eb01",
       "pdfPage": 21,
       "alignmentPage": 21,
       "alignmentScore": 0.459,
@@ -497,14 +526,15 @@
       "translatedName": "Стоунхоум",
       "technicalTokens": [
         "@Check[fortitude|dc:15|trait:rare,disease,divine,transmutation]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
       ],
-      "technicalHash": "888fa338506cee81ada70a42f111e980869e6a929d15d4d81e602c638de9aea4",
+      "technicalHash": "12a4b45593b946a15fc96f0b65382cdc68d1458df74280e97347f1812725839a",
+      "htmlHash": "a4b222fb680b62bf63952aab2cfd3f6f373862209f5a9c83fadb121bef580c15",
       "pdfPage": 21,
       "alignmentPage": 21,
       "alignmentScore": 0.459,
@@ -516,13 +546,14 @@
       "sourceName": "Stonehome",
       "translatedName": "Стоунхоум",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Inveigle}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]{C4}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]{Rust Creep}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}"
       ],
-      "technicalHash": "b7dd725bceb76bc137990a863241d83204b32d5746fc68f3bb7889ebd77fd45c",
+      "technicalHash": "26bc9b0fc53f642f9346bbb1caac07cf5ce1612d908eaf16bb37e5e200dc686d",
+      "htmlHash": "ffa50904d3291120479f33b68c1088da0e8fe1ba16d70f84720b750922adcc7d",
       "pdfPage": 21,
       "alignmentPage": 21,
       "alignmentScore": 0.459,
@@ -536,11 +567,12 @@
       "technicalTokens": [
         "@Check[scouting-lore|dc:15]",
         "@Check[perception|dc:20]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]{Entering Stonehome}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]{C1}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "e023fb137f289fc6e2e177046964706b98769e07f50dca5410481712abcbeb35",
+      "technicalHash": "380a8b72022982bf40c3eca0a9c2ff68d19490bfcdc48a90f2c2575e59ef5fa2",
+      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
       "pdfPage": 20,
       "alignmentPage": 20,
       "alignmentScore": 0.775,
@@ -552,9 +584,10 @@
       "sourceName": "Thunderhead Isle",
       "translatedName": "Остров Громовой Головы",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus]"
+        "@UUID[JournalEntry.pf2sa06403therus]{Chapter 2}"
       ],
-      "technicalHash": "b34c85ca1e2ff39a013aef6d1235e442ac01a8eb905f24d0ce0e35b5b6ac5de8",
+      "technicalHash": "dda574cdc6ab1c48757ce5160a3c4f2e1721c15f1f5124b295a7c5a8878ba5f0",
+      "htmlHash": "0d6cb8ab7e453311b1ad854314ad24f869d655621bbe030c3f39342badbb5d55",
       "pdfPage": 20,
       "alignmentPage": 20,
       "alignmentScore": 0.5918,
@@ -566,9 +599,10 @@
       "sourceName": "Fisher’s Point",
       "translatedName": "Рыбацкий мыс",
       "technicalTokens": [
-        "@UUID[Actor.84LNL3ZM41yvYaY6]"
+        "@UUID[Actor.84LNL3ZM41yvYaY6]{Fishing Hut}"
       ],
-      "technicalHash": "3a8b0736281913fdaa5bbfed1bbcd96f4bb607f40b8700104a59d0f43ef12c72",
+      "technicalHash": "eedea0311d73a8905ecfec83122a46ab4c13c7482e56bd65ef6cc01a4896bb53",
+      "htmlHash": "5434210d635d32982447b5a6f5ce91dd5e91b1acdee195c968e8a805e3eb7a56",
       "pdfPage": 20,
       "alignmentPage": 20,
       "alignmentScore": 0.7742,
@@ -580,16 +614,17 @@
       "sourceName": "Gold’s Ruin",
       "translatedName": "Руины Голда",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02kindredcross00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]",
-        "@UUID[Actor.slPGAdJR86h6DnaL]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02kindredcross00]{Kindred Crossing}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]{Entering Stonehome}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{Thunderhead Isle}",
+        "@UUID[Actor.slPGAdJR86h6DnaL]{Derrol's Gift}"
       ],
-      "technicalHash": "102ab85b7e6ca22e8dbe2245898f0962187c4ba4ef2e514e0c3ba3a0640366fe",
+      "technicalHash": "34d60c3b8e0726e6002e0cbd9aa5cb58344900506c470b69f1a4a1624f80d83d",
+      "htmlHash": "a779ecddb448e5e340ec64972230ef35c5e019921b14aac16e8b6a35dbfb7489",
       "pdfPage": 19,
       "alignmentPage": 19,
       "alignmentScore": 0.4855,
@@ -601,10 +636,11 @@
       "sourceName": "Stonehome",
       "translatedName": "Стоунхоум",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]"
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Here}"
       ],
-      "technicalHash": "2735757d06f7c0096f0cea201964cbb993147cea5b85e81e364b4daad5d14ea8",
+      "technicalHash": "673391c8f887f533f021da83fe5fc67fe8bf7073d9e695997bc7e9e963bc8c9d",
+      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
       "pdfPage": 19,
       "alignmentPage": 19,
       "alignmentScore": 0.8571,
@@ -617,6 +653,7 @@
       "translatedName": "Сухой док",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "4b426d63c824664f5ac232ff21a03f4e68f589f48ed7cf378a0cf78d1bd6779a",
       "pdfPage": 18,
       "alignmentPage": 19,
       "alignmentScore": 0.5094,
@@ -629,6 +666,7 @@
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "62933bae751c6423db02a1df354b97ecd7d8a7d53a018037fb2faf9748c6c01d",
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.2827,
@@ -640,17 +678,18 @@
       "sourceName": "Speaking to the Crew",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@Check[deception|dc:15]",
         "@Check[diplomacy|dc:15]",
         "@Check[intimidation|dc:15]",
-        "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]",
-        "@UUID[Actor.5q8BrmM40NdrnwkF]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
+        "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Handout #1}",
+        "@UUID[Actor.5q8BrmM40NdrnwkF]{Janis' Reward}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
         "@Check[intimidation|dc:22|traits:auditory,concentrate,emotion,exploration,linguistic,mental,skill,action:coerce|name:Coerce]"
       ],
-      "technicalHash": "f601a42deefd10c3d6a6c71cf01f918912ec86f98c806c3f664b27fafe76c04a",
+      "technicalHash": "19a25bdefcf4b8c3cf9c2d711d484bd3b3a68234967146b9173225ba719ba6d5",
+      "htmlHash": "705886bc91b68db70d635f13d773ae213f15ae644251fc70bec61d88d6b25d30",
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.2827,
@@ -662,11 +701,12 @@
       "sourceName": "Getting in a Fight",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [
-        "@UUID[Actor.ejs3JWhzdnj0pVAT]",
-        "@UUID[Actor.qcoQw8vZOpYX5V0V]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]"
+        "@UUID[Actor.ejs3JWhzdnj0pVAT]{Janis}",
+        "@UUID[Actor.qcoQw8vZOpYX5V0V]{Deck Hands (6)}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "9253755f4ce3a756404720341ab58ebbce91ce398f08be47eedc294a1667b750",
+      "technicalHash": "d9e59417d8989c46205244542a5e8a44d5276be6461e534405f3284b77b7b5b1",
+      "htmlHash": "f4f00f1c60581db1d4fbff07f44d62408da2651722fa4cf54d3be8b32593e1f0",
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.2827,
@@ -678,14 +718,15 @@
       "sourceName": "Swordfish Discoveries",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [
-        "@UUID[Actor.vzfjiN90hY4BKqTC]",
-        "@UUID[Actor.E4nAqM6ioupOiCO8]",
-        "@UUID[Actor.DT8LYKyMTa0BzUgx]",
-        "@UUID[Actor.mkpyy4bVJi16lOhD]",
-        "@UUID[Actor.rWV6SIL5lXsJufgs]",
-        "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]"
+        "@UUID[Actor.vzfjiN90hY4BKqTC]{Bottle of “Carpenden”}",
+        "@UUID[Actor.E4nAqM6ioupOiCO8]{Ship’s Payroll}",
+        "@UUID[Actor.DT8LYKyMTa0BzUgx]{Navigational Logs}",
+        "@UUID[Actor.mkpyy4bVJi16lOhD]{Small Coffer}",
+        "@UUID[Actor.rWV6SIL5lXsJufgs]{Swordfish’s Log}",
+        "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Handout #1}"
       ],
-      "technicalHash": "e39c2a69533d0140063176a4eab41d4e8242f6311f6ebb1b54a6e1cf312fa213",
+      "technicalHash": "1d1ff7a00596e1149581a35cfc7b0548bdc1225dc7b40521bafbd4ac127ec892",
+      "htmlHash": "afac0047d6af3ff6871a5324a48f7edcbcd08b52e267fa522feb07ae752843c8",
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.2827,
@@ -697,18 +738,19 @@
       "sourceName": "Sneaking Onboard",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02sneakingonbo00#search-ship]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02sneakingonbo00#distract-crew]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02sneakingonbo00#search-ship]{Search Ship}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02sneakingonbo00#distract-crew]{Distract Crew}",
         "@Check[deception|dc:15|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew]",
         "@Check[diplomacy|dc:17|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew]",
         "@Check[performance|dc:13|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew]",
         "@Check[xin-edasseril-lore|dc:13|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew]",
         "@Check[stealth|dc:15|trait:concentrate,exploration,action:search-ship|name:Search Ship]",
         "@Check[sailing-lore|dc:13|trait:concentrate,exploration,action:search-ship|name:Search Ship]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingtoth00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02gettinginafi00]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingtoth00]{Speaking to the Crew}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02gettinginafi00]{Getting in a Fight}"
       ],
-      "technicalHash": "56e4673c19eb5accebeb99abe8abc3ed7d4bbc9e1dbcd81cec1e34790cd5cfdb",
+      "technicalHash": "f068ba269172045ea3deb912d116df8b5a46ef9d39ae614dec4a4050af737a5b",
+      "htmlHash": "06854dd3d53263a9f9147394b408e96b6b0f18f115c8542e0f3b01c9de195ee8",
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.2827,
@@ -721,6 +763,7 @@
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "2950e207255180b5448ec793d62ce7be6582d13177b1e497b5c44adf8ca91e97",
       "pdfPage": 16,
       "alignmentPage": 18,
       "alignmentScore": 0.2827,
@@ -732,12 +775,13 @@
       "sourceName": "Elsie’s Concerns",
       "translatedName": "Б1. У Элси",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theswordfish00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]{Gold's Ruin}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theswordfish00]{Swordfish}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]{Entering Stonehome}"
       ],
-      "technicalHash": "de317bc1f4942f8211382817e1d54270d5246a5f516646d8614f108d340081a3",
+      "technicalHash": "e1c94754d41a29e463cf172a40f1ba1f2cc0ab84fcd3925f217c113108636459",
+      "htmlHash": "ad5301de93866ea09ef1a70ce4ed8716d4a2d3bdb6b446cad9664a730244a77d",
       "pdfPage": 16,
       "alignmentPage": 16,
       "alignmentScore": 0.4092,
@@ -749,12 +793,13 @@
       "sourceName": "Elsie’s",
       "translatedName": "Б1. У Элси",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.SrjykpB3nEAQmgj5]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.SrjykpB3nEAQmgj5]{Elsie's Excellent Bottled Vim}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "34f09497da97aa443875699d7c1ed050f7bc598053e7c16be0295fabeed4406a",
+      "technicalHash": "a606346000a4e300308a1f9d70b2c12c9bcd20ffd96b5dbe6d63ec776d7af9e8",
+      "htmlHash": "9b16c6ac0ecb4c84121155af64d0eae2e3c9334da52e3650a49e9dbc264b35e6",
       "pdfPage": 15,
       "alignmentPage": 16,
       "alignmentScore": 0.4092,
@@ -767,15 +812,16 @@
       "translatedName": "Расспросы",
       "technicalTokens": [
         "@Check[diplomacy|dc:15|traits:exploration,skill,secret,action:gather-information|name:Gather Information]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elsies00000000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{Thunderhead Isle}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elsies00000000]{Elsie's}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]{\"Gold's Ruin\"}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]{Fisher's Point}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
       ],
-      "technicalHash": "06007cd63e89e5c003c38ba485b4a0b439c8ee9e5b6c7226d222b0b4a1689b09",
+      "technicalHash": "d37676acd7aef9973f7a5f04920bc1ba2207b788a2e7d479d8d0c5f455557bd4",
+      "htmlHash": "1ad148bc186ef090ff0c5659cfa8e1e3007191a803c6cada7f542ef9a87e3708",
       "pdfPage": 15,
       "alignmentPage": 15,
       "alignmentScore": 0.5023,
@@ -787,13 +833,14 @@
       "sourceName": "Approaching the Village",
       "translatedName": "Приближение к Деревне",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@Check[gorum-lore|dc:15]",
         "@Check[perception|dc:20|traits:concentrate,secret,action:sense-motive|name:Sense Motive]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "75ce4af42ca1405d252b5380097edc550718ca9a987aa19307ff2cf70a60479b",
+      "technicalHash": "72ed40e64b72c650c03736ebe87c0249558106942420ac2855a3b0c179120586",
+      "htmlHash": "cf01d302275f82fca40ad6f94f6475e574e835d2bcdc007508858942ae638809",
       "pdfPage": 13,
       "alignmentPage": 13,
       "alignmentScore": 0.4106,
@@ -805,20 +852,21 @@
       "sourceName": "Iron Harbor",
       "translatedName": "Айрон-Харбор",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.mvHqFvy3I04HNWgE]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.HWIoRvWtGNb8tL9d]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.qaVam9ooAgqROEMa]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.sAi9t3AmPTDCgAo7]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.8WXn4c3MY5f4H6Qh]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.yUaGL90OfnWUq8Uj]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elsies00000000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02drydock0000000]",
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]{B6}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{B7}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.mvHqFvy3I04HNWgE]{Small Village Outdoors}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.HWIoRvWtGNb8tL9d]{Small Village Indoors}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.qaVam9ooAgqROEMa]{Coastal Waves}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.sAi9t3AmPTDCgAo7]{Strong Winds}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.8WXn4c3MY5f4H6Qh]{Docks}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.yUaGL90OfnWUq8Uj]{Ship}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]{B5}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elsies00000000]{B1}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02drydock0000000]{B3}",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}"
       ],
-      "technicalHash": "9bc99d903c054e1a0b88a43eb68ad48a181f3e6fa5477dc57031970b2837d9b6",
+      "technicalHash": "75adcea3b806e99c0e5ecd681b2b75b6ca9ba1d198d1198af57a9f08f71bd018",
+      "htmlHash": "c30b7abf71cbcd6d3e99f087c6fc72427f8b779fb799332af74ce0c0d8a29e7b",
       "pdfPage": 13,
       "alignmentPage": 13,
       "alignmentScore": 0.6235,
@@ -834,13 +882,14 @@
         "@Check[scouting-lore|dc:13|traits:concentrate,exploration,secret,action:scout|name:Scout]",
         "@Check[perception|dc:5]",
         "@Check[stealth|dc:16|traits:move,skill,secret,exploration,action:avoid-notice|name:Avoid Notice]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theoldbridge00]",
-        "@UUID[Actor.0qGYozu96uCyqwwv]",
-        "@UUID[Actor.ShWcSAzHjKnQ8MJX]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000]{Iron Harbor}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theoldbridge00]{The Old Bridge}",
+        "@UUID[Actor.0qGYozu96uCyqwwv]{Sydri}",
+        "@UUID[Actor.ShWcSAzHjKnQ8MJX]{Giant Centipedes (2)}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}"
       ],
-      "technicalHash": "fb56d6a66cfbfa2914b9e7b0b1ca78c5d9c1a876800bb26557b2c0b5cb91162d",
+      "technicalHash": "5efe9b571a89cece1b555edb1a6db2fe49abb83022d9fcdf80f4599431d29974",
+      "htmlHash": "8b7602dc4b322fae91ea408d3faaee5b78d908c473f5a6e358987278c823fb0d",
       "pdfPage": 12,
       "alignmentPage": 12,
       "alignmentScore": 0.6572,
@@ -852,19 +901,20 @@
       "sourceName": "The Old Bridge",
       "translatedName": "Старый мост",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02shelteredled00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02shelteredled00]{A3}",
         "@Check[reflex|dc:15|traits:manipulate,action:grab-an-edge|name:Grab an Edge]",
         "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]",
         "@Check[athletics|dc:15|traits:move,skill,action:swim|name:Swim]",
         "@Check[athletics|dc:15|traits:move,skill,action:long-jump|name:Long Jump]",
         "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]",
         "@Check[acrobatics|dc:30|traits:move,skill,action:balance|name:Balance]",
-        "@UUID[Actor.tO46DP0MnaEzL54l]",
+        "@UUID[Actor.tO46DP0MnaEzL54l]{Wooden Post}",
         "@Check[crafting|dc:15|traits:concentrate,exploration,secret,skill,action:identify-alchemy|name:Identify Alchemy]"
       ],
-      "technicalHash": "544000f6a4410c026d903eab8fdf9afcbfaad15dfdf7b47bb9fd57263643c8e2",
+      "technicalHash": "dae895628303a1ea893e7ba9c0f0872a4e8b65b000f2a134ee970f90956fc503",
+      "htmlHash": "528e6d00be12678c8a0b677f4a42029104ed53ec3978e4f8ff6df7333c25e771",
       "pdfPage": 11,
       "alignmentPage": 11,
       "alignmentScore": 0.5528,
@@ -877,12 +927,13 @@
       "translatedName": "Крик о помощи",
       "technicalTokens": [
         "@Check[athletics|dc:20|traits:move,skill,action:climb|name:Climb]",
-        "@UUID[Actor.2gOOtPSWXJtql8i2]",
-        "@UUID[Actor.Y133Sx0joIm2DZ3g]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.yV7Ouzaoe7DHLESI]",
-        "@UUID[Actor.LcAFMhy6wasCBxDQ]"
+        "@UUID[Actor.2gOOtPSWXJtql8i2]{Haniver}",
+        "@UUID[Actor.Y133Sx0joIm2DZ3g]{Reefclaw}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.yV7Ouzaoe7DHLESI]{Ventriloquism}",
+        "@UUID[Actor.LcAFMhy6wasCBxDQ]{Waterproof Leather Bag}"
       ],
-      "technicalHash": "caf9bc3a7308b6694c542013b514ed5a34fc5a29b1f9ff7fe89a9a47235e1385",
+      "technicalHash": "194f25e49897cf341841fbf061368e2b644c00deaaff70577a92ca012b600373",
+      "htmlHash": "967d0ca0a25755edd9d908d78d099a38cde990421753940e1f9259623b588a34",
       "pdfPage": 10,
       "alignmentPage": 10,
       "alignmentScore": 0.4209,
@@ -894,10 +945,11 @@
       "sourceName": "Kindred Crossing",
       "translatedName": "Родственное Побережье",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02shelteredled00]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02shelteredled00]{A3}"
       ],
-      "technicalHash": "3a48478a083f8f7f04e3f9f202800c3ec07f4b872fc23623850ea579ff45e3dc",
+      "technicalHash": "ffa57195804a72483aae8baa66f68a9670d5eb3c32bdb09c4ea4c6a5b9498f99",
+      "htmlHash": "747e742946c77fe2aa973343a265edbbbe16e8a9a975bd28c6959d108b56f72e",
       "pdfPage": 10,
       "alignmentPage": 10,
       "alignmentScore": 0.6494,
@@ -909,9 +961,10 @@
       "sourceName": "Elder Ordwi",
       "translatedName": "Старейшина Ордви",
       "technicalTokens": [
-        "@UUID[Actor.6AiPO2aKOFN6qipW]"
+        "@UUID[Actor.6AiPO2aKOFN6qipW]{Ordwi}"
       ],
-      "technicalHash": "db8a16319c2caced60f6b9abadec8ff0d0593465711174ae55e44d3a9ad8560d",
+      "technicalHash": "e459c08d95453ee00a82689efe94b158bf8115ee23475dda774db7161c2ba29e",
+      "htmlHash": "9d393601dcbeb389ff49a1de260dfaa140f751231ed8e0bc950b2aaca93a404f",
       "pdfPage": 9,
       "alignmentPage": 9,
       "alignmentScore": 0.3615,
@@ -923,17 +976,18 @@
       "sourceName": "Optional - Starting Earlier",
       "translatedName": "Начало Приключения",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]{A1}",
         "@Check[medicine|dc:15]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.mvHqFvy3I04HNWgE]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.HWIoRvWtGNb8tL9d]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.qaVam9ooAgqROEMa]",
-        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.sAi9t3AmPTDCgAo7]",
-        "@UUID[Compendium.pf2e.deities.Item.JgqH3BhuEuA4Zyqs]",
-        "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]"
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.mvHqFvy3I04HNWgE]{Small Village Outdoors}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.HWIoRvWtGNb8tL9d]{Small Village Indoors}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.qaVam9ooAgqROEMa]{Coastal Waves}",
+        "@UUID[Playlist.Ze7VkZs6zYN2isgz.PlaylistSound.sAi9t3AmPTDCgAo7]{Strong Winds}",
+        "@UUID[Compendium.pf2e.deities.Item.JgqH3BhuEuA4Zyqs]{Desna}",
+        "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}"
       ],
-      "technicalHash": "2865bc0f18cd199c6cb04a2ce8058b210019b206b866ae45610c15e1d6728b2b",
+      "technicalHash": "0ae8d7362a66d559f257a808c736b4e52e51ea2294eeaa62a6fd9176924997eb",
+      "htmlHash": "6554a303e52aa06958b8cd2c0e22c29def16877590dc7b0bfd3d2d2e372a2708",
       "pdfPage": 9,
       "alignmentPage": 9,
       "alignmentScore": 0.3615,
@@ -945,14 +999,15 @@
       "sourceName": "Starting Rusthenge",
       "translatedName": "Начало Приключения",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05rusthengebac00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]{Rust Creep}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05rusthengebac00]{Here}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]{A1}"
       ],
-      "technicalHash": "d94ec69c40128e1700708e8d0a1c32893abae56f9600dc74a18f777c5e83537f",
+      "technicalHash": "df2ef0832951a3fc99d5280d511f424f68bbc521668b1a2cd2e7c5885a349f60",
+      "htmlHash": "311d055f175ae64600e2482e9550b1ac7ca53228982c01d5df5a24b178274bb8",
       "pdfPage": 9,
       "alignmentPage": 9,
       "alignmentScore": 0.3615,
@@ -964,10 +1019,11 @@
       "sourceName": "A Deeper History",
       "translatedName": "Углубленная Предыстория",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
-        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00#horn-of-rust]"
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
+        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00#horn-of-rust]{Horn of Rust}"
       ],
-      "technicalHash": "0e738c3e962782a3d3e473162ad24b0d19fc513c907ebfa62fbbe793b34cbd9c",
+      "technicalHash": "a7ea2e072c7e669d1b841b3f99cc24ce6923f3efb5d703473897e03352dd94a6",
+      "htmlHash": "b08f5a16190bfe6717997ddc2789d1b4eb0fd4b8808074883d6432655caea7b2",
       "pdfPage": 7,
       "alignmentPage": 7,
       "alignmentScore": 0.4082,
@@ -979,12 +1035,13 @@
       "sourceName": "Message in the Night",
       "translatedName": "Глава 1: Послание в ночи",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]",
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}"
       ],
-      "technicalHash": "5730e257f5a1e1f8a8b0cc1b0f342464920694f1399d5a7d5777fe3af8f84d64",
+      "technicalHash": "2cacf2cfb5e5e90bf2e08e6bc8f9d99cc33e17ac7e8cee69f3753ce777b36e1e",
+      "htmlHash": "3df855128a85c9d28dd0b8bd918a9968220a9ee530a0da5e4d933dbc700f93f4",
       "pdfPage": 7,
       "alignmentPage": 7,
       "alignmentScore": 0.4112,
@@ -996,18 +1053,19 @@
       "sourceName": "Secret Lab",
       "translatedName": "Тайная лаборатория",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]{D20}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]{D20}",
         "@Check[arcana|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
         "@Check[nature|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
         "@Check[occultism|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
         "@Check[religion|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04grandgallery00]",
-        "@UUID[Actor.3PAJHNWNs2LrPhhx]",
-        "@UUID[Actor.vNPk2Y3Ba0FYrVv6]",
-        "@UUID[Actor.iqTt8ErJJQbnTLDy]"
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04grandgallery00]{E1}",
+        "@UUID[Actor.3PAJHNWNs2LrPhhx]{Envyspawn (2)}",
+        "@UUID[Actor.vNPk2Y3Ba0FYrVv6]{Desk}",
+        "@UUID[Actor.iqTt8ErJJQbnTLDy]{Secret Lab}"
       ],
-      "technicalHash": "96b627e1329117b3c4fcc59266923078ad998e4626664bfe6e65fd00d1833009",
+      "technicalHash": "372a73f5033d56c28cc512f3330c0d074e9656888b0352233b705eb5d51a694c",
+      "htmlHash": "0a37412cf05bfac2d4006e300f6b6b1ef60fa135f41395a6e6c58c83749e8f20",
       "pdfPage": 43,
       "alignmentPage": 43,
       "alignmentScore": 0.743,
@@ -1020,16 +1078,17 @@
       "translatedName": "Исследовательская лаборатория",
       "technicalTokens": [
         "@Check[arcana|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Broken}",
         "@Check[athletics|dc:20|traits:attack,skill,action:force-open|name:Force Open]",
         "@Check[perception|dc:20|traits:concentrate,exploration,secret,action:search|name:Search]",
-        "@UUID[Actor.XCkK3Xrz8Yoi4SMG]",
-        "@UUID[Actor.2EVDrnEMPs0TKcdN]",
-        "@UUID[Actor.2g8LSm8VMWFoOK8U]",
-        "@UUID[Playlist.rxsf0vQ3EmoZJo72.PlaylistSound.X1tQQG8zr7pmlxJ2]",
-        "@UUID[Actor.LLj6cVI1UHHEjZcU]"
+        "@UUID[Actor.XCkK3Xrz8Yoi4SMG]{Primordial Envy}",
+        "@UUID[Actor.2EVDrnEMPs0TKcdN]{Rustsworn Cultist}",
+        "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (2)}",
+        "@UUID[Playlist.rxsf0vQ3EmoZJo72.PlaylistSound.X1tQQG8zr7pmlxJ2]{Magic Surge}",
+        "@UUID[Actor.LLj6cVI1UHHEjZcU]{Research Lab}"
       ],
-      "technicalHash": "58db41718bcedc06369252edbcefbc2570b6a4914030c0395e9930761fc87b2c",
+      "technicalHash": "567392bb3a2449987d88e1a7ab0de3ab5dfbb06675dd85efc304cd2eae28f99f",
+      "htmlHash": "cb3a8ae3ce37ee8e854937c25970a7c52a1e3f2c0585b3311069fc57c7f808e4",
       "pdfPage": 42,
       "alignmentPage": 42,
       "alignmentScore": 0.4545,
@@ -1041,10 +1100,11 @@
       "sourceName": "Smithy",
       "translatedName": "Кузница",
       "technicalTokens": [
-        "@UUID[Actor.dbMmGE7Deitzsuz6]",
-        "@UUID[Actor.Cp4jFRcH4ZMYeIFd]"
+        "@UUID[Actor.dbMmGE7Deitzsuz6]{Dretches (2)}",
+        "@UUID[Actor.Cp4jFRcH4ZMYeIFd]{Anvil}"
       ],
-      "technicalHash": "0b720bf6c3cf06152f6e744641a63ace6fa9f857c2274da6c129d5e02b09f85e",
+      "technicalHash": "966d4318a6e9f345dcbc67cf40f4bbbf0b52e74ea4278373b0fd9f7cfe56d1f2",
+      "htmlHash": "2cdbeb2c6b68c8c68cd058e2a37576a9122c09c2c4110453375ea3d1c823666e",
       "pdfPage": 41,
       "alignmentPage": 42,
       "alignmentScore": 0.5822,
@@ -1056,11 +1116,12 @@
       "sourceName": "Ingot Storage",
       "translatedName": "Склад слитков",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.equipment-srd.Item.q2TYVAMaK6UfenbV]",
-        "@UUID[Actor.qn9OLgIUJO8SLOkH]",
-        "@UUID[Actor.Q5UbdbXfnJ6pFJna]"
+        "@UUID[Compendium.pf2e.equipment-srd.Item.q2TYVAMaK6UfenbV]{Average Lock}",
+        "@UUID[Actor.qn9OLgIUJO8SLOkH]{Ingot Storage}",
+        "@UUID[Actor.Q5UbdbXfnJ6pFJna]{Rusty Ingots}"
       ],
-      "technicalHash": "e4b04498e43d66a671a9460b8bcc8c7357989cd5596f9fd8799f3a62468905f5",
+      "technicalHash": "dac6055358d4d2bb073b62cd946ec08fa4f8f921c40192cc12aae400c54bf358",
+      "htmlHash": "f1dac96a39b39e2c304453ecd553a53d3a74b96cba9a45ef8891b2e8c02864c3",
       "pdfPage": 41,
       "alignmentPage": 41,
       "alignmentScore": 0.7429,
@@ -1072,11 +1133,12 @@
       "sourceName": "Akata Husbandry",
       "translatedName": "Питомник акат",
       "technicalTokens": [
-        "@UUID[Actor.HzvHFXBKD1uAlHWc]",
-        "@UUID[Actor.N0nSDzkMv7OwGumH]",
-        "@UUID[Actor.do8VjavOIPDQd2Rp]"
+        "@UUID[Actor.HzvHFXBKD1uAlHWc]{Akata}",
+        "@UUID[Actor.N0nSDzkMv7OwGumH]{Void Zombie}",
+        "@UUID[Actor.do8VjavOIPDQd2Rp]{Crystals}"
       ],
-      "technicalHash": "1094d49bb26cf95691c3ed5baed6a883efb893af2cc781454236e4d4ea9084c9",
+      "technicalHash": "f8553ef6e6378465b8ae01b273b411bb50c431c0ac66807588169546c8945bbd",
+      "htmlHash": "40f1f91d3a3ea041e0d2e5dd027b17d99212e75e3b4b6f818c7963a5f0be322b",
       "pdfPage": 41,
       "alignmentPage": 41,
       "alignmentScore": 0.6458,
@@ -1088,11 +1150,12 @@
       "sourceName": "Metal Rod Storage",
       "translatedName": "Хранилище металлических стержней",
       "technicalTokens": [
-        "@UUID[Actor.fnjgFygP2p6zj1Fc]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03workshop000000]",
-        "@UUID[Macro.8ACUEK7rfUq1Tyes]"
+        "@UUID[Actor.fnjgFygP2p6zj1Fc]{Rusted Cage Trap}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03workshop000000]{D15}",
+        "@UUID[Macro.8ACUEK7rfUq1Tyes]{Drop Rusted Cage}"
       ],
-      "technicalHash": "8c0020a3baace447e2b88aa56383aa4837ffa4cf73cefb650da4d7ca45869fb9",
+      "technicalHash": "3198331867df0799d2fbea23f3c762141e916e91e4d202ad3503d03210e650ca",
+      "htmlHash": "3e59abb9d979b9bce16f13e6319829cf540077db87822e303249a4afe61f1e69",
       "pdfPage": 40,
       "alignmentPage": 40,
       "alignmentScore": 0.7527,
@@ -1104,14 +1167,15 @@
       "sourceName": "Workshop",
       "translatedName": "Мастерская",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03metalrodstor00]",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03metalrodstor00]{D16}",
         "@Check[perception|dc:15]",
-        "@UUID[Actor.2EVDrnEMPs0TKcdN]",
-        "@UUID[Actor.WLRDPeJjHCqJGYAw]",
-        "@UUID[Actor.fFMhZSnaETOHdzPj]",
+        "@UUID[Actor.2EVDrnEMPs0TKcdN]{Rustsworn Cultists (2)}",
+        "@UUID[Actor.WLRDPeJjHCqJGYAw]{Workshop}",
+        "@UUID[Actor.fFMhZSnaETOHdzPj]{Southern Cabinets}",
         "@Check[perception|dc:18|traits:concentrate,exploration,secret,action:search|name:Search]"
       ],
-      "technicalHash": "6c7aa1789db90d85957c18744e0122798a3f1f65682f2e61a2b0b83c77080ab7",
+      "technicalHash": "a92081c9ac176dc120d016568c45d604420b5ca7788809e8fbb5ba246ffbe39c",
+      "htmlHash": "2575d060df70002398354cd7f42898dcf19520251af84c3f04fc060966f392bd",
       "pdfPage": 40,
       "alignmentPage": 40,
       "alignmentScore": 0.584,
@@ -1123,10 +1187,11 @@
       "sourceName": "Refuse Pile",
       "translatedName": "Куча мусора",
       "technicalTokens": [
-        "@UUID[Actor.ZLdZe3qKjR6xoN4Z]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]"
+        "@UUID[Actor.ZLdZe3qKjR6xoN4Z]{Ostovites (2)}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"
       ],
-      "technicalHash": "248e18122ddb5513963ed24ae45650691d6eb6659d85324570692c0720a39aaf",
+      "technicalHash": "1ee4a550785a0c1f301268dfbf830eee49704c88a82ff7b416beb266f5a8d062",
+      "htmlHash": "afc7850b39ec71ed72b56cf0ed6834f7a77a92878f6e118da2b9786b854d7ce1",
       "pdfPage": 39,
       "alignmentPage": 40,
       "alignmentScore": 0.5125,
@@ -1139,11 +1204,12 @@
       "translatedName": "Ритуальная комната",
       "technicalTokens": [
         "@UUID[Compendium.pf2e.spells-srd.Item.vgy00hnqxN9VoeoF]",
-        "@UUID[Actor.viyUBIwO7gFRqwVG]",
-        "@UUID[Actor.2g8LSm8VMWFoOK8U]",
-        "@UUID[Macro.XQUSLhjmMKghWAyq]"
+        "@UUID[Actor.viyUBIwO7gFRqwVG]{Larva}",
+        "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (2)}",
+        "@UUID[Macro.XQUSLhjmMKghWAyq]{Stop Chanting}"
       ],
-      "technicalHash": "b25bc5cec1ab8261dce5f94a6c1752a20ad2670794c52b54fc203086b09955e5",
+      "technicalHash": "cbdfdca17d511155180a57366d526a4fd05e51657846183d1dcc45443f310be1",
+      "htmlHash": "4b6e2ae664b8492a1945005b7fa85c641ed29746b099d9a72aea378b07dab447",
       "pdfPage": 39,
       "alignmentPage": 39,
       "alignmentScore": 0.7159,
@@ -1155,11 +1221,12 @@
       "sourceName": "Magical Storage",
       "translatedName": "Магическое хранилище",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]{D21}",
         "@Check[perception|dc:15|traits:concentrate,exploration,secret,action:search|name:Search]",
-        "@UUID[Actor.xvPL5O1ttAeANAUZ]"
+        "@UUID[Actor.xvPL5O1ttAeANAUZ]{Magical Storage}"
       ],
-      "technicalHash": "202761aad0039c4c3e0e5717b792fcdb712251aa8d29f1b3d7c5da50c56fe19d",
+      "technicalHash": "db4a1b8ae0de3f0a2643aa9683a04ace41ea3d492cff4e44e6007ff86f57341b",
+      "htmlHash": "d04b2e627373e55dd9e0125a1a202dff5f0e3f48bbbcd0781edcc1b62e00d16f",
       "pdfPage": 39,
       "alignmentPage": 39,
       "alignmentScore": 0.7802,
@@ -1172,6 +1239,7 @@
       "translatedName": "Уборные",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
       "pdfPage": 39,
       "alignmentPage": 39,
       "alignmentScore": 0.9333,
@@ -1187,11 +1255,12 @@
         "@Check[nature|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
         "@Check[occultism|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
         "@Check[religion|dc:20|traits:concentrate,exploration,secret,action:identify-magic|name:Identify Magic]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.WzLKjSw6hsBhuklC]",
-        "@UUID[Actor.9XwV6EhK14DtMxOw]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03dininghall0000]"
+        "@UUID[Compendium.pf2e.spells-srd.Item.WzLKjSw6hsBhuklC]{Create Water}",
+        "@UUID[Actor.9XwV6EhK14DtMxOw]{Gurga}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03dininghall0000]{D8}"
       ],
-      "technicalHash": "882f4c331ec33bcfbfd28bcbc03c4850325141425ea9596b68b4f41c9bb4162f",
+      "technicalHash": "c01a2687e9bad1aea3c6631a627923bbfa16d3e39c7f50d359f10abdddd2bfdc",
+      "htmlHash": "45a39d0bf20b2d22e82c2e5959084a83b87fe54ddde3339231e0b7bd52ad2f47",
       "pdfPage": 38,
       "alignmentPage": 39,
       "alignmentScore": 0.4897,
@@ -1204,6 +1273,7 @@
       "translatedName": "Кухня",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
       "pdfPage": 38,
       "alignmentPage": 38,
       "alignmentScore": 0.5,
@@ -1216,18 +1286,19 @@
       "translatedName": "Столовая",
       "technicalTokens": [
         "@Check[athletics|dc:20|traits:attack,skill,action:force-open|name:Force Open]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]{F10}",
         "@Check[diplomacy|dc:18|traits:action:make-an-impression|name:Make an Impression]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}",
         "@Check[diplomacy|dc:20|traits:action:make-an-impression|name:Make an Impression]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03magicalstora00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]",
-        "@UUID[Actor.NWJvhxgboK7Kj0gw]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]",
-        "@UUID[Actor.lCoYPuKzOOE0wap7]"
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03magicalstora00]{D12}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]{D21}",
+        "@UUID[Actor.NWJvhxgboK7Kj0gw]{Boggard Scouts (2)}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}",
+        "@UUID[Actor.lCoYPuKzOOE0wap7]{Treasure Pile}"
       ],
-      "technicalHash": "c0e2107cffadc2ea7d46d8170d4263ceadcd003e1b703ce7012b14e2daba939f",
+      "technicalHash": "a8f51d00b477986458b25034f9e20e8a645eadb515cc3e05580a052de409ef2c",
+      "htmlHash": "45f711a6ff8e2b778d8f61cfd7932b9ec15f00e5942d16f200bbc3d976f72705",
       "pdfPage": 37,
       "alignmentPage": 37,
       "alignmentScore": 0.4046,
@@ -1239,12 +1310,13 @@
       "sourceName": "Prison",
       "translatedName": "Тюрьма",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.equipment-srd.Item.q2TYVAMaK6UfenbV]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03priestsquart00]",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.q2TYVAMaK6UfenbV]{Average Padlock}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03priestsquart00]{D5}",
         "@Check[perception|dc:20|traits:concentrate,exploration,secret,action:search|name:Search]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{Elder Ordwi}"
       ],
-      "technicalHash": "70ca5e8f9d87ba83189d4ca2bec416e5e3000f01d6cee38f038b2c38e8ca255b",
+      "technicalHash": "e5377c2dc574c4063ec87fa9b90c121813874968b06fdb035349e506690d9da3",
+      "htmlHash": "835a7e330875f1fa2d7af441b85495d8138103acd5acd0717e735356a342acac",
       "pdfPage": 36,
       "alignmentPage": 37,
       "alignmentScore": 0.6627,
@@ -1256,11 +1328,12 @@
       "sourceName": "Cultist Quarters",
       "translatedName": "Покои культистов",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03grandaltar0000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]",
-        "@UUID[Actor.8LByzA7nbuYehXmt]"
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03grandaltar0000]{D3}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]{D13}",
+        "@UUID[Actor.8LByzA7nbuYehXmt]{Quarters}"
       ],
-      "technicalHash": "d9b2c9ab09c4c422740045dd3a64faaf5bb5d8658800fc202b6479e82702bf3a",
+      "technicalHash": "32f06d6ffbc7d32a27072c85530b6e3bf542e34cde9214f1b96358e68d1b157e",
+      "htmlHash": "8763f51cf2074d6ffb54126e778823849fe4aace955a7284b74dccc845a5eb3f",
       "pdfPage": 36,
       "alignmentPage": 36,
       "alignmentScore": 0.6739,
@@ -1272,11 +1345,12 @@
       "sourceName": "Priest’s Quarters",
       "translatedName": "Покои жреца",
       "technicalTokens": [
-        "@UUID[Actor.ikYX0UyNmAavfr2h]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03prison00000000]"
+        "@UUID[Actor.ikYX0UyNmAavfr2h]{Desk}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03prison00000000]{D7}"
       ],
-      "technicalHash": "b7d6fac4a4ac5207406b4b1f791dcfd9fa5eb69e53717e2fb2860b0f2e5b37f8",
+      "technicalHash": "e9fb1be0394f19c8a0a09fbc19d180fed8d677be0d89885ad612e0d51f2f8a50",
+      "htmlHash": "d04b2e627373e55dd9e0125a1a202dff5f0e3f48bbbcd0781edcc1b62e00d16f",
       "pdfPage": 36,
       "alignmentPage": 36,
       "alignmentScore": 0.8036,
@@ -1288,9 +1362,10 @@
       "sourceName": "Storeroom",
       "translatedName": "Кладовая",
       "technicalTokens": [
-        "@UUID[Actor.MwHZ9llX4RCpTqzc]"
+        "@UUID[Actor.MwHZ9llX4RCpTqzc]{Shelves}"
       ],
-      "technicalHash": "34e0997778add40596c6f081dc6e29f455de508093a8897587133e79aebfac67",
+      "technicalHash": "d683f7c52e4db9317da900b81abf31426bb2a3c62956f99b0f0547f88de6b78a",
+      "htmlHash": "ca2362b3f34364557298a1cb2b13e989bd4642b2074db494ad52209f54d21917",
       "pdfPage": 36,
       "alignmentPage": 36,
       "alignmentScore": 0.7872,
@@ -1302,13 +1377,14 @@
       "sourceName": "Grand Altar",
       "translatedName": "Большой алтарь",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]",
-        "@UUID[Actor.buu375tJJutZ9xT2]",
-        "@UUID[Actor.2g8LSm8VMWFoOK8U]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]",
-        "@UUID[Actor.TIP8DD2dLKxFfqHf]"
+        "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
+        "@UUID[Actor.buu375tJJutZ9xT2]{Knurr Ragnulf}",
+        "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (3)}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Inveigle}",
+        "@UUID[Actor.TIP8DD2dLKxFfqHf]{Ancient Apparatus}"
       ],
-      "technicalHash": "8d9d6333403765533fe33a7a0ef97ee91d2f9a3ded718d00966e4ded74eb51c7",
+      "technicalHash": "3baf5f6dfaa1441dc394f28e025a1aeb4b5c6b009c4c78f2f855c36195d8a1b5",
+      "htmlHash": "98ead3c67e12ae1e2b0c0b3827edfae57652ed828bef1db96c8ca76b016be23e",
       "pdfPage": 35,
       "alignmentPage": 35,
       "alignmentScore": 0.6162,
@@ -1320,9 +1396,10 @@
       "sourceName": "Grand Entrance",
       "translatedName": "Большой вход",
       "technicalTokens": [
-        "@UUID[Actor.KeknT5gCKZUR0WM7]"
+        "@UUID[Actor.KeknT5gCKZUR0WM7]{Rusted Animated Armor (2)}"
       ],
-      "technicalHash": "66e2425a35fb144dfaf5a2ce2682f26aa2187e15c42dc24d47b31e5397272206",
+      "technicalHash": "cc6d5c4611294132b39283dbdd1147f6a6c70b1121ab45e992b60ed21bbd92b1",
+      "htmlHash": "6fbd808019a091a739ebe0b342c017ea0891926eeb879a1d8eb8b9b647be825d",
       "pdfPage": 34,
       "alignmentPage": 34,
       "alignmentScore": 0.4643,
@@ -1334,11 +1411,12 @@
       "sourceName": "The Rusted Door",
       "translatedName": "Ржавая дверь",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
         "@Check[religion|dc:25|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
-        "@UUID[Actor.4Zwt3eqjMo0EQUrq]"
+        "@UUID[Actor.4Zwt3eqjMo0EQUrq]{Rusted Door}"
       ],
-      "technicalHash": "39c413ea6b7765f1cc299895bd6bcc16c9bcc1b019a9e38bb4c8b2c63073ec43",
+      "technicalHash": "b051f8a514925280567242eebaeaf3aab265050255eec40d63ef6f3e5b1e6ea0",
+      "htmlHash": "77b6f4efe8afc67d810ceddea8c918060c58b06299c92a8054de431b133a9244",
       "pdfPage": 34,
       "alignmentPage": 34,
       "alignmentScore": 0.6978,
@@ -1351,6 +1429,7 @@
       "translatedName": "Мастерская Небесного Металла",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "a1a2ef5b70e435fef462f6719c525ab420201b905922aa0473c6fc410ea9a55e",
       "pdfPage": 33,
       "alignmentPage": 33,
       "alignmentScore": 0.5656,
@@ -1362,9 +1441,10 @@
       "sourceName": "Encounter Adjustments",
       "translatedName": "Жертвенные Хранители / Серьезно 2",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]"
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{Final Encounter}"
       ],
-      "technicalHash": "f22682e4547f452a841149f07786fd336e4389649f77c927a304d95a0df600ef",
+      "technicalHash": "b18450fdf03be04ac2c846771b55af056305290b718d6f9778d9c219a8eb50ad",
+      "htmlHash": "efb12833b5caacc24fc650478aff3a7a84dacd069fc6dbcbac48f2c2df1361bc",
       "pdfPage": 32,
       "alignmentPage": 32,
       "alignmentScore": 0.3755,
@@ -1376,12 +1456,13 @@
       "sourceName": "Sacrifice Keepers",
       "translatedName": "Жертвенные Хранители / Серьезно 2",
       "technicalTokens": [
-        "@UUID[Macro.NQIG03UFlBT1wxTe]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theswordfish00]",
-        "@UUID[Actor.Aoll0FdVcKcL1Ucd]",
-        "@UUID[Actor.2g8LSm8VMWFoOK8U]"
+        "@UUID[Macro.NQIG03UFlBT1wxTe]{Toggle Rusthenge Chanting}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theswordfish00]{Swordfish}",
+        "@UUID[Actor.Aoll0FdVcKcL1Ucd]{Vlorian Cythnigot}",
+        "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (4)}"
       ],
-      "technicalHash": "37dc464efaa45a72b0eaa009e75ccdcb461280867214f38d32a1f506bf4159b2",
+      "technicalHash": "254bc3f54f0e7c1dde4be2e4d5c9bf4eddc44453a7243a152710dbcbe263e846",
+      "htmlHash": "d7e5dcd4b3b74ffc5be6705ae0193eab1810cb1a5416b54eb46b185fb1f81984",
       "pdfPage": 32,
       "alignmentPage": 32,
       "alignmentScore": 0.3755,
@@ -1393,17 +1474,18 @@
       "sourceName": "Rusthenge",
       "translatedName": "Растхендж",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{Thunderhead Isle}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]{Fisher’s Point}",
         "@Check[arcana|dc:20]",
         "@Check[xin-edasseril-lore|dc:20]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03sacrificekee00]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03sacrificekee00]{\"Sacrifice Keepers\"}",
         "@Check[fortitude|dc:15]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]"
+        "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}"
       ],
-      "technicalHash": "51fad60529259e039324acdf3094ec390236441cd930077271a7c6e231e37a8e",
+      "technicalHash": "8fa26955638eadf7e3478bf68732158f279abee0306104658ddce118470f84b6",
+      "htmlHash": "392b3c6d912429e8cc9f38d6317f3797409b3a49be2c6e98045abf161de87170",
       "pdfPage": 31,
       "alignmentPage": 31,
       "alignmentScore": 0.6318,
@@ -1415,12 +1497,13 @@
       "sourceName": "Starting this Chapter",
       "translatedName": "Начало 2 Главы",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@Check[crafting|dc:15]"
       ],
-      "technicalHash": "680b1d9da35aee49a4021e4ce28565f816b76a793d60fc6ae9407d22678977d9",
+      "technicalHash": "95391534a4f4fb46f2d191678ca8996a2d2fa7610b1641bf8485102b1b4c9975",
+      "htmlHash": "a360128899e7dec9986d07691f269c9a35d5e14b27cec52119e3be7b21452a83",
       "pdfPage": 30,
       "alignmentPage": 30,
       "alignmentScore": 0.4019,
@@ -1432,13 +1515,14 @@
       "sourceName": "The Rusted Ruin",
       "translatedName": "Глава 2: Ржавые руины",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theswordfish00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02theswordfish00]{Swordfish}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{Elder Ordwi}"
       ],
-      "technicalHash": "797f6f090281282cfbf99738c801e188cff351c85451948fc107c88c7009c9ce",
+      "technicalHash": "ed2cad4a1a0c8757fd18c58cceb5d92b7b2350a8d9739772084f1158599db3c9",
+      "htmlHash": "a3be405730b1c2ecf78a730207f02fd02eede199de1ccdb4ac31d94eb549fe31",
       "pdfPage": 30,
       "alignmentPage": 30,
       "alignmentScore": 0.4019,
@@ -1451,6 +1535,7 @@
       "translatedName": "Завершение Приключения",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "0d6cb8ab7e453311b1ad854314ad24f869d655621bbe030c3f39342badbb5d55",
       "pdfPage": 59,
       "alignmentPage": 59,
       "alignmentScore": 0.6844,
@@ -1463,6 +1548,7 @@
       "translatedName": "Завершение Приключения",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "2aff9a0b616f4d895f5c6978ecb5b7839b3bd70e18777cec5b646783308a010b",
       "pdfPage": 59,
       "alignmentPage": 59,
       "alignmentScore": 0.6844,
@@ -1474,34 +1560,35 @@
       "sourceName": "Summoning Chamber",
       "translatedName": "Зал призыва",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04ritualprepar00]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo]",
-        "@UUID[Macro.5mD9z9Yiup58CiRy]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03sacrificekee00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03grandaltar0000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]",
-        "@UUID[Macro.U92Yu8YJE5rXY9HM]",
-        "@UUID[Actor.M72Bl8X3Ue4v2dB4]",
-        "@UUID[Actor.ZIUG2ArW9SCBrgd2]",
-        "@UUID[Actor.Wk9c3TwlnHoQo03B]",
-        "@UUID[Actor.UoeLlR2PwtJUZjGD]",
-        "@UUID[Actor.M72Bl8X3Ue4v2dB4]",
-        "@UUID[Actor.ZIUG2ArW9SCBrgd2]",
-        "@UUID[Actor.2NqZ8BEB8kmwzZae]",
-        "@UUID[Actor.M72Bl8X3Ue4v2dB4]",
-        "@UUID[Actor.ZIUG2ArW9SCBrgd2]",
-        "@UUID[Actor.UoeLlR2PwtJUZjGD]",
-        "@UUID[Actor.M72Bl8X3Ue4v2dB4]",
-        "@UUID[Actor.ZIUG2ArW9SCBrgd2]",
-        "@UUID[Actor.2NqZ8BEB8kmwzZae]",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04ritualprepar00]{F13}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo]{Wall of Force}",
+        "@UUID[Macro.5mD9z9Yiup58CiRy]{Bring Down Wall of Force}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03sacrificekee00]{Sacrifice Keepers}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03grandaltar0000]{D3}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]{D13}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]{D20}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]{D21}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
+        "@UUID[Macro.U92Yu8YJE5rXY9HM]{Summon Fiend}",
+        "@UUID[Actor.M72Bl8X3Ue4v2dB4]{Meitremar}",
+        "@UUID[Actor.ZIUG2ArW9SCBrgd2]{Vloriak}",
+        "@UUID[Actor.Wk9c3TwlnHoQo03B]{Rustsworn Cultists (3)}",
+        "@UUID[Actor.UoeLlR2PwtJUZjGD]{Rust Zombie}",
+        "@UUID[Actor.M72Bl8X3Ue4v2dB4]{Meitremar}",
+        "@UUID[Actor.ZIUG2ArW9SCBrgd2]{Vloriak}",
+        "@UUID[Actor.2NqZ8BEB8kmwzZae]{Zombie Shamblers (4)}",
+        "@UUID[Actor.M72Bl8X3Ue4v2dB4]{Meitremar}",
+        "@UUID[Actor.ZIUG2ArW9SCBrgd2]{Weak Vloriak}",
+        "@UUID[Actor.UoeLlR2PwtJUZjGD]{Rust Zombie}",
+        "@UUID[Actor.M72Bl8X3Ue4v2dB4]{Meitremar}",
+        "@UUID[Actor.ZIUG2ArW9SCBrgd2]{Weak Vloriak}",
+        "@UUID[Actor.2NqZ8BEB8kmwzZae]{Zombie Shamblers (4)}",
         "@Check[intimidation|dc:23|traits:auditory,concentrate,emotion,fear,mental,action:demoralize|name:Demoralize]",
-        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]",
-        "@UUID[Actor.2c8g1noVjApqAtia]"
+        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Horn of Rust}",
+        "@UUID[Actor.2c8g1noVjApqAtia]{Summoning Chamber}"
       ],
-      "technicalHash": "ae4b33c6f0132ec9f36a34790ee7ecb44f9eb294fcf9762373bba412027e152d",
+      "technicalHash": "0a51d46f8e0efa94b44515f04ac0bbe22e64174456dde4ffeacbced5e93f9648",
+      "htmlHash": "07f8aa5811154b670d193dacf182c57b94f912ff90c2b7dfb5d7de5b59621519",
       "pdfPage": 56,
       "alignmentPage": 57,
       "alignmentScore": 0.4523,
@@ -1513,13 +1600,14 @@
       "sourceName": "Ritual Preparation Chamber",
       "translatedName": "Зал подготовки ритуала",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]",
-        "@UUID[Actor.7dgKzWxcJUJmLsXF]",
-        "@UUID[Actor.oeM8EcS1F5NIkd30]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]"
+        "@UUID[Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo]{Wall of Force}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}",
+        "@UUID[Actor.7dgKzWxcJUJmLsXF]{Theiltemar}",
+        "@UUID[Actor.oeM8EcS1F5NIkd30]{Skeleton Guards (2)}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"
       ],
-      "technicalHash": "c64112588705f20e5758612898764d1da509b625ffa1b36a1475f4a66b5ca7dd",
+      "technicalHash": "cbdf712e5fed31bc21927af57393b7dbc058ab93fdf14422a916762e51875670",
+      "htmlHash": "5ad0dced86dad04c432e9d92efb5b65d0acbca5cabbe492a493fba51c42e3e41",
       "pdfPage": 55,
       "alignmentPage": 55,
       "alignmentScore": 0.5092,
@@ -1531,11 +1619,12 @@
       "sourceName": "Rusted Door",
       "translatedName": "Ржавая дверь",
       "technicalTokens": [
-        "@UUID[Actor.oDTP0oNCRCovqkNy]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]",
+        "@UUID[Actor.oDTP0oNCRCovqkNy]{Rusty Spike Launcher}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
         "@Check[thievery|dc:20|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]"
       ],
-      "technicalHash": "201cf21dca7c7b05fd7ec32264f04837a9cf7101bc9b8c5e6029007fa6a6347d",
+      "technicalHash": "c5d453db0b298348c065e15876d569be4607aed1b88db9100afe75797c115260",
+      "htmlHash": "0839d82798bb9ba312c9b3a0a394772e546f605e84fb49074f0ef7c0d9eb2ed2",
       "pdfPage": 55,
       "alignmentPage": 55,
       "alignmentScore": 0.5854,
@@ -1547,9 +1636,10 @@
       "sourceName": "Boggard Compost",
       "translatedName": "Компост боггардов",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.pathfinder-bestiary.Actor.kPBSSOuR8n8vZHXB]"
+        "@UUID[Compendium.pf2e.pathfinder-bestiary.Actor.kPBSSOuR8n8vZHXB]{Otyugh's}"
       ],
-      "technicalHash": "6ade6a3b53bfc2bad75108ff6450aa3c6af92f1dda8e9f6f31a88fea46cb6bee",
+      "technicalHash": "6f135db2e9f3e38c1c89f8226599971ed7b8e7c6b0b86b3239f5c726d7235966",
+      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
       "pdfPage": 55,
       "alignmentPage": 55,
       "alignmentScore": 0.7105,
@@ -1561,16 +1651,17 @@
       "sourceName": "The Black Lake",
       "translatedName": "Чёрное озеро",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04ritualprepar00]",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04ritualprepar00]{F13}",
         "@Check[perception|dc:25|traits:concentrate,exploration,secret,action:search|name:Search]",
-        "@UUID[Actor.IWrJeX5D8wFcy2JW]",
-        "@UUID[Actor.hU8Z9Z6b0fD8ftvk]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04boggardcompo00]",
+        "@UUID[Actor.IWrJeX5D8wFcy2JW]{Glutu}",
+        "@UUID[Actor.hU8Z9Z6b0fD8ftvk]{Gnork}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04boggardcompo00]{F11}",
         "@Check[deception|dc:18]",
         "@Check[diplomacy|dc:18]",
         "@Check[intimidation|dc:18]"
       ],
-      "technicalHash": "224b67a6121e846355ac45a275127c2994831f90be35a74c19d3c4ca5ecf3b73",
+      "technicalHash": "1a0af419111755b89e5a9ce01cbe679f429d23ffaac37b264a7205a9ebd1a6e7",
+      "htmlHash": "d9d03501b9747aaa3c279906ef5285e8eb992b9d580f8e94551e0119dcd48b23",
       "pdfPage": 54,
       "alignmentPage": 54,
       "alignmentScore": 0.5955,
@@ -1583,6 +1674,7 @@
       "translatedName": "Мост боггардов",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
       "pdfPage": 54,
       "alignmentPage": 54,
       "alignmentScore": 0.7778,
@@ -1594,10 +1686,11 @@
       "sourceName": "Mold Farm",
       "translatedName": "Грибная ферма",
       "technicalTokens": [
-        "@UUID[Actor.63tNsYHRrIaRASKj]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]"
+        "@UUID[Actor.63tNsYHRrIaRASKj]{Boggard Scouts (4)}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]{F10}"
       ],
-      "technicalHash": "9675d4b4106bc2f1f71a7bb3442c095ceb786b58adb676974a3805003d1c7bb4",
+      "technicalHash": "b7bc2bd3d7e26aaaad5d20a0a7ddc29b245c2bc44c9ec05c0ab28dd0c44d26d3",
+      "htmlHash": "6f3af2dc933385c355f03c461b6ae0d238380dc279d722a58df7fa388a3ebeb9",
       "pdfPage": 54,
       "alignmentPage": 54,
       "alignmentScore": 0.7451,
@@ -1609,12 +1702,13 @@
       "sourceName": "Werebat Camp",
       "translatedName": "Лагерь вернетопырей",
       "technicalTokens": [
-        "@UUID[Actor.CL4YCcPhKegUvEVx]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04thedespoiled00]"
+        "@UUID[Actor.CL4YCcPhKegUvEVx]{Starving Werebats (3)}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1a}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1b}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04thedespoiled00]{F2a}"
       ],
-      "technicalHash": "632f62dec136e9fe2918c1521254d17df055308ea347d6b3848abb147eca0f8c",
+      "technicalHash": "a5e27f9d5ffaf054dadc7fb935577ecea3a40c8376798e48f75171bf384c47cc",
+      "htmlHash": "ee55f3665b00d547910830ea851c22f035122c1800a9f5ea0f9e203795668205",
       "pdfPage": 53,
       "alignmentPage": 53,
       "alignmentScore": 0.4129,
@@ -1626,9 +1720,10 @@
       "sourceName": "Zaiox’s Nook",
       "translatedName": "Уголок Заокса",
       "technicalTokens": [
-        "@UUID[Actor.bRXpyT68VI3n9eWv]"
+        "@UUID[Actor.bRXpyT68VI3n9eWv]{Zaiox}"
       ],
-      "technicalHash": "ef6c2344f02429ecb39cde922cbc30ff5fbecb21a872034970e12e61d05d7138",
+      "technicalHash": "c53bff7ebafe564edde714f6d864ab02476603ab524a46730809ff62aee3b0d9",
+      "htmlHash": "99717a0dcdadc12e47f45fd98f36c293e9fd33d93e546c07582eda535a7b2762",
       "pdfPage": 53,
       "alignmentPage": 53,
       "alignmentScore": 0.7798,
@@ -1640,17 +1735,18 @@
       "sourceName": "Dero Barracks",
       "translatedName": "Казармы деро",
       "technicalTokens": [
-        "@UUID[Actor.dUxUDTLcUnDxvvA2]",
+        "@UUID[Actor.dUxUDTLcUnDxvvA2]{Mushrooms}",
         "@Check[nature|dc:20|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
         "@Check[type:fortitude|dc:20]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 2}",
         "@Check[medicine|dc:20]",
         "@Check[survival|dc:20]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.rjUJEY424jyG9dGn]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.aZm1x9tpvBAT8YCd]"
+        "@UUID[Compendium.pf2e.equipment-srd.Item.rjUJEY424jyG9dGn]{Cytillesh}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.aZm1x9tpvBAT8YCd]{Cytillesh Oil}"
       ],
-      "technicalHash": "2c12402c31d4ff8d9d76e2b14107a1dcb331e9b078386b5b42c09c72cd4a39b0",
+      "technicalHash": "1167c036324520af436732870b78283830ae3bf995fcb59e335d979897318853",
+      "htmlHash": "8763f51cf2074d6ffb54126e778823849fe4aace955a7284b74dccc845a5eb3f",
       "pdfPage": 52,
       "alignmentPage": 52,
       "alignmentScore": 0.5851,
@@ -1663,13 +1759,14 @@
       "translatedName": "Лагерь деро",
       "technicalTokens": [
         "@Check[survival|dc:15|traits:secret,exploration,skill,action:sense-direction|name:Sense Direction]",
-        "@UUID[Actor.ltfi8ZCUvuN84qSS]",
-        "@UUID[Actor.zj4VyFf9wYB6xO6S]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]"
+        "@UUID[Actor.ltfi8ZCUvuN84qSS]{Dero Strangler}",
+        "@UUID[Actor.zj4VyFf9wYB6xO6S]{Deadly Fungus Leshy}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]{F5}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]{F3}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]{F6}"
       ],
-      "technicalHash": "c402b847271a2117c0366da1c678b75fb37c0f5c251a859bc2ececfa8e39e1ce",
+      "technicalHash": "1062d729c21be42c70548296e5d253444e9d447aee3bf83a9ae61789dc012c69",
+      "htmlHash": "d3784faa84dc8869d342d5b18cad0bae0cff54c7d98c9a55af6513c02cc7db0e",
       "pdfPage": 52,
       "alignmentPage": 52,
       "alignmentScore": 0.7657,
@@ -1681,12 +1778,13 @@
       "sourceName": "Watchpost",
       "translatedName": "Наблюдательный пост",
       "technicalTokens": [
-        "@UUID[Actor.62aTwXuLWWrqZXxW]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]"
+        "@UUID[Actor.62aTwXuLWWrqZXxW]{Dero Stalkers (2)}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]{F4}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]{F4}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]{F5}"
       ],
-      "technicalHash": "08ec71e9c1ffb7e9b5abdf922b5a25d52934939c1de14d2096e3c31b4e743ef3",
+      "technicalHash": "1a3dbf36d2c4b9ba2b0668dbfa8c9c1b6315f583db1fe22d38f7576faef73cce",
+      "htmlHash": "afa25344ee53ff9770f5db22eb836d076c6c5666e24983c653c9b84a1a0f916c",
       "pdfPage": 52,
       "alignmentPage": 52,
       "alignmentScore": 0.6081,
@@ -1701,10 +1799,11 @@
         "@Check[type:reflex|dc:18|trait:action:grab-an-edge|name:Grab an Edge]",
         "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]",
         "@Check[athletics|dc:25|traits:move,skill,action:climb|name:Climb]",
-        "@UUID[Actor.Sse38NzIUckC6Gga]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04rusteddoor0000]"
+        "@UUID[Actor.Sse38NzIUckC6Gga]{Skeletal Remains}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04rusteddoor0000]{F12}"
       ],
-      "technicalHash": "cccba274210e2ab55d2eee5b6c8bec2e4be4b889f73816c2ffb4debea100a20b",
+      "technicalHash": "48455e801cc2f1dccbdfc6f651ce4b13a833399052cf527feedbc33980419f06",
+      "htmlHash": "cb4cd10ee2cfcbd6bd041851182cbbff7a12b76de64d044b51ccd3beff1c17da",
       "pdfPage": 51,
       "alignmentPage": 51,
       "alignmentScore": 0.5714,
@@ -1716,21 +1815,22 @@
       "sourceName": "Darklands Landing",
       "translatedName": "Преддверие Тёмных земель",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
         "@Check[survival|dc:20|traits:secret,concentrate,exploration,move,skill,action:track|name:Track]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04werebatcamp000]",
-        "@UUID[Actor.mKuegTrL8zIoab0o]",
-        "@UUID[Actor.hzjZKJLz1sLAeHtq]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04werebatcamp000]",
-        "@UUID[Playlist.rxsf0vQ3EmoZJo72.PlaylistSound.aMHaYeS8jDuYKbQM]",
-        "@UUID[Macro.H7C74E1a3JJl9Eyk]",
-        "@UUID[Actor.j1gSg8aFSKq9o0aU]"
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04werebatcamp000]{F7}",
+        "@UUID[Actor.mKuegTrL8zIoab0o]{Rushing Waters}",
+        "@UUID[Actor.hzjZKJLz1sLAeHtq]{Spiky Pit Trap}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]{F3}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]{F4}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]{F5}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]{F6}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04werebatcamp000]{F7}",
+        "@UUID[Playlist.rxsf0vQ3EmoZJo72.PlaylistSound.aMHaYeS8jDuYKbQM]{Rushing Water}",
+        "@UUID[Macro.H7C74E1a3JJl9Eyk]{Reveal Spiky Pit}",
+        "@UUID[Actor.j1gSg8aFSKq9o0aU]{Corpses}"
       ],
-      "technicalHash": "ea35016adec0482db60ca3b3fed77b57cbf1cd5d011129a5ef66f706a19df79a",
+      "technicalHash": "eaa32797c5c1c2f3ac47052f6f65716faf71aadb20aaa79dddd3397d19d24088",
+      "htmlHash": "888bdd1f80a88f8005bcf4ca3086b0009531f3fdb1880c9197b963ac345a3c2d",
       "pdfPage": 50,
       "alignmentPage": 51,
       "alignmentScore": 0.5,
@@ -1743,6 +1843,7 @@
       "translatedName": "Глубины Опустошителя",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "f9e0c6ed1cca91cf77293575395574514308030ecf1dfedba6db5ab15edd074d",
       "pdfPage": 50,
       "alignmentPage": 50,
       "alignmentScore": 0.7021,
@@ -1754,25 +1855,26 @@
       "sourceName": "Worship Chamber",
       "translatedName": "Зал поклонения",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04grandgallery00]",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04grandgallery00]{Grand Gallery}",
         "@Check[religion|dc:20|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
         "@Check[religion|dc:20|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
-        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]",
+        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Horn of Rust}",
         "@Check[perception|dc:25|traits:concentrate,exploration,secret,action:search|name:Search]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]",
-        "@UUID[Actor.91bdPT5tIEDZvQB2]",
-        "@UUID[Actor.Wk9c3TwlnHoQo03B]",
-        "@UUID[Actor.kqGEpdTaiZtovqbm]",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1}",
+        "@UUID[Actor.91bdPT5tIEDZvQB2]{Rusty Spike Launcher}",
+        "@UUID[Actor.Wk9c3TwlnHoQo03B]{Rustsworn Cultists (3)}",
+        "@UUID[Actor.kqGEpdTaiZtovqbm]{Clockwork Belimarius}",
         "@UUID[Compendium.pf2e.spells-srd.Item.aAbfKn8maGjJjk2W]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.24U1b9K4Lj94cgaj]",
+        "@UUID[Compendium.pf2e.spells-srd.Item.24U1b9K4Lj94cgaj]{Magnetic Repulsion}",
         "@UUID[Compendium.pf2e.spells-srd.Item.UKsIOWmMx4hSpafl]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.Fr58LDSrbndgld9n]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.4gBIw4IDrSfFHik4]",
-        "@UUID[Actor.HqpzxgEhWWsgPszX]",
+        "@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.Fr58LDSrbndgld9n]{Resist Energy}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.4gBIw4IDrSfFHik4]{Daze}",
+        "@UUID[Actor.HqpzxgEhWWsgPszX]{Statue}",
         "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]"
       ],
-      "technicalHash": "8ac3c04b2598ce8d8aa960921c0640d00942267a82eb9b2b85772d90395f917a",
+      "technicalHash": "4587900c15b80b3798eaf6d98f18ff064b557d8b97dfe3ffca4771f73e659a98",
+      "htmlHash": "fc3dd1fed78d34e10e24e1d8d135811b9bb66cf0453f85dccdd256d71d86c618",
       "pdfPage": 48,
       "alignmentPage": 48,
       "alignmentScore": 0.334,
@@ -1784,9 +1886,10 @@
       "sourceName": "Wreckage Room",
       "translatedName": "Комната обломков",
       "technicalTokens": [
-        "@UUID[Actor.XZX1TpeWYkI14qLj]"
+        "@UUID[Actor.XZX1TpeWYkI14qLj]{Droxur}"
       ],
-      "technicalHash": "07df4c3020f5d7d629e2c65fa79cbc9a664172b3312016d89097fe4556789496",
+      "technicalHash": "ee37bbc027ad9e2416a7d6d5db1805d40ca299e11ed63e465447993857a73d71",
+      "htmlHash": "14c4455500aa44eb62b7838c2f23df1f97486458300559ee6054719bb40bd0f9",
       "pdfPage": 48,
       "alignmentPage": 48,
       "alignmentScore": 0.7644,
@@ -1798,17 +1901,18 @@
       "sourceName": "Bedroom Prison",
       "translatedName": "Спальня-тюрьма",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04meitremarsqu00]",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04meitremarsqu00]{E2}",
         "@Check[thievery|dc:25|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]",
         "@Check[athletics|dc:25|traits:attack,skill,action:force-open|name:Force Open]",
         "@Check[perception|dc:20|traits:secret]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]",
-        "@UUID[Actor.zb2LebobKQWXeVQ1]"
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.2RuepCemJhrpKKao]{Minor Healing Potions}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
+        "@UUID[Actor.zb2LebobKQWXeVQ1]{Ordwi}"
       ],
-      "technicalHash": "7fc650b16121f8f507126ed762baacf941147eb117d304ead4a8fc11bf80c514",
+      "technicalHash": "a7ffecaeae9cb038679a64b00f2b3d606cef98b9a2ed2f0b242ff392de06d86a",
+      "htmlHash": "ead1ae856323cf91bfe18f2c68a18ca759bd67ee2a343ba362aebb5843e408a3",
       "pdfPage": 47,
       "alignmentPage": 47,
       "alignmentScore": 0.5424,
@@ -1820,18 +1924,19 @@
       "sourceName": "Meitremar’s Quarters",
       "translatedName": "Покои Мейтремара",
       "technicalTokens": [
-        "@UUID[Actor.ZoP9C7TGVQm1tmiR]",
-        "@UUID[Actor.rsQ4PbiIKDOKAXWf]",
-        "@UUID[Actor.GzjSDgbOUaq1z1AC]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]",
-        "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]",
-        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]",
-        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]",
-        "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]",
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04bedroompriso00]",
+        "@UUID[Actor.ZoP9C7TGVQm1tmiR]{Clockwork Serpent Spies (3)}",
+        "@UUID[Actor.rsQ4PbiIKDOKAXWf]{Small Bedroom}",
+        "@UUID[Actor.GzjSDgbOUaq1z1AC]{Iron-Bound Chest}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]{Create Undead}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Inveigle}",
+        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Horn of Rust}",
+        "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}",
+        "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]{Handout #2}",
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04bedroompriso00]{E3}",
         "@Check[thievery|dc:25|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]"
       ],
-      "technicalHash": "5fda6766d1e2c701c6e02fe35475836becdfe866739b3871eb499ccc2570272f",
+      "technicalHash": "ae19db2a930c5b7062ee22ae91617cc0783eec7863418f6818264bc9b2f36268",
+      "htmlHash": "4bbe4166e91197cce1669c4cd0131bb02bd92b7443a87d05a9ae1d0f569a546a",
       "pdfPage": 45,
       "alignmentPage": 47,
       "alignmentScore": 0.3466,
@@ -1843,10 +1948,11 @@
       "sourceName": "Grand Gallery",
       "translatedName": "Большая галерея",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]",
-        "@UUID[Actor.q3dCj5gJoOW22HMd]"
+        "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
+        "@UUID[Actor.q3dCj5gJoOW22HMd]{Envyspawn (2)}"
       ],
-      "technicalHash": "10b6ec08f18c701c89d9aa8d7acb15778d8401ab6c713dd86dd97a58a15594d7",
+      "technicalHash": "6b47f9049119f624e38de51076f325864fd9b2d6bee9566560e207099c1558c1",
+      "htmlHash": "27a670bca76423872933eb3dc02cdffda5dbcfedd7175c75aa2e85deec427dd5",
       "pdfPage": 44,
       "alignmentPage": 45,
       "alignmentScore": 0.6449,
@@ -1859,6 +1965,7 @@
       "translatedName": "Храм Ксар-Азмак",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "747e742946c77fe2aa973343a265edbbbe16e8a9a975bd28c6959d108b56f72e",
       "pdfPage": 44,
       "alignmentPage": 44,
       "alignmentScore": 0.7383,
@@ -1871,6 +1978,7 @@
       "translatedName": "Глава 3: Воскрешение ржавчины",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "7f02670ec5201f2d836e20dda25004bcebbb7a60fd615edd3aeb6e0a076d943a",
       "pdfPage": 44,
       "alignmentPage": 44,
       "alignmentScore": 0.7383,
@@ -1882,9 +1990,10 @@
       "sourceName": "Sinsludge",
       "translatedName": "Грехошлам",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.FUxaVKVEV8eOuTVB]"
+        "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.FUxaVKVEV8eOuTVB]{Primordial Envy}"
       ],
-      "technicalHash": "e57ea8b95561c3f66465249338662f0b2016e0f7bfaa8a8d3f6af9499bb854ab",
+      "technicalHash": "124a7a34a312290fc247e7c92408855f294ff7ac0d6fe9e1d24e80c5dfcca6f7",
+      "htmlHash": "184a27a05413838c1cdc22f2b9f81c83f87dbc173c736ccefed9e4795e42bc67",
       "pdfPage": 65,
       "alignmentPage": 65,
       "alignmentScore": 0.7171,
@@ -1896,9 +2005,10 @@
       "sourceName": "Demon, Vloriak",
       "translatedName": "Бестиарий: Влориак",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.fRiOPTsfqJBiwUwh]"
+        "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.fRiOPTsfqJBiwUwh]{Vloriak}"
       ],
-      "technicalHash": "084170370b17d7eb5d5a5ce68f969612c9551b156a4dc8d774350aba6ea2f19a",
+      "technicalHash": "e3a672e52a724e05d02623ab40393eb0b12a30ff7705c0b585ded1a3a26b12f8",
+      "htmlHash": "7ce62c4ec26e77a7eba7ede865022d295c90c7c980a8d8271d7b1cc9c1e6b9b8",
       "pdfPage": 64,
       "alignmentPage": 64,
       "alignmentScore": 0.6354,
@@ -1910,15 +2020,16 @@
       "sourceName": "Rusthenge Backgrounds",
       "translatedName": "Предыстории Растхендж",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.backgrounds.Item.mh0hj27ZO5qDWat1]",
-        "@UUID[Compendium.pf2e.backgrounds.Item.v319qChG1uAQkGEe]",
-        "@UUID[Compendium.pf2e.backgrounds.Item.PJxPNMEUTimop4Lq]",
-        "@UUID[Compendium.pf2e.backgrounds.Item.v8pS4UCYjt9OTtQL]",
-        "@UUID[Compendium.pf2e.backgrounds.Item.JjAh5pxgHrW3fwaH]",
-        "@UUID[Compendium.pf2e.backgrounds.Item.AJuE41aToGs9tbcM]",
-        "@UUID[Compendium.pf2e.backgrounds.Item.f7ZTF8tnZUmTXwwF]"
+        "@UUID[Compendium.pf2e.backgrounds.Item.mh0hj27ZO5qDWat1]{Osprey Barnraiser}",
+        "@UUID[Compendium.pf2e.backgrounds.Item.v319qChG1uAQkGEe]{Osprey Fisher}",
+        "@UUID[Compendium.pf2e.backgrounds.Item.PJxPNMEUTimop4Lq]{Osprey Scion}",
+        "@UUID[Compendium.pf2e.backgrounds.Item.v8pS4UCYjt9OTtQL]{Osprey Scout}",
+        "@UUID[Compendium.pf2e.backgrounds.Item.JjAh5pxgHrW3fwaH]{Osprey Scribe}",
+        "@UUID[Compendium.pf2e.backgrounds.Item.AJuE41aToGs9tbcM]{Osprey Spellcaster}",
+        "@UUID[Compendium.pf2e.backgrounds.Item.f7ZTF8tnZUmTXwwF]{Osprey Warrior}"
       ],
-      "technicalHash": "bc5db965fe44697d7dde7b7a5a9c54d2ad9e5e88d68a6d44e2d2b0b3d838be0d",
+      "technicalHash": "8f42bb6cd9823dcf94006e4b70c1dcdc9b53f51fbb62c5b10de23843ff5eea81",
+      "htmlHash": "da355d5027736eed7706879c190ca2738990648886fd685752a305534228b7ae",
       "pdfPage": 63,
       "alignmentPage": 63,
       "alignmentScore": 0.7895,
@@ -1930,11 +2041,12 @@
       "sourceName": "The Horn of Rust",
       "translatedName": "Рог Ржавчины",
       "technicalTokens": [
-        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05demonvloriak00]",
-        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.4eC5wMw1vcDDgC4x]"
+        "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05demonvloriak00]{Vloriak Demon}",
+        "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.4eC5wMw1vcDDgC4x]{Horn of Rust}"
       ],
-      "technicalHash": "eefa00dac9b700ba2d0b75dea549f5e5f82d9ace32a2fa263e0238a70097e9d0",
+      "technicalHash": "6e725d90096392f19c497fd307433f2a4e2ccc51b79bb79a4b1d69a8baf7ee03",
+      "htmlHash": "8aef3413e1157ebbb71281d4451be3ed4cd1586ccb33521967f351f7a97cbb82",
       "pdfPage": 61,
       "alignmentPage": 61,
       "alignmentScore": 0.4845,
@@ -1946,12 +2058,13 @@
       "sourceName": "Shopping in Iron Harbor",
       "translatedName": "Покупки в Железной Гавани",
       "technicalTokens": [
-        "@UUID[Compendium.pf2e.equipment-srd.Item.CbZ72wdo1jiWLXeY]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.SrjykpB3nEAQmgj5]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.fRVCVfoV8KzmZsKs]",
-        "@UUID[Compendium.pf2e.equipment-srd.Item.gi1zuwWrwcW7OKlK]"
+        "@UUID[Compendium.pf2e.equipment-srd.Item.CbZ72wdo1jiWLXeY]{Armor Polishing Kit}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.SrjykpB3nEAQmgj5]{Elsie's Excellent Bottled Vim}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.fRVCVfoV8KzmZsKs]{Rust Scrub}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.gi1zuwWrwcW7OKlK]{Sanitizing Pin}"
       ],
-      "technicalHash": "3fdcb875274bc58e30c7db2b963de8e847b8ad5907cc05546c5bc6902e20cca2",
+      "technicalHash": "2c4d464ff834fafca720bc407d405a7c0fa214eb1b3671b3ca51b20338a6a014",
+      "htmlHash": "52515d0f2afd03d0873c414f927dd2c64ef29b21cc8f9d60f6c06a1d0493ba88",
       "pdfPage": 61,
       "alignmentPage": 61,
       "alignmentScore": 0.9,
@@ -1964,6 +2077,7 @@
       "translatedName": "Инструментарий приключения",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "c0f3a8bc42acca478ce3cc8f6d5e29af48b0bc0de4ace5bf0d79a7b2ca62c16e",
       "pdfPage": 5,
       "alignmentPage": 5,
       "alignmentScore": 0.5823,
@@ -1976,6 +2090,7 @@
       "translatedName": "Раздаточный материал №2",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "ece765767fb128c9b7e0fe027d042446fb2516b36b637be820b01ef92f67aad1",
       "pdfPage": 47,
       "alignmentPage": 47,
       "alignmentScore": 0.7619,
@@ -1988,6 +2103,7 @@
       "translatedName": "Раздаточный материал №1",
       "technicalTokens": [],
       "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "htmlHash": "63b5702aff14d68e18852dcce35ac47658442803e92b83a5e84a2574f60af8bb",
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.7488,
@@ -1999,89 +2115,89 @@
     "0qGYozu96uCyqwwv/description": [],
     "0qGYozu96uCyqwwv/descriptionGM": [],
     "0qGYozu96uCyqwwv/items/T8jQXV4jxIhvfS14/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered}"
     ],
     "0qGYozu96uCyqwwv/items/6BFQljbOQZkiMjjS/description": [],
     "2EVDrnEMPs0TKcdN/description": [],
     "2EVDrnEMPs0TKcdN/items/zMkrKhyfRWFrFfuv/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]",
-      "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}",
+      "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}"
     ],
     "2NqZ8BEB8kmwzZae/description": [],
     "2NqZ8BEB8kmwzZae/descriptionGM": [],
     "2NqZ8BEB8kmwzZae/items/v90WRjELLiKF57vr/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}"
     ],
     "2NqZ8BEB8kmwzZae/items/eulyI60JHNUYs39w/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}"
     ],
     "2g8LSm8VMWFoOK8U/items/CNpPqhgSIEamhwFL/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}"
     ],
     "2gOOtPSWXJtql8i2/description": [],
     "2gOOtPSWXJtql8i2/descriptionGM": [],
     "2gOOtPSWXJtql8i2/items/f4Mkjn4uAW6nabJR/description": [
-      "@UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal}"
     ],
     "3PAJHNWNs2LrPhhx/description": [],
     "3PAJHNWNs2LrPhhx/items/hk7qH9BpvzM7rFGe/description": [],
     "3PAJHNWNs2LrPhhx/items/MpNlJrdPvv9bECNE/description": [
       "@Check[type:will|dc:18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
     ],
     "4Zwt3eqjMo0EQUrq/items/0rwXFzCG58mrENRi/description": [
       "@Check[type:fortitude|dc:15|traits:disease,divine,transmutation]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "4ajJbWhiX1V5jrCg/description": [],
     "4ajJbWhiX1V5jrCg/items/KjLaF8NJBaPjsRAz/description": [],
     "4ajJbWhiX1V5jrCg/items/oxpwAUYEbjv8nf4R/description": [
       "@Check[type:fortitude|dc:15]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "5uoigpUArRCSWArQ/description": [],
     "5uoigpUArRCSWArQ/items/hk7qH9BpvzM7rFGe/description": [],
     "5uoigpUArRCSWArQ/items/MpNlJrdPvv9bECNE/description": [
       "@Check[type:will|dc:18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
     ],
     "62aTwXuLWWrqZXxW/description": [],
     "62aTwXuLWWrqZXxW/descriptionGM": [],
     "62aTwXuLWWrqZXxW/items/T8jQXV4jxIhvfS14/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered}"
     ],
     "62aTwXuLWWrqZXxW/items/6BFQljbOQZkiMjjS/description": [],
     "63tNsYHRrIaRASKj/description": [],
     "63tNsYHRrIaRASKj/descriptionGM": [],
     "63tNsYHRrIaRASKj/items/VxA7WerDGElBkdYj/description": [],
     "63tNsYHRrIaRASKj/items/8LvVStEHJB30KVCE/description": [
-      "@Template[type:emanation|distance:30]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
+      "@Template[type:emanation|distance:30]{30 feet}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
       "@Check[type:will|dc:17]"
     ],
     "63tNsYHRrIaRASKj/items/kGQg9F0ZgW7fp4DB/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "6AiPO2aKOFN6qipW/items/htliQ05jVKwfE22v/description": [
-      "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]"
+      "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
     ],
     "6AiPO2aKOFN6qipW/items/UDhWMhJzdEJtykvO/description": [],
     "7dO0tWbAmPOFpKAi/description": [],
     "7dO0tWbAmPOFpKAi/items/zMkrKhyfRWFrFfuv/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]",
-      "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}",
+      "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}"
     ],
     "7dgKzWxcJUJmLsXF/description": [],
     "7dgKzWxcJUJmLsXF/items/a5L9zwEbTQnPprg5/description": [
@@ -2090,9 +2206,9 @@
     ],
     "7dgKzWxcJUJmLsXF/items/GFEimWK8niicOioN/description": [
       "@Check[type:fortitude|dc:15]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "91bdPT5tIEDZvQB2/items/xcV4iG9yR2uKSGdL/description": [
       "@Check[type:reflex|dc:20|traits:damaging-effect]",
@@ -2102,9 +2218,9 @@
     "9CqQbPyKUk3G39o2/items/a5X5gNKg3MIEGsZ9/description": [],
     "9CqQbPyKUk3G39o2/items/tfriWcHgXqM6QLkB/description": [
       "@Check[type:fortitude|dc:14]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}"
     ],
     "9XwV6EhK14DtMxOw/description": [],
     "9XwV6EhK14DtMxOw/descriptionGM": [],
@@ -2112,7 +2228,7 @@
       "@Damage[4d6[sonic]",
       "@Template[type:emanation|distance:15]",
       "@Check[type:fortitude|dc:19|basic:true]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}"
     ],
     "9XwV6EhK14DtMxOw/items/80CuEcGtDQ6fUIyY/description": [
       "@Check[type:performance]"
@@ -2120,39 +2236,39 @@
     "9XwV6EhK14DtMxOw/items/xBIoPO0Yl00JwtXW/description": [],
     "9XwV6EhK14DtMxOw/items/z8bl09rqF4yCJDy4/description": [
       "@Template[type:emanation|distance:30]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
       "@Check[type:will|dc:19]"
     ],
     "9XwV6EhK14DtMxOw/items/A33mGw1DCgRJRDSe/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "Aoll0FdVcKcL1Ucd/description": [],
     "Aoll0FdVcKcL1Ucd/items/UGFoKIvbXM0ZSdiU/description": [
       "@Check[type:fortitude|dc:20|traits:divine,transmutation]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "Aoll0FdVcKcL1Ucd/items/Kv1pkf5Ma30A8n58/description": [
       "@Template[type:emanation|distance:10]",
       "@Check[type:will|dc:20]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}"
     ],
     "AvjfX6ybUeejKsjJ/description": [],
     "AvjfX6ybUeejKsjJ/items/0Rn8CE4JcrTxdKqN/description": [
-      "@UUID[Compendium.pf2e.spells-srd.Item.2ykmAVKrsAWcazcC]"
+      "@UUID[Compendium.pf2e.spells-srd.Item.2ykmAVKrsAWcazcC]{Binding Circle}"
     ],
     "AvjfX6ybUeejKsjJ/items/5gY8gk28J2srHl1t/description": [
-      "@UUID[Compendium.pf2e.spells-srd.Item.D2nPKbIS67m9199U]"
+      "@UUID[Compendium.pf2e.spells-srd.Item.D2nPKbIS67m9199U]{Ethereal Jaunt}"
     ],
     "CL4YCcPhKegUvEVx/items/6kZm8XnYELAQFppU/description": [],
     "CL4YCcPhKegUvEVx/items/lnftcCa5nWLimB4r/description": [],
     "HzvHFXBKD1uAlHWc/description": [],
     "HzvHFXBKD1uAlHWc/items/sYzEwjtXD4GsP03b/description": [
-      "@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]"
+      "@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]{Lifesense}"
     ],
     "HzvHFXBKD1uAlHWc/items/rsf1q6ooMNJFjdfh/description": [],
     "HzvHFXBKD1uAlHWc/items/D13sjvjuSrxFEe35/description": [],
@@ -2161,8 +2277,8 @@
     ],
     "HzvHFXBKD1uAlHWc/items/L17R2FDChGWE5pgD/description": [
       "@Check[type:fortitude|dc:17]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}"
     ],
     "IWrJeX5D8wFcy2JW/description": [],
     "IWrJeX5D8wFcy2JW/items/80CuEcGtDQ6fUIyY/description": [
@@ -2171,12 +2287,12 @@
     "IWrJeX5D8wFcy2JW/items/xBIoPO0Yl00JwtXW/description": [],
     "IWrJeX5D8wFcy2JW/items/z8bl09rqF4yCJDy4/description": [
       "@Template[type:emanation|distance:30]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
       "@Check[type:will|dc:19]"
     ],
     "IWrJeX5D8wFcy2JW/items/A33mGw1DCgRJRDSe/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "KeknT5gCKZUR0WM7/description": [],
     "KeknT5gCKZUR0WM7/descriptionGM": [],
@@ -2185,27 +2301,27 @@
     "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/gm": [],
     "M72Bl8X3Ue4v2dB4/items/97l0hEJqbFlmWhUZ/description": [],
     "M72Bl8X3Ue4v2dB4/items/QXmns8bw5DBlNJ9D/description": [
-      "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]"
+      "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
     ],
     "N0nSDzkMv7OwGumH/description": [],
     "N0nSDzkMv7OwGumH/items/mdEZdShzE63nlTQK/description": [
       "@Damage[4d6[acid]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}"
     ],
     "N0nSDzkMv7OwGumH/items/19Ayra6rX2M49iPG/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}"
     ],
     "NWJvhxgboK7Kj0gw/description": [],
     "NWJvhxgboK7Kj0gw/descriptionGM": [],
     "NWJvhxgboK7Kj0gw/items/VxA7WerDGElBkdYj/description": [],
     "NWJvhxgboK7Kj0gw/items/8LvVStEHJB30KVCE/description": [
-      "@Template[type:emanation|distance:30]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
+      "@Template[type:emanation|distance:30]{30 feet}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
       "@Check[type:will|dc:17]"
     ],
     "NWJvhxgboK7Kj0gw/items/kGQg9F0ZgW7fp4DB/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "Q3ciH3AHZlb1Dc3E/description": [],
     "ShWcSAzHjKnQ8MJX/description": [],
@@ -2214,53 +2330,53 @@
       "@Check[type:fortitude|dc:14]",
       "@Damage[1d6[poison]",
       "@Damage[1d8[poison]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}",
       "@Damage[1d12[poison]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}"
     ],
     "TIP8DD2dLKxFfqHf/items/y7VNs5A41UH94zX1/description": [
       "@Check[type:fortitude|dc:18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}"
     ],
     "TIP8DD2dLKxFfqHf/items/SHmm4Z4oVUEYADth/description": [
       "@Check[type:fortitude|dc:15]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "UoeLlR2PwtJUZjGD/description": [],
     "UoeLlR2PwtJUZjGD/items/MuiyXm8KyQF57NaW/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}"
     ],
     "UoeLlR2PwtJUZjGD/items/a2pZeef5wn9y5xAA/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}"
     ],
     "UoeLlR2PwtJUZjGD/items/PmrOcp7IYi6XPIer/description": [
       "@Check[type:fortitude|dc:15]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "WV7XAaNpm5w8kVZW/items/0tDhCne8RVvfJHxv/gm": [],
     "WV7XAaNpm5w8kVZW/items/2tLWKbKmJp9SzebT/description": [],
     "Wk9c3TwlnHoQo03B/description": [],
     "Wk9c3TwlnHoQo03B/items/zMkrKhyfRWFrFfuv/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]",
-      "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}",
+      "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}"
     ],
     "XCkK3Xrz8Yoi4SMG/description": [],
     "XCkK3Xrz8Yoi4SMG/items/HhUe0MpfzNrigkps/description": [],
     "XCkK3Xrz8Yoi4SMG/items/fJ34aqwTiZbTv92E/description": [],
     "XCkK3Xrz8Yoi4SMG/items/FDCXS4bVC2F1PdGz/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}",
       "@Check[type:will|dc:20]",
       "@Damage[1d6[mental]",
       "@Damage[2d6[mental]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}"
     ],
     "XZX1TpeWYkI14qLj/description": [],
     "XZX1TpeWYkI14qLj/descriptionGM": [],
@@ -2269,7 +2385,7 @@
     ],
     "XZX1TpeWYkI14qLj/items/3wLOdV2RXEY5pnF5/description": [
       "@Check[type:fortitude|dc:21]",
-      "@UUID[Compendium.pf2e.bestiary-effects.Item.LgZx5xotO08JzhVc]"
+      "@UUID[Compendium.pf2e.bestiary-effects.Item.LgZx5xotO08JzhVc]{Effect: Mutilating Bite}"
     ],
     "XZX1TpeWYkI14qLj/items/4cx1d9efogHuWe26/description": [],
     "Y133Sx0joIm2DZ3g/description": [],
@@ -2277,9 +2393,9 @@
     "Y133Sx0joIm2DZ3g/items/We6LladGR4C687q0/description": [
       "@Check[type:fortitude|dc:17]",
       "@Damage[1d6[poison]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
       "@Damage[1d6[poison]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
     ],
     "ZIUG2ArW9SCBrgd2/description": [],
     "ZIUG2ArW9SCBrgd2/items/V8UhxFNrr8B2m7UP/description": [
@@ -2287,7 +2403,7 @@
     ],
     "ZIUG2ArW9SCBrgd2/items/fzTUnlrMpxSgmSAy/description": [],
     "ZIUG2ArW9SCBrgd2/items/TZig28UcpE4GS2P0/description": [
-      "@UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]",
+      "@UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}",
       "@Damage[2d6[untyped]"
     ],
     "ZIUG2ArW9SCBrgd2/items/w9Owf4Jdub9WbuFx/description": [
@@ -2297,29 +2413,29 @@
     ],
     "ZIUG2ArW9SCBrgd2/items/Q0Sd9sqnUeL32Jw9/description": [
       "@Check[type:fortitude|dc:14]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}"
     ],
     "ZLdZe3qKjR6xoN4Z/description": [],
     "ZLdZe3qKjR6xoN4Z/items/K8HY6MgNzIvDLuDT/description": [],
     "ZLdZe3qKjR6xoN4Z/items/uMNXrK8Is6PAzNEB/description": [],
     "ZoP9C7TGVQm1tmiR/description": [],
     "ZoP9C7TGVQm1tmiR/items/lL49wJa4ig4V0ag1/description": [
-      "@Template[type:emanation|distance:25]",
+      "@Template[type:emanation|distance:25]{25 feet}",
       "@Check[type:thievery|dc:14|traits:action:disable-a-device]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
     ],
     "ZoP9C7TGVQm1tmiR/items/zdb8RR0jcIIol6on/description": [
       "@Check[type:thievery|dc:17|traits:action:disable-a-device]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
     ],
     "ZoP9C7TGVQm1tmiR/items/UK9gsjbHYgmKZze9/description": [
       "@Damage[1d12[piercing]",
-      "@Template[type:emanation|distance:5]",
+      "@Template[type:emanation|distance:5]{5-foot radius}",
       "@Check[type:reflex|dc:17|basic:true]",
       "@Check[type:thievery|dc:17|traits:action:disable-a-device]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
     ],
     "ZoP9C7TGVQm1tmiR/items/hAK9kJGhzP6DASJX/description": [
       "@Damage[1d4[persistent,bleed]",
@@ -2328,23 +2444,23 @@
     "bRXpyT68VI3n9eWv/description": [],
     "bRXpyT68VI3n9eWv/items/qtsF75k2Zterahrt/description": [],
     "bRXpyT68VI3n9eWv/items/36QKwrAooz1cygR4/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}",
       "@Check[type:will|dc:21]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}"
     ],
     "buu375tJJutZ9xT2/items/rmbTeX3cdnck9oQ2/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}"
     ],
     "dbMmGE7Deitzsuz6/description": [],
     "dbMmGE7Deitzsuz6/items/p6uToNU7wgFDgDDH/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}"
     ],
     "dbMmGE7Deitzsuz6/items/Lb8baU3vfeAtn1Nw/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
     "dbMmGE7Deitzsuz6/items/h8caQJMnKj4F22zZ/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}"
     ],
     "dbMmGE7Deitzsuz6/items/xdQJFj57QglkQXeG/description": [
       "@Damage[1d6[bleed]"
@@ -2352,40 +2468,40 @@
     "fnjgFygP2p6zj1Fc/items/PFa0h9BekFPB4Eoh/description": [
       "@Check[type:reflex|dc:17|traits:damaging-effect]",
       "@Damage[(1d6+3)[bludgeoning]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]",
+      "@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}",
       "@Damage[(2d6+5)[bludgeoning]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}",
       "@Damage[(2d6+5)[bludgeoning]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "hU8Z9Z6b0fD8ftvk/description": [],
     "hU8Z9Z6b0fD8ftvk/descriptionGM": [],
     "hU8Z9Z6b0fD8ftvk/items/momzHh7zAZRC7Hob/description": [],
     "hU8Z9Z6b0fD8ftvk/items/up8Xcig2FrwgbFfb/description": [
-      "@Template[type:emanation|distance:30]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
+      "@Template[type:emanation|distance:30]{30 feet}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
       "@Check[type:will|dc:18]"
     ],
     "hU8Z9Z6b0fD8ftvk/items/MEAPfylvHHHbTqOf/description": [
-      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "hzjZKJLz1sLAeHtq/items/yf2VZtO2S4eV7fKZ/description": [
       "@Damage[10[bludgeoning]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]",
+      "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}",
       "@Check[type:reflex|dc:20]",
       "@Check[type:reflex|dc:22]"
     ],
     "kqGEpdTaiZtovqbm/description": [],
     "kqGEpdTaiZtovqbm/items/edVyMro5viX5rgD9/description": [
       "@Check[type:thievery|dc:21|traits:action:disable-a-device]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
     ],
     "kqGEpdTaiZtovqbm/items/fH4zN6EufktPqbW4/description": [
       "@Check[type:thievery|dc:25|traits:action:disable-a-device]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]",
-      "@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]",
-      "@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}",
+      "@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{Magic Wand}",
+      "@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}"
     ],
     "kqGEpdTaiZtovqbm/items/pyDc4hD647pfgYEk/description": [],
     "kqGEpdTaiZtovqbm/items/IvUr6AnOtG8K2BSD/description": [],
@@ -2400,15 +2516,15 @@
     "ltfi8ZCUvuN84qSS/items/uldVZLVdwiLD1q6v/description": [],
     "ltfi8ZCUvuN84qSS/items/ZDJkjnIor7qxsiSU/description": [
       "@Check[type:athletics|traits:action:grapple,action:strangle]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]",
+      "@UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grab}",
       "@Damage[(1d6+6)[bludgeoning]"
     ],
     "mKuegTrL8zIoab0o/items/8tVnSA2uTOLAmycM/description": [
       "@Check[type:fortitude|dc:20|traits:damaging-effect]",
       "@Damage[1d10[bludgeoning]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]",
+      "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}",
       "@Damage[(1d10+6)[bludgeoning]",
-      "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]"
+      "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}"
     ],
     "oDTP0oNCRCovqkNy/items/xcV4iG9yR2uKSGdL/description": [
       "@Check[type:reflex|dc:20|traits:damaging-effect]",
@@ -2421,26 +2537,26 @@
     "q3dCj5gJoOW22HMd/items/hk7qH9BpvzM7rFGe/description": [],
     "q3dCj5gJoOW22HMd/items/MpNlJrdPvv9bECNE/description": [
       "@Check[type:will|dc:18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
     ],
     "rXjtkRiFj00HzPAG/description": [],
     "rXjtkRiFj00HzPAG/items/uNH8ZKqCgsh6qYis/description": [
       "@Check[type:will|dc:20]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 3}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{Fleeing}"
     ],
     "rXjtkRiFj00HzPAG/items/MgWi09fDy6GgzHJM/description": [
       "@Check[type:will|dc:20]",
-      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]"
+      "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}"
     ],
     "viyUBIwO7gFRqwVG/description": [],
     "viyUBIwO7gFRqwVG/descriptionGM": [],
     "viyUBIwO7gFRqwVG/items/9yu44cM7W0Xg2Q36/description": [],
     "zb2LebobKQWXeVQ1/items/htliQ05jVKwfE22v/description": [
-      "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]"
+      "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
     ],
     "zb2LebobKQWXeVQ1/items/UDhWMhJzdEJtykvO/description": [],
     "zj4VyFf9wYB6xO6S/description": [],
@@ -2454,5 +2570,180 @@
       "@Damage[1[persistent,poison]"
     ],
     "zj4VyFf9wYB6xO6S/items/ARWbmjbxbCd0JMUv/description": []
+  },
+  "actorHtml": {
+    "0qGYozu96uCyqwwv/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "0qGYozu96uCyqwwv/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "0qGYozu96uCyqwwv/items/T8jQXV4jxIhvfS14/description": "8803785599ac00d52debf372a9893147940d4ba8563758abbf7fedb1010d9f9d",
+    "0qGYozu96uCyqwwv/items/6BFQljbOQZkiMjjS/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "2EVDrnEMPs0TKcdN/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "2EVDrnEMPs0TKcdN/items/zMkrKhyfRWFrFfuv/description": "a2b31adc16b6fcd8c76f47b1ebba21a530942879ffdd8110c54b0e093063386f",
+    "2NqZ8BEB8kmwzZae/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "2NqZ8BEB8kmwzZae/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2NqZ8BEB8kmwzZae/items/v90WRjELLiKF57vr/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+    "2NqZ8BEB8kmwzZae/items/eulyI60JHNUYs39w/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "2g8LSm8VMWFoOK8U/items/CNpPqhgSIEamhwFL/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "2gOOtPSWXJtql8i2/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "2gOOtPSWXJtql8i2/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "2gOOtPSWXJtql8i2/items/f4Mkjn4uAW6nabJR/description": "e93f64dbc8a91340563ead13addda301f0c80499366aa3f9d53e627316665430",
+    "3PAJHNWNs2LrPhhx/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "3PAJHNWNs2LrPhhx/items/hk7qH9BpvzM7rFGe/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "3PAJHNWNs2LrPhhx/items/MpNlJrdPvv9bECNE/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+    "4Zwt3eqjMo0EQUrq/items/0rwXFzCG58mrENRi/description": "ac730317a1339e57c7eec2ae1fff8d11ba2dbb4ac22939b70a436d45932593a2",
+    "4ajJbWhiX1V5jrCg/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "4ajJbWhiX1V5jrCg/items/KjLaF8NJBaPjsRAz/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "4ajJbWhiX1V5jrCg/items/oxpwAUYEbjv8nf4R/description": "4a5647763e80b90d6a3f276c1ead628b50eea087d82fd0af6db9d49e08601419",
+    "5uoigpUArRCSWArQ/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "5uoigpUArRCSWArQ/items/hk7qH9BpvzM7rFGe/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "5uoigpUArRCSWArQ/items/MpNlJrdPvv9bECNE/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+    "62aTwXuLWWrqZXxW/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "62aTwXuLWWrqZXxW/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "62aTwXuLWWrqZXxW/items/T8jQXV4jxIhvfS14/description": "8803785599ac00d52debf372a9893147940d4ba8563758abbf7fedb1010d9f9d",
+    "62aTwXuLWWrqZXxW/items/6BFQljbOQZkiMjjS/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "63tNsYHRrIaRASKj/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "63tNsYHRrIaRASKj/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "63tNsYHRrIaRASKj/items/VxA7WerDGElBkdYj/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "63tNsYHRrIaRASKj/items/8LvVStEHJB30KVCE/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "63tNsYHRrIaRASKj/items/kGQg9F0ZgW7fp4DB/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "6AiPO2aKOFN6qipW/items/htliQ05jVKwfE22v/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
+    "6AiPO2aKOFN6qipW/items/UDhWMhJzdEJtykvO/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "7dO0tWbAmPOFpKAi/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "7dO0tWbAmPOFpKAi/items/zMkrKhyfRWFrFfuv/description": "a2b31adc16b6fcd8c76f47b1ebba21a530942879ffdd8110c54b0e093063386f",
+    "7dgKzWxcJUJmLsXF/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "7dgKzWxcJUJmLsXF/items/a5L9zwEbTQnPprg5/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+    "7dgKzWxcJUJmLsXF/items/GFEimWK8niicOioN/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+    "91bdPT5tIEDZvQB2/items/xcV4iG9yR2uKSGdL/description": "349d59ed53eaff29b8953257340d2886efdbd81a2007899c65da218330ebeff4",
+    "9CqQbPyKUk3G39o2/items/a5X5gNKg3MIEGsZ9/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "9CqQbPyKUk3G39o2/items/tfriWcHgXqM6QLkB/description": "1cf8c187006f1c02de1010a973c57695357c1918d705e1b8302c221f783895f5",
+    "9XwV6EhK14DtMxOw/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "9XwV6EhK14DtMxOw/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "9XwV6EhK14DtMxOw/items/9SboqcQona3PXQIx/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "9XwV6EhK14DtMxOw/items/80CuEcGtDQ6fUIyY/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "9XwV6EhK14DtMxOw/items/xBIoPO0Yl00JwtXW/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "9XwV6EhK14DtMxOw/items/z8bl09rqF4yCJDy4/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "9XwV6EhK14DtMxOw/items/A33mGw1DCgRJRDSe/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "Aoll0FdVcKcL1Ucd/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "Aoll0FdVcKcL1Ucd/items/UGFoKIvbXM0ZSdiU/description": "0cca2d2b81ab40a3a3d408d67a1cde8f7dd2247fc067cc988fcd826cdb0f3f3a",
+    "Aoll0FdVcKcL1Ucd/items/Kv1pkf5Ma30A8n58/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+    "AvjfX6ybUeejKsjJ/description": "cb05046ab632c36faec4334ad471d8cb0930bcc8a2cf4591f4a9a2f6532afadb",
+    "AvjfX6ybUeejKsjJ/items/0Rn8CE4JcrTxdKqN/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
+    "AvjfX6ybUeejKsjJ/items/5gY8gk28J2srHl1t/description": "b6a6be7c21780cbd72d37d8a71bc60c2288bd78b4917ea0ed035b42d1e78c9bb",
+    "CL4YCcPhKegUvEVx/items/6kZm8XnYELAQFppU/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "CL4YCcPhKegUvEVx/items/lnftcCa5nWLimB4r/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "HzvHFXBKD1uAlHWc/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "HzvHFXBKD1uAlHWc/items/sYzEwjtXD4GsP03b/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "HzvHFXBKD1uAlHWc/items/rsf1q6ooMNJFjdfh/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "HzvHFXBKD1uAlHWc/items/D13sjvjuSrxFEe35/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "HzvHFXBKD1uAlHWc/items/AMnTAvqDDSvhK4rN/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "HzvHFXBKD1uAlHWc/items/L17R2FDChGWE5pgD/description": "9621edfbac613964745ce4a0123c796107dfdd233f6fbefc5003c0a4bc9ed4c2",
+    "IWrJeX5D8wFcy2JW/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "IWrJeX5D8wFcy2JW/items/80CuEcGtDQ6fUIyY/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "IWrJeX5D8wFcy2JW/items/xBIoPO0Yl00JwtXW/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "IWrJeX5D8wFcy2JW/items/z8bl09rqF4yCJDy4/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "IWrJeX5D8wFcy2JW/items/A33mGw1DCgRJRDSe/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "KeknT5gCKZUR0WM7/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "KeknT5gCKZUR0WM7/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "KeknT5gCKZUR0WM7/items/GhnXpFtWM1vyvu8V/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/description": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/gm": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+    "M72Bl8X3Ue4v2dB4/items/97l0hEJqbFlmWhUZ/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "M72Bl8X3Ue4v2dB4/items/QXmns8bw5DBlNJ9D/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
+    "N0nSDzkMv7OwGumH/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
+    "N0nSDzkMv7OwGumH/items/mdEZdShzE63nlTQK/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "N0nSDzkMv7OwGumH/items/19Ayra6rX2M49iPG/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "NWJvhxgboK7Kj0gw/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "NWJvhxgboK7Kj0gw/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "NWJvhxgboK7Kj0gw/items/VxA7WerDGElBkdYj/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "NWJvhxgboK7Kj0gw/items/8LvVStEHJB30KVCE/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "NWJvhxgboK7Kj0gw/items/kGQg9F0ZgW7fp4DB/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "Q3ciH3AHZlb1Dc3E/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "ShWcSAzHjKnQ8MJX/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "ShWcSAzHjKnQ8MJX/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ShWcSAzHjKnQ8MJX/items/PIjZTZsbQlriq5X3/description": "84bd8554e9bc69b292ac2294072b44b2ce381fb6b14348f600f8f91d1be95493",
+    "TIP8DD2dLKxFfqHf/items/y7VNs5A41UH94zX1/description": "8fe34dc6ef3cee7638e5b46240c3cf09e9cd96b33054e2fbbba2e24dcc97e9ab",
+    "TIP8DD2dLKxFfqHf/items/SHmm4Z4oVUEYADth/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+    "UoeLlR2PwtJUZjGD/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "UoeLlR2PwtJUZjGD/items/MuiyXm8KyQF57NaW/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+    "UoeLlR2PwtJUZjGD/items/a2pZeef5wn9y5xAA/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "UoeLlR2PwtJUZjGD/items/PmrOcp7IYi6XPIer/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+    "WV7XAaNpm5w8kVZW/items/0tDhCne8RVvfJHxv/gm": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "WV7XAaNpm5w8kVZW/items/2tLWKbKmJp9SzebT/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "Wk9c3TwlnHoQo03B/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "Wk9c3TwlnHoQo03B/items/zMkrKhyfRWFrFfuv/description": "a2b31adc16b6fcd8c76f47b1ebba21a530942879ffdd8110c54b0e093063386f",
+    "XCkK3Xrz8Yoi4SMG/description": "cc7146678fbb08eb29c3049daa629e89214e28f85510d8cbf188224fd47c64a2",
+    "XCkK3Xrz8Yoi4SMG/items/HhUe0MpfzNrigkps/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "XCkK3Xrz8Yoi4SMG/items/fJ34aqwTiZbTv92E/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "XCkK3Xrz8Yoi4SMG/items/FDCXS4bVC2F1PdGz/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+    "XZX1TpeWYkI14qLj/description": "dab2172f51d5d53095e8c4a52489223cadf3681afc1cb9d3b6d8ffbdee65124c",
+    "XZX1TpeWYkI14qLj/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "XZX1TpeWYkI14qLj/items/983mBG3qwmzQKGS2/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "XZX1TpeWYkI14qLj/items/3wLOdV2RXEY5pnF5/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
+    "XZX1TpeWYkI14qLj/items/4cx1d9efogHuWe26/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "Y133Sx0joIm2DZ3g/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
+    "Y133Sx0joIm2DZ3g/items/D2ezhwANZLcMNbz9/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "Y133Sx0joIm2DZ3g/items/We6LladGR4C687q0/description": "841af20b5a4bcbb70160942234862dbb078a23cfdc1812f40f391441027beb40",
+    "ZIUG2ArW9SCBrgd2/description": "a709c9f74f606fe7e44c5a24fb9edd976a7c74e715ada0b3a79775e82be5b60c",
+    "ZIUG2ArW9SCBrgd2/items/V8UhxFNrr8B2m7UP/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "ZIUG2ArW9SCBrgd2/items/fzTUnlrMpxSgmSAy/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "ZIUG2ArW9SCBrgd2/items/TZig28UcpE4GS2P0/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "ZIUG2ArW9SCBrgd2/items/w9Owf4Jdub9WbuFx/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "ZIUG2ArW9SCBrgd2/items/Q0Sd9sqnUeL32Jw9/description": "1cf8c187006f1c02de1010a973c57695357c1918d705e1b8302c221f783895f5",
+    "ZLdZe3qKjR6xoN4Z/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
+    "ZLdZe3qKjR6xoN4Z/items/K8HY6MgNzIvDLuDT/description": "b6a6be7c21780cbd72d37d8a71bc60c2288bd78b4917ea0ed035b42d1e78c9bb",
+    "ZLdZe3qKjR6xoN4Z/items/uMNXrK8Is6PAzNEB/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "ZoP9C7TGVQm1tmiR/description": "c2bef1cf65181998020b6fe4888ac9c5f87a4d18e9ca11b7431a181835cdcf83",
+    "ZoP9C7TGVQm1tmiR/items/lL49wJa4ig4V0ag1/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "ZoP9C7TGVQm1tmiR/items/zdb8RR0jcIIol6on/description": "001dff8cc83a39f0c14c98c6788adf0dc121831c1b6f2f82e811c84f3aa3af08",
+    "ZoP9C7TGVQm1tmiR/items/UK9gsjbHYgmKZze9/description": "2c2084603de2eb9ae7b7602547d270dcb72f9a5602afe4789f32b0ea1c5d3b1e",
+    "ZoP9C7TGVQm1tmiR/items/hAK9kJGhzP6DASJX/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "bRXpyT68VI3n9eWv/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "bRXpyT68VI3n9eWv/items/qtsF75k2Zterahrt/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "bRXpyT68VI3n9eWv/items/36QKwrAooz1cygR4/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "buu375tJJutZ9xT2/items/rmbTeX3cdnck9oQ2/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "dbMmGE7Deitzsuz6/description": "dab2172f51d5d53095e8c4a52489223cadf3681afc1cb9d3b6d8ffbdee65124c",
+    "dbMmGE7Deitzsuz6/items/p6uToNU7wgFDgDDH/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "dbMmGE7Deitzsuz6/items/Lb8baU3vfeAtn1Nw/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "dbMmGE7Deitzsuz6/items/h8caQJMnKj4F22zZ/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "dbMmGE7Deitzsuz6/items/xdQJFj57QglkQXeG/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "fnjgFygP2p6zj1Fc/items/PFa0h9BekFPB4Eoh/description": "7efb9e4c8961642eeacbd050edff06bc53aad5614a75dcfee58e30ebb5a8067a",
+    "hU8Z9Z6b0fD8ftvk/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "hU8Z9Z6b0fD8ftvk/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hU8Z9Z6b0fD8ftvk/items/momzHh7zAZRC7Hob/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "hU8Z9Z6b0fD8ftvk/items/up8Xcig2FrwgbFfb/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "hU8Z9Z6b0fD8ftvk/items/MEAPfylvHHHbTqOf/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "hzjZKJLz1sLAeHtq/items/yf2VZtO2S4eV7fKZ/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "kqGEpdTaiZtovqbm/description": "c2bef1cf65181998020b6fe4888ac9c5f87a4d18e9ca11b7431a181835cdcf83",
+    "kqGEpdTaiZtovqbm/items/edVyMro5viX5rgD9/description": "001dff8cc83a39f0c14c98c6788adf0dc121831c1b6f2f82e811c84f3aa3af08",
+    "kqGEpdTaiZtovqbm/items/fH4zN6EufktPqbW4/description": "32e0e6e246036fba10a12609d7d353b090db479c4207d4078ced679164d0b5bd",
+    "kqGEpdTaiZtovqbm/items/pyDc4hD647pfgYEk/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "kqGEpdTaiZtovqbm/items/IvUr6AnOtG8K2BSD/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "lCNsglj9xoQfBl3p/description": "dab2172f51d5d53095e8c4a52489223cadf3681afc1cb9d3b6d8ffbdee65124c",
+    "lCNsglj9xoQfBl3p/items/0Himurdx3RL3D4gk/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "lCNsglj9xoQfBl3p/items/wFnxNcpjZQq97vyn/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "lCNsglj9xoQfBl3p/items/Og5zTgT13s8QIGgb/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "ltfi8ZCUvuN84qSS/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "ltfi8ZCUvuN84qSS/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ltfi8ZCUvuN84qSS/items/uldVZLVdwiLD1q6v/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "ltfi8ZCUvuN84qSS/items/ZDJkjnIor7qxsiSU/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "mKuegTrL8zIoab0o/items/8tVnSA2uTOLAmycM/description": "a4d3edf2b506287ee0e0835b46c26932373ce9e1d3c463f1f8c205c20e86bffe",
+    "oDTP0oNCRCovqkNy/items/xcV4iG9yR2uKSGdL/description": "349d59ed53eaff29b8953257340d2886efdbd81a2007899c65da218330ebeff4",
+    "oeM8EcS1F5NIkd30/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "oeM8EcS1F5NIkd30/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "q3dCj5gJoOW22HMd/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "q3dCj5gJoOW22HMd/items/hk7qH9BpvzM7rFGe/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "q3dCj5gJoOW22HMd/items/MpNlJrdPvv9bECNE/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+    "rXjtkRiFj00HzPAG/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "rXjtkRiFj00HzPAG/items/uNH8ZKqCgsh6qYis/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "rXjtkRiFj00HzPAG/items/MgWi09fDy6GgzHJM/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "viyUBIwO7gFRqwVG/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "viyUBIwO7gFRqwVG/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "viyUBIwO7gFRqwVG/items/9yu44cM7W0Xg2Q36/description": "8bb8a37897205b15d90a87dd938270a946a13e916112fb5c78635bdc5a0c4162",
+    "zb2LebobKQWXeVQ1/items/htliQ05jVKwfE22v/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
+    "zb2LebobKQWXeVQ1/items/UDhWMhJzdEJtykvO/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "zj4VyFf9wYB6xO6S/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "zj4VyFf9wYB6xO6S/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "zj4VyFf9wYB6xO6S/items/Y2DikEsO4R95MHFo/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "zj4VyFf9wYB6xO6S/items/LCFMKpxw0iDxWGXu/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "zj4VyFf9wYB6xO6S/items/ARWbmjbxbCd0JMUv/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d"
   }
 }

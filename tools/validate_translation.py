@@ -17,7 +17,7 @@ TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[[^\]]+\])(?:\{[^{}]*\})?")
 TAG_RE = re.compile(r"<[^>]+>")
 LATIN_RE = re.compile(r"\b[A-Za-z][A-Za-z'’-]{2,}\b")
 ALLOWED_LATIN = {"foundry", "pathfinder", "babele", "pf2e", "vtt", "pdf"}
-FORBIDDEN = ("pf2e-ts-adv", ".ldb", "leveldb", "%pdf", "data:image/", "<img")
+FORBIDDEN = ("pf2e-ts-adv", ".ldb", "leveldb", "%pdf", "data:image/")
 EXPECTED_COUNTS = {
     "journals": 7,
     "pages": 191,
@@ -51,6 +51,14 @@ def load_json(path: Path, check: Validation) -> Any:
 
 def technical_cores(value: str) -> list[str]:
     return [TECH_CORE_RE.fullmatch(token).group(1) for token in TECH_RE.findall(value)]
+
+
+def technical_tokens(value: str) -> list[str]:
+    return TECH_RE.findall(value)
+
+
+def html_hash(value: str) -> str:
+    return hashlib.sha256("\n".join(TAG_RE.findall(value)).encode()).hexdigest()
 
 
 def main() -> int:
@@ -95,9 +103,10 @@ def main() -> int:
 
     for page_id, page_meta in index.get("pages", {}).items():
         text = pages.get(page_id, {}).get("text", "")
-        cores = technical_cores(text)
-        digest = hashlib.sha256("\n".join(cores).encode()).hexdigest()
+        tokens = technical_tokens(text)
+        digest = hashlib.sha256("\n".join(tokens).encode()).hexdigest()
         check.require(digest == page_meta.get("technicalHash"), f"{page_id}: изменены @UUID/@Check/@Damage или их порядок")
+        check.require(html_hash(text) == page_meta.get("htmlHash"), f"{page_id}: изменена HTML-структура или атрибут")
         plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", text)))
         words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
         check.require(not words, f"{page_id}: остался английский текст: {', '.join(sorted(words)[:8])}")
@@ -116,9 +125,17 @@ def main() -> int:
         else:
             value = actor_items.get(actor_id, {}).get(parts[2], {}).get(parts[3], "")
         check.require(
-            technical_cores(value) == expected_tokens,
+            technical_tokens(value) == expected_tokens,
             f"{path}: изменены технические токены актёра/элемента",
         )
+    for path, expected_hash in index.get("actorHtml", {}).items():
+        parts = path.split("/")
+        actor_id = parts[0]
+        if len(parts) == 2:
+            value = actors.get(actor_id, {}).get(parts[1], "")
+        else:
+            value = actor_items.get(actor_id, {}).get(parts[2], {}).get(parts[3], "")
+        check.require(html_hash(value) == expected_hash, f"{path}: изменена HTML-структура актёра/элемента")
     for label, values in (
         ("актёр", [a.get("name", "") for a in actors.values()]),
         ("встроенный элемент", [i.get("name", "") for i in custom_items]),
@@ -131,7 +148,6 @@ def main() -> int:
     raw = args.translation.read_text(encoding="utf-8").lower()
     for needle in FORBIDDEN:
         check.require(needle not in raw, f"запрещённая строка в переводе: {needle}")
-    check.require(not re.search(r"\b(?:href|src)\s*=", raw), "перевод не должен подменять пути к ресурсам")
 
     if check.errors:
         print("\n".join(f"ОШИБК: {error}" for error in check.errors), file=sys.stderr)

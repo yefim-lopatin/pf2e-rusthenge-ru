@@ -3,7 +3,7 @@
   "type": "module",
   "title": "Pathfinder Adventure: Растхендж — русский перевод",
   "description": "<p>Личный русский перевод официального модуля Pathfinder Adventure: Rusthenge. Модуль содержит только данные локализации Babele и требует установленный официальный модуль.</p>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "authors": [
     {
       "name": "Yefim Lopatin"

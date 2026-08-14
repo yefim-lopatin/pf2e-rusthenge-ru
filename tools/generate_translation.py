@@ -261,7 +261,7 @@ def best_pdf_page(reference_html: str, pdf_pages: list[str]) -> tuple[int, float
     return best_index, best_score
 
 
-def pdf_page_html(page_text: str, page_number: int) -> str:
+def pdf_page_text(page_text: str, page_number: int) -> str:
     ignored = {
         "Глава 1:", "Глава 2:", "Глава 3:", "Ночное", "послание", "Ржавые", "руины",
         "Воскрешение", "Ржавчины", "Инструменты", "приключения",
@@ -278,10 +278,44 @@ def pdf_page_html(page_text: str, page_number: int) -> str:
             joined = joined[:-1] + line
         else:
             joined += (" " if joined else "") + line
-    return (
-        f'<div class="rusthenge-ru-pdf"><p>{html.escape(joined)}</p>'
-        f'<p class="rusthenge-ru-source">Русский PDF, стр. {page_number}</p></div>'
-    )
+    return joined
+
+
+def reflow_preserving_html(source_html: str, translated_text: str) -> str:
+    """Заменяет только текстовые узлы, оставляя каждый HTML-тег и атрибут без изменений."""
+    parts = re.split(r"(<[^>]+>)", source_html)
+    weighted: list[tuple[int, int]] = []
+    for index in range(0, len(parts), 2):
+        source_text = TECH_RE.sub(" ", html.unescape(parts[index]))
+        weight = len(re.findall(r"[A-Za-zА-яЁё]{2,}", source_text))
+        if weight:
+            weighted.append((index, weight))
+    if not weighted:
+        return source_html
+
+    words = translated_text.split()
+    total_weight = sum(weight for _, weight in weighted)
+    consumed_weight = 0
+    cursor = 0
+    for position, (index, weight) in enumerate(weighted):
+        consumed_weight += weight
+        end = len(words) if position == len(weighted) - 1 else round(len(words) * consumed_weight / total_weight)
+        chunk = html.escape(" ".join(words[cursor:end]), quote=False)
+        original_tokens = TECH_RE.findall(parts[index])
+        if original_tokens:
+            chunk = (chunk + " " if chunk else "") + " ".join(original_tokens)
+        parts[index] = chunk
+        cursor = end
+    # Технические токены из нулевых по весу узлов тоже должны остаться на месте.
+    weighted_indexes = {index for index, _ in weighted}
+    for index in range(0, len(parts), 2):
+        if index not in weighted_indexes:
+            parts[index] = " ".join(TECH_RE.findall(parts[index]))
+    return "".join(parts)
+
+
+def html_tags(value: str) -> list[str]:
+    return TAG_RE.findall(value)
 
 
 def pdf_area_section(pdf_pages: list[str], page_index: int, code: str) -> tuple[str, bool, int]:
@@ -411,8 +445,8 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
             content_pdf_index = pdf_index
             if code:
                 pdf_text, area_section_used, content_pdf_index = pdf_area_section(pdf_pages, pdf_index, code)
-            russian_html = pdf_page_html(pdf_text, content_pdf_index + 1)
-            russian_html = sync_technical_tokens(russian_html, source_html)
+            russian_plain = pdf_page_text(pdf_text, content_pdf_index + 1)
+            russian_html = reflow_preserving_html(source_html, russian_plain)
             name = PAGE_NAMES.get(pid) or translated_name(page["name"])
             if name == page["name"]:
                 name = clean_ru(ref_page["name"])
@@ -421,8 +455,9 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
                 "journalId": journal["_id"],
                 "sourceName": page["name"],
                 "translatedName": name,
-                "technicalTokens": technical_cores(source_html),
-                "technicalHash": hashlib.sha256("\n".join(technical_cores(source_html)).encode()).hexdigest(),
+                "technicalTokens": TECH_RE.findall(source_html),
+                "technicalHash": hashlib.sha256("\n".join(TECH_RE.findall(source_html)).encode()).hexdigest(),
+                "htmlHash": hashlib.sha256("\n".join(html_tags(source_html)).encode()).hexdigest(),
                 "pdfPage": content_pdf_index + 1,
                 "alignmentPage": pdf_index + 1,
                 "alignmentScore": round(alignment_score, 4),
@@ -438,6 +473,7 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
 
     actors: dict[str, Any] = {}
     actor_technical: dict[str, list[str]] = {}
+    actor_html: dict[str, str] = {}
     custom_items = 0
     custom_items_translated = 0
     for actor in source.get("actors", []):
@@ -448,15 +484,21 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
             public = ref_actor.get("system", {}).get("details", {}).get("publicNotes", "")
             private = ref_actor.get("system", {}).get("details", {}).get("privateNotes", "")
             if public:
-                entry["description"] = sync_technical_tokens(clean_ru(public), actor.get("system", {}).get("details", {}).get("publicNotes", ""))
-                actor_technical[f"{actor['_id']}/description"] = technical_cores(
-                    actor.get("system", {}).get("details", {}).get("publicNotes", "")
-                )
+                source_public = actor.get("system", {}).get("details", {}).get("publicNotes", "")
+                public_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(public))))
+                entry["description"] = reflow_preserving_html(source_public, public_plain)
+                actor_technical[f"{actor['_id']}/description"] = TECH_RE.findall(source_public)
+                actor_html[f"{actor['_id']}/description"] = hashlib.sha256(
+                    "\n".join(html_tags(source_public)).encode()
+                ).hexdigest()
             if private:
-                entry["descriptionGM"] = sync_technical_tokens(clean_ru(private), actor.get("system", {}).get("details", {}).get("privateNotes", ""))
-                actor_technical[f"{actor['_id']}/descriptionGM"] = technical_cores(
-                    actor.get("system", {}).get("details", {}).get("privateNotes", "")
-                )
+                source_private = actor.get("system", {}).get("details", {}).get("privateNotes", "")
+                private_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(private))))
+                entry["descriptionGM"] = reflow_preserving_html(source_private, private_plain)
+                actor_technical[f"{actor['_id']}/descriptionGM"] = TECH_RE.findall(source_private)
+                actor_html[f"{actor['_id']}/descriptionGM"] = hashlib.sha256(
+                    "\n".join(html_tags(source_private)).encode()
+                ).hexdigest()
 
         item_entries = []
         for item in actor.get("items", []):
@@ -472,15 +514,19 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
                 source_desc = item.get("system", {}).get("description", {})
                 ref_desc = ref_item.get("system", {}).get("description", {})
                 if ref_desc.get("value"):
-                    item_entry["description"] = sync_technical_tokens(clean_ru(ref_desc["value"]), source_desc.get("value", ""))
-                    actor_technical[f"{actor['_id']}/items/{item['_id']}/description"] = technical_cores(
-                        source_desc.get("value", "")
-                    )
+                    source_value = source_desc.get("value", "")
+                    ref_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(ref_desc["value"]))))
+                    item_entry["description"] = reflow_preserving_html(source_value, ref_plain)
+                    key = f"{actor['_id']}/items/{item['_id']}/description"
+                    actor_technical[key] = TECH_RE.findall(source_value)
+                    actor_html[key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
                 if ref_desc.get("gm"):
-                    item_entry["gm"] = sync_technical_tokens(clean_ru(ref_desc["gm"]), source_desc.get("gm", ""))
-                    actor_technical[f"{actor['_id']}/items/{item['_id']}/gm"] = technical_cores(
-                        source_desc.get("gm", "")
-                    )
+                    source_gm = source_desc.get("gm", "")
+                    ref_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(ref_desc["gm"]))))
+                    item_entry["gm"] = reflow_preserving_html(source_gm, ref_plain)
+                    key = f"{actor['_id']}/items/{item['_id']}/gm"
+                    actor_technical[key] = TECH_RE.findall(source_gm)
+                    actor_html[key] = hashlib.sha256("\n".join(html_tags(source_gm)).encode()).hexdigest()
                 custom_items_translated += 1
             item_entries.append(item_entry)
         if item_entries:
@@ -532,6 +578,7 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
         "servicePageIds": sorted(SERVICE_PAGE_IDS),
         "pages": page_index,
         "actorTechnical": actor_technical,
+        "actorHtml": actor_html,
     }
     return translation, index
 
