@@ -76,6 +76,15 @@ def main() -> int:
         return 1
 
     check.require(manifest.get("id") == "pf2e-rusthenge-ru", "неверный id модуля")
+    check.require(
+        manifest.get("manifest") == "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/latest/download/module.json",
+        "неверная публичная manifest-ссылка",
+    )
+    expected_download = (
+        "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/download/"
+        f"v{manifest.get('version')}/pf2e-rusthenge-ru.zip"
+    )
+    check.require(manifest.get("download") == expected_download, "download-ссылка не совпадает с версией")
     required = {r.get("id") for r in manifest.get("relationships", {}).get("requires", [])}
     check.require(required == {"pf2e-rusthenge", "babele", "pf2e-ru", "ru-ru"}, "изменён набор обязательных модулей")
     check.require(index.get("source", {}).get("version") == "14.1.0", "индекс не от Rusthenge 14.1.0")

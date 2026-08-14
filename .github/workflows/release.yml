@@ -21,7 +21,7 @@ jobs:
       - name: Build module archive
         run: python3 tools/build_release.py --tag "${GITHUB_REF_NAME}"
 
-      - name: Create private GitHub release
+      - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
         run: >-
