@@ -30,11 +30,14 @@
       "sourceName": "Adventure Summary",
       "translatedName": "Краткое содержание",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "cd5d9bb4317fcffde346f9cb9f102e2197c8725eaf842434a1592c5bcaca51e2",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 death of xar-azmak.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 5,
       "alignmentPage": 5,
-      "alignmentScore": 0.5823,
+      "alignmentScore": 0.6512,
       "areaSection": false,
       "areaCode": null
     },
@@ -48,11 +51,19 @@
         "@UUID[JournalEntry.pf2sa06404ressur]{Resurrection of Rust}",
         "@UUID[JournalEntry.pf2sa06405advent]{Adventure Toolbox}"
       ],
-      "technicalHash": "b5ebdb625dfb3f713018798f799404e136f987e644eb93065c2d0ca054232bb9",
-      "htmlHash": "b0d27e0e4c4e54afe76b9b203b06e0dc2d896f8ac46f33f2fa106142c645162a",
-      "pdfPage": 7,
-      "alignmentPage": 7,
-      "alignmentScore": 0.4112,
+      "technicalCoreHash": "e2877d7074759ba95cdf37566289ac67fcc695b74e7dabb453785e5198e85c5f",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo09564 cover final.webp",
+        "modules/pf2e-rusthenge/assets/art/PF2Logo.webp",
+        "modules/pf2e-rusthenge/assets/art/Rusthenge Logo.webp",
+        "modules/pf2e-rusthenge/assets/art/PF2Logo.webp"
+      ],
+      "sourceLinkPaths": [
+        "https://metamorphic-digital.com/"
+      ],
+      "pdfPage": 21,
+      "alignmentPage": 21,
+      "alignmentScore": 0.2174,
       "areaSection": false,
       "areaCode": null
     },
@@ -63,11 +74,20 @@
       "technicalTokens": [
         "@UUID[Macro.OgpGrBEI2nchZQUC]{Landing Picker}"
       ],
-      "technicalHash": "d64ffb99f22ad6b6ac449f5c50306aa2fff86c3b3710a0d8537b66438ac9c561",
-      "htmlHash": "2ea5c60fd3138ba7042b816057b57bff22fb62c05fec87cabea3e0350e0b3a96",
-      "pdfPage": 5,
-      "alignmentPage": 5,
-      "alignmentScore": 0.5823,
+      "technicalCoreHash": "03d5746dc1070844b72cd14aa3bc2eb8a052032e4da4521f0524506f686c96f5",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/mini/Elder Johedia-MINI.webp",
+        "modules/pf2e-rusthenge/assets/mini/Azmakian Animated Armor-MINI.webp",
+        "modules/pf2e-rusthenge/assets/token/CombinedToken.webp"
+      ],
+      "sourceLinkPaths": [
+        "https://support.metamorphic-digital.com/",
+        "modules/pf2e-rusthenge/assets/token/TokenBorder.webp",
+        "modules/pf2e-rusthenge/assets/token/TokenBackground.webp"
+      ],
+      "pdfPage": 33,
+      "alignmentPage": 33,
+      "alignmentScore": 0.0909,
       "areaSection": false,
       "areaCode": null
     },
@@ -80,8 +100,9 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@Check[survival|dc:15|traits:secret,concentrate,exploration,move,skill,action:track|name:Track]"
       ],
-      "technicalHash": "2480ea09d48bf0049f32b0c30fd79c5d4ba80184511ccef4c38449407bbf5cd9",
-      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
+      "technicalCoreHash": "c62e12918fc1deee2f9a0849ec092e2e7dcb5c692fe53291fde373f265854eb7",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 29,
       "alignmentPage": 29,
       "alignmentScore": 0.7556,
@@ -97,11 +118,12 @@
         "@UUID[Actor.Q3ciH3AHZlb1Dc3E]{Gorumite Acolytes (3)}",
         "@UUID[Actor.MIYeIfCPevjN1DeE]{Secure Storage}"
       ],
-      "technicalHash": "3c6d99ba54db5849304e440a876fa744a9349d8398ea28132886f210bd561d76",
-      "htmlHash": "8f33f43c79c32b527517837635f4f8e6abee255e422920e261de0fa5e4863acb",
+      "technicalCoreHash": "b2285399aa6fc7891f2e5309dd8347d14ab5749b04ba6ab3a011142250c5f6e1",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 29,
       "alignmentPage": 29,
-      "alignmentScore": 0.6713,
+      "alignmentScore": 0.6729,
       "areaSection": true,
       "areaCode": "C21"
     },
@@ -120,11 +142,14 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
         "@UUID[Actor.5uoigpUArRCSWArQ]{Azomi}"
       ],
-      "technicalHash": "46a8a8328c3978c6d395f4f1c61a22baa53460ab52d980f1734edc874c8346c1",
-      "htmlHash": "cc743ca514e59a6fa8991064fca2e864e630ca2255c5da6f5fdc98bab109f55d",
+      "technicalCoreHash": "41652f30b2845461fb2eb79836fd00a6a5f9fbe3f2421a1b58f98f525cda9dd3",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Esipil%20Sahkil.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 29,
       "alignmentPage": 29,
-      "alignmentScore": 0.5886,
+      "alignmentScore": 0.5909,
       "areaSection": true,
       "areaCode": "C20"
     },
@@ -138,11 +163,14 @@
         "@UUID[Actor.TOxjJfmAB5MdXlCQ]{Captain Perrios’s Head}",
         "@UUID[Actor.5q8BrmM40NdrnwkF]{Janis' Reward}"
       ],
-      "technicalHash": "b749bb20d068f893eb6f8a1e27b5bfa6de4141c8640dfa3e2acd6ca77b884c0f",
-      "htmlHash": "49c751c6ca09b476c2b535a4faf37decb9f3f5f5be5a4ad5d47c03bbb5c21f45",
+      "technicalCoreHash": "cc10da8fba49939298735dbb2052e8601cc46066b4f8f949f1924c267148fd12",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Severed%20Head.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 28,
       "alignmentPage": 28,
-      "alignmentScore": 0.5964,
+      "alignmentScore": 0.5976,
       "areaSection": true,
       "areaCode": "C19"
     },
@@ -154,8 +182,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02outerguardst00]{Outer Guard Stations}",
         "@UUID[Actor.ynwsdhrMNPRQ9i2b]{Arrows}"
       ],
-      "technicalHash": "4a4b62a6b43193086d65e17f094d5d5277341c3bdf521cfaf7e44f86096c5d1f",
-      "htmlHash": "b7c89a6a2001b3a234df3204fcdde81b44dcef1748b43f76f044685c5470190a",
+      "technicalCoreHash": "f2d35e021c11a1ae9781d7e18489588aff35ad1047d4c0da5907b2065b27287d",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 28,
       "alignmentPage": 28,
       "alignmentScore": 0.6389,
@@ -170,8 +199,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02seniorbarrac00]{C15}",
         "@UUID[Actor.jIu5ZSe8z6kiTNW4]{Weapon Racks}"
       ],
-      "technicalHash": "f1a32d8b5b3841ab0ba5e084e4189467bd13d6957ee1c4b623f980f7506ebe36",
-      "htmlHash": "50347e680fec278b8c93ede043db92ff8079cd07afcb10c935a5e38f2f51fe12",
+      "technicalCoreHash": "fd260ae8d7dac4be0749b9cc84bdfc1f69c9eaad8c61e7d874914e2105ca896a",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 28,
       "alignmentPage": 28,
       "alignmentScore": 0.6709,
@@ -189,11 +219,15 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
         "@UUID[Actor.uS508NYwcJmolEC1]{Junior Barracks}"
       ],
-      "technicalHash": "4aac281109426f80cf41009c5dd8caa509bb09e36f1e901cd103e9175bc6c386",
-      "htmlHash": "bdc7de05fda1857a67022d8aa8dea8269f975c2b717b997e96199ed0e46fb7bc",
+      "technicalCoreHash": "2d50a7a60db26a010bacbce99b6e98b1cd52982670119e1cfb49243c9aa407c0",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20azomi.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 azomi.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 27,
       "alignmentPage": 27,
-      "alignmentScore": 0.7647,
+      "alignmentScore": 0.7786,
       "areaSection": true,
       "areaCode": "C16"
     },
@@ -205,11 +239,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingwith00]{Speaking with Trygve}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}"
       ],
-      "technicalHash": "4ec62783675166644250aa19bbce0f11e7b08e00db565cdf07d4e493dbcb6f88",
-      "htmlHash": "14e63ac1413dfd76c82725de124414cf95c146b7112dcce5508a667681a5d39d",
+      "technicalCoreHash": "f4d6a4be8d98776e93c0fab6d9329a519eeb9e19652bf3e204a6216bdfc3aef5",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 27,
       "alignmentPage": 27,
-      "alignmentScore": 0.3944,
+      "alignmentScore": 0.6882,
       "areaSection": false,
       "areaCode": null
     },
@@ -224,11 +259,15 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}",
         "@UUID[Actor.vADTRwg50q0Dzhbu]{Footlockers}"
       ],
-      "technicalHash": "a014c767460a43678049071f5ed702ec1cd40fbe274e07cc7e8a95c455613288",
-      "htmlHash": "e5b90eb95f1083ec60778b024cf87570fbcb0c8d33f35dfa25750b9f88777ac5",
+      "technicalCoreHash": "8a48f39f30f62daa3da507e4236bed893225e30d829a0b4f859a49d6fdb7dc51",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20vanda.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 vanda.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 26,
-      "alignmentPage": 27,
-      "alignmentScore": 0.3944,
+      "alignmentPage": 26,
+      "alignmentScore": 0.5973,
       "areaSection": true,
       "areaCode": "C15"
     },
@@ -241,8 +280,9 @@
         "@UUID[Actor.6ZXHXgTdZu16aHRH]{Sand}",
         "@Check[perception|dc:14|traits:concentrate,exploration,secret,action:search|name:Search]"
       ],
-      "technicalHash": "5ba2b5387f529d8625e3b79a8ca5d5d47f4484655dc5c6aed70e0b23d0474455",
-      "htmlHash": "05703fcbc64da7a59306f394437e0f962ba5597521abe31b38f91e535d10e57f",
+      "technicalCoreHash": "d10bd07763b010502af8a832943baa62ca7164bbde9c5a7dd6a905a7a269856a",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.6552,
@@ -256,8 +296,9 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stairwell00000]{C10}"
       ],
-      "technicalHash": "5f777c81423eb1ab30ddd14a26d59e8ba8b695c7c33fb10543913e8f74220b06",
-      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
+      "technicalCoreHash": "f6945634f7bda3fc1b55234f27f9c8444add51009ba18f9479467b6e67829e3c",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.6087,
@@ -269,8 +310,9 @@
       "sourceName": "Storage",
       "translatedName": "Склад",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.8824,
@@ -285,8 +327,9 @@
         "@UUID[Actor.t1fmdlwEuYN3DeZe]{Mannequin}",
         "@UUID[Actor.WS5wRNaginlvJO2B]{Rusty Mannequin}"
       ],
-      "technicalHash": "0a60385be91bd814401f9cdf91fddcfd4d085a7447b7a09b6d0f56c134091f3c",
-      "htmlHash": "9504d3aa2b6fd6341c31cb95282b6b2b5be4fdb0f0f5dd5fe2eb7b85751e4856",
+      "technicalCoreHash": "3658315f73de918b35ce1e0781283321f904819a2c486a8621114c96c84750b6",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
       "alignmentScore": 0.7015,
@@ -300,9 +343,10 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02upstairshall00]{C13}"
       ],
-      "technicalHash": "c5dc5d8a5434bb5c17b00e25090bbce554256f7160a6baa28ae87bc028c1b12a",
-      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
-      "pdfPage": 25,
+      "technicalCoreHash": "206e08c2b71adebadfba66b091fcb5f17f26cccd9e61130854ce244ef7db22bd",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 24,
       "alignmentPage": 24,
       "alignmentScore": 1.0,
       "areaSection": true,
@@ -315,8 +359,9 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
       ],
-      "technicalHash": "e649456aedb4983df03a235d00eb603cf0d084b25143115a37b23be58ab1652f",
-      "htmlHash": "bc5cfbef4f45287eec51c2cb86c8783abe201f0f4b23f42e88227a00f6bc597a",
+      "technicalCoreHash": "0b841cbc777828b355cbc79f775f778b345343179970e115c8750998f1cc3086",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 25,
       "alignmentPage": 25,
       "alignmentScore": 0.4471,
@@ -332,8 +377,9 @@
         "@UUID[Actor.ZP8VIsUB0EpmRUqs]{West Guard Station}",
         "@UUID[Actor.CNts6wCHzwUhy8SK]{East Guard Station}"
       ],
-      "technicalHash": "d125e5f90e905fe4f963f5367a0bd261ccc8bf3b65df845c398610085f043833",
-      "htmlHash": "52de3a3fbe473cfcfb5f7d1f46300c490f27936810e0e42980c553575f96fbe5",
+      "technicalCoreHash": "0a0e9c07f3b983007fc515a4036d2a6fdfe7adb74ba22c28043ac42779b06cf1",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 25,
       "alignmentPage": 25,
       "alignmentScore": 0.7143,
@@ -349,8 +395,9 @@
         "@UUID[Actor.om6TSYlSODDuKqQI]{Barrel}",
         "@UUID[Actor.ZHHiYsgBC2ZU8Su9]{Beacon Shot Barrel}"
       ],
-      "technicalHash": "161dea7279a72022ac25145fd48e94af041a5bfeafb53c3215224093d6d7c323",
-      "htmlHash": "7453ef638cad3e47c2e726ee0c16a615173c363d3ef818dbb175ca3fa29fe1b9",
+      "technicalCoreHash": "c8b9de41fd25d4588e6493512d0969f7a91c9e8a28b4226a105ee102d9d8ef66",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 25,
       "alignmentPage": 25,
       "alignmentScore": 0.8974,
@@ -360,17 +407,20 @@
     "02speakingwith00": {
       "journalId": "pf2sa06402messag",
       "sourceName": "Speaking with Trygve",
-      "translatedName": "В5. Клиника",
+      "translatedName": "В6. Кузница / Низко 1",
       "technicalTokens": [
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@Check[occultism|dc:16|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}"
       ],
-      "technicalHash": "31ea657e46632ab356c099192b7d9ec5afca5397279ff393bbced84980466ea6",
-      "htmlHash": "964c3963ff41304b7b59ddeab8fd55efdf525fd010a36bc705cb12f6b5ba7990",
-      "pdfPage": 24,
-      "alignmentPage": 24,
-      "alignmentScore": 0.6765,
+      "technicalCoreHash": "50eea30a644be4b0c5342459228a6b27408dd8e865fa8464eeab108eec8cd417",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 trygve.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 25,
+      "alignmentPage": 25,
+      "alignmentScore": 0.6723,
       "areaSection": false,
       "areaCode": null
     },
@@ -386,11 +436,14 @@
         "@Check[religion|dc:15]",
         "@UUID[Actor.23tLrEUVgLELGQ96]{Wall}"
       ],
-      "technicalHash": "f57fdd1fba5d5a2048123a81a05958b99e79fb26e0faddb5e74a83931b52a860",
-      "htmlHash": "0f05625d7fa6c1f20e166b1719287a57da93bf963278474d9f951f2bfab06b07",
+      "technicalCoreHash": "6e4f9edd443f38609baacb840ee178cf61e519338a0f74320531ee83e0ad2600",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20trygve.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 24,
-      "alignmentPage": 25,
-      "alignmentScore": 0.4218,
+      "alignmentPage": 24,
+      "alignmentScore": 0.6625,
       "areaSection": true,
       "areaCode": "C6"
     },
@@ -402,11 +455,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02basement000000]{C20}",
         "@UUID[Actor.lcY8NVur4ZFjfw7e]{Shelves}"
       ],
-      "technicalHash": "3e02c5bb28e93c5b0455049789c4255b2b926a4cbe5df4d084662dce6e282876",
-      "htmlHash": "8763f51cf2074d6ffb54126e778823849fe4aace955a7284b74dccc845a5eb3f",
+      "technicalCoreHash": "be602675bcc343c2dfd754118ae108286029496b1509ab882d280e4a1c061537",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 24,
       "alignmentPage": 24,
-      "alignmentScore": 0.6765,
+      "alignmentScore": 0.6552,
       "areaSection": true,
       "areaCode": "C5"
     },
@@ -419,11 +473,14 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02mainentrance00]{C3}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]{C1}"
       ],
-      "technicalHash": "c6a5f599e220c22a03cf6ae6040c22230026a0df4fec7e0478e8e2545cce3793",
-      "htmlHash": "4e8ecf12e4faa2c60503d06ce914d6b1f62647371f6bf9ba08e1e15f2a60786f",
+      "technicalCoreHash": "8605102773f3b86688432c373c2fcfb4f7f4505356653bd83968ec4c8d5156ee",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Fallen%20Acolyte.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 24,
       "alignmentPage": 24,
-      "alignmentScore": 0.6569,
+      "alignmentScore": 0.66,
       "areaSection": true,
       "areaCode": "C4"
     },
@@ -434,11 +491,14 @@
       "technicalTokens": [
         "@UUID[Actor.9CqQbPyKUk3G39o2]{Rusty Floor Spikes}"
       ],
-      "technicalHash": "6e56b64949c934a49dc5273b32aaec5b8f7428b837fd734f98c64b09508e2a54",
-      "htmlHash": "e809183d81fdd12c7fd094f48d4365eb965d274f748cb8a6f9590375db7c5ff5",
+      "technicalCoreHash": "70c64ab5cc0cda7b5bc8b51b412bd934dbfd78b8390bdf9d2c71795a62f38fce",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 23,
       "alignmentPage": 23,
-      "alignmentScore": 0.7154,
+      "alignmentScore": 0.693,
       "areaSection": true,
       "areaCode": "C3"
     },
@@ -451,11 +511,12 @@
         "@Check[medicine|dc:15]",
         "@UUID[Actor.lCNsglj9xoQfBl3p]{Ida}"
       ],
-      "technicalHash": "bfde48344711fdc2cde7f843489097d0f5d8496c4af4ad2e21fe9000082eb71d",
-      "htmlHash": "e33ef75c1e06d3bbcaae8cfb35ac627c4c3e7fb3ea8c188db98099ba80316849",
+      "technicalCoreHash": "660ec8cbddef0f0d177e0382f0e1b52407b523a3c06908021956ce22161e2862",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 23,
       "alignmentPage": 23,
-      "alignmentScore": 0.6458,
+      "alignmentScore": 0.6571,
       "areaSection": true,
       "areaCode": "C2"
     },
@@ -469,8 +530,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]{C4}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}"
       ],
-      "technicalHash": "222a06a615c96783e8c9df8ec67cae795b2101bb77f89e34d2949e7455320a6b",
-      "htmlHash": "8b6172df988d046aa5fe2fa31388d52bfe98d2eb71321c0de61e47e89e38e827",
+      "technicalCoreHash": "582a187c2237fc40b90f009a11117649dad2c3e1aad7c9973f856ceb5c615c42",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 23,
       "alignmentPage": 23,
       "alignmentScore": 0.75,
@@ -497,8 +559,9 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]{Artisan's Toolkit}",
         "@Check[crafting|dc:15]"
       ],
-      "technicalHash": "26a6b261ae3fb4c253b8165b5c25e7515677f2cb5e19ce6120d001eae48b8b13",
-      "htmlHash": "f957f4aa733a595971049b99dbafdc64ed9921aa8367d14b781e4cbbd20d6b6f",
+      "technicalCoreHash": "ce9bb7d08a122d752743ca163290366640999be70136a7ec4db92099fe130c53",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 22,
       "alignmentPage": 22,
       "alignmentScore": 0.4985,
@@ -512,11 +575,12 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.spells-srd.Item.ynm8JIU3sc3qUMpa]"
       ],
-      "technicalHash": "bf456ef27ede08d44bad24c05f6a3d91692bcf56b816316f979718e6261576fc",
-      "htmlHash": "dd4e05e59fc5f2392b5965a40cd8b2c4377d6ec100f63455b7c0e85ae2b0eb01",
+      "technicalCoreHash": "bf456ef27ede08d44bad24c05f6a3d91692bcf56b816316f979718e6261576fc",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 21,
       "alignmentPage": 21,
-      "alignmentScore": 0.459,
+      "alignmentScore": 0.5461,
       "areaSection": false,
       "areaCode": null
     },
@@ -533,11 +597,12 @@
         "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}",
         "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
       ],
-      "technicalHash": "12a4b45593b946a15fc96f0b65382cdc68d1458df74280e97347f1812725839a",
-      "htmlHash": "a4b222fb680b62bf63952aab2cfd3f6f373862209f5a9c83fadb121bef580c15",
+      "technicalCoreHash": "888fa338506cee81ada70a42f111e980869e6a929d15d4d81e602c638de9aea4",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 21,
       "alignmentPage": 21,
-      "alignmentScore": 0.459,
+      "alignmentScore": 0.7,
       "areaSection": false,
       "areaCode": null
     },
@@ -552,11 +617,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]{Rust Creep}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}"
       ],
-      "technicalHash": "26bc9b0fc53f642f9346bbb1caac07cf5ce1612d908eaf16bb37e5e200dc686d",
-      "htmlHash": "ffa50904d3291120479f33b68c1088da0e8fe1ba16d70f84720b750922adcc7d",
-      "pdfPage": 21,
-      "alignmentPage": 21,
-      "alignmentScore": 0.459,
+      "technicalCoreHash": "b7dd725bceb76bc137990a863241d83204b32d5746fc68f3bb7889ebd77fd45c",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 20,
+      "alignmentPage": 20,
+      "alignmentScore": 0.4481,
       "areaSection": false,
       "areaCode": null
     },
@@ -571,8 +637,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]{C1}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "380a8b72022982bf40c3eca0a9c2ff68d19490bfcdc48a90f2c2575e59ef5fa2",
-      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
+      "technicalCoreHash": "e023fb137f289fc6e2e177046964706b98769e07f50dca5410481712abcbeb35",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
       "alignmentScore": 0.775,
@@ -586,8 +653,9 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06403therus]{Chapter 2}"
       ],
-      "technicalHash": "dda574cdc6ab1c48757ce5160a3c4f2e1721c15f1f5124b295a7c5a8878ba5f0",
-      "htmlHash": "0d6cb8ab7e453311b1ad854314ad24f869d655621bbe030c3f39342badbb5d55",
+      "technicalCoreHash": "b34c85ca1e2ff39a013aef6d1235e442ac01a8eb905f24d0ce0e35b5b6ac5de8",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
       "alignmentScore": 0.5918,
@@ -601,8 +669,9 @@
       "technicalTokens": [
         "@UUID[Actor.84LNL3ZM41yvYaY6]{Fishing Hut}"
       ],
-      "technicalHash": "eedea0311d73a8905ecfec83122a46ab4c13c7482e56bd65ef6cc01a4896bb53",
-      "htmlHash": "5434210d635d32982447b5a6f5ce91dd5e91b1acdee195c968e8a805e3eb7a56",
+      "technicalCoreHash": "3a8b0736281913fdaa5bbfed1bbcd96f4bb607f40b8700104a59d0f43ef12c72",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
       "alignmentScore": 0.7742,
@@ -623,11 +692,14 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{Thunderhead Isle}",
         "@UUID[Actor.slPGAdJR86h6DnaL]{Derrol's Gift}"
       ],
-      "technicalHash": "34d60c3b8e0726e6002e0cbd9aa5cb58344900506c470b69f1a4a1624f80d83d",
-      "htmlHash": "a779ecddb448e5e340ec64972230ef35c5e019921b14aac16e8b6a35dbfb7489",
+      "technicalCoreHash": "102ab85b7e6ca22e8dbe2245898f0962187c4ba4ef2e514e0c3ba3a0640366fe",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 derrol.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 19,
       "alignmentPage": 19,
-      "alignmentScore": 0.4855,
+      "alignmentScore": 0.4869,
       "areaSection": true,
       "areaCode": "B5"
     },
@@ -639,8 +711,9 @@
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Here}"
       ],
-      "technicalHash": "673391c8f887f533f021da83fe5fc67fe8bf7073d9e695997bc7e9e963bc8c9d",
-      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
+      "technicalCoreHash": "2735757d06f7c0096f0cea201964cbb993147cea5b85e81e364b4daad5d14ea8",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 19,
       "alignmentPage": 19,
       "alignmentScore": 0.8571,
@@ -652,11 +725,12 @@
       "sourceName": "Drydock",
       "translatedName": "Сухой док",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "4b426d63c824664f5ac232ff21a03f4e68f589f48ed7cf378a0cf78d1bd6779a",
-      "pdfPage": 18,
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 19,
       "alignmentPage": 19,
-      "alignmentScore": 0.5094,
+      "alignmentScore": 0.5306,
       "areaSection": true,
       "areaCode": "B3"
     },
@@ -665,11 +739,12 @@
       "sourceName": "Final Reward",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "62933bae751c6423db02a1df354b97ecd7d8a7d53a018037fb2faf9748c6c01d",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 18,
       "alignmentPage": 18,
-      "alignmentScore": 0.2827,
+      "alignmentScore": 0.5714,
       "areaSection": false,
       "areaCode": null
     },
@@ -688,11 +763,14 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
         "@Check[intimidation|dc:22|traits:auditory,concentrate,emotion,exploration,linguistic,mental,skill,action:coerce|name:Coerce]"
       ],
-      "technicalHash": "19a25bdefcf4b8c3cf9c2d711d484bd3b3a68234967146b9173225ba719ba6d5",
-      "htmlHash": "705886bc91b68db70d635f13d773ae213f15ae644251fc70bec61d88d6b25d30",
+      "technicalCoreHash": "f601a42deefd10c3d6a6c71cf01f918912ec86f98c806c3f664b27fafe76c04a",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 janis.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 18,
       "alignmentPage": 18,
-      "alignmentScore": 0.2827,
+      "alignmentScore": 0.5343,
       "areaSection": false,
       "areaCode": null
     },
@@ -705,11 +783,14 @@
         "@UUID[Actor.qcoQw8vZOpYX5V0V]{Deck Hands (6)}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "d9e59417d8989c46205244542a5e8a44d5276be6461e534405f3284b77b7b5b1",
-      "htmlHash": "f4f00f1c60581db1d4fbff07f44d62408da2651722fa4cf54d3be8b32593e1f0",
-      "pdfPage": 18,
-      "alignmentPage": 18,
-      "alignmentScore": 0.2827,
+      "technicalCoreHash": "9253755f4ce3a756404720341ab58ebbce91ce398f08be47eedc294a1667b750",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/mini/PZO9564%20JANIS-MINI.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 17,
+      "alignmentPage": 17,
+      "alignmentScore": 0.4878,
       "areaSection": false,
       "areaCode": null
     },
@@ -725,11 +806,12 @@
         "@UUID[Actor.rWV6SIL5lXsJufgs]{Swordfish’s Log}",
         "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Handout #1}"
       ],
-      "technicalHash": "1d1ff7a00596e1149581a35cfc7b0548bdc1225dc7b40521bafbd4ac127ec892",
-      "htmlHash": "afac0047d6af3ff6871a5324a48f7edcbcd08b52e267fa522feb07ae752843c8",
-      "pdfPage": 18,
-      "alignmentPage": 18,
-      "alignmentScore": 0.2827,
+      "technicalCoreHash": "e39c2a69533d0140063176a4eab41d4e8242f6311f6ebb1b54a6e1cf312fa213",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 17,
+      "alignmentPage": 17,
+      "alignmentScore": 0.5797,
       "areaSection": false,
       "areaCode": null
     },
@@ -749,11 +831,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingtoth00]{Speaking to the Crew}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02gettinginafi00]{Getting in a Fight}"
       ],
-      "technicalHash": "f068ba269172045ea3deb912d116df8b5a46ef9d39ae614dec4a4050af737a5b",
-      "htmlHash": "06854dd3d53263a9f9147394b408e96b6b0f18f115c8542e0f3b01c9de195ee8",
-      "pdfPage": 18,
-      "alignmentPage": 18,
-      "alignmentScore": 0.2827,
+      "technicalCoreHash": "56e4673c19eb5accebeb99abe8abc3ed7d4bbc9e1dbcd81cec1e34790cd5cfdb",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 16,
+      "alignmentPage": 16,
+      "alignmentScore": 0.6047,
       "areaSection": false,
       "areaCode": null
     },
@@ -762,11 +845,12 @@
       "sourceName": "The Swordfish",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "2950e207255180b5448ec793d62ce7be6582d13177b1e497b5c44adf8ca91e97",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 16,
-      "alignmentPage": 18,
-      "alignmentScore": 0.2827,
+      "alignmentPage": 16,
+      "alignmentScore": 0.7091,
       "areaSection": true,
       "areaCode": "B2"
     },
@@ -780,11 +864,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]{Entering Stonehome}"
       ],
-      "technicalHash": "e1c94754d41a29e463cf172a40f1ba1f2cc0ab84fcd3925f217c113108636459",
-      "htmlHash": "ad5301de93866ea09ef1a70ce4ed8716d4a2d3bdb6b446cad9664a730244a77d",
+      "technicalCoreHash": "de317bc1f4942f8211382817e1d54270d5246a5f516646d8614f108d340081a3",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 16,
       "alignmentPage": 16,
-      "alignmentScore": 0.4092,
+      "alignmentScore": 0.7586,
       "areaSection": false,
       "areaCode": null
     },
@@ -798,11 +883,14 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.SrjykpB3nEAQmgj5]{Elsie's Excellent Bottled Vim}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "a606346000a4e300308a1f9d70b2c12c9bcd20ffd96b5dbe6d63ec776d7af9e8",
-      "htmlHash": "9b16c6ac0ecb4c84121155af64d0eae2e3c9334da52e3650a49e9dbc264b35e6",
+      "technicalCoreHash": "34f09497da97aa443875699d7c1ed050f7bc598053e7c16be0295fabeed4406a",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564%20elsie.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 15,
-      "alignmentPage": 16,
-      "alignmentScore": 0.4092,
+      "alignmentPage": 15,
+      "alignmentScore": 0.4509,
       "areaSection": true,
       "areaCode": "B1"
     },
@@ -820,8 +908,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]{Fisher's Point}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
       ],
-      "technicalHash": "d37676acd7aef9973f7a5f04920bc1ba2207b788a2e7d479d8d0c5f455557bd4",
-      "htmlHash": "1ad148bc186ef090ff0c5659cfa8e1e3007191a803c6cada7f542ef9a87e3708",
+      "technicalCoreHash": "06007cd63e89e5c003c38ba485b4a0b439c8ee9e5b6c7226d222b0b4a1689b09",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 15,
       "alignmentPage": 15,
       "alignmentScore": 0.5023,
@@ -839,8 +928,9 @@
         "@Check[perception|dc:20|traits:concentrate,secret,action:sense-motive|name:Sense Motive]",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
-      "technicalHash": "72ed40e64b72c650c03736ebe87c0249558106942420ac2855a3b0c179120586",
-      "htmlHash": "cf01d302275f82fca40ad6f94f6475e574e835d2bcdc007508858942ae638809",
+      "technicalCoreHash": "75ce4af42ca1405d252b5380097edc550718ca9a987aa19307ff2cf70a60479b",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 13,
       "alignmentPage": 13,
       "alignmentScore": 0.4106,
@@ -865,11 +955,14 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02drydock0000000]{B3}",
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}"
       ],
-      "technicalHash": "75adcea3b806e99c0e5ecd681b2b75b6ca9ba1d198d1198af57a9f08f71bd018",
-      "htmlHash": "c30b7abf71cbcd6d3e99f087c6fc72427f8b779fb799332af74ce0c0d8a29e7b",
+      "technicalCoreHash": "9bc99d903c054e1a0b88a43eb68ad48a181f3e6fa5477dc57031970b2837d9b6",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 13,
       "alignmentPage": 13,
-      "alignmentScore": 0.6235,
+      "alignmentScore": 0.6207,
       "areaSection": false,
       "areaCode": null
     },
@@ -888,11 +981,14 @@
         "@UUID[Actor.ShWcSAzHjKnQ8MJX]{Giant Centipedes (2)}",
         "@UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}"
       ],
-      "technicalHash": "5efe9b571a89cece1b555edb1a6db2fe49abb83022d9fcdf80f4599431d29974",
-      "htmlHash": "8b7602dc4b322fae91ea408d3faaee5b78d908c473f5a6e358987278c823fb0d",
+      "technicalCoreHash": "fb56d6a66cfbfa2914b9e7b0b1ca78c5d9c1a876800bb26557b2c0b5cb91162d",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Sydri.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 12,
       "alignmentPage": 12,
-      "alignmentScore": 0.6572,
+      "alignmentScore": 0.6667,
       "areaSection": true,
       "areaCode": "A3"
     },
@@ -913,8 +1009,9 @@
         "@UUID[Actor.tO46DP0MnaEzL54l]{Wooden Post}",
         "@Check[crafting|dc:15|traits:concentrate,exploration,secret,skill,action:identify-alchemy|name:Identify Alchemy]"
       ],
-      "technicalHash": "dae895628303a1ea893e7ba9c0f0872a4e8b65b000f2a134ee970f90956fc503",
-      "htmlHash": "528e6d00be12678c8a0b677f4a42029104ed53ec3978e4f8ff6df7333c25e771",
+      "technicalCoreHash": "544000f6a4410c026d903eab8fdf9afcbfaad15dfdf7b47bb9fd57263643c8e2",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 11,
       "alignmentPage": 11,
       "alignmentScore": 0.5528,
@@ -932,11 +1029,14 @@
         "@UUID[Compendium.pf2e.spells-srd.Item.yV7Ouzaoe7DHLESI]{Ventriloquism}",
         "@UUID[Actor.LcAFMhy6wasCBxDQ]{Waterproof Leather Bag}"
       ],
-      "technicalHash": "194f25e49897cf341841fbf061368e2b644c00deaaff70577a92ca012b600373",
-      "htmlHash": "967d0ca0a25755edd9d908d78d099a38cde990421753940e1f9259623b588a34",
+      "technicalCoreHash": "caf9bc3a7308b6694c542013b514ed5a34fc5a29b1f9ff7fe89a9a47235e1385",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Haniver%20Gremlin.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 10,
       "alignmentPage": 10,
-      "alignmentScore": 0.4209,
+      "alignmentScore": 0.427,
       "areaSection": true,
       "areaCode": "A1"
     },
@@ -948,11 +1048,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02shelteredled00]{A3}"
       ],
-      "technicalHash": "ffa57195804a72483aae8baa66f68a9670d5eb3c32bdb09c4ea4c6a5b9498f99",
-      "htmlHash": "747e742946c77fe2aa973343a265edbbbe16e8a9a975bd28c6959d108b56f72e",
+      "technicalCoreHash": "3a48478a083f8f7f04e3f9f202800c3ec07f4b872fc23623850ea579ff45e3dc",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 10,
       "alignmentPage": 10,
-      "alignmentScore": 0.6494,
+      "alignmentScore": 0.6579,
       "areaSection": false,
       "areaCode": null
     },
@@ -963,11 +1064,14 @@
       "technicalTokens": [
         "@UUID[Actor.6AiPO2aKOFN6qipW]{Ordwi}"
       ],
-      "technicalHash": "e459c08d95453ee00a82689efe94b158bf8115ee23475dda774db7161c2ba29e",
-      "htmlHash": "9d393601dcbeb389ff49a1de260dfaa140f751231ed8e0bc950b2aaca93a404f",
+      "technicalCoreHash": "db8a16319c2caced60f6b9abadec8ff0d0593465711174ae55e44d3a9ad8560d",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 ordwi.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 9,
       "alignmentPage": 9,
-      "alignmentScore": 0.3615,
+      "alignmentScore": 0.6562,
       "areaSection": false,
       "areaCode": null
     },
@@ -986,11 +1090,14 @@
         "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}"
       ],
-      "technicalHash": "0ae8d7362a66d559f257a808c736b4e52e51ea2294eeaa62a6fd9176924997eb",
-      "htmlHash": "6554a303e52aa06958b8cd2c0e22c29def16877590dc7b0bfd3d2d2e372a2708",
+      "technicalCoreHash": "2865bc0f18cd199c6cb04a2ce8058b210019b206b866ae45610c15e1d6728b2b",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 9,
       "alignmentPage": 9,
-      "alignmentScore": 0.3615,
+      "alignmentScore": 0.7467,
       "areaSection": false,
       "areaCode": null
     },
@@ -1006,11 +1113,12 @@
         "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05rusthengebac00]{Here}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]{A1}"
       ],
-      "technicalHash": "df2ef0832951a3fc99d5280d511f424f68bbc521668b1a2cd2e7c5885a349f60",
-      "htmlHash": "311d055f175ae64600e2482e9550b1ac7ca53228982c01d5df5a24b178274bb8",
-      "pdfPage": 9,
-      "alignmentPage": 9,
-      "alignmentScore": 0.3615,
+      "technicalCoreHash": "d94ec69c40128e1700708e8d0a1c32893abae56f9600dc74a18f777c5e83537f",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 8,
+      "alignmentPage": 8,
+      "alignmentScore": 0.6626,
       "areaSection": false,
       "areaCode": null
     },
@@ -1022,8 +1130,9 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00#horn-of-rust]{Horn of Rust}"
       ],
-      "technicalHash": "a7ea2e072c7e669d1b841b3f99cc24ce6923f3efb5d703473897e03352dd94a6",
-      "htmlHash": "b08f5a16190bfe6717997ddc2789d1b4eb0fd4b8808074883d6432655caea7b2",
+      "technicalCoreHash": "0e738c3e962782a3d3e473162ad24b0d19fc513c907ebfa62fbbe793b34cbd9c",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 7,
       "alignmentPage": 7,
       "alignmentScore": 0.4082,
@@ -1040,8 +1149,11 @@
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}"
       ],
-      "technicalHash": "2cacf2cfb5e5e90bf2e08e6bc8f9d99cc33e17ac7e8cee69f3753ce777b36e1e",
-      "htmlHash": "3df855128a85c9d28dd0b8bd918a9968220a9ee530a0da5e4d933dbc700f93f4",
+      "technicalCoreHash": "5730e257f5a1e1f8a8b0cc1b0f342464920694f1399d5a7d5777fe3af8f84d64",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 reefclaw ambush.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 7,
       "alignmentPage": 7,
       "alignmentScore": 0.4112,
@@ -1064,11 +1176,14 @@
         "@UUID[Actor.vNPk2Y3Ba0FYrVv6]{Desk}",
         "@UUID[Actor.iqTt8ErJJQbnTLDy]{Secret Lab}"
       ],
-      "technicalHash": "372a73f5033d56c28cc512f3330c0d074e9656888b0352233b705eb5d51a694c",
-      "htmlHash": "0a37412cf05bfac2d4006e300f6b6b1ef60fa135f41395a6e6c58c83749e8f20",
+      "technicalCoreHash": "96b627e1329117b3c4fcc59266923078ad998e4626664bfe6e65fd00d1833009",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Envyspawn.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 43,
       "alignmentPage": 43,
-      "alignmentScore": 0.743,
+      "alignmentScore": 0.7441,
       "areaSection": true,
       "areaCode": "D21"
     },
@@ -1087,11 +1202,16 @@
         "@UUID[Playlist.rxsf0vQ3EmoZJo72.PlaylistSound.X1tQQG8zr7pmlxJ2]{Magic Surge}",
         "@UUID[Actor.LLj6cVI1UHHEjZcU]{Research Lab}"
       ],
-      "technicalHash": "567392bb3a2449987d88e1a7ab0de3ab5dfbb06675dd85efc304cd2eae28f99f",
-      "htmlHash": "cb3a8ae3ce37ee8e854937c25970a7c52a1e3f2c0585b3311069fc57c7f808e4",
+      "technicalCoreHash": "58db41718bcedc06369252edbcefbc2570b6a4914030c0395e9930761fc87b2c",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20sinsludge.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 rustsworn cultist.webp",
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 42,
       "alignmentPage": 42,
-      "alignmentScore": 0.4545,
+      "alignmentScore": 0.4647,
       "areaSection": true,
       "areaCode": "D20"
     },
@@ -1103,11 +1223,15 @@
         "@UUID[Actor.dbMmGE7Deitzsuz6]{Dretches (2)}",
         "@UUID[Actor.Cp4jFRcH4ZMYeIFd]{Anvil}"
       ],
-      "technicalHash": "966d4318a6e9f345dcbc67cf40f4bbbf0b52e74ea4278373b0fd9f7cfe56d1f2",
-      "htmlHash": "2cdbeb2c6b68c8c68cd058e2a37576a9122c09c2c4110453375ea3d1c823666e",
-      "pdfPage": 41,
+      "technicalCoreHash": "0b720bf6c3cf06152f6e744641a63ace6fa9f857c2274da6c129d5e02b09f85e",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20dretch.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 dretch.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 42,
       "alignmentPage": 42,
-      "alignmentScore": 0.5822,
+      "alignmentScore": 0.5915,
       "areaSection": true,
       "areaCode": "D19"
     },
@@ -1120,8 +1244,9 @@
         "@UUID[Actor.qn9OLgIUJO8SLOkH]{Ingot Storage}",
         "@UUID[Actor.Q5UbdbXfnJ6pFJna]{Rusty Ingots}"
       ],
-      "technicalHash": "dac6055358d4d2bb073b62cd946ec08fa4f8f921c40192cc12aae400c54bf358",
-      "htmlHash": "f1dac96a39b39e2c304453ecd553a53d3a74b96cba9a45ef8891b2e8c02864c3",
+      "technicalCoreHash": "e4b04498e43d66a671a9460b8bcc8c7357989cd5596f9fd8799f3a62468905f5",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 41,
       "alignmentPage": 41,
       "alignmentScore": 0.7429,
@@ -1137,11 +1262,14 @@
         "@UUID[Actor.N0nSDzkMv7OwGumH]{Void Zombie}",
         "@UUID[Actor.do8VjavOIPDQd2Rp]{Crystals}"
       ],
-      "technicalHash": "f8553ef6e6378465b8ae01b273b411bb50c431c0ac66807588169546c8945bbd",
-      "htmlHash": "40f1f91d3a3ea041e0d2e5dd027b17d99212e75e3b4b6f818c7963a5f0be322b",
+      "technicalCoreHash": "1094d49bb26cf95691c3ed5baed6a883efb893af2cc781454236e4d4ea9084c9",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Akata.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 41,
       "alignmentPage": 41,
-      "alignmentScore": 0.6458,
+      "alignmentScore": 0.6595,
       "areaSection": true,
       "areaCode": "D17"
     },
@@ -1154,11 +1282,15 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03workshop000000]{D15}",
         "@UUID[Macro.8ACUEK7rfUq1Tyes]{Drop Rusted Cage}"
       ],
-      "technicalHash": "3198331867df0799d2fbea23f3c762141e916e91e4d202ad3503d03210e650ca",
-      "htmlHash": "3e59abb9d979b9bce16f13e6319829cf540077db87822e303249a4afe61f1e69",
+      "technicalCoreHash": "8c0020a3baace447e2b88aa56383aa4837ffa4cf73cefb650da4d7ca45869fb9",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp",
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 40,
       "alignmentPage": 40,
-      "alignmentScore": 0.7527,
+      "alignmentScore": 0.7162,
       "areaSection": true,
       "areaCode": "D16"
     },
@@ -1174,11 +1306,14 @@
         "@UUID[Actor.fFMhZSnaETOHdzPj]{Southern Cabinets}",
         "@Check[perception|dc:18|traits:concentrate,exploration,secret,action:search|name:Search]"
       ],
-      "technicalHash": "a92081c9ac176dc120d016568c45d604420b5ca7788809e8fbb5ba246ffbe39c",
-      "htmlHash": "2575d060df70002398354cd7f42898dcf19520251af84c3f04fc060966f392bd",
+      "technicalCoreHash": "6c7aa1789db90d85957c18744e0122798a3f1f65682f2e61a2b0b83c77080ab7",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20rustsworn%20cultist.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 40,
       "alignmentPage": 40,
-      "alignmentScore": 0.584,
+      "alignmentScore": 0.5868,
       "areaSection": true,
       "areaCode": "D15"
     },
@@ -1190,11 +1325,14 @@
         "@UUID[Actor.ZLdZe3qKjR6xoN4Z]{Ostovites (2)}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"
       ],
-      "technicalHash": "1ee4a550785a0c1f301268dfbf830eee49704c88a82ff7b416beb266f5a8d062",
-      "htmlHash": "afc7850b39ec71ed72b56cf0ed6834f7a77a92878f6e118da2b9786b854d7ce1",
-      "pdfPage": 39,
+      "technicalCoreHash": "248e18122ddb5513963ed24ae45650691d6eb6659d85324570692c0720a39aaf",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Ostovite.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 40,
       "alignmentPage": 40,
-      "alignmentScore": 0.5125,
+      "alignmentScore": 0.5128,
       "areaSection": true,
       "areaCode": "D14"
     },
@@ -1208,11 +1346,15 @@
         "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (2)}",
         "@UUID[Macro.XQUSLhjmMKghWAyq]{Stop Chanting}"
       ],
-      "technicalHash": "cbdfdca17d511155180a57366d526a4fd05e51657846183d1dcc45443f310be1",
-      "htmlHash": "4b6e2ae664b8492a1945005b7fa85c641ed29746b099d9a72aea378b07dab447",
+      "technicalCoreHash": "b25bc5cec1ab8261dce5f94a6c1752a20ad2670794c52b54fc203086b09955e5",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Larva%20Petitioner.webp",
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 39,
       "alignmentPage": 39,
-      "alignmentScore": 0.7159,
+      "alignmentScore": 0.7235,
       "areaSection": true,
       "areaCode": "D13"
     },
@@ -1225,8 +1367,9 @@
         "@Check[perception|dc:15|traits:concentrate,exploration,secret,action:search|name:Search]",
         "@UUID[Actor.xvPL5O1ttAeANAUZ]{Magical Storage}"
       ],
-      "technicalHash": "db4a1b8ae0de3f0a2643aa9683a04ace41ea3d492cff4e44e6007ff86f57341b",
-      "htmlHash": "d04b2e627373e55dd9e0125a1a202dff5f0e3f48bbbcd0781edcc1b62e00d16f",
+      "technicalCoreHash": "202761aad0039c4c3e0e5717b792fcdb712251aa8d29f1b3d7c5da50c56fe19d",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 39,
       "alignmentPage": 39,
       "alignmentScore": 0.7802,
@@ -1238,8 +1381,9 @@
       "sourceName": "Toilets",
       "translatedName": "Уборные",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "6ceb2af5afa664a30566b2fd2a1b89aa9674190f8b95808e228c17ac6bc4decc",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 39,
       "alignmentPage": 39,
       "alignmentScore": 0.9333,
@@ -1259,11 +1403,15 @@
         "@UUID[Actor.9XwV6EhK14DtMxOw]{Gurga}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03dininghall0000]{D8}"
       ],
-      "technicalHash": "c01a2687e9bad1aea3c6631a627923bbfa16d3e39c7f50d359f10abdddd2bfdc",
-      "htmlHash": "45a39d0bf20b2d22e82c2e5959084a83b87fe54ddde3339231e0b7bd52ad2f47",
-      "pdfPage": 38,
+      "technicalCoreHash": "882f4c331ec33bcfbfd28bcbc03c4850325141425ea9596b68b4f41c9bb4162f",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20gurga.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 gurga.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 39,
       "alignmentPage": 39,
-      "alignmentScore": 0.4897,
+      "alignmentScore": 0.493,
       "areaSection": true,
       "areaCode": "D10"
     },
@@ -1272,8 +1420,9 @@
       "sourceName": "Kitchen",
       "translatedName": "Кухня",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 38,
       "alignmentPage": 38,
       "alignmentScore": 0.5,
@@ -1297,11 +1446,14 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}",
         "@UUID[Actor.lCoYPuKzOOE0wap7]{Treasure Pile}"
       ],
-      "technicalHash": "a8f51d00b477986458b25034f9e20e8a645eadb515cc3e05580a052de409ef2c",
-      "htmlHash": "45f711a6ff8e2b778d8f61cfd7932b9ec15f00e5942d16f200bbc3d976f72705",
+      "technicalCoreHash": "c0e2107cffadc2ea7d46d8170d4263ceadcd003e1b703ce7012b14e2daba939f",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Boggard%20Scout.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 37,
       "alignmentPage": 37,
-      "alignmentScore": 0.4046,
+      "alignmentScore": 0.4036,
       "areaSection": true,
       "areaCode": "D8"
     },
@@ -1315,11 +1467,14 @@
         "@Check[perception|dc:20|traits:concentrate,exploration,secret,action:search|name:Search]",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{Elder Ordwi}"
       ],
-      "technicalHash": "e5377c2dc574c4063ec87fa9b90c121813874968b06fdb035349e506690d9da3",
-      "htmlHash": "835a7e330875f1fa2d7af441b85495d8138103acd5acd0717e735356a342acac",
-      "pdfPage": 36,
+      "technicalCoreHash": "70ca5e8f9d87ba83189d4ca2bec416e5e3000f01d6cee38f038b2c38e8ca255b",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Yeth%20Hound.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 37,
       "alignmentPage": 37,
-      "alignmentScore": 0.6627,
+      "alignmentScore": 0.6687,
       "areaSection": true,
       "areaCode": "D7"
     },
@@ -1332,8 +1487,9 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]{D13}",
         "@UUID[Actor.8LByzA7nbuYehXmt]{Quarters}"
       ],
-      "technicalHash": "32f06d6ffbc7d32a27072c85530b6e3bf542e34cde9214f1b96358e68d1b157e",
-      "htmlHash": "8763f51cf2074d6ffb54126e778823849fe4aace955a7284b74dccc845a5eb3f",
+      "technicalCoreHash": "d9b2c9ab09c4c422740045dd3a64faaf5bb5d8658800fc202b6479e82702bf3a",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 36,
       "alignmentPage": 36,
       "alignmentScore": 0.6739,
@@ -1349,8 +1505,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03prison00000000]{D7}"
       ],
-      "technicalHash": "e9fb1be0394f19c8a0a09fbc19d180fed8d677be0d89885ad612e0d51f2f8a50",
-      "htmlHash": "d04b2e627373e55dd9e0125a1a202dff5f0e3f48bbbcd0781edcc1b62e00d16f",
+      "technicalCoreHash": "b7d6fac4a4ac5207406b4b1f791dcfd9fa5eb69e53717e2fb2860b0f2e5b37f8",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 36,
       "alignmentPage": 36,
       "alignmentScore": 0.8036,
@@ -1364,8 +1521,9 @@
       "technicalTokens": [
         "@UUID[Actor.MwHZ9llX4RCpTqzc]{Shelves}"
       ],
-      "technicalHash": "d683f7c52e4db9317da900b81abf31426bb2a3c62956f99b0f0547f88de6b78a",
-      "htmlHash": "ca2362b3f34364557298a1cb2b13e989bd4642b2074db494ad52209f54d21917",
+      "technicalCoreHash": "34e0997778add40596c6f081dc6e29f455de508093a8897587133e79aebfac67",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 36,
       "alignmentPage": 36,
       "alignmentScore": 0.7872,
@@ -1383,11 +1541,16 @@
         "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Inveigle}",
         "@UUID[Actor.TIP8DD2dLKxFfqHf]{Ancient Apparatus}"
       ],
-      "technicalHash": "3baf5f6dfaa1441dc394f28e025a1aeb4b5c6b009c4c78f2f855c36195d8a1b5",
-      "htmlHash": "98ead3c67e12ae1e2b0c0b3827edfae57652ed828bef1db96c8ca76b016be23e",
+      "technicalCoreHash": "8d9d6333403765533fe33a7a0ef97ee91d2f9a3ded718d00966e4ded74eb51c7",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 knurr ragnulf.webp",
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20knurr%20ragnulf.webp",
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 35,
       "alignmentPage": 35,
-      "alignmentScore": 0.6162,
+      "alignmentScore": 0.6677,
       "areaSection": true,
       "areaCode": "D3"
     },
@@ -1398,11 +1561,14 @@
       "technicalTokens": [
         "@UUID[Actor.KeknT5gCKZUR0WM7]{Rusted Animated Armor (2)}"
       ],
-      "technicalHash": "cc6d5c4611294132b39283dbdd1147f6a6c70b1121ab45e992b60ed21bbd92b1",
-      "htmlHash": "6fbd808019a091a739ebe0b342c017ea0891926eeb879a1d8eb8b9b647be825d",
+      "technicalCoreHash": "66e2425a35fb144dfaf5a2ce2682f26aa2187e15c42dc24d47b31e5397272206",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Azmakian%20Animated%20Armor.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 34,
       "alignmentPage": 34,
-      "alignmentScore": 0.4643,
+      "alignmentScore": 0.486,
       "areaSection": true,
       "areaCode": "D2"
     },
@@ -1415,11 +1581,14 @@
         "@Check[religion|dc:25|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
         "@UUID[Actor.4Zwt3eqjMo0EQUrq]{Rusted Door}"
       ],
-      "technicalHash": "b051f8a514925280567242eebaeaf3aab265050255eec40d63ef6f3e5b1e6ea0",
-      "htmlHash": "77b6f4efe8afc67d810ceddea8c918060c58b06299c92a8054de431b133a9244",
+      "technicalCoreHash": "39c413ea6b7765f1cc299895bd6bcc16c9bcc1b019a9e38bb4c8b2c63073ec43",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 34,
       "alignmentPage": 34,
-      "alignmentScore": 0.6978,
+      "alignmentScore": 0.7273,
       "areaSection": true,
       "areaCode": "D1"
     },
@@ -1428,8 +1597,9 @@
       "sourceName": "The Skymetal Workshop",
       "translatedName": "Мастерская Небесного Металла",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "a1a2ef5b70e435fef462f6719c525ab420201b905922aa0473c6fc410ea9a55e",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 33,
       "alignmentPage": 33,
       "alignmentScore": 0.5656,
@@ -1443,11 +1613,12 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{Final Encounter}"
       ],
-      "technicalHash": "b18450fdf03be04ac2c846771b55af056305290b718d6f9778d9c219a8eb50ad",
-      "htmlHash": "efb12833b5caacc24fc650478aff3a7a84dacd069fc6dbcbac48f2c2df1361bc",
-      "pdfPage": 32,
-      "alignmentPage": 32,
-      "alignmentScore": 0.3755,
+      "technicalCoreHash": "f22682e4547f452a841149f07786fd336e4389649f77c927a304d95a0df600ef",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 33,
+      "alignmentPage": 33,
+      "alignmentScore": 0.5752,
       "areaSection": false,
       "areaCode": null
     },
@@ -1461,11 +1632,16 @@
         "@UUID[Actor.Aoll0FdVcKcL1Ucd]{Vlorian Cythnigot}",
         "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (4)}"
       ],
-      "technicalHash": "254bc3f54f0e7c1dde4be2e4d5c9bf4eddc44453a7243a152710dbcbe263e846",
-      "htmlHash": "d7e5dcd4b3b74ffc5be6705ae0193eab1810cb1a5416b54eb46b185fb1f81984",
+      "technicalCoreHash": "37dc464efaa45a72b0eaa009e75ccdcb461280867214f38d32a1f506bf4159b2",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 rustsword initiate.webp",
+        "modules/pf2e-rusthenge/assets/tokens/Vlorian%20Cythnigot.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 32,
       "alignmentPage": 32,
-      "alignmentScore": 0.3755,
+      "alignmentScore": 0.526,
       "areaSection": false,
       "areaCode": null
     },
@@ -1484,8 +1660,9 @@
         "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
         "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}"
       ],
-      "technicalHash": "8fa26955638eadf7e3478bf68732158f279abee0306104658ddce118470f84b6",
-      "htmlHash": "392b3c6d912429e8cc9f38d6317f3797409b3a49be2c6e98045abf161de87170",
+      "technicalCoreHash": "51fad60529259e039324acdf3094ec390236441cd930077271a7c6e231e37a8e",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 31,
       "alignmentPage": 31,
       "alignmentScore": 0.6318,
@@ -1502,11 +1679,12 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@Check[crafting|dc:15]"
       ],
-      "technicalHash": "95391534a4f4fb46f2d191678ca8996a2d2fa7610b1641bf8485102b1b4c9975",
-      "htmlHash": "a360128899e7dec9986d07691f269c9a35d5e14b27cec52119e3be7b21452a83",
-      "pdfPage": 30,
-      "alignmentPage": 30,
-      "alignmentScore": 0.4019,
+      "technicalCoreHash": "680b1d9da35aee49a4021e4ce28565f816b76a793d60fc6ae9407d22678977d9",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
+      "pdfPage": 31,
+      "alignmentPage": 31,
+      "alignmentScore": 0.4672,
       "areaSection": false,
       "areaCode": null
     },
@@ -1521,11 +1699,14 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{Elder Ordwi}"
       ],
-      "technicalHash": "ed2cad4a1a0c8757fd18c58cceb5d92b7b2350a8d9739772084f1158599db3c9",
-      "htmlHash": "a3be405730b1c2ecf78a730207f02fd02eede199de1ccdb4ac31d94eb549fe31",
+      "technicalCoreHash": "797f6f090281282cfbf99738c801e188cff351c85451948fc107c88c7009c9ce",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 yeth hound fight.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 30,
       "alignmentPage": 30,
-      "alignmentScore": 0.4019,
+      "alignmentScore": 0.6092,
       "areaSection": false,
       "areaCode": null
     },
@@ -1534,11 +1715,12 @@
       "sourceName": "What if the PCs Fail?",
       "translatedName": "Завершение Приключения",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "0d6cb8ab7e453311b1ad854314ad24f869d655621bbe030c3f39342badbb5d55",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 59,
       "alignmentPage": 59,
-      "alignmentScore": 0.6844,
+      "alignmentScore": 0.7311,
       "areaSection": false,
       "areaCode": null
     },
@@ -1547,11 +1729,12 @@
       "sourceName": "Concluding the Adventure",
       "translatedName": "Завершение Приключения",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "2aff9a0b616f4d895f5c6978ecb5b7839b3bd70e18777cec5b646783308a010b",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 59,
       "alignmentPage": 59,
-      "alignmentScore": 0.6844,
+      "alignmentScore": 0.6862,
       "areaSection": false,
       "areaCode": null
     },
@@ -1587,11 +1770,20 @@
         "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Horn of Rust}",
         "@UUID[Actor.2c8g1noVjApqAtia]{Summoning Chamber}"
       ],
-      "technicalHash": "0a51d46f8e0efa94b44515f04ac0bbe22e64174456dde4ffeacbced5e93f9648",
-      "htmlHash": "07f8aa5811154b670d193dacf182c57b94f912ff90c2b7dfb5d7de5b59621519",
-      "pdfPage": 56,
+      "technicalCoreHash": "ae4b33c6f0132ec9f36a34790ee7ecb44f9eb294fcf9762373bba412027e152d",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 meitremar.webp",
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg",
+        "modules/pf2e-rusthenge/assets/mini/PZO9564%20vloriak-MINI.webp",
+        "modules/pf2e-rusthenge/assets/mini/PZO9564%20Meitremar-MINI.webp",
+        "modules/pf2e-rusthenge/assets/mini/Rust%20Zombie-MINI.webp",
+        "modules/pf2e-rusthenge/assets/mini/Zombie%20Shambler-MINI.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 57,
       "alignmentPage": 57,
-      "alignmentScore": 0.4523,
+      "alignmentScore": 0.4894,
       "areaSection": true,
       "areaCode": "F14"
     },
@@ -1606,11 +1798,15 @@
         "@UUID[Actor.oeM8EcS1F5NIkd30]{Skeleton Guards (2)}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"
       ],
-      "technicalHash": "cbdf712e5fed31bc21927af57393b7dbc058ab93fdf14422a916762e51875670",
-      "htmlHash": "5ad0dced86dad04c432e9d92efb5b65d0acbca5cabbe492a493fba51c42e3e41",
+      "technicalCoreHash": "c64112588705f20e5758612898764d1da509b625ffa1b36a1475f4a66b5ca7dd",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20theiltemar.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 theiltemar.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 55,
       "alignmentPage": 55,
-      "alignmentScore": 0.5092,
+      "alignmentScore": 0.5238,
       "areaSection": true,
       "areaCode": "F13"
     },
@@ -1623,11 +1819,14 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
         "@Check[thievery|dc:20|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]"
       ],
-      "technicalHash": "c5d453db0b298348c065e15876d569be4607aed1b88db9100afe75797c115260",
-      "htmlHash": "0839d82798bb9ba312c9b3a0a394772e546f605e84fb49074f0ef7c0d9eb2ed2",
+      "technicalCoreHash": "201cf21dca7c7b05fd7ec32264f04837a9cf7101bc9b8c5e6029007fa6a6347d",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 55,
       "alignmentPage": 55,
-      "alignmentScore": 0.5854,
+      "alignmentScore": 0.8696,
       "areaSection": true,
       "areaCode": "F12"
     },
@@ -1638,8 +1837,9 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.pathfinder-bestiary.Actor.kPBSSOuR8n8vZHXB]{Otyugh's}"
       ],
-      "technicalHash": "6f135db2e9f3e38c1c89f8226599971ed7b8e7c6b0b86b3239f5c726d7235966",
-      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
+      "technicalCoreHash": "6ade6a3b53bfc2bad75108ff6450aa3c6af92f1dda8e9f6f31a88fea46cb6bee",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 55,
       "alignmentPage": 55,
       "alignmentScore": 0.7105,
@@ -1660,11 +1860,14 @@
         "@Check[diplomacy|dc:18]",
         "@Check[intimidation|dc:18]"
       ],
-      "technicalHash": "1a0af419111755b89e5a9ce01cbe679f429d23ffaac37b264a7205a9ebd1a6e7",
-      "htmlHash": "d9d03501b9747aaa3c279906ef5285e8eb992b9d580f8e94551e0119dcd48b23",
+      "technicalCoreHash": "224b67a6121e846355ac45a275127c2994831f90be35a74c19d3c4ca5ecf3b73",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Glutu.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 54,
       "alignmentPage": 54,
-      "alignmentScore": 0.5955,
+      "alignmentScore": 0.6216,
       "areaSection": true,
       "areaCode": "F10"
     },
@@ -1673,8 +1876,9 @@
       "sourceName": "Boggard Bridge",
       "translatedName": "Мост боггардов",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "a78f2d0597c28abe414678a78e6f28b5a4fdff5c0c05fb2dd6ac07380277ab7c",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 54,
       "alignmentPage": 54,
       "alignmentScore": 0.7778,
@@ -1689,11 +1893,14 @@
         "@UUID[Actor.63tNsYHRrIaRASKj]{Boggard Scouts (4)}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]{F10}"
       ],
-      "technicalHash": "b7bc2bd3d7e26aaaad5d20a0a7ddc29b245c2bc44c9ec05c0ab28dd0c44d26d3",
-      "htmlHash": "6f3af2dc933385c355f03c461b6ae0d238380dc279d722a58df7fa388a3ebeb9",
+      "technicalCoreHash": "9675d4b4106bc2f1f71a7bb3442c095ceb786b58adb676974a3805003d1c7bb4",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Boggard%20Scout.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 54,
       "alignmentPage": 54,
-      "alignmentScore": 0.7451,
+      "alignmentScore": 0.7653,
       "areaSection": true,
       "areaCode": "F8"
     },
@@ -1707,11 +1914,14 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1b}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04thedespoiled00]{F2a}"
       ],
-      "technicalHash": "a5e27f9d5ffaf054dadc7fb935577ecea3a40c8376798e48f75171bf384c47cc",
-      "htmlHash": "ee55f3665b00d547910830ea851c22f035122c1800a9f5ea0f9e203795668205",
+      "technicalCoreHash": "632f62dec136e9fe2918c1521254d17df055308ea347d6b3848abb147eca0f8c",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Starving%20Werebat.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 53,
       "alignmentPage": 53,
-      "alignmentScore": 0.4129,
+      "alignmentScore": 0.4286,
       "areaSection": true,
       "areaCode": "F7"
     },
@@ -1722,11 +1932,15 @@
       "technicalTokens": [
         "@UUID[Actor.bRXpyT68VI3n9eWv]{Zaiox}"
       ],
-      "technicalHash": "c53bff7ebafe564edde714f6d864ab02476603ab524a46730809ff62aee3b0d9",
-      "htmlHash": "99717a0dcdadc12e47f45fd98f36c293e9fd33d93e546c07582eda535a7b2762",
+      "technicalCoreHash": "ef6c2344f02429ecb39cde922cbc30ff5fbecb21a872034970e12e61d05d7138",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20zaiox.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 zaiox.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 53,
       "alignmentPage": 53,
-      "alignmentScore": 0.7798,
+      "alignmentScore": 0.7755,
       "areaSection": true,
       "areaCode": "F6"
     },
@@ -1745,8 +1959,9 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.rjUJEY424jyG9dGn]{Cytillesh}",
         "@UUID[Compendium.pf2e.equipment-srd.Item.aZm1x9tpvBAT8YCd]{Cytillesh Oil}"
       ],
-      "technicalHash": "1167c036324520af436732870b78283830ae3bf995fcb59e335d979897318853",
-      "htmlHash": "8763f51cf2074d6ffb54126e778823849fe4aace955a7284b74dccc845a5eb3f",
+      "technicalCoreHash": "2c12402c31d4ff8d9d76e2b14107a1dcb331e9b078386b5b42c09c72cd4a39b0",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 52,
       "alignmentPage": 52,
       "alignmentScore": 0.5851,
@@ -1765,11 +1980,14 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]{F3}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]{F6}"
       ],
-      "technicalHash": "1062d729c21be42c70548296e5d253444e9d447aee3bf83a9ae61789dc012c69",
-      "htmlHash": "d3784faa84dc8869d342d5b18cad0bae0cff54c7d98c9a55af6513c02cc7db0e",
+      "technicalCoreHash": "c402b847271a2117c0366da1c678b75fb37c0f5c251a859bc2ececfa8e39e1ce",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Dero%20Strangler.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 52,
       "alignmentPage": 52,
-      "alignmentScore": 0.7657,
+      "alignmentScore": 0.7738,
       "areaSection": true,
       "areaCode": "F4"
     },
@@ -1783,11 +2001,14 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]{F4}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]{F5}"
       ],
-      "technicalHash": "1a3dbf36d2c4b9ba2b0668dbfa8c9c1b6315f583db1fe22d38f7576faef73cce",
-      "htmlHash": "afa25344ee53ff9770f5db22eb836d076c6c5666e24983c653c9b84a1a0f916c",
+      "technicalCoreHash": "08ec71e9c1ffb7e9b5abdf922b5a25d52934939c1de14d2096e3c31b4e743ef3",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Dero%20Stalker.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 52,
       "alignmentPage": 52,
-      "alignmentScore": 0.6081,
+      "alignmentScore": 0.6056,
       "areaSection": true,
       "areaCode": "F3"
     },
@@ -1802,8 +2023,9 @@
         "@UUID[Actor.Sse38NzIUckC6Gga]{Skeletal Remains}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04rusteddoor0000]{F12}"
       ],
-      "technicalHash": "48455e801cc2f1dccbdfc6f651ce4b13a833399052cf527feedbc33980419f06",
-      "htmlHash": "cb4cd10ee2cfcbd6bd041851182cbbff7a12b76de64d044b51ccd3beff1c17da",
+      "technicalCoreHash": "cccba274210e2ab55d2eee5b6c8bec2e4be4b889f73816c2ffb4debea100a20b",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 51,
       "alignmentPage": 51,
       "alignmentScore": 0.5714,
@@ -1829,11 +2051,16 @@
         "@UUID[Macro.H7C74E1a3JJl9Eyk]{Reveal Spiky Pit}",
         "@UUID[Actor.j1gSg8aFSKq9o0aU]{Corpses}"
       ],
-      "technicalHash": "eaa32797c5c1c2f3ac47052f6f65716faf71aadb20aaa79dddd3397d19d24088",
-      "htmlHash": "888bdd1f80a88f8005bcf4ca3086b0009531f3fdb1880c9197b963ac345a3c2d",
+      "technicalCoreHash": "ea35016adec0482db60ca3b3fed77b57cbf1cd5d011129a5ef66f706a19df79a",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp",
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg",
+        "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 50,
-      "alignmentPage": 51,
-      "alignmentScore": 0.5,
+      "alignmentPage": 50,
+      "alignmentScore": 0.467,
       "areaSection": true,
       "areaCode": "F1"
     },
@@ -1842,8 +2069,9 @@
       "sourceName": "Despoiler’s Deep",
       "translatedName": "Глубины Опустошителя",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "f9e0c6ed1cca91cf77293575395574514308030ecf1dfedba6db5ab15edd074d",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 50,
       "alignmentPage": 50,
       "alignmentScore": 0.7021,
@@ -1873,11 +2101,16 @@
         "@UUID[Actor.HqpzxgEhWWsgPszX]{Statue}",
         "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]"
       ],
-      "technicalHash": "4587900c15b80b3798eaf6d98f18ff064b557d8b97dfe3ffca4771f73e659a98",
-      "htmlHash": "fc3dd1fed78d34e10e24e1d8d135811b9bb66cf0453f85dccdd256d71d86c618",
+      "technicalCoreHash": "8ac3c04b2598ce8d8aa960921c0640d00942267a82eb9b2b85772d90395f917a",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/hazard.webp",
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20clockwork%20belimarus.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 clockwork belimarus.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 48,
       "alignmentPage": 48,
-      "alignmentScore": 0.334,
+      "alignmentScore": 0.3517,
       "areaSection": true,
       "areaCode": "E5"
     },
@@ -1888,11 +2121,14 @@
       "technicalTokens": [
         "@UUID[Actor.XZX1TpeWYkI14qLj]{Droxur}"
       ],
-      "technicalHash": "ee37bbc027ad9e2416a7d6d5db1805d40ca299e11ed63e465447993857a73d71",
-      "htmlHash": "14c4455500aa44eb62b7838c2f23df1f97486458300559ee6054719bb40bd0f9",
+      "technicalCoreHash": "07df4c3020f5d7d629e2c65fa79cbc9a664172b3312016d89097fe4556789496",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Abrikandilu%202.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 48,
       "alignmentPage": 48,
-      "alignmentScore": 0.7644,
+      "alignmentScore": 0.7706,
       "areaSection": true,
       "areaCode": "E4"
     },
@@ -1911,11 +2147,12 @@
         "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
         "@UUID[Actor.zb2LebobKQWXeVQ1]{Ordwi}"
       ],
-      "technicalHash": "a7ffecaeae9cb038679a64b00f2b3d606cef98b9a2ed2f0b242ff392de06d86a",
-      "htmlHash": "ead1ae856323cf91bfe18f2c68a18ca759bd67ee2a343ba362aebb5843e408a3",
+      "technicalCoreHash": "7fc650b16121f8f507126ed762baacf941147eb117d304ead4a8fc11bf80c514",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 47,
       "alignmentPage": 47,
-      "alignmentScore": 0.5424,
+      "alignmentScore": 0.5687,
       "areaSection": true,
       "areaCode": "E3"
     },
@@ -1935,11 +2172,15 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04bedroompriso00]{E3}",
         "@Check[thievery|dc:25|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]"
       ],
-      "technicalHash": "ae19db2a930c5b7062ee22ae91617cc0783eec7863418f6818264bc9b2f36268",
-      "htmlHash": "4bbe4166e91197cce1669c4cd0131bb02bd92b7443a87d05a9ae1d0f569a546a",
-      "pdfPage": 45,
+      "technicalCoreHash": "5fda6766d1e2c701c6e02fe35475836becdfe866739b3871eb499ccc2570272f",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/PZO9564%20clockwork%20serpent.webp",
+        "modules/pf2e-rusthenge/assets/art/pzo9564 clockwork serpent.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 47,
       "alignmentPage": 47,
-      "alignmentScore": 0.3466,
+      "alignmentScore": 0.3517,
       "areaSection": true,
       "areaCode": "E2"
     },
@@ -1951,11 +2192,14 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
         "@UUID[Actor.q3dCj5gJoOW22HMd]{Envyspawn (2)}"
       ],
-      "technicalHash": "6b47f9049119f624e38de51076f325864fd9b2d6bee9566560e207099c1558c1",
-      "htmlHash": "27a670bca76423872933eb3dc02cdffda5dbcfedd7175c75aa2e85deec427dd5",
-      "pdfPage": 44,
+      "technicalCoreHash": "10b6ec08f18c701c89d9aa8d7acb15778d8401ab6c713dd86dd97a58a15594d7",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/tokens/Envyspawn.webp"
+      ],
+      "sourceLinkPaths": [],
+      "pdfPage": 45,
       "alignmentPage": 45,
-      "alignmentScore": 0.6449,
+      "alignmentScore": 0.6487,
       "areaSection": true,
       "areaCode": "E1"
     },
@@ -1964,11 +2208,12 @@
       "sourceName": "The Temple of Xar-Azmak",
       "translatedName": "Храм Ксар-Азмак",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "747e742946c77fe2aa973343a265edbbbe16e8a9a975bd28c6959d108b56f72e",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 44,
       "alignmentPage": 44,
-      "alignmentScore": 0.7383,
+      "alignmentScore": 0.75,
       "areaSection": false,
       "areaCode": null
     },
@@ -1977,11 +2222,14 @@
       "sourceName": "Resurrection of Rust",
       "translatedName": "Глава 3: Воскрешение ржавчины",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "7f02670ec5201f2d836e20dda25004bcebbb7a60fd615edd3aeb6e0a076d943a",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 undead rising.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 44,
       "alignmentPage": 44,
-      "alignmentScore": 0.7383,
+      "alignmentScore": 0.7407,
       "areaSection": false,
       "areaCode": null
     },
@@ -1992,11 +2240,15 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.FUxaVKVEV8eOuTVB]{Primordial Envy}"
       ],
-      "technicalHash": "124a7a34a312290fc247e7c92408855f294ff7ac0d6fe9e1d24e80c5dfcca6f7",
-      "htmlHash": "184a27a05413838c1cdc22f2b9f81c83f87dbc173c736ccefed9e4795e42bc67",
+      "technicalCoreHash": "e57ea8b95561c3f66465249338662f0b2016e0f7bfaa8a8d3f6af9499bb854ab",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 sinsludge.webp",
+        "modules/pf2e-rusthenge/assets/art/PZO92102 MONSTER ICON.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 65,
       "alignmentPage": 65,
-      "alignmentScore": 0.7171,
+      "alignmentScore": 0.7162,
       "areaSection": false,
       "areaCode": null
     },
@@ -2007,11 +2259,15 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.fRiOPTsfqJBiwUwh]{Vloriak}"
       ],
-      "technicalHash": "e3a672e52a724e05d02623ab40393eb0b12a30ff7705c0b585ded1a3a26b12f8",
-      "htmlHash": "7ce62c4ec26e77a7eba7ede865022d295c90c7c980a8d8271d7b1cc9c1e6b9b8",
+      "technicalCoreHash": "084170370b17d7eb5d5a5ce68f969612c9551b156a4dc8d774350aba6ea2f19a",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 vloriak.webp",
+        "modules/pf2e-rusthenge/assets/art/PZO92102 PF LORE.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 64,
       "alignmentPage": 64,
-      "alignmentScore": 0.6354,
+      "alignmentScore": 0.6444,
       "areaSection": false,
       "areaCode": null
     },
@@ -2028,8 +2284,9 @@
         "@UUID[Compendium.pf2e.backgrounds.Item.AJuE41aToGs9tbcM]{Osprey Spellcaster}",
         "@UUID[Compendium.pf2e.backgrounds.Item.f7ZTF8tnZUmTXwwF]{Osprey Warrior}"
       ],
-      "technicalHash": "8f42bb6cd9823dcf94006e4b70c1dcdc9b53f51fbb62c5b10de23843ff5eea81",
-      "htmlHash": "da355d5027736eed7706879c190ca2738990648886fd685752a305534228b7ae",
+      "technicalCoreHash": "bc5db965fe44697d7dde7b7a5a9c54d2ad9e5e88d68a6d44e2d2b0b3d838be0d",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 63,
       "alignmentPage": 63,
       "alignmentScore": 0.7895,
@@ -2045,8 +2302,11 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@UUID[Compendium.pf2e.equipment-srd.Item.4eC5wMw1vcDDgC4x]{Horn of Rust}"
       ],
-      "technicalHash": "6e725d90096392f19c497fd307433f2a4e2ccc51b79bb79a4b1d69a8baf7ee03",
-      "htmlHash": "8aef3413e1157ebbb71281d4451be3ed4cd1586ccb33521967f351f7a97cbb82",
+      "technicalCoreHash": "eefa00dac9b700ba2d0b75dea549f5e5f82d9ace32a2fa263e0238a70097e9d0",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 horn of rust.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 61,
       "alignmentPage": 61,
       "alignmentScore": 0.4845,
@@ -2063,11 +2323,14 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.fRVCVfoV8KzmZsKs]{Rust Scrub}",
         "@UUID[Compendium.pf2e.equipment-srd.Item.gi1zuwWrwcW7OKlK]{Sanitizing Pin}"
       ],
-      "technicalHash": "2c4d464ff834fafca720bc407d405a7c0fa214eb1b3671b3ca51b20338a6a014",
-      "htmlHash": "52515d0f2afd03d0873c414f927dd2c64ef29b21cc8f9d60f6c06a1d0493ba88",
+      "technicalCoreHash": "3fdcb875274bc58e30c7db2b963de8e847b8ad5907cc05546c5bc6902e20cca2",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564%20sanitizing%20pin.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 61,
       "alignmentPage": 61,
-      "alignmentScore": 0.9,
+      "alignmentScore": 0.8333,
       "areaSection": false,
       "areaCode": null
     },
@@ -2076,11 +2339,14 @@
       "sourceName": "Adventure Toolbox",
       "translatedName": "Инструментарий приключения",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "c0f3a8bc42acca478ce3cc8f6d5e29af48b0bc0de4ace5bf0d79a7b2ca62c16e",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [
+        "modules/pf2e-rusthenge/assets/art/pzo9564 theiltemar and horn of rust.webp"
+      ],
+      "sourceLinkPaths": [],
       "pdfPage": 5,
       "alignmentPage": 5,
-      "alignmentScore": 0.5823,
+      "alignmentScore": 0.5,
       "areaSection": false,
       "areaCode": null
     },
@@ -2089,8 +2355,9 @@
       "sourceName": "Handout #2",
       "translatedName": "Раздаточный материал №2",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "ece765767fb128c9b7e0fe027d042446fb2516b36b637be820b01ef92f67aad1",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 47,
       "alignmentPage": 47,
       "alignmentScore": 0.7619,
@@ -2102,8 +2369,9 @@
       "sourceName": "Handout #1",
       "translatedName": "Раздаточный материал №1",
       "technicalTokens": [],
-      "technicalHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "htmlHash": "63b5702aff14d68e18852dcce35ac47658442803e92b83a5e84a2574f60af8bb",
+      "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sourceImagePaths": [],
+      "sourceLinkPaths": [],
       "pdfPage": 18,
       "alignmentPage": 18,
       "alignmentScore": 0.7488,
