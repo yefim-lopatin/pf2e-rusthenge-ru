@@ -24,10 +24,10 @@ SERVICE_PAGE_IDS = {
     "00changelog00000",
 }
 
-TECH_RE = re.compile(r"@[A-Za-z][A-Za-z0-9]*\[[^\]]+\](?:\{[^{}]*\})?")
-TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[[^\]]+\])(?:\{[^{}]*\})?")
+TECH_RE = re.compile(r"@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\](?:\{[^{}]*\})?")
+TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\])(?:\{[^{}]*\})?")
 TAG_RE = re.compile(r"<[^>]+>")
-INLINE_ROLL_RE = re.compile(r"\[\[/r\s+[^\]]+\]\](?:\{[^{}]*\})?", re.I)
+INLINE_ROLL_RE = re.compile(r"\[\[/[a-z]+\s+(?:[^\[\]]|\[[^\[\]]*\])*\]\](?:\{[^{}]*\})?", re.I)
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 # Коды локаций в старом структурированном тексте имели кириллический сдвиг.
@@ -63,6 +63,7 @@ PAGE_NAMES = {
     "01rusthenge00000": "Растхендж",
     "01landing0000000": "Стартовая страница",
     "02chapter1000000": "Глава 1: Послание в ночи",
+    "02optionalstar00": "Вариант: начать раньше",
     "03chapter2000000": "Глава 2: Ржавые руины",
     "04chapter3000000": "Глава 3: Воскрешение ржавчины",
     "05adventuretoo00": "Инструментарий приключения",
@@ -163,9 +164,15 @@ GLOSSARY = (
     ("Мейтреймар", "Мейтремар"),
     ("Мейтримар", "Мейтремар"),
     ("Бухта Оспри", "Бухта Скопы"),
+    ("Бухты Оспри", "Бухты Скопы"),
+    ("Бухте Оспри", "Бухте Скопы"),
+    ("Бухту Оспри", "Бухту Скопы"),
+    ("Бухтой Оспри", "Бухтой Скопы"),
     ("Железная Гавань", "Айрон-Харбор"),
     ("Путь Родства", "Родственное Побережье"),
-    ("ПИ", "герои"),
+    ("Оспрей", "Скопы"),
+    ("Cleanse Affliction", "Очищение недуга"),
+    ("Violet Venom", "Фиолетовый яд"),
 )
 
 SIMPLE_NAMES = {
@@ -330,8 +337,16 @@ def clean_reference_html(value: str) -> str:
     """Очищает структурированный русский текст от старых UUID, статблоков и ресурсов."""
     value = clean_ru(value)
     value = re.sub(r"<figure\b[^>]*>.*?</figure>", "", value, flags=re.I | re.S)
-    value = TECH_RE.sub("", value)
-    value = INLINE_ROLL_RE.sub("", value)
+
+    # UUID прежней конверсии невалидны в V14. Сохраняем русскую подпись как
+    # часть предложения, а рабочую команду ниже возвращаем из официального
+    # Adventure и только с официальным идентификатором.
+    def old_token_label(match: re.Match[str]) -> str:
+        label = re.search(r"\{([^{}]*)\}$", match.group(0))
+        return label.group(1) if label else ""
+
+    value = TECH_RE.sub(old_token_label, value)
+    value = INLINE_ROLL_RE.sub(old_token_label, value)
     value = re.sub(r"`[^`]*`", "", value)
 
     def stat_block(match: re.Match[str]) -> str:
@@ -354,6 +369,11 @@ def clean_reference_html(value: str) -> str:
     value = re.sub(r"<blockquote\b[^>]*>", '<div class="read-aloud">', value, flags=re.I)
     value = re.sub(r"</blockquote>", "</div>", value, flags=re.I)
     value = re.sub(r'<h[1-6]\b[^>]*>\s*(?:/\s*)?(?:Существо|Предмет|Болезнь)?\s*\d*\s*</h[1-6]>', "", value, flags=re.I)
+    # Кириллические классы принадлежали старому PDF-конвертеру и ломают тему
+    # официального V14. Смысловые выноски выше уже получили классы Foundry.
+    value = re.sub(r'\sclass="[^"]*[А-Яа-яЁё][^"]*"', "", value)
+    value = re.sub(r"<(p|li|h[1-6])\b[^>]*>\s*</\1>", "", value, flags=re.I)
+    value = re.sub(r"<ul\b[^>]*>\s*</ul>", "", value, flags=re.I)
     value = re.sub(r"([А-Яа-яЁё]{2,})-\s+([а-яё]{2,})", r"\1\2", value)
     value = re.sub(r"\s+([,.;:!?])", r"\1", value)
     value = re.sub(r">\s+<", "><", value)
@@ -396,6 +416,155 @@ CARD_REPLACEMENTS = {
     "Varies": "Разная",
 }
 
+FOLDER_NAMES = {
+    "Rusthenge": "Растхендж",
+    "Original Maps": "Оригинальные карты",
+    "Chapter 1: Message in the Night": "Глава 1: Послание в ночи",
+    "Bonus Flip Mats": "Дополнительные двусторонние карты",
+    "Chapter 2: The Rusted Ruin": "Глава 2: Ржавые руины",
+    "Chapter 3: Resurrection of Rust": "Глава 3: Воскрешение ржавчины",
+    "Kindred Crossing": "Родственное Побережье",
+    "The Swordfish": "«Рыба-меч»",
+    "Stonehome": "Стоунхоум",
+    "Temple of Xar-Azmak": "Храм Ксар-Азмака",
+    "Despoiler’s Deep": "Глубины Опустошителя",
+    "Treasure": "Сокровища",
+    "Summon Fiend": "Призыв демона",
+}
+
+MACRO_NAMES = {
+    "Esipil Transformation": "Превращение Эсипила",
+    "Bring Down Wall of Force": "Разрушить силовую стену",
+    "Weakened": "Ослаблен",
+    "Stable": "Стабилен",
+    "Drop Rusted Cage": "Сбросить ржавую клетку",
+    "Reveal Spiky Pit": "Показать шипованную яму",
+    "Toggle Rusthenge Chanting": "Переключить песнопения Растхенджа",
+    "Landing Scene Picker": "Выбор стартовой сцены",
+    "Summon Fiend": "Призвать демона",
+    "Reset": "Сброс",
+    "Stop Chanting": "Остановить песнопения",
+    "Unstable": "Нестабилен",
+    "Disrupted": "Нарушен",
+}
+
+PLAYLIST_NAMES = {"Ambience": "Атмосфера", "Loop": "Зацикленные звуки", "SFX": "Звуковые эффекты"}
+SOUND_NAMES = {
+    "Basement": "Подвал", "Coastal Waves": "Прибрежные волны", "Docks": "Доки", "Ship": "Корабль",
+    "Small Village Indoors": "Малая деревня — внутри", "Small Village Outdoors": "Малая деревня — снаружи",
+    "Strong Winds": "Сильный ветер", "Underground Caverns": "Подземные пещеры",
+    "Underground Facility": "Подземный комплекс", "Windy Coast": "Ветреное побережье", "Temple": "Храм",
+    "Campfire": "Костёр", "Chanting": "Песнопения", "Dripping": "Капли",
+    "Electrical Machinery": "Электрические механизмы", "Light Wall": "Световая стена",
+    "Mechanical Clockwork 1": "Заводной механизм 1", "Mechanical Clockwork 2": "Заводной механизм 2",
+    "Mechanical Gear 1": "Механическая передача 1", "Mechanical Gear 2": "Механическая передача 2",
+    "Mechanical Gear 3": "Механическая передача 3", "Mechanical Gear 4": "Механическая передача 4",
+    "Mechanical Gear 5": "Механическая передача 5", "Metalwork Forge": "Металлообрабатывающая кузница",
+    "Ritual Circle Energy Large": "Энергия большого ритуального круга",
+    "Ritual Circle Energy Small": "Энергия малого ритуального круга",
+    "Underground Lake Shore": "Берег подземного озера", "Underground Ravine": "Подземное ущелье",
+    "Magic Surge": "Всплеск магии", "Mechanical Spike Trap": "Механическая ловушка с шипами",
+    "Metal Cage Drop": "Падение металлической клетки", "Pit Trap": "Ловушка-яма",
+    "Rushing Water": "Бурный поток", "Summoned Fiend": "Призванный демон",
+}
+
+MANUAL_ITEM_DESCRIPTIONS = {
+    "Navigational Logs": {"description": "Навигационные журналы и записи показывают, что «Рыба-меч» — наёмное судно, которое обычно нанимает тассилонская знать, а не торговый корабль."},
+    "Unopened Pony Keg of Akvavit": {"description": "Водка, настоянная на травах."},
+    "Fine Captain's Hat": {
+        "description": "Добротная треуголка.",
+        "gm": "Янис позволяет героям оставить перьевой жетон, если они вернут эту шляпу как доказательство судьбы капитана.",
+    },
+    "Chart a Course": {"description": "Потратив 10 минут на работу и успешно пройдя @Check[type:sailing-lore|dc:22]{проверку Знаний о мореплавании}, штурман прокладывает оптимальный курс.\n\nСерьёзность погодных условий, кроме температуры, снижается на одну ступень на 24 часа (на две ступени при критическом успехе). Средний урон становится малым, ветер, создающий особо трудную местность, создаёт только трудную местность, и так далее."},
+    "Navigator's Edge": {"description": "Находясь на корабле, штурман наносит оружием дополнительно [[/r {1d6}]]{1d6 урона}."},
+    "Heft Crate": {"description": "**Требования** Матрос находится рядом с ящиком.\n\n**Эффект** Матрос поднимает ящик и бросает его на расстояние до 15 футов. При падении ящик разбивается в @Template[type:burst|distance:5]. Каждое существо в области получает @Damage[2d6[bludgeoning]] дробящего урона (@Check[type:reflex|dc:13|basic:true]{простой спасбросок Рефлекса}); область становится трудной местностью, пока её не расчистят."},
+    "Swig": {"description": "Матрос Взаимодействует, чтобы достать бутылку @UUID[Compendium.pf2e.equipment-srd.Item.UMAXLDpI6YLSfYX1]{алкоголя} либо подобрать стоящую рядом ничейную бутылку алкоголя и выпить её целиком.\n\nНа 1 минуту матрос получает предметный бонус +2 к броскам урона в ближнем бою и спасброскам против страха, но становится @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{неуклюжим 1}.\n\n@UUID[Compendium.pf2e.bestiary-effects.Item.HArljmKc2IR7rtfc]{Эффект: глоток}"},
+    "Swordfish’s Log": {"description": "Журнал «Рыбы-меч», написанный на тассилонском.", "gm": "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Раздаточный материал №1}"},
+    "Meitremar's Journal": {"description": "Журнал Мейтремара, написанный на тассилонском, открыт на последней записи без даты. Этот древний журнал некогда принадлежал его деду; прежние записи рассказывают об истории мастерской небесного металла, Влорийских шпилей и плане Тейлтемара воскресить Ксар-Азмака. Упоминается и пребывание Тейлтемара в Дисе во время неудачного нападения Ксар-Азмака: бежав обратно к Влорийским шпилям, он сумел унести один из отломленных рогов повелителя демонов. В середине журнала записаны два ритуала: @UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]{Создание нежити} и @UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Обольщение}.\n\nМейтремар продолжил записи после того, как через год после возвращения Ксин-Эдассерила в современную эпоху нашёл журнал в доме деда. Его увлекла мысль, что Рог Ржавчины скрыт глубоко под Растхенджем, и он задумал отправиться туда с последователями. Записи после прибытия в Айрон-Харбор кратки. В одной он ликует, что нашёл Рог Ржавчины в «великом храме», и упоминает тайную дверь за огромной статуей Ксар-Азмака. Последняя, более длинная запись воспроизведена в @UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]{раздаточном материале №2}."},
+    "Key to E3": {"description": "Ключ от спальни-тюрьмы."},
+    "Tiny Brass Key set with Small Gemstones": {"gm": "По вашему усмотрению этот ключ может сыграть важную роль в будущем приключении. В частности, если группа продолжит приключения в «Семи погибелях Сэндпойнта», он может оказаться ключом к таинственной заводной певчей птице, которую герои будут постепенно восстанавливать."},
+}
+
+MANUAL_ACTOR_NOTES = {
+    "Starving Werebat": {"description": "Вернетопыри образуют организованные колонии охотников-приспособленцев. Они охотно обращают других существ, пополняя колонию, а посвящение сопровождают сложными обрядами и кровавыми испытаниями. Проклятие вернетопыря пробуждает сильное желание охотиться на слабых и одиноких. Истинные вернетопыри часто необычно высоки и худы, с угловатыми чертами. В бою они предпочитают безоружные атаки, поскольку не могут летать с оружием в крыльях.\n\nВерсущества — гуманоиды, которые под светом полной луны превращаются в животных и гибридов. Их судьба связана с древним природным проклятием, передающимся через укусы. Параметры представлены для гибридного облика."},
+    "Janis": {"description": "Штурман определяет маршрут по небесным телам и морским путям. Для небоевых задач, связанных с навигацией или мореплаванием, штурман представляет испытание 4-го уровня.\n\nИскателям приключений может понадобиться переход на быстром судне, либо им придётся столкнуться с морскими разбойниками и опасностями прибрежных поселений."},
+    "Deck Hand": {"description": "Матросы грузят и разгружают суда. Их считают неуправляемыми, но многие сосредоточенно и упорно трудятся до конца работы, а уже затем шумно празднуют завершение дня.\n\nКаждый день рабочие выполняют изнурительный физический труд."},
+    "Elder Vandous": {"descriptionGM": "Старейший из деревенских старейшин, хранитель записей и историк.\n@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}"},
+    "Elder Anlorgog": {"descriptionGM": "Помогает руководить рыболовством деревни.\n@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}"},
+    "Elder Johedia": {"descriptionGM": "Главная целительница Бухты Скопы.\n@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}"},
+    "Elder Bo-Mel": {"descriptionGM": "Помогает руководить земледелием и строительством деревни.\n@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}"},
+}
+
+# Для отсутствовавших в старой конверсии полей задаём готовый HTML с той же
+# последовательностью тегов, что в официальном документе. Это сохраняет
+# команды в середине предложений и не создаёт пробелов на их прежнем месте.
+MANUAL_ITEM_HTML = {
+    "Navigational Logs": {"description": "<p>Навигационные журналы и записи показывают, что «Рыба-меч» — наёмное судно, которое обычно нанимает тассилонская знать, а не торговый корабль.</p>"},
+    "Unopened Pony Keg of Akvavit": {"description": "<p>Водка, настоянная на травах.</p>"},
+    "Fine Captain's Hat": {
+        "description": "<p>Добротная треуголка.</p>",
+        "gm": "<p>Янис позволяет героям оставить перьевой жетон, если они вернут эту шляпу как доказательство судьбы капитана.</p>",
+    },
+    "Chart a Course": {"description": "<p>Потратив 10 минут на работу и успешно пройдя @Check[type:sailing-lore|dc:22]{проверку Знаний о мореплавании}, штурман прокладывает оптимальный курс.</p>\n<p>Серьёзность погодных условий, кроме температуры, снижается на одну ступень на 24 часа (на две ступени при критическом успехе). Средний урон становится малым, ветер, создающий особо трудную местность, создаёт только трудную местность, и так далее.</p>"},
+    "Navigator's Edge": {"description": "<p>Находясь на корабле, штурман наносит оружием дополнительно [[/r {1d6}]]{1d6 урона}.</p>"},
+    "Heft Crate": {"description": "<p><strong>Требования</strong> Матрос находится рядом с ящиком.</p>\n<hr />\n<p><strong>Эффект</strong> Матрос поднимает ящик и бросает его на расстояние до 15 футов. При падении ящик разбивается в @Template[type:burst|distance:5]. Каждое существо в области получает @Damage[2d6[bludgeoning]] дробящего урона (@Check[type:reflex|dc:13|basic:true]{простой спасбросок Рефлекса}); область становится трудной местностью, пока её не расчистят.</p>"},
+    "Swig": {"description": "<p>Матрос Взаимодействует, чтобы достать бутылку @UUID[Compendium.pf2e.equipment-srd.Item.UMAXLDpI6YLSfYX1]{алкоголя} либо подобрать стоящую рядом ничейную бутылку @UUID[Compendium.pf2e.equipment-srd.Item.UMAXLDpI6YLSfYX1]{алкоголя} и выпить её целиком.</p>\n<p>На 1 минуту матрос получает предметный бонус +2 к броскам урона в ближнем бою и спасброскам против страха, но становится @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{неуклюжим 1}.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.HArljmKc2IR7rtfc]{Эффект: глоток}</p>"},
+    "Swordfish’s Log": {
+        "description": "<p>Журнал «Рыбы-меч», написанный на тассилонском.</p>",
+        "gm": "<p>@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Раздаточный материал №1}</p>",
+    },
+    "Meitremar's Journal": {"description": "<p>Журнал Мейтремара, написанный на тассилонском, открыт на последней записи без даты. Этот древний журнал некогда принадлежал его деду; прежние записи рассказывают об истории мастерской небесного металла, Влорийских шпилей и плане Тейлтемара воскресить Ксар-Азмака. Упоминается и пребывание Тейлтемара в Дисе во время неудачного нападения Ксар-Азмака: бежав обратно к Влорийским шпилям, он сумел унести один из отломленных рогов повелителя демонов. В середине журнала записаны два ритуала: @UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]{Создание нежити} и @UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Обольщение}.</p>\n<p>Мейтремар продолжил записи после того, как через год после возвращения Ксин-Эдассерила в современную эпоху нашёл журнал в доме деда. Его увлекла мысль, что Рог Ржавчины скрыт глубоко под Растхенджем, и он задумал отправиться туда с последователями. Записи после прибытия в Айрон-Харбор кратки. В одной он ликует, что нашёл Рог Ржавчины в «великом храме», и упоминает тайную дверь за огромной статуей Ксар-Азмака. Последняя, более длинная запись воспроизведена в @UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]{раздаточном материале №2}.</p>"},
+    "Key to E3": {"description": "<p>Ключ от спальни-тюрьмы.</p>"},
+    "Tiny Brass Key set with Small Gemstones": {"gm": "<p>По вашему усмотрению этот ключ может сыграть важную роль в будущем приключении. В частности, если группа продолжит приключения в «Семи погибелях Сэндпойнта», он может оказаться ключом к таинственной заводной певчей птице, которую герои будут постепенно восстанавливать.</p>"},
+    "Rusting Death": {"description": "<p>Когда Тейлтемар уничтожен, некромантическая энергия, удерживающая его кости, высвобождается и заставляет их взорваться. Ржавая кольчуга разлетается вместе с ними, разбрасывая во все стороны зазубренные металлические осколки. Существа рядом получают @Damage[2d6[piercing]] колющего урона (@Check[type:reflex|dc:21|basic:true]{простой спасбросок Рефлекса}) и подвергаются воздействию ползучей ржавчины. Когда останки оседают на пол, силовая стена, преграждающая путь в область <strong>F14</strong>, мерцает и исчезает.</p>"},
+    "Destructive Croak": {"description": "<p>Болотный мудрец издаёт могучее кваканье, которое наносит @Damage[4d6[sonic]] урона звуком всем не-боггардам в @Template[type:emanation|distance:15] (@Check[type:fortitude|dc:19|basic:true]{простой спасбросок Стойкости}).</p>\n<p>Любое существо в состоянии @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{испуга} получает дополнительный урон звуком, равный удвоенному значению этого состояния.</p>\n<p>Боггард не может снова использовать «Разрушительное кваканье» в течение [[/br 1d4 #Recharge Destructive Croak]]{1d4 раундов}.</p>"},
+    "Hibernation": {"description": "<p>Проведя без пищи 3 дня или больше, аката может выделить смолу, заключающую её в кокон из ноквала. Кокон имеет Твёрдость 9, 40 ОЗ и Предел Поломки 18, а также сопротивление 5 урону от магических источников. Пока кокон цел, акате нельзя навредить и ей не требуется есть или пить.</p>\n<p>Внутри кокона аката получает @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]{чувство жизни} на 30 футов.</p>\n<p>Аката остаётся в спячке, пока не подвергнется воздействию чрезвычайно высокой температуры или не почувствует живое существо; после этого она может вырваться из кокона за [[/br 1d4 #minutes]]{1d4 минуты}.</p>"},
+    "Void Death": {"description": "<p>Аката внедряет паразитических личинок в укушенное существо, но подходящими носителями служат только гуманоиды Среднего или Маленького размера; все остальные существа невосприимчивы к этой болезни.</p>\n<p><strong>Спасбросок</strong> @Check[type:fortitude|dc:17]{Стойкость}</p>\n<p><strong>Стадия 1</strong> носитель без негативного эффекта (1 день)</p>\n<p><strong>Стадия 2</strong> @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{истощён 1} (1 день)</p>\n<p><strong>Стадия 3</strong> как стадия 2 (1 день)</p>\n<p><strong>Стадия 4</strong> истощён 2 и @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{утомлён} (1 день)</p>\n<p><strong>Стадия 5</strong> как стадия 4 (1 день)</p>\n<p><strong>Стадия 6</strong> смерть; труп восстаёт как пустотный зомби через [[/br 2d4 #hours]]{2d4 часа}</p>"},
+    "Spew Rusted Shards": {"description": "<p>Влориак извергает @Template[type:cone|distance:15]{15-футовый конус} кислоты и ржавого металла. Существа в области получают 3d6 урона кислотой и @Damage[3d6[piercing]] колющего урона (@Check[type:reflex|dc:22|basic:true]{простой спасбросок Рефлекса}). Существо, получившее колющий урон, подвергается воздействию столбняка. Влориак не может снова извергать ржавые осколки в течение [[/br 1d4 #rounds]]{1d4 раундов}.</p>"},
+    "Bay": {"description": "<p>Гончая йета издаёт потусторонний вой, слышимый на расстоянии до 300 футов. Любое существо, не являющееся бесом, которое слышит вой, должно успешно пройти @Check[type:will|dc:20]{спасбросок Воли}, иначе становится @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{испуганным 1}. При критическом провале существо в пределах 60 футов от гончей вместо этого становится @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{испуганным 3} и @UUID[Compendium.pf2e.conditionitems.Item.sDPxOjQ9kx2RZE8D]{бегущим} на [[/br 1d4 #rounds]]{1d4 раунда} (или пока не избавится от состояния испуга).</p>\n<p>Независимо от результата спасброска существо после этого получает временную невосприимчивость к Вою на 24 часа.</p>"},
+    "Sinister Bite": {"description": "<p>Доброе существо, укушенное гончей йета, должно пройти @Check[type:will|dc:20]{спасбросок Воли}. При критическом успехе существо получает временную невосприимчивость к зловещему укусу на 1 минуту. При провале существо становится @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{испуганным 1}; если оно уже испугано, значение этого состояния увеличивается на 1.</p>"},
+}
+
+MANUAL_ITEM_HTML_BY_ID = {
+    "oHYtarmUC2qQjUtU": {"gm": "<p>Ключ от сундука в области <strong>E2</strong>.</p>"},
+    "0tDhCne8RVvfJHxv": {"gm": "<p>Ключ от защищённого хранилища.</p>"},
+}
+
+MANUAL_ACTOR_HTML = {
+    "Starving Werebat": {"description": "<p>Вернетопыри образуют организованные колонии охотников-приспособленцев. Они охотно обращают других существ, пополняя колонию, а посвящение сопровождают сложными обрядами и кровавыми испытаниями. Проклятие вернетопыря пробуждает сильное желание охотиться на слабых и одиноких. Истинные вернетопыри часто необычно высоки и худы, с угловатыми чертами. В бою они предпочитают безоружные атаки, поскольку не могут летать с оружием в крыльях.</p>\n<hr>\n<p>Версущества — гуманоиды, которые под светом полной луны превращаются в животных и гибридов. Их судьба связана с древним природным проклятием, передающимся через укусы. Параметры представлены для гибридного облика.</p>"},
+    "Janis": {"description": "<p>Штурман определяет маршрут по небесным телам и морским путям. Для небоевых задач, связанных с навигацией или мореплаванием, штурман представляет испытание 4-го уровня.</p>\n<hr>\n<p>Искателям приключений может понадобиться переход на быстром судне, либо им придётся столкнуться с морскими разбойниками и опасностями прибрежных поселений.</p>"},
+    "Deck Hand": {"description": "<p>Матросы грузят и разгружают суда. Их считают неуправляемыми, но многие сосредоточенно и упорно трудятся до конца работы, а уже затем шумно празднуют завершение дня.</p>\n<hr>\n<p>Каждый день рабочие выполняют изнурительный физический труд.</p>"},
+    "Elder Vandous": {"descriptionGM": "<p>Старейший из деревенских старейшин, хранитель записей и историк.<br>@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}</p>"},
+    "Elder Anlorgog": {"descriptionGM": "<p>Помогает руководить рыболовством деревни.<br>@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}</p>"},
+    "Elder Johedia": {"descriptionGM": "<p>Главная целительница Бухты Скопы.<br>@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}</p>"},
+    "Elder Bo-Mel": {"descriptionGM": "<p>Помогает руководить земледелием и строительством деревни.<br>@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухта Скопы}</p>"},
+}
+
+PF2E_RU_ACTOR_DONORS = {
+    "Envyspawn": ("pf2e.pathfinder-monster-core.json", "Envyspawn"),
+    "Azomi": ("pf2e.pathfinder-monster-core.json", "Envyspawn"),
+    "Severed Head": ("pf2e.pathfinder-monster-core-2.json", "Severed Head"),
+    "Theiltemar": ("pf2e.pathfinder-monster-core.json", "Skeleton Guard"),
+    "Vlorian Cythnigot": ("pf2e.pathfinder-monster-core.json", "Cythnigot"),
+    "Glutu": ("pf2e.pathfinder-monster-core.json", "Boggard Swampseer"),
+    "Rust Zombie": ("pf2e.pathfinder-monster-core.json", "Plague Zombie"),
+    "Reefclaw": ("pf2e.pathfinder-monster-core.json", "Reefclaw"),
+    "Zaiox": ("pf2e.pathfinder-monster-core.json", "Dero Magister"),
+    "Ida": ("pf2e.pathfinder-bestiary-3.json", "Rosethorn Ram"),
+}
+
+
+def load_pf2e_ru_actor_lore(root: Path) -> dict[str, str]:
+    lore: dict[str, str] = {}
+    for actor_name, (filename, entry_name) in PF2E_RU_ACTOR_DONORS.items():
+        path = root / filename
+        data = json.loads(path.read_text(encoding="utf-8"))
+        description = data.get("entries", {}).get(entry_name, {}).get("description", "")
+        if not description:
+            raise ValueError(f"В pf2e-ru не найден перевод {entry_name} ({path})")
+        lore[actor_name] = description
+    return lore
+
 
 def translate_token_label(
     token: str,
@@ -423,7 +592,7 @@ def translate_token_label(
         elif target.startswith("Compendium.pf2e."):
             label = ""  # Babele/pf2e-ru подставят локализованное имя документа.
         elif target.startswith("Macro."):
-            label = "Макрос Foundry"
+            label = MACRO_NAMES.get(label, "Макрос Foundry")
         else:
             label = translated_name(label)
     elif label:
@@ -502,24 +671,62 @@ def source_functional_cards(
     return "".join(cards)
 
 
-def translated_controls(
+def _markup_key(value: str) -> str:
+    if value.startswith("@"):
+        return technical_cores(value)[0]
+    return re.sub(r"\{[^{}]*\}$", "", value)
+
+
+def _foundry_markup(value: str) -> list[str]:
+    matches = [(match.start(), match.group(0)) for match in TECH_RE.finditer(value)]
+    matches.extend((match.start(), match.group(0)) for match in INLINE_ROLL_RE.finditer(value))
+    return [token for _position, token in sorted(matches)]
+
+
+def _append_inline_markup(block: str, markup: str) -> str:
+    closing = block.rfind("</")
+    if closing < 0:
+        return block + " " + markup
+    return block[:closing].rstrip() + " " + markup + block[closing:]
+
+
+def restore_missing_markup(
     source_html: str,
     current_html: str,
     page_names: dict[str, str],
     journal_names: dict[str, str],
     actor_names: dict[str, str],
 ) -> str:
-    source_tokens = TECH_RE.findall(source_html)
-    current = Counter(technical_cores(current_html))
-    missing: list[str] = []
-    for token in source_tokens:
-        core = technical_cores(token)[0]
-        if current[core]:
-            current[core] -= 1
-        else:
-            missing.append(translate_token_label(token, page_names, journal_names, actor_names))
+    """Возвращает отсутствующие команды в ближайший смысловой HTML-блок."""
+    current = Counter(_markup_key(token) for token in _foundry_markup(current_html))
+    source_blocks = top_level_blocks(source_html)
+    missing: list[tuple[int, str]] = []
+    for source_index, block in enumerate(source_blocks):
+        for token in _foundry_markup(block):
+            key = _markup_key(token)
+            if current[key]:
+                current[key] -= 1
+                continue
+            translated = translate_token_label(token, page_names, journal_names, actor_names) if token.startswith("@") else token
+            missing.append((source_index, translated))
     if not missing:
-        return ""
+        return current_html
+    blocks = top_level_blocks(current_html)
+    candidates = [
+        index for index, block in enumerate(blocks)
+        if block_plain_text(block)
+        and not block.lstrip().lower().startswith(("<h1", "<h2", "<h3", "<h4", "<h5", "<h6", "<img", "<hr"))
+    ]
+    if not candidates:
+        return current_html + " ".join(markup for _index, markup in missing)
+    source_denominator = max(1, len(source_blocks) - 1)
+    for source_index, markup in missing:
+        fraction = source_index / source_denominator
+        target = candidates[round(fraction * (len(candidates) - 1))]
+        blocks[target] = _append_inline_markup(blocks[target], markup)
+    return "".join(blocks)
+    # Старый общий подвал ниже намеренно недостижим и будет удалён после
+    # миграции существующих переводов.
     return (
         '<details class="rusthenge-ru-controls"><summary>Игровые элементы Foundry</summary>'
         f'<div class="rusthenge-ru-control-list">{" ".join(missing)}</div></details>'
@@ -627,10 +834,15 @@ def pdf_page_text(page_text: str, page_number: int) -> str:
 
 def reflow_preserving_html(source_html: str, translated_text: str) -> str:
     """Заменяет только текстовые узлы, оставляя каждый HTML-тег и атрибут без изменений."""
+    # Команды и формулы всегда берутся из официального исходника. Переводной
+    # текст может содержать их копии лишь как ориентиры для переводчика.
+    translated_markup = _foundry_markup(translated_text)
+    markup_cursor = 0
+    translated_text = INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", translated_text))
     parts = re.split(r"(<[^>]+>)", source_html)
     weighted: list[tuple[int, int]] = []
     for index in range(0, len(parts), 2):
-        source_text = TECH_RE.sub(" ", html.unescape(parts[index]))
+        source_text = INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", html.unescape(parts[index])))
         weight = len(re.findall(r"[A-Za-zА-яЁё]{2,}", source_text))
         if weight:
             weighted.append((index, weight))
@@ -645,16 +857,27 @@ def reflow_preserving_html(source_html: str, translated_text: str) -> str:
         consumed_weight += weight
         end = len(words) if position == len(weighted) - 1 else round(len(words) * consumed_weight / total_weight)
         chunk = html.escape(" ".join(words[cursor:end]), quote=False)
-        original_tokens = TECH_RE.findall(parts[index])
-        if original_tokens:
-            chunk = (chunk + " " if chunk else "") + " ".join(original_tokens)
+        original_tokens = _foundry_markup(parts[index])
+        localized_tokens: list[str] = []
+        for source_token in original_tokens:
+            candidate = translated_markup[markup_cursor] if markup_cursor < len(translated_markup) else None
+            markup_cursor += 1
+            if candidate and source_token.startswith("@") and candidate.startswith(source_token.split("[", 1)[0] + "["):
+                label = re.search(r"\{([^{}]*)\}$", candidate)
+                source_token = _markup_key(source_token) + ("{" + label.group(1) + "}" if label else "")
+            elif candidate and source_token.startswith("[[/r") and candidate.startswith("[[/r"):
+                label = re.search(r"\{([^{}]*)\}$", candidate)
+                source_token = _markup_key(source_token) + ("{" + label.group(1) + "}" if label else "")
+            localized_tokens.append(source_token)
+        if localized_tokens:
+            chunk = (chunk + " " if chunk else "") + " ".join(localized_tokens)
         parts[index] = chunk
         cursor = end
     # Технические токены из нулевых по весу узлов тоже должны остаться на месте.
     weighted_indexes = {index for index, _ in weighted}
     for index in range(0, len(parts), 2):
         if index not in weighted_indexes:
-            parts[index] = " ".join(TECH_RE.findall(parts[index]))
+            parts[index] = " ".join(_foundry_markup(parts[index]))
     return "".join(parts)
 
 
@@ -738,14 +961,32 @@ def item_source(item: dict[str, Any]) -> str | None:
     )
 
 
-def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_pages: list[str]) -> tuple[dict[str, Any], dict[str, Any]]:
+def make_translation(
+    source: dict[str, Any],
+    reference: dict[str, Any],
+    pdf_pages: list[str],
+    pf2e_ru_actor_lore: dict[str, str],
+) -> tuple[dict[str, Any], dict[str, Any]]:
     ref_pages = {p["name"]: p for j in reference["journal"] for p in j.get("pages", [])}
     ref_areas = {reference_area_code(p["name"]): p for p in ref_pages.values() if reference_area_code(p["name"])}
     source_pages = {p["_id"]: p for j in source["journal"] for p in j.get("pages", [])}
-    translated_page_names = {
-        page_id: PAGE_NAMES.get(page_id) or translated_name(page.get("name", ""))
-        for page_id, page in source_pages.items()
-    }
+    translated_page_names: dict[str, str] = {}
+    for page_id, page in source_pages.items():
+        source_name = page.get("name", "")
+        translated = PAGE_NAMES.get(page_id) or translated_name(source_name)
+        if translated == source_name and page.get("type") != "image":
+            reference_page = None
+            if page_id in REFERENCE_SLICES:
+                reference_page = ref_pages.get(REFERENCE_SLICES[page_id][0])
+            else:
+                area_code = first_area_code(page.get("text", {}).get("content", ""))
+                if area_code:
+                    reference_page = ref_areas.get(AREA_PREFIX[area_code[0]] + area_code[1:])
+                if reference_page is None:
+                    reference_page = ref_pages.get(NARRATIVE_REFERENCE.get(page_id, ""))
+            if reference_page:
+                translated = clean_ru(reference_page["name"])
+        translated_page_names[page_id] = translated
     translated_journal_names = {
         journal["_id"]: JOURNAL_NAMES.get(journal["_id"], translated_name(journal.get("name", "")))
         for journal in source["journal"]
@@ -801,9 +1042,7 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
             if manual_html is None and ref_page is None:
                 raise ValueError(f"Не найден русский текст для страницы {pid} ({page['name']})")
 
-            name = PAGE_NAMES.get(pid) or translated_name(page["name"])
-            if name == page["name"]:
-                name = clean_ru(ref_page["name"]) if ref_page else name
+            name = translated_page_names[pid]
             if manual_html is not None:
                 russian_html = manual_html
                 alignment_reference = block_plain_text(manual_html)
@@ -833,16 +1072,14 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
                 body = translated_heading(pid, name) + ref_html
                 if pid.startswith("06handout"):
                     body = f'<div class="handout-wrapper"><section class="handout">{body}</section></div>'
-                russian_html = f'<div class="rusthenge-ru-content">{media}{body}{cards}</div>'
-                controls = translated_controls(
+                body = restore_missing_markup(
                     source_html,
-                    russian_html,
+                    body + cards,
                     translated_page_names,
                     translated_journal_names,
                     translated_actor_names,
                 )
-                if controls:
-                    russian_html = russian_html.removesuffix("</div>") + controls + "</div>"
+                russian_html = f'<div class="rusthenge-ru-content">{media}{body}</div>'
                 alignment_reference = ref_html
 
             try:
@@ -858,6 +1095,7 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
                 "sourceName": page["name"],
                 "translatedName": name,
                 "technicalTokens": TECH_RE.findall(source_html),
+                "inlineRolls": INLINE_ROLL_RE.findall(source_html),
                 "technicalCoreHash": hashlib.sha256("\n".join(technical_cores(source_html)).encode()).hexdigest(),
                 "sourceImagePaths": re.findall(r'<img\b[^>]*\bsrc="([^"]+)"', source_html, flags=re.I),
                 "sourceLinkPaths": re.findall(r'<a\b[^>]*\bhref="([^"]+)"', source_html, flags=re.I),
@@ -876,6 +1114,7 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
 
     actors: dict[str, Any] = {}
     actor_technical: dict[str, list[str]] = {}
+    actor_inline_rolls: dict[str, list[str]] = {}
     actor_html: dict[str, str] = {}
     custom_items = 0
     custom_items_translated = 0
@@ -883,24 +1122,32 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
         ref_actor = ref_actors_by_source.get(item_source(actor)) or ref_actors_by_id.get(actor["_id"])
         actor_name = clean_ru(ref_actor["name"]) if ref_actor else ACTOR_NAMES.get(actor["name"], translated_name(actor["name"]))
         entry: dict[str, Any] = {"name": actor_name, "tokenName": actor_name}
-        if ref_actor:
-            public = ref_actor.get("system", {}).get("details", {}).get("publicNotes", "")
-            private = ref_actor.get("system", {}).get("details", {}).get("privateNotes", "")
-            if public:
-                source_public = actor.get("system", {}).get("details", {}).get("publicNotes", "")
-                public_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(public))))
-                entry["description"] = reflow_preserving_html(source_public, public_plain)
-                actor_technical[f"{actor['_id']}/description"] = TECH_RE.findall(source_public)
-                actor_html[f"{actor['_id']}/description"] = hashlib.sha256(
-                    "\n".join(html_tags(source_public)).encode()
-                ).hexdigest()
-            if private:
-                source_private = actor.get("system", {}).get("details", {}).get("privateNotes", "")
-                private_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(private))))
-                entry["descriptionGM"] = reflow_preserving_html(source_private, private_plain)
-                actor_technical[f"{actor['_id']}/descriptionGM"] = TECH_RE.findall(source_private)
-                actor_html[f"{actor['_id']}/descriptionGM"] = hashlib.sha256(
-                    "\n".join(html_tags(source_private)).encode()
+        source_details = actor.get("system", {}).get("details", {})
+        ref_details = ref_actor.get("system", {}).get("details", {}) if ref_actor else {}
+        manual_notes = MANUAL_ACTOR_NOTES.get(actor["name"], {})
+        manual_html = MANUAL_ACTOR_HTML.get(actor["name"], {})
+        for source_key, output_key, manual_key in (
+            ("publicNotes", "description", "description"),
+            ("privateNotes", "descriptionGM", "descriptionGM"),
+        ):
+            source_value = source_details.get(source_key, "")
+            reference_value = ref_details.get(source_key, "")
+            translated_value = manual_notes.get(manual_key)
+            if output_key == "description" and actor["name"] in pf2e_ru_actor_lore:
+                translated_value = html.unescape(
+                    TAG_RE.sub(" ", TECH_RE.sub(" ", pf2e_ru_actor_lore[actor["name"]]))
+                )
+            if translated_value is None and reference_value:
+                translated_value = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(reference_value))))
+            if source_value and translated_value:
+                rendered = manual_html.get(output_key) or reflow_preserving_html(source_value, translated_value)
+                if html_tags(rendered) != html_tags(source_value):
+                    raise ValueError(f"{actor['name']}/{output_key}: ручной HTML не совпадает со структурой источника")
+                entry[output_key] = rendered
+                actor_technical[f"{actor['_id']}/{output_key}"] = TECH_RE.findall(source_value)
+                actor_inline_rolls[f"{actor['_id']}/{output_key}"] = INLINE_ROLL_RE.findall(source_value)
+                actor_html[f"{actor['_id']}/{output_key}"] = hashlib.sha256(
+                    "\n".join(html_tags(source_value)).encode()
                 ).hexdigest()
 
         item_entries = []
@@ -913,23 +1160,29 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
                 "id": item["_id"],
                 "name": translated_name(clean_ru(ref_item["name"])) if ref_item else translated_name(item["name"]),
             }
-            if ref_item:
-                source_desc = item.get("system", {}).get("description", {})
-                ref_desc = ref_item.get("system", {}).get("description", {})
-                if ref_desc.get("value"):
-                    source_value = source_desc.get("value", "")
-                    ref_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(ref_desc["value"]))))
-                    item_entry["description"] = reflow_preserving_html(source_value, ref_plain)
-                    key = f"{actor['_id']}/items/{item['_id']}/description"
+            source_desc = item.get("system", {}).get("description", {})
+            ref_desc = ref_item.get("system", {}).get("description", {}) if ref_item else {}
+            manual_desc = MANUAL_ITEM_DESCRIPTIONS.get(item["name"], {})
+            manual_html = {
+                **MANUAL_ITEM_HTML.get(item["name"], {}),
+                **MANUAL_ITEM_HTML_BY_ID.get(item["_id"], {}),
+            }
+            for source_key, output_key in (("value", "description"), ("gm", "gm")):
+                source_value = source_desc.get(source_key, "")
+                reference_value = ref_desc.get(source_key, "")
+                translated_value = manual_desc.get(output_key)
+                if translated_value is None and reference_value:
+                    translated_value = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(reference_value))))
+                if source_value and translated_value:
+                    rendered = manual_html.get(output_key) or reflow_preserving_html(source_value, translated_value)
+                    if html_tags(rendered) != html_tags(source_value):
+                        raise ValueError(f"{item['name']}/{output_key}: ручной HTML не совпадает со структурой источника")
+                    item_entry[output_key] = rendered
+                    key = f"{actor['_id']}/items/{item['_id']}/{output_key}"
                     actor_technical[key] = TECH_RE.findall(source_value)
+                    actor_inline_rolls[key] = INLINE_ROLL_RE.findall(source_value)
                     actor_html[key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
-                if ref_desc.get("gm"):
-                    source_gm = source_desc.get("gm", "")
-                    ref_plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(ref_desc["gm"]))))
-                    item_entry["gm"] = reflow_preserving_html(source_gm, ref_plain)
-                    key = f"{actor['_id']}/items/{item['_id']}/gm"
-                    actor_technical[key] = TECH_RE.findall(source_gm)
-                    actor_html[key] = hashlib.sha256("\n".join(html_tags(source_gm)).encode()).hexdigest()
+            if ref_item or manual_desc:
                 custom_items_translated += 1
             item_entries.append(item_entry)
         if item_entries:
@@ -954,7 +1207,21 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
             entry["regions"] = regions
         scenes[scene["_id"]] = entry
 
-    folder_names = {f["name"]: translated_name(f["name"]) for f in source.get("folders", [])}
+    folder_names = {f["name"]: FOLDER_NAMES.get(f["name"], translated_name(f["name"])) for f in source.get("folders", [])}
+    macros = {
+        macro["_id"]: {"name": MACRO_NAMES[macro["name"]]}
+        for macro in source.get("macros", [])
+    }
+    playlists = {
+        playlist["_id"]: {
+            "name": PLAYLIST_NAMES[playlist["name"]],
+            "sounds": {
+                sound["_id"]: {"name": SOUND_NAMES[sound["name"]]}
+                for sound in playlist.get("sounds", [])
+            },
+        }
+        for playlist in source.get("playlists", [])
+    }
     translation = {
         "label": "Pathfinder Adventure: Растхендж",
         "entries": {
@@ -964,6 +1231,8 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
                 "folders": folder_names,
                 "journals": translated_journals,
                 "scenes": scenes,
+                "macros": macros,
+                "playlists": playlists,
                 "actors": actors,
             }
         },
@@ -977,11 +1246,32 @@ def make_translation(source: dict[str, Any], reference: dict[str, Any], pdf_page
             "translatedNoteLabels": translated_note_labels,
             "actors": len(source.get("actors", [])), "tokens": sum(len(s.get("tokens", [])) for s in source.get("scenes", [])),
             "customEmbeddedItems": custom_items, "referenceMatchedCustomItems": custom_items_translated,
+            "macros": len(source.get("macros", [])), "playlists": len(source.get("playlists", [])),
+            "playlistSounds": sum(len(p.get("sounds", [])) for p in source.get("playlists", [])),
+            "actorPublicNotes": sum(bool(a.get("system", {}).get("details", {}).get("publicNotes")) for a in source.get("actors", [])),
+            "actorPrivateNotes": sum(bool(a.get("system", {}).get("details", {}).get("privateNotes")) for a in source.get("actors", [])),
+            "itemPublicDescriptions": sum(
+                bool(i.get("system", {}).get("description", {}).get("value"))
+                for a in source.get("actors", []) for i in a.get("items", []) if not item_source(i)
+            ),
+            "itemGMDescriptions": sum(
+                bool(i.get("system", {}).get("description", {}).get("gm"))
+                for a in source.get("actors", []) for i in a.get("items", []) if not item_source(i)
+            ),
         },
         "servicePageIds": sorted(SERVICE_PAGE_IDS),
         "pages": page_index,
         "actorTechnical": actor_technical,
+        "actorInlineRolls": actor_inline_rolls,
         "actorHtml": actor_html,
+        "macroCommandHashes": {
+            macro["_id"]: hashlib.sha256(macro.get("command", "").encode()).hexdigest()
+            for macro in source.get("macros", [])
+        },
+        "playlistSounds": {
+            playlist["_id"]: [sound["_id"] for sound in playlist.get("sounds", [])]
+            for playlist in source.get("playlists", [])
+        },
     }
     return translation, index
 
@@ -991,6 +1281,7 @@ def main() -> None:
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--reference", required=True, type=Path)
     parser.add_argument("--pdf", required=True, type=Path, help="Локальный PDF для проверки источника; не копируется")
+    parser.add_argument("--pf2e-ru", required=True, type=Path, help="Каталог data/community/pf2e/packs модуля pf2e-ru")
     parser.add_argument("--output", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
     parser.add_argument("--index", type=Path, default=Path("data/source-index.json"))
     args = parser.parse_args()
@@ -1000,6 +1291,7 @@ def main() -> None:
         load_adventure(args.source),
         load_adventure(args.reference),
         extract_pdf_pages(args.pdf),
+        load_pf2e_ru_actor_lore(args.pf2e_ru),
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.index.parent.mkdir(parents=True, exist_ok=True)

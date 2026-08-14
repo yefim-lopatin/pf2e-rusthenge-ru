@@ -13,8 +13,9 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-TECH_RE = re.compile(r"@[A-Za-z][A-Za-z0-9]*\[[^\]]+\](?:\{[^{}]*\})?")
-TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[[^\]]+\])(?:\{[^{}]*\})?")
+TECH_RE = re.compile(r"@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\](?:\{[^{}]*\})?")
+TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\])(?:\{[^{}]*\})?")
+INLINE_ROLL_RE = re.compile(r"\[\[/[a-z]+\s+(?:[^\[\]]|\[[^\[\]]*\])*\]\](?:\{[^{}]*\})?", re.I)
 TAG_RE = re.compile(r"<[^>]+>")
 LATIN_RE = re.compile(r"\b[A-Za-z][A-Za-z'’-]{2,}\b")
 ALLOWED_LATIN = {"foundry", "pathfinder", "babele", "pf2e", "vtt", "pdf"}
@@ -25,6 +26,8 @@ ANCHOR_RE = re.compile(r"<a\b[^>]*>(.*?)</a>", re.I | re.S)
 IMAGE_PATH_RE = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"', re.I)
 LINK_PATH_RE = re.compile(r'<a\b[^>]*\bhref="([^"]+)"', re.I)
 BALANCED_TAGS = ("div", "section", "aside", "h1", "h2", "h3", "p", "details")
+CYRILLIC_CLASS_RE = re.compile(r'class="[^"]*[А-Яа-яЁё][^"]*"')
+EMPTY_LIST_RE = re.compile(r"<(?:ul|ol)\b[^>]*>\s*(?:<li\b[^>]*>\s*</li>\s*)*</(?:ul|ol)>", re.I)
 EXPECTED_COUNTS = {
     "journals": 7,
     "pages": 191,
@@ -36,6 +39,13 @@ EXPECTED_COUNTS = {
     "actors": 113,
     "tokens": 287,
     "customEmbeddedItems": 271,
+    "macros": 13,
+    "playlists": 3,
+    "playlistSounds": 34,
+    "actorPublicNotes": 43,
+    "actorPrivateNotes": 4,
+    "itemPublicDescriptions": 125,
+    "itemGMDescriptions": 5,
 }
 
 
@@ -65,7 +75,7 @@ def technical_tokens(value: str) -> list[str]:
 
 
 def visible_words(value: str) -> list[str]:
-    plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", value)))
+    plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
     return re.findall(r"[A-Za-zА-Яа-яЁё'’-]+", plain)
 
 
@@ -73,11 +83,16 @@ def html_hash(value: str) -> str:
     return hashlib.sha256("\n".join(TAG_RE.findall(value)).encode()).hexdigest()
 
 
+def inline_roll_cores(value: str) -> list[str]:
+    return [re.sub(r"\{[^{}]*\}$", "", roll) for roll in INLINE_ROLL_RE.findall(value)]
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--translation", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
     parser.add_argument("--index", type=Path, default=Path("data/source-index.json"))
     parser.add_argument("--module", type=Path, default=Path("module.json"))
+    parser.add_argument("--source", type=Path, help="Официальный Adventure для локальной проверки команд макросов")
     args = parser.parse_args()
     check = Validation()
     translation = load_json(args.translation, check)
@@ -110,11 +125,24 @@ def main() -> int:
     journals = adventure.get("journals", {})
     scenes = adventure.get("scenes", {})
     actors = adventure.get("actors", {})
+    macros = adventure.get("macros", {})
+    playlists = adventure.get("playlists", {})
     check.require(len(journals) == 7, "должно быть 7 журналов")
     check.require(len(scenes) == 19, "должно быть 19 сцен")
     check.require(len(actors) == 113, "должно быть 113 актёров")
-    check.require("macros" not in adventure, "макросы не должны переопределяться")
-    check.require("playlists" not in adventure, "плейлисты не должны переопределяться")
+    check.require(len(macros) == 13, "должно быть 13 переводов названий макросов")
+    check.require(set(macros) == set(index.get("macroCommandHashes", {})), "изменён набор _id макросов")
+    for macro_id, macro in macros.items():
+        check.require(set(macro) == {"name"}, f"{macro_id}: разрешён перевод только имени макроса")
+    check.require(len(playlists) == 3, "должно быть 3 перевода плейлистов")
+    check.require(set(playlists) == set(index.get("playlistSounds", {})), "изменён набор _id плейлистов")
+    for playlist_id, sound_ids in index.get("playlistSounds", {}).items():
+        sounds = playlists.get(playlist_id, {}).get("sounds", {})
+        check.require(set(sounds) == set(sound_ids), f"{playlist_id}: изменён набор звуков")
+        for sound_id, sound in sounds.items():
+            check.require(set(sound) == {"name"}, f"{sound_id}: разрешён перевод только имени звука")
+    folders = adventure.get("folders", {})
+    check.require(len(folders) == 13, "должно быть 13 уникальных переводов папок")
 
     pages = {pid: page for journal in journals.values() for pid, page in journal.get("pages", {}).items()}
     check.require(len(pages) == 187, "должно быть 187 переводимых страниц (116 текстов + 71 галереи)")
@@ -130,11 +158,18 @@ def main() -> int:
             Counter(cores) == Counter(source_cores),
             f"{page_id}: потерян или добавлен технический @UUID/@Check/@Damage",
         )
+        check.require(
+            Counter(inline_roll_cores(text)) == Counter(inline_roll_cores(" ".join(page_meta.get("inlineRolls", [])))),
+            f"{page_id}: потеряна или изменена встроенная формула броска",
+        )
         image_paths = set(IMAGE_PATH_RE.findall(text))
         link_paths = set(LINK_PATH_RE.findall(text))
         check.require(set(page_meta.get("sourceImagePaths", [])) <= image_paths, f"{page_id}: потерян путь к изображению")
         check.require(set(page_meta.get("sourceLinkPaths", [])) <= link_paths, f"{page_id}: потеряна HTML-ссылка")
         check.require(not SUSPICIOUS_HYPHEN_RE.search(text), f"{page_id}: остался перенос слова из PDF")
+        check.require("rusthenge-ru-controls" not in text, f"{page_id}: технические элементы вынесены в общий подвал")
+        check.require(not CYRILLIC_CLASS_RE.search(text), f"{page_id}: остался класс старого PDF-конвертера")
+        check.require(not EMPTY_LIST_RE.search(text), f"{page_id}: остался пустой список")
         for tag in BALANCED_TAGS:
             opened = len(re.findall(rf"<{tag}\b", text, flags=re.I))
             closed = len(re.findall(rf"</{tag}>", text, flags=re.I))
@@ -145,7 +180,7 @@ def main() -> int:
             check.require(len(words_in_heading) <= 24, f"{page_id}: в заголовок попал абзац ({len(words_in_heading)} слов)")
         for body in ANCHOR_RE.findall(text):
             check.require(len(visible_words(body)) <= 20, f"{page_id}: в HTML-ссылку попал абзац")
-        plain = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", text)))
+        plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", text))))
         words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
         if page_id not in {"01rusthenge00000", "01landing0000000"}:
             check.require(not words, f"{page_id}: остался английский текст: {', '.join(sorted(words)[:8])}")
@@ -164,8 +199,19 @@ def main() -> int:
         else:
             value = actor_items.get(actor_id, {}).get(parts[2], {}).get(parts[3], "")
         check.require(
-            technical_tokens(value) == expected_tokens,
+            technical_cores(value) == technical_cores(" ".join(expected_tokens)),
             f"{path}: изменены технические токены актёра/элемента",
+        )
+    for path, expected_rolls in index.get("actorInlineRolls", {}).items():
+        parts = path.split("/")
+        actor_id = parts[0]
+        if len(parts) == 2:
+            value = actors.get(actor_id, {}).get(parts[1], "")
+        else:
+            value = actor_items.get(actor_id, {}).get(parts[2], {}).get(parts[3], "")
+        check.require(
+            inline_roll_cores(value) == inline_roll_cores(" ".join(expected_rolls)),
+            f"{path}: изменены встроенные формулы актёра/элемента",
         )
     for path, expected_hash in index.get("actorHtml", {}).items():
         parts = path.split("/")
@@ -183,6 +229,39 @@ def main() -> int:
         for value in values:
             words = {w.lower() for w in LATIN_RE.findall(value)} - ALLOWED_LATIN
             check.require(not words, f"{label} не переведён: {value}")
+
+    check.require(sum("description" in actor for actor in actors.values()) == 43, "неполный перевод публичных заметок актёров")
+    check.require(sum("descriptionGM" in actor for actor in actors.values()) == 4, "неполный перевод приватных заметок актёров")
+    check.require(sum("description" in item for item in custom_items) == 125, "неполный перевод описаний встроенных элементов")
+    check.require(sum("gm" in item for item in custom_items) == 5, "неполный перевод GM-описаний встроенных элементов")
+    for label, value in [
+        *[(f"актёр {actor.get('name', '')}", actor.get("description", "")) for actor in actors.values()],
+        *[(f"GM актёра {actor.get('name', '')}", actor.get("descriptionGM", "")) for actor in actors.values()],
+        *[(f"элемент {item.get('name', '')}", item.get("description", "")) for item in custom_items],
+        *[(f"GM элемента {item.get('name', '')}", item.get("gm", "")) for item in custom_items],
+    ]:
+        plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
+        words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
+        check.require(not words, f"{label}: остался английский текст: {', '.join(sorted(words)[:8])}")
+    for label, values in (
+        ("папка", folders.values()),
+        ("макрос", [macro.get("name", "") for macro in macros.values()]),
+        ("плейлист", [playlist.get("name", "") for playlist in playlists.values()]),
+        ("звук", [sound.get("name", "") for playlist in playlists.values() for sound in playlist.get("sounds", {}).values()]),
+    ):
+        for value in values:
+            words = {word.lower() for word in LATIN_RE.findall(value)} - ALLOWED_LATIN
+            check.require(not words, f"{label} не переведён: {value}")
+
+    if args.source:
+        source = load_json(args.source, check)
+        if isinstance(source, list):
+            source = source[0] if len(source) == 1 else {}
+        source_macros = {macro.get("_id"): macro for macro in source.get("macros", [])}
+        check.require(set(source_macros) == set(macros), "официальный источник содержит другой набор макросов")
+        for macro_id, expected_hash in index.get("macroCommandHashes", {}).items():
+            actual_hash = hashlib.sha256(source_macros.get(macro_id, {}).get("command", "").encode()).hexdigest()
+            check.require(actual_hash == expected_hash, f"{macro_id}: команда официального макроса отличается от контрольной")
 
     raw = args.translation.read_text(encoding="utf-8").lower()
     for needle in FORBIDDEN:
