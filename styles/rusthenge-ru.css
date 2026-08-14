@@ -43,6 +43,36 @@
   min-width: 0;
 }
 
+.rusthenge .rusthenge-ru-content .split > :first-child,
+.rusthenge-wrapper .rusthenge-ru-content .split > :first-child {
+  flex: 1 1 16rem;
+}
+
+.rusthenge .rusthenge-ru-content .split > :last-child,
+.rusthenge-wrapper .rusthenge-ru-content .split > :last-child {
+  flex: 0 1 auto;
+  overflow-wrap: anywhere;
+  text-align: end;
+}
+
+.rusthenge .rusthenge-ru-content .content-link,
+.rusthenge .rusthenge-ru-content .inline-roll,
+.rusthenge-wrapper .rusthenge-ru-content .content-link,
+.rusthenge-wrapper .rusthenge-ru-content .inline-roll {
+  box-sizing: border-box;
+  max-inline-size: 100%;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.rusthenge .rusthenge-ru-content section.action,
+.rusthenge .rusthenge-ru-content section.encounter,
+.rusthenge-wrapper .rusthenge-ru-content section.action,
+.rusthenge-wrapper .rusthenge-ru-content section.encounter {
+  min-inline-size: 0;
+  overflow: hidden;
+}
+
 .rusthenge .rusthenge-ru-summary-aside,
 .rusthenge-wrapper .rusthenge-ru-summary-aside {
   background: #f5efe0;
@@ -78,27 +108,6 @@
 .rusthenge-wrapper .rusthenge-ru-content .handout {
   box-sizing: border-box;
   max-width: calc(100% + 5em);
-}
-
-.rusthenge-ru-controls {
-  border-block-start: 1px solid color-mix(in srgb, #a74332 55%, transparent);
-  clear: both;
-  margin-block-start: 1rem;
-  padding-block-start: 0.5rem;
-}
-
-.rusthenge-ru-controls summary {
-  color: #7e5142;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.rusthenge-ru-control-list {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-block-start: 0.5rem;
 }
 
 .rusthenge .rusthenge-ru-content::after,

@@ -16,7 +16,14 @@
     "actors": 113,
     "tokens": 287,
     "customEmbeddedItems": 271,
-    "referenceMatchedCustomItems": 245
+    "referenceMatchedCustomItems": 256,
+    "macros": 13,
+    "playlists": 3,
+    "playlistSounds": 34,
+    "actorPublicNotes": 43,
+    "actorPrivateNotes": 4,
+    "itemPublicDescriptions": 125,
+    "itemGMDescriptions": 5
   },
   "servicePageIds": [
     "00changelog00000",
@@ -30,6 +37,7 @@
       "sourceName": "Adventure Summary",
       "translatedName": "Краткое содержание",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 death of xar-azmak.webp"
@@ -51,6 +59,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur]{Resurrection of Rust}",
         "@UUID[JournalEntry.pf2sa06405advent]{Adventure Toolbox}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "e2877d7074759ba95cdf37566289ac67fcc695b74e7dabb453785e5198e85c5f",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo09564 cover final.webp",
@@ -74,6 +83,7 @@
       "technicalTokens": [
         "@UUID[Macro.OgpGrBEI2nchZQUC]{Landing Picker}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "03d5746dc1070844b72cd14aa3bc2eb8a052032e4da4521f0524506f686c96f5",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/mini/Elder Johedia-MINI.webp",
@@ -100,12 +110,13 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@Check[survival|dc:15|traits:secret,concentrate,exploration,move,skill,action:track|name:Track]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "c62e12918fc1deee2f9a0849ec092e2e7dcb5c692fe53291fde373f265854eb7",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 29,
       "alignmentPage": 29,
-      "alignmentScore": 0.7556,
+      "alignmentScore": 0.7391,
       "areaSection": true,
       "areaCode": "C22"
     },
@@ -118,12 +129,13 @@
         "@UUID[Actor.Q3ciH3AHZlb1Dc3E]{Gorumite Acolytes (3)}",
         "@UUID[Actor.MIYeIfCPevjN1DeE]{Secure Storage}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "b2285399aa6fc7891f2e5309dd8347d14ab5749b04ba6ab3a011142250c5f6e1",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 29,
       "alignmentPage": 29,
-      "alignmentScore": 0.6729,
+      "alignmentScore": 0.6744,
       "areaSection": true,
       "areaCode": "C21"
     },
@@ -142,6 +154,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
         "@UUID[Actor.5uoigpUArRCSWArQ]{Azomi}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "41652f30b2845461fb2eb79836fd00a6a5f9fbe3f2421a1b58f98f525cda9dd3",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Esipil%20Sahkil.webp"
@@ -149,7 +162,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 29,
       "alignmentPage": 29,
-      "alignmentScore": 0.5909,
+      "alignmentScore": 0.5897,
       "areaSection": true,
       "areaCode": "C20"
     },
@@ -163,6 +176,7 @@
         "@UUID[Actor.TOxjJfmAB5MdXlCQ]{Captain Perrios’s Head}",
         "@UUID[Actor.5q8BrmM40NdrnwkF]{Janis' Reward}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "cc10da8fba49939298735dbb2052e8601cc46066b4f8f949f1924c267148fd12",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Severed%20Head.webp"
@@ -170,7 +184,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 28,
       "alignmentPage": 28,
-      "alignmentScore": 0.5976,
+      "alignmentScore": 0.5928,
       "areaSection": true,
       "areaCode": "C19"
     },
@@ -182,12 +196,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02outerguardst00]{Outer Guard Stations}",
         "@UUID[Actor.ynwsdhrMNPRQ9i2b]{Arrows}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "f2d35e021c11a1ae9781d7e18489588aff35ad1047d4c0da5907b2065b27287d",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 28,
       "alignmentPage": 28,
-      "alignmentScore": 0.6389,
+      "alignmentScore": 0.6579,
       "areaSection": true,
       "areaCode": "C18"
     },
@@ -199,6 +214,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02seniorbarrac00]{C15}",
         "@UUID[Actor.jIu5ZSe8z6kiTNW4]{Weapon Racks}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "fd260ae8d7dac4be0749b9cc84bdfc1f69c9eaad8c61e7d874914e2105ca896a",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -219,6 +235,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}",
         "@UUID[Actor.uS508NYwcJmolEC1]{Junior Barracks}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "2d50a7a60db26a010bacbce99b6e98b1cd52982670119e1cfb49243c9aa407c0",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20azomi.webp",
@@ -227,7 +244,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 27,
       "alignmentPage": 27,
-      "alignmentScore": 0.7786,
+      "alignmentScore": 0.7794,
       "areaSection": true,
       "areaCode": "C16"
     },
@@ -239,12 +256,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingwith00]{Speaking with Trygve}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "f4d6a4be8d98776e93c0fab6d9329a519eeb9e19652bf3e204a6216bdfc3aef5",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 27,
       "alignmentPage": 27,
-      "alignmentScore": 0.6882,
+      "alignmentScore": 0.7111,
       "areaSection": false,
       "areaCode": null
     },
@@ -259,6 +277,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}",
         "@UUID[Actor.vADTRwg50q0Dzhbu]{Footlockers}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "8a48f39f30f62daa3da507e4236bed893225e30d829a0b4f859a49d6fdb7dc51",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20vanda.webp",
@@ -267,7 +286,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
-      "alignmentScore": 0.5973,
+      "alignmentScore": 0.5817,
       "areaSection": true,
       "areaCode": "C15"
     },
@@ -280,12 +299,13 @@
         "@UUID[Actor.6ZXHXgTdZu16aHRH]{Sand}",
         "@Check[perception|dc:14|traits:concentrate,exploration,secret,action:search|name:Search]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "d10bd07763b010502af8a832943baa62ca7164bbde9c5a7dd6a905a7a269856a",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
-      "alignmentScore": 0.6552,
+      "alignmentScore": 0.6477,
       "areaSection": true,
       "areaCode": "C14"
     },
@@ -296,6 +316,7 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stairwell00000]{C10}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "f6945634f7bda3fc1b55234f27f9c8444add51009ba18f9479467b6e67829e3c",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -310,6 +331,7 @@
       "sourceName": "Storage",
       "translatedName": "Склад",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -327,12 +349,13 @@
         "@UUID[Actor.t1fmdlwEuYN3DeZe]{Mannequin}",
         "@UUID[Actor.WS5wRNaginlvJO2B]{Rusty Mannequin}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "3658315f73de918b35ce1e0781283321f904819a2c486a8621114c96c84750b6",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 26,
       "alignmentPage": 26,
-      "alignmentScore": 0.7015,
+      "alignmentScore": 0.6857,
       "areaSection": true,
       "areaCode": "C11"
     },
@@ -343,6 +366,7 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02upstairshall00]{C13}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "206e08c2b71adebadfba66b091fcb5f17f26cccd9e61130854ce244ef7db22bd",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -359,12 +383,13 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "0b841cbc777828b355cbc79f775f778b345343179970e115c8750998f1cc3086",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 25,
       "alignmentPage": 25,
-      "alignmentScore": 0.4471,
+      "alignmentScore": 0.4458,
       "areaSection": true,
       "areaCode": "C9"
     },
@@ -377,12 +402,13 @@
         "@UUID[Actor.ZP8VIsUB0EpmRUqs]{West Guard Station}",
         "@UUID[Actor.CNts6wCHzwUhy8SK]{East Guard Station}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "0a0e9c07f3b983007fc515a4036d2a6fdfe7adb74ba22c28043ac42779b06cf1",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 25,
       "alignmentPage": 25,
-      "alignmentScore": 0.7143,
+      "alignmentScore": 0.6923,
       "areaSection": true,
       "areaCode": "C8"
     },
@@ -395,12 +421,13 @@
         "@UUID[Actor.om6TSYlSODDuKqQI]{Barrel}",
         "@UUID[Actor.ZHHiYsgBC2ZU8Su9]{Beacon Shot Barrel}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "c8b9de41fd25d4588e6493512d0969f7a91c9e8a28b4226a105ee102d9d8ef66",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 25,
       "alignmentPage": 25,
-      "alignmentScore": 0.8974,
+      "alignmentScore": 0.8372,
       "areaSection": true,
       "areaCode": "C7"
     },
@@ -413,6 +440,7 @@
         "@Check[occultism|dc:16|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "50eea30a644be4b0c5342459228a6b27408dd8e865fa8464eeab108eec8cd417",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 trygve.webp"
@@ -436,6 +464,7 @@
         "@Check[religion|dc:15]",
         "@UUID[Actor.23tLrEUVgLELGQ96]{Wall}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "6e4f9edd443f38609baacb840ee178cf61e519338a0f74320531ee83e0ad2600",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20trygve.webp"
@@ -443,7 +472,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 24,
       "alignmentPage": 24,
-      "alignmentScore": 0.6625,
+      "alignmentScore": 0.6752,
       "areaSection": true,
       "areaCode": "C6"
     },
@@ -455,6 +484,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02basement000000]{C20}",
         "@UUID[Actor.lcY8NVur4ZFjfw7e]{Shelves}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "be602675bcc343c2dfd754118ae108286029496b1509ab882d280e4a1c061537",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -473,6 +503,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02mainentrance00]{C3}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]{C1}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "8605102773f3b86688432c373c2fcfb4f7f4505356653bd83968ec4c8d5156ee",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Fallen%20Acolyte.webp"
@@ -480,7 +511,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 24,
       "alignmentPage": 24,
-      "alignmentScore": 0.66,
+      "alignmentScore": 0.6735,
       "areaSection": true,
       "areaCode": "C4"
     },
@@ -491,6 +522,7 @@
       "technicalTokens": [
         "@UUID[Actor.9CqQbPyKUk3G39o2]{Rusty Floor Spikes}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "70c64ab5cc0cda7b5bc8b51b412bd934dbfd78b8390bdf9d2c71795a62f38fce",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
@@ -498,7 +530,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 23,
       "alignmentPage": 23,
-      "alignmentScore": 0.693,
+      "alignmentScore": 0.6875,
       "areaSection": true,
       "areaCode": "C3"
     },
@@ -511,12 +543,13 @@
         "@Check[medicine|dc:15]",
         "@UUID[Actor.lCNsglj9xoQfBl3p]{Ida}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "660ec8cbddef0f0d177e0382f0e1b52407b523a3c06908021956ce22161e2862",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 23,
       "alignmentPage": 23,
-      "alignmentScore": 0.6571,
+      "alignmentScore": 0.6767,
       "areaSection": true,
       "areaCode": "C2"
     },
@@ -530,12 +563,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]{C4}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "582a187c2237fc40b90f009a11117649dad2c3e1aad7c9973f856ceb5c615c42",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 23,
       "alignmentPage": 23,
-      "alignmentScore": 0.75,
+      "alignmentScore": 0.7429,
       "areaSection": true,
       "areaCode": "C1"
     },
@@ -559,12 +593,15 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.y34yjumCFakrbtdw]{Artisan's Toolkit}",
         "@Check[crafting|dc:15]"
       ],
+      "inlineRolls": [
+        "[[/r 4d6[piercing]]]"
+      ],
       "technicalCoreHash": "ce9bb7d08a122d752743ca163290366640999be70136a7ec4db92099fe130c53",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 22,
       "alignmentPage": 22,
-      "alignmentScore": 0.4985,
+      "alignmentScore": 0.5137,
       "areaSection": false,
       "areaCode": null
     },
@@ -575,12 +612,13 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.spells-srd.Item.ynm8JIU3sc3qUMpa]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "bf456ef27ede08d44bad24c05f6a3d91692bcf56b816316f979718e6261576fc",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 21,
       "alignmentPage": 21,
-      "alignmentScore": 0.5461,
+      "alignmentScore": 0.5474,
       "areaSection": false,
       "areaCode": null
     },
@@ -597,12 +635,13 @@
         "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}",
         "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "888fa338506cee81ada70a42f111e980869e6a929d15d4d81e602c638de9aea4",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 21,
       "alignmentPage": 21,
-      "alignmentScore": 0.7,
+      "alignmentScore": 0.6957,
       "areaSection": false,
       "areaCode": null
     },
@@ -617,12 +656,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]{Rust Creep}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "b7dd725bceb76bc137990a863241d83204b32d5746fc68f3bb7889ebd77fd45c",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
-      "alignmentScore": 0.4481,
+      "alignmentScore": 0.455,
       "areaSection": false,
       "areaCode": null
     },
@@ -637,12 +677,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02courtyard00000]{C1}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "e023fb137f289fc6e2e177046964706b98769e07f50dca5410481712abcbeb35",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
-      "alignmentScore": 0.775,
+      "alignmentScore": 0.75,
       "areaSection": true,
       "areaCode": "B8"
     },
@@ -653,12 +694,13 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06403therus]{Chapter 2}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "b34c85ca1e2ff39a013aef6d1235e442ac01a8eb905f24d0ce0e35b5b6ac5de8",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
-      "alignmentScore": 0.5918,
+      "alignmentScore": 0.5714,
       "areaSection": true,
       "areaCode": "B7"
     },
@@ -669,12 +711,13 @@
       "technicalTokens": [
         "@UUID[Actor.84LNL3ZM41yvYaY6]{Fishing Hut}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "3a8b0736281913fdaa5bbfed1bbcd96f4bb607f40b8700104a59d0f43ef12c72",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 20,
       "alignmentPage": 20,
-      "alignmentScore": 0.7742,
+      "alignmentScore": 0.75,
       "areaSection": true,
       "areaCode": "B6"
     },
@@ -692,6 +735,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{Thunderhead Isle}",
         "@UUID[Actor.slPGAdJR86h6DnaL]{Derrol's Gift}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "102ab85b7e6ca22e8dbe2245898f0962187c4ba4ef2e514e0c3ba3a0640366fe",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 derrol.webp"
@@ -699,7 +743,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 19,
       "alignmentPage": 19,
-      "alignmentScore": 0.4869,
+      "alignmentScore": 0.4941,
       "areaSection": true,
       "areaCode": "B5"
     },
@@ -711,12 +755,13 @@
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Here}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "2735757d06f7c0096f0cea201964cbb993147cea5b85e81e364b4daad5d14ea8",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 19,
       "alignmentPage": 19,
-      "alignmentScore": 0.8571,
+      "alignmentScore": 0.875,
       "areaSection": true,
       "areaCode": "B4"
     },
@@ -725,12 +770,13 @@
       "sourceName": "Drydock",
       "translatedName": "Сухой док",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 19,
       "alignmentPage": 19,
-      "alignmentScore": 0.5306,
+      "alignmentScore": 0.5208,
       "areaSection": true,
       "areaCode": "B3"
     },
@@ -739,12 +785,13 @@
       "sourceName": "Final Reward",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 18,
       "alignmentPage": 18,
-      "alignmentScore": 0.5714,
+      "alignmentScore": 0.5385,
       "areaSection": false,
       "areaCode": null
     },
@@ -763,6 +810,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
         "@Check[intimidation|dc:22|traits:auditory,concentrate,emotion,exploration,linguistic,mental,skill,action:coerce|name:Coerce]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "f601a42deefd10c3d6a6c71cf01f918912ec86f98c806c3f664b27fafe76c04a",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 janis.webp"
@@ -770,7 +818,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 18,
       "alignmentPage": 18,
-      "alignmentScore": 0.5343,
+      "alignmentScore": 0.5773,
       "areaSection": false,
       "areaCode": null
     },
@@ -783,6 +831,7 @@
         "@UUID[Actor.qcoQw8vZOpYX5V0V]{Deck Hands (6)}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "9253755f4ce3a756404720341ab58ebbce91ce398f08be47eedc294a1667b750",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/mini/PZO9564%20JANIS-MINI.webp"
@@ -790,7 +839,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 17,
       "alignmentPage": 17,
-      "alignmentScore": 0.4878,
+      "alignmentScore": 0.4651,
       "areaSection": false,
       "areaCode": null
     },
@@ -806,12 +855,16 @@
         "@UUID[Actor.rWV6SIL5lXsJufgs]{Swordfish’s Log}",
         "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Handout #1}"
       ],
+      "inlineRolls": [
+        "[[/r 1d20]]{d20}",
+        "[[/r 3d6 #sp]]"
+      ],
       "technicalCoreHash": "e39c2a69533d0140063176a4eab41d4e8242f6311f6ebb1b54a6e1cf312fa213",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 17,
       "alignmentPage": 17,
-      "alignmentScore": 0.5797,
+      "alignmentScore": 0.5833,
       "areaSection": false,
       "areaCode": null
     },
@@ -831,12 +884,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingtoth00]{Speaking to the Crew}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02gettinginafi00]{Getting in a Fight}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "56e4673c19eb5accebeb99abe8abc3ed7d4bbc9e1dbcd81cec1e34790cd5cfdb",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 16,
       "alignmentPage": 16,
-      "alignmentScore": 0.6047,
+      "alignmentScore": 0.6222,
       "areaSection": false,
       "areaCode": null
     },
@@ -845,6 +899,7 @@
       "sourceName": "The Swordfish",
       "translatedName": "Б2. Меч-Рыба",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -864,12 +919,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02enteringston00]{Entering Stonehome}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "de317bc1f4942f8211382817e1d54270d5246a5f516646d8614f108d340081a3",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 16,
       "alignmentPage": 16,
-      "alignmentScore": 0.7586,
+      "alignmentScore": 0.8108,
       "areaSection": false,
       "areaCode": null
     },
@@ -883,6 +939,7 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.SrjykpB3nEAQmgj5]{Elsie's Excellent Bottled Vim}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "34f09497da97aa443875699d7c1ed050f7bc598053e7c16be0295fabeed4406a",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564%20elsie.webp"
@@ -890,7 +947,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 15,
       "alignmentPage": 15,
-      "alignmentScore": 0.4509,
+      "alignmentScore": 0.4632,
       "areaSection": true,
       "areaCode": "B1"
     },
@@ -907,6 +964,9 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]{\"Gold's Ruin\"}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]{Fisher's Point}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
+      ],
+      "inlineRolls": [
+        "[[/r 1d8]]{d8}"
       ],
       "technicalCoreHash": "06007cd63e89e5c003c38ba485b4a0b439c8ee9e5b6c7226d222b0b4a1689b09",
       "sourceImagePaths": [],
@@ -928,12 +988,13 @@
         "@Check[perception|dc:20|traits:concentrate,secret,action:sense-motive|name:Sense Motive]",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02stonehome00001]{Stonehome}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "75ce4af42ca1405d252b5380097edc550718ca9a987aa19307ff2cf70a60479b",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 13,
       "alignmentPage": 13,
-      "alignmentScore": 0.4106,
+      "alignmentScore": 0.432,
       "areaSection": false,
       "areaCode": null
     },
@@ -955,6 +1016,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02drydock0000000]{B3}",
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "9bc99d903c054e1a0b88a43eb68ad48a181f3e6fa5477dc57031970b2837d9b6",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
@@ -962,7 +1024,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 13,
       "alignmentPage": 13,
-      "alignmentScore": 0.6207,
+      "alignmentScore": 0.6279,
       "areaSection": false,
       "areaCode": null
     },
@@ -981,6 +1043,7 @@
         "@UUID[Actor.ShWcSAzHjKnQ8MJX]{Giant Centipedes (2)}",
         "@UUID[Compendium.pf2e.spells-srd.Item.vLA0q0WOK2YPuJs6]{Charm}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "fb56d6a66cfbfa2914b9e7b0b1ca78c5d9c1a876800bb26557b2c0b5cb91162d",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Sydri.webp"
@@ -988,7 +1051,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 12,
       "alignmentPage": 12,
-      "alignmentScore": 0.6667,
+      "alignmentScore": 0.6821,
       "areaSection": true,
       "areaCode": "A3"
     },
@@ -1009,12 +1072,13 @@
         "@UUID[Actor.tO46DP0MnaEzL54l]{Wooden Post}",
         "@Check[crafting|dc:15|traits:concentrate,exploration,secret,skill,action:identify-alchemy|name:Identify Alchemy]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "544000f6a4410c026d903eab8fdf9afcbfaad15dfdf7b47bb9fd57263643c8e2",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 11,
       "alignmentPage": 11,
-      "alignmentScore": 0.5528,
+      "alignmentScore": 0.5637,
       "areaSection": true,
       "areaCode": "A2"
     },
@@ -1029,6 +1093,7 @@
         "@UUID[Compendium.pf2e.spells-srd.Item.yV7Ouzaoe7DHLESI]{Ventriloquism}",
         "@UUID[Actor.LcAFMhy6wasCBxDQ]{Waterproof Leather Bag}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "caf9bc3a7308b6694c542013b514ed5a34fc5a29b1f9ff7fe89a9a47235e1385",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Haniver%20Gremlin.webp"
@@ -1036,7 +1101,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 10,
       "alignmentPage": 10,
-      "alignmentScore": 0.427,
+      "alignmentScore": 0.4182,
       "areaSection": true,
       "areaCode": "A1"
     },
@@ -1048,12 +1113,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02shelteredled00]{A3}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "3a48478a083f8f7f04e3f9f202800c3ec07f4b872fc23623850ea579ff45e3dc",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 10,
       "alignmentPage": 10,
-      "alignmentScore": 0.6579,
+      "alignmentScore": 0.6575,
       "areaSection": false,
       "areaCode": null
     },
@@ -1064,6 +1130,7 @@
       "technicalTokens": [
         "@UUID[Actor.6AiPO2aKOFN6qipW]{Ordwi}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "db8a16319c2caced60f6b9abadec8ff0d0593465711174ae55e44d3a9ad8560d",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 ordwi.webp"
@@ -1071,14 +1138,14 @@
       "sourceLinkPaths": [],
       "pdfPage": 9,
       "alignmentPage": 9,
-      "alignmentScore": 0.6562,
+      "alignmentScore": 0.6911,
       "areaSection": false,
       "areaCode": null
     },
     "02optionalstar00": {
       "journalId": "pf2sa06402messag",
       "sourceName": "Optional - Starting Earlier",
-      "translatedName": "Начало Приключения",
+      "translatedName": "Вариант: начать раньше",
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]{A1}",
         "@Check[medicine|dc:15]",
@@ -1090,6 +1157,7 @@
         "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "2865bc0f18cd199c6cb04a2ce8058b210019b206b866ae45610c15e1d6728b2b",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg"
@@ -1097,7 +1165,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 9,
       "alignmentPage": 9,
-      "alignmentScore": 0.7467,
+      "alignmentScore": 0.7867,
       "areaSection": false,
       "areaCode": null
     },
@@ -1113,12 +1181,13 @@
         "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05rusthengebac00]{Here}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02acryforhelp000]{A1}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "d94ec69c40128e1700708e8d0a1c32893abae56f9600dc74a18f777c5e83537f",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 8,
       "alignmentPage": 8,
-      "alignmentScore": 0.6626,
+      "alignmentScore": 0.6799,
       "areaSection": false,
       "areaCode": null
     },
@@ -1130,6 +1199,7 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00#horn-of-rust]{Horn of Rust}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "0e738c3e962782a3d3e473162ad24b0d19fc513c907ebfa62fbbe793b34cbd9c",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -1149,6 +1219,7 @@
         "@UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Gorum}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Iron Harbor}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "5730e257f5a1e1f8a8b0cc1b0f342464920694f1399d5a7d5777fe3af8f84d64",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 reefclaw ambush.webp"
@@ -1156,7 +1227,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 7,
       "alignmentPage": 7,
-      "alignmentScore": 0.4112,
+      "alignmentScore": 0.4206,
       "areaSection": false,
       "areaCode": null
     },
@@ -1176,6 +1247,7 @@
         "@UUID[Actor.vNPk2Y3Ba0FYrVv6]{Desk}",
         "@UUID[Actor.iqTt8ErJJQbnTLDy]{Secret Lab}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "96b627e1329117b3c4fcc59266923078ad998e4626664bfe6e65fd00d1833009",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Envyspawn.webp"
@@ -1183,7 +1255,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 43,
       "alignmentPage": 43,
-      "alignmentScore": 0.7441,
+      "alignmentScore": 0.7227,
       "areaSection": true,
       "areaCode": "D21"
     },
@@ -1202,6 +1274,7 @@
         "@UUID[Playlist.rxsf0vQ3EmoZJo72.PlaylistSound.X1tQQG8zr7pmlxJ2]{Magic Surge}",
         "@UUID[Actor.LLj6cVI1UHHEjZcU]{Research Lab}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "58db41718bcedc06369252edbcefbc2570b6a4914030c0395e9930761fc87b2c",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20sinsludge.webp",
@@ -1211,7 +1284,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 42,
       "alignmentPage": 42,
-      "alignmentScore": 0.4647,
+      "alignmentScore": 0.4634,
       "areaSection": true,
       "areaCode": "D20"
     },
@@ -1223,6 +1296,7 @@
         "@UUID[Actor.dbMmGE7Deitzsuz6]{Dretches (2)}",
         "@UUID[Actor.Cp4jFRcH4ZMYeIFd]{Anvil}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "0b720bf6c3cf06152f6e744641a63ace6fa9f857c2274da6c129d5e02b09f85e",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20dretch.webp",
@@ -1231,7 +1305,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 42,
       "alignmentPage": 42,
-      "alignmentScore": 0.5915,
+      "alignmentScore": 0.5862,
       "areaSection": true,
       "areaCode": "D19"
     },
@@ -1244,12 +1318,13 @@
         "@UUID[Actor.qn9OLgIUJO8SLOkH]{Ingot Storage}",
         "@UUID[Actor.Q5UbdbXfnJ6pFJna]{Rusty Ingots}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "e4b04498e43d66a671a9460b8bcc8c7357989cd5596f9fd8799f3a62468905f5",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 41,
       "alignmentPage": 41,
-      "alignmentScore": 0.7429,
+      "alignmentScore": 0.7534,
       "areaSection": true,
       "areaCode": "D18"
     },
@@ -1262,6 +1337,7 @@
         "@UUID[Actor.N0nSDzkMv7OwGumH]{Void Zombie}",
         "@UUID[Actor.do8VjavOIPDQd2Rp]{Crystals}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "1094d49bb26cf95691c3ed5baed6a883efb893af2cc781454236e4d4ea9084c9",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Akata.webp"
@@ -1269,7 +1345,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 41,
       "alignmentPage": 41,
-      "alignmentScore": 0.6595,
+      "alignmentScore": 0.6703,
       "areaSection": true,
       "areaCode": "D17"
     },
@@ -1282,6 +1358,7 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03workshop000000]{D15}",
         "@UUID[Macro.8ACUEK7rfUq1Tyes]{Drop Rusted Cage}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "8c0020a3baace447e2b88aa56383aa4837ffa4cf73cefb650da4d7ca45869fb9",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/hazard.webp",
@@ -1290,7 +1367,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 40,
       "alignmentPage": 40,
-      "alignmentScore": 0.7162,
+      "alignmentScore": 0.726,
       "areaSection": true,
       "areaCode": "D16"
     },
@@ -1306,6 +1383,7 @@
         "@UUID[Actor.fFMhZSnaETOHdzPj]{Southern Cabinets}",
         "@Check[perception|dc:18|traits:concentrate,exploration,secret,action:search|name:Search]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "6c7aa1789db90d85957c18744e0122798a3f1f65682f2e61a2b0b83c77080ab7",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20rustsworn%20cultist.webp"
@@ -1313,7 +1391,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 40,
       "alignmentPage": 40,
-      "alignmentScore": 0.5868,
+      "alignmentScore": 0.6218,
       "areaSection": true,
       "areaCode": "D15"
     },
@@ -1325,6 +1403,7 @@
         "@UUID[Actor.ZLdZe3qKjR6xoN4Z]{Ostovites (2)}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "248e18122ddb5513963ed24ae45650691d6eb6659d85324570692c0720a39aaf",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Ostovite.webp"
@@ -1346,6 +1425,7 @@
         "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (2)}",
         "@UUID[Macro.XQUSLhjmMKghWAyq]{Stop Chanting}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "b25bc5cec1ab8261dce5f94a6c1752a20ad2670794c52b54fc203086b09955e5",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Larva%20Petitioner.webp",
@@ -1354,7 +1434,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 39,
       "alignmentPage": 39,
-      "alignmentScore": 0.7235,
+      "alignmentScore": 0.7278,
       "areaSection": true,
       "areaCode": "D13"
     },
@@ -1367,12 +1447,13 @@
         "@Check[perception|dc:15|traits:concentrate,exploration,secret,action:search|name:Search]",
         "@UUID[Actor.xvPL5O1ttAeANAUZ]{Magical Storage}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "202761aad0039c4c3e0e5717b792fcdb712251aa8d29f1b3d7c5da50c56fe19d",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 39,
       "alignmentPage": 39,
-      "alignmentScore": 0.7802,
+      "alignmentScore": 0.8022,
       "areaSection": true,
       "areaCode": "D12"
     },
@@ -1381,6 +1462,7 @@
       "sourceName": "Toilets",
       "translatedName": "Уборные",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -1403,6 +1485,7 @@
         "@UUID[Actor.9XwV6EhK14DtMxOw]{Gurga}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03dininghall0000]{D8}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "882f4c331ec33bcfbfd28bcbc03c4850325141425ea9596b68b4f41c9bb4162f",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20gurga.webp",
@@ -1411,7 +1494,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 39,
       "alignmentPage": 39,
-      "alignmentScore": 0.493,
+      "alignmentScore": 0.5,
       "areaSection": true,
       "areaCode": "D10"
     },
@@ -1420,6 +1503,7 @@
       "sourceName": "Kitchen",
       "translatedName": "Кухня",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -1446,6 +1530,7 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}",
         "@UUID[Actor.lCoYPuKzOOE0wap7]{Treasure Pile}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "c0e2107cffadc2ea7d46d8170d4263ceadcd003e1b703ce7012b14e2daba939f",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Boggard%20Scout.webp"
@@ -1453,7 +1538,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 37,
       "alignmentPage": 37,
-      "alignmentScore": 0.4036,
+      "alignmentScore": 0.4015,
       "areaSection": true,
       "areaCode": "D8"
     },
@@ -1467,6 +1552,7 @@
         "@Check[perception|dc:20|traits:concentrate,exploration,secret,action:search|name:Search]",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{Elder Ordwi}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "70ca5e8f9d87ba83189d4ca2bec416e5e3000f01d6cee38f038b2c38e8ca255b",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Yeth%20Hound.webp"
@@ -1474,7 +1560,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 37,
       "alignmentPage": 37,
-      "alignmentScore": 0.6687,
+      "alignmentScore": 0.6727,
       "areaSection": true,
       "areaCode": "D7"
     },
@@ -1487,12 +1573,13 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]{D13}",
         "@UUID[Actor.8LByzA7nbuYehXmt]{Quarters}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "d9b2c9ab09c4c422740045dd3a64faaf5bb5d8658800fc202b6479e82702bf3a",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 36,
       "alignmentPage": 36,
-      "alignmentScore": 0.6739,
+      "alignmentScore": 0.6889,
       "areaSection": true,
       "areaCode": "D6"
     },
@@ -1505,6 +1592,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{C21}",
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03prison00000000]{D7}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "b7d6fac4a4ac5207406b4b1f791dcfd9fa5eb69e53717e2fb2860b0f2e5b37f8",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -1521,12 +1609,13 @@
       "technicalTokens": [
         "@UUID[Actor.MwHZ9llX4RCpTqzc]{Shelves}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "34e0997778add40596c6f081dc6e29f455de508093a8897587133e79aebfac67",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 36,
       "alignmentPage": 36,
-      "alignmentScore": 0.7872,
+      "alignmentScore": 0.8148,
       "areaSection": true,
       "areaCode": "D4"
     },
@@ -1541,6 +1630,7 @@
         "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Inveigle}",
         "@UUID[Actor.TIP8DD2dLKxFfqHf]{Ancient Apparatus}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "8d9d6333403765533fe33a7a0ef97ee91d2f9a3ded718d00966e4ded74eb51c7",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 knurr ragnulf.webp",
@@ -1550,7 +1640,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 35,
       "alignmentPage": 35,
-      "alignmentScore": 0.6677,
+      "alignmentScore": 0.679,
       "areaSection": true,
       "areaCode": "D3"
     },
@@ -1561,6 +1651,7 @@
       "technicalTokens": [
         "@UUID[Actor.KeknT5gCKZUR0WM7]{Rusted Animated Armor (2)}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "66e2425a35fb144dfaf5a2ce2682f26aa2187e15c42dc24d47b31e5397272206",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Azmakian%20Animated%20Armor.webp"
@@ -1581,6 +1672,7 @@
         "@Check[religion|dc:25|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]",
         "@UUID[Actor.4Zwt3eqjMo0EQUrq]{Rusted Door}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "39c413ea6b7765f1cc299895bd6bcc16c9bcc1b019a9e38bb4c8b2c63073ec43",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
@@ -1588,7 +1680,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 34,
       "alignmentPage": 34,
-      "alignmentScore": 0.7273,
+      "alignmentScore": 0.7355,
       "areaSection": true,
       "areaCode": "D1"
     },
@@ -1597,12 +1689,13 @@
       "sourceName": "The Skymetal Workshop",
       "translatedName": "Мастерская Небесного Металла",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 33,
       "alignmentPage": 33,
-      "alignmentScore": 0.5656,
+      "alignmentScore": 0.5616,
       "areaSection": false,
       "areaCode": null
     },
@@ -1613,12 +1706,13 @@
       "technicalTokens": [
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{Final Encounter}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "f22682e4547f452a841149f07786fd336e4389649f77c927a304d95a0df600ef",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 33,
       "alignmentPage": 33,
-      "alignmentScore": 0.5752,
+      "alignmentScore": 0.5727,
       "areaSection": false,
       "areaCode": null
     },
@@ -1632,6 +1726,7 @@
         "@UUID[Actor.Aoll0FdVcKcL1Ucd]{Vlorian Cythnigot}",
         "@UUID[Actor.2g8LSm8VMWFoOK8U]{Rustsworn Initiates (4)}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "37dc464efaa45a72b0eaa009e75ccdcb461280867214f38d32a1f506bf4159b2",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg",
@@ -1641,7 +1736,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 32,
       "alignmentPage": 32,
-      "alignmentScore": 0.526,
+      "alignmentScore": 0.5417,
       "areaSection": false,
       "areaCode": null
     },
@@ -1660,12 +1755,13 @@
         "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
         "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "51fad60529259e039324acdf3094ec390236441cd930077271a7c6e231e37a8e",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 31,
       "alignmentPage": 31,
-      "alignmentScore": 0.6318,
+      "alignmentScore": 0.6405,
       "areaSection": false,
       "areaCode": null
     },
@@ -1679,12 +1775,13 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@Check[crafting|dc:15]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "680b1d9da35aee49a4021e4ce28565f816b76a793d60fc6ae9407d22678977d9",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 31,
       "alignmentPage": 31,
-      "alignmentScore": 0.4672,
+      "alignmentScore": 0.4954,
       "areaSection": false,
       "areaCode": null
     },
@@ -1699,6 +1796,7 @@
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}",
         "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{Elder Ordwi}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "797f6f090281282cfbf99738c801e188cff351c85451948fc107c88c7009c9ce",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 yeth hound fight.webp"
@@ -1706,7 +1804,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 30,
       "alignmentPage": 30,
-      "alignmentScore": 0.6092,
+      "alignmentScore": 0.6071,
       "areaSection": false,
       "areaCode": null
     },
@@ -1715,12 +1813,13 @@
       "sourceName": "What if the PCs Fail?",
       "translatedName": "Завершение Приключения",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 59,
       "alignmentPage": 59,
-      "alignmentScore": 0.7311,
+      "alignmentScore": 0.7304,
       "areaSection": false,
       "areaCode": null
     },
@@ -1729,12 +1828,13 @@
       "sourceName": "Concluding the Adventure",
       "translatedName": "Завершение Приключения",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 59,
       "alignmentPage": 59,
-      "alignmentScore": 0.6862,
+      "alignmentScore": 0.6996,
       "areaSection": false,
       "areaCode": null
     },
@@ -1770,6 +1870,7 @@
         "@UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Horn of Rust}",
         "@UUID[Actor.2c8g1noVjApqAtia]{Summoning Chamber}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "ae4b33c6f0132ec9f36a34790ee7ecb44f9eb294fcf9762373bba412027e152d",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/mm_logo_blue.svg",
@@ -1783,7 +1884,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 57,
       "alignmentPage": 57,
-      "alignmentScore": 0.4894,
+      "alignmentScore": 0.4994,
       "areaSection": true,
       "areaCode": "F14"
     },
@@ -1798,6 +1899,7 @@
         "@UUID[Actor.oeM8EcS1F5NIkd30]{Skeleton Guards (2)}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "c64112588705f20e5758612898764d1da509b625ffa1b36a1475f4a66b5ca7dd",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20theiltemar.webp",
@@ -1806,7 +1908,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 55,
       "alignmentPage": 55,
-      "alignmentScore": 0.5238,
+      "alignmentScore": 0.5388,
       "areaSection": true,
       "areaCode": "F13"
     },
@@ -1819,6 +1921,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
         "@Check[thievery|dc:20|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "201cf21dca7c7b05fd7ec32264f04837a9cf7101bc9b8c5e6029007fa6a6347d",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/hazard.webp"
@@ -1837,12 +1940,13 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.pathfinder-bestiary.Actor.kPBSSOuR8n8vZHXB]{Otyugh's}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "6ade6a3b53bfc2bad75108ff6450aa3c6af92f1dda8e9f6f31a88fea46cb6bee",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 55,
       "alignmentPage": 55,
-      "alignmentScore": 0.7105,
+      "alignmentScore": 0.675,
       "areaSection": true,
       "areaCode": "F11"
     },
@@ -1860,6 +1964,7 @@
         "@Check[diplomacy|dc:18]",
         "@Check[intimidation|dc:18]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "224b67a6121e846355ac45a275127c2994831f90be35a74c19d3c4ca5ecf3b73",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Glutu.webp"
@@ -1867,7 +1972,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 54,
       "alignmentPage": 54,
-      "alignmentScore": 0.6216,
+      "alignmentScore": 0.6525,
       "areaSection": true,
       "areaCode": "F10"
     },
@@ -1876,12 +1981,13 @@
       "sourceName": "Boggard Bridge",
       "translatedName": "Мост боггардов",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 54,
       "alignmentPage": 54,
-      "alignmentScore": 0.7778,
+      "alignmentScore": 0.7955,
       "areaSection": true,
       "areaCode": "F9"
     },
@@ -1893,6 +1999,7 @@
         "@UUID[Actor.63tNsYHRrIaRASKj]{Boggard Scouts (4)}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]{F10}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "9675d4b4106bc2f1f71a7bb3442c095ceb786b58adb676974a3805003d1c7bb4",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Boggard%20Scout.webp"
@@ -1900,7 +2007,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 54,
       "alignmentPage": 54,
-      "alignmentScore": 0.7653,
+      "alignmentScore": 0.7812,
       "areaSection": true,
       "areaCode": "F8"
     },
@@ -1914,6 +2021,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1b}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04thedespoiled00]{F2a}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "632f62dec136e9fe2918c1521254d17df055308ea347d6b3848abb147eca0f8c",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Starving%20Werebat.webp"
@@ -1921,7 +2029,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 53,
       "alignmentPage": 53,
-      "alignmentScore": 0.4286,
+      "alignmentScore": 0.4468,
       "areaSection": true,
       "areaCode": "F7"
     },
@@ -1932,6 +2040,7 @@
       "technicalTokens": [
         "@UUID[Actor.bRXpyT68VI3n9eWv]{Zaiox}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "ef6c2344f02429ecb39cde922cbc30ff5fbecb21a872034970e12e61d05d7138",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20zaiox.webp",
@@ -1940,7 +2049,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 53,
       "alignmentPage": 53,
-      "alignmentScore": 0.7755,
+      "alignmentScore": 0.7835,
       "areaSection": true,
       "areaCode": "F6"
     },
@@ -1959,12 +2068,13 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.rjUJEY424jyG9dGn]{Cytillesh}",
         "@UUID[Compendium.pf2e.equipment-srd.Item.aZm1x9tpvBAT8YCd]{Cytillesh Oil}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "2c12402c31d4ff8d9d76e2b14107a1dcb331e9b078386b5b42c09c72cd4a39b0",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 52,
       "alignmentPage": 52,
-      "alignmentScore": 0.5851,
+      "alignmentScore": 0.5612,
       "areaSection": true,
       "areaCode": "F5"
     },
@@ -1980,6 +2090,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]{F3}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]{F6}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "c402b847271a2117c0366da1c678b75fb37c0f5c251a859bc2ececfa8e39e1ce",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Dero%20Strangler.webp"
@@ -1987,7 +2098,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 52,
       "alignmentPage": 52,
-      "alignmentScore": 0.7738,
+      "alignmentScore": 0.7784,
       "areaSection": true,
       "areaCode": "F4"
     },
@@ -2001,6 +2112,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]{F4}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]{F5}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "08ec71e9c1ffb7e9b5abdf922b5a25d52934939c1de14d2096e3c31b4e743ef3",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Dero%20Stalker.webp"
@@ -2008,7 +2120,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 52,
       "alignmentPage": 52,
-      "alignmentScore": 0.6056,
+      "alignmentScore": 0.6143,
       "areaSection": true,
       "areaCode": "F3"
     },
@@ -2023,12 +2135,15 @@
         "@UUID[Actor.Sse38NzIUckC6Gga]{Skeletal Remains}",
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04rusteddoor0000]{F12}"
       ],
+      "inlineRolls": [
+        "[[/r 1d6*10]]{1d6x10}"
+      ],
       "technicalCoreHash": "cccba274210e2ab55d2eee5b6c8bec2e4be4b889f73816c2ffb4debea100a20b",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 51,
       "alignmentPage": 51,
-      "alignmentScore": 0.5714,
+      "alignmentScore": 0.5561,
       "areaSection": true,
       "areaCode": "F2"
     },
@@ -2051,6 +2166,7 @@
         "@UUID[Macro.H7C74E1a3JJl9Eyk]{Reveal Spiky Pit}",
         "@UUID[Actor.j1gSg8aFSKq9o0aU]{Corpses}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "ea35016adec0482db60ca3b3fed77b57cbf1cd5d011129a5ef66f706a19df79a",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/hazard.webp",
@@ -2060,7 +2176,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 50,
       "alignmentPage": 50,
-      "alignmentScore": 0.467,
+      "alignmentScore": 0.462,
       "areaSection": true,
       "areaCode": "F1"
     },
@@ -2069,12 +2185,13 @@
       "sourceName": "Despoiler’s Deep",
       "translatedName": "Глубины Опустошителя",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 50,
       "alignmentPage": 50,
-      "alignmentScore": 0.7021,
+      "alignmentScore": 0.7097,
       "areaSection": false,
       "areaCode": null
     },
@@ -2101,6 +2218,7 @@
         "@UUID[Actor.HqpzxgEhWWsgPszX]{Statue}",
         "@Check[athletics|dc:15|traits:move,skill,action:climb|name:Climb]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "8ac3c04b2598ce8d8aa960921c0640d00942267a82eb9b2b85772d90395f917a",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/hazard.webp",
@@ -2110,7 +2228,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 48,
       "alignmentPage": 48,
-      "alignmentScore": 0.3517,
+      "alignmentScore": 0.3452,
       "areaSection": true,
       "areaCode": "E5"
     },
@@ -2121,6 +2239,7 @@
       "technicalTokens": [
         "@UUID[Actor.XZX1TpeWYkI14qLj]{Droxur}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "07df4c3020f5d7d629e2c65fa79cbc9a664172b3312016d89097fe4556789496",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Abrikandilu%202.webp"
@@ -2128,7 +2247,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 48,
       "alignmentPage": 48,
-      "alignmentScore": 0.7706,
+      "alignmentScore": 0.7784,
       "areaSection": true,
       "areaCode": "E4"
     },
@@ -2147,12 +2266,13 @@
         "@UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Cayden Cailean}",
         "@UUID[Actor.zb2LebobKQWXeVQ1]{Ordwi}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "7fc650b16121f8f507126ed762baacf941147eb117d304ead4a8fc11bf80c514",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 47,
       "alignmentPage": 47,
-      "alignmentScore": 0.5687,
+      "alignmentScore": 0.5888,
       "areaSection": true,
       "areaCode": "E3"
     },
@@ -2172,6 +2292,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04bedroompriso00]{E3}",
         "@Check[thievery|dc:25|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "5fda6766d1e2c701c6e02fe35475836becdfe866739b3871eb499ccc2570272f",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/PZO9564%20clockwork%20serpent.webp",
@@ -2180,7 +2301,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 47,
       "alignmentPage": 47,
-      "alignmentScore": 0.3517,
+      "alignmentScore": 0.3564,
       "areaSection": true,
       "areaCode": "E2"
     },
@@ -2192,6 +2313,7 @@
         "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}",
         "@UUID[Actor.q3dCj5gJoOW22HMd]{Envyspawn (2)}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "10b6ec08f18c701c89d9aa8d7acb15778d8401ab6c713dd86dd97a58a15594d7",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/tokens/Envyspawn.webp"
@@ -2208,6 +2330,7 @@
       "sourceName": "The Temple of Xar-Azmak",
       "translatedName": "Храм Ксар-Азмак",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -2222,6 +2345,7 @@
       "sourceName": "Resurrection of Rust",
       "translatedName": "Глава 3: Воскрешение ржавчины",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 undead rising.webp"
@@ -2229,7 +2353,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 44,
       "alignmentPage": 44,
-      "alignmentScore": 0.7407,
+      "alignmentScore": 0.8,
       "areaSection": false,
       "areaCode": null
     },
@@ -2240,6 +2364,7 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.FUxaVKVEV8eOuTVB]{Primordial Envy}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "e57ea8b95561c3f66465249338662f0b2016e0f7bfaa8a8d3f6af9499bb854ab",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 sinsludge.webp",
@@ -2248,7 +2373,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 65,
       "alignmentPage": 65,
-      "alignmentScore": 0.7162,
+      "alignmentScore": 0.7133,
       "areaSection": false,
       "areaCode": null
     },
@@ -2259,6 +2384,7 @@
       "technicalTokens": [
         "@UUID[Compendium.pf2e.rusthenge-bestiary.Actor.fRiOPTsfqJBiwUwh]{Vloriak}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "084170370b17d7eb5d5a5ce68f969612c9551b156a4dc8d774350aba6ea2f19a",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 vloriak.webp",
@@ -2267,7 +2393,7 @@
       "sourceLinkPaths": [],
       "pdfPage": 64,
       "alignmentPage": 64,
-      "alignmentScore": 0.6444,
+      "alignmentScore": 0.6484,
       "areaSection": false,
       "areaCode": null
     },
@@ -2284,12 +2410,13 @@
         "@UUID[Compendium.pf2e.backgrounds.Item.AJuE41aToGs9tbcM]{Osprey Spellcaster}",
         "@UUID[Compendium.pf2e.backgrounds.Item.f7ZTF8tnZUmTXwwF]{Osprey Warrior}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "bc5db965fe44697d7dde7b7a5a9c54d2ad9e5e88d68a6d44e2d2b0b3d838be0d",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
       "pdfPage": 63,
       "alignmentPage": 63,
-      "alignmentScore": 0.7895,
+      "alignmentScore": 0.875,
       "areaSection": false,
       "areaCode": null
     },
@@ -2302,6 +2429,7 @@
         "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Rusthenge}",
         "@UUID[Compendium.pf2e.equipment-srd.Item.4eC5wMw1vcDDgC4x]{Horn of Rust}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "eefa00dac9b700ba2d0b75dea549f5e5f82d9ace32a2fa263e0238a70097e9d0",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 horn of rust.webp"
@@ -2323,6 +2451,7 @@
         "@UUID[Compendium.pf2e.equipment-srd.Item.fRVCVfoV8KzmZsKs]{Rust Scrub}",
         "@UUID[Compendium.pf2e.equipment-srd.Item.gi1zuwWrwcW7OKlK]{Sanitizing Pin}"
       ],
+      "inlineRolls": [],
       "technicalCoreHash": "3fdcb875274bc58e30c7db2b963de8e847b8ad5907cc05546c5bc6902e20cca2",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564%20sanitizing%20pin.webp"
@@ -2339,6 +2468,7 @@
       "sourceName": "Adventure Toolbox",
       "translatedName": "Инструментарий приключения",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [
         "modules/pf2e-rusthenge/assets/art/pzo9564 theiltemar and horn of rust.webp"
@@ -2355,6 +2485,7 @@
       "sourceName": "Handout #2",
       "translatedName": "Раздаточный материал №2",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -2369,6 +2500,7 @@
       "sourceName": "Handout #1",
       "translatedName": "Раздаточный материал №1",
       "technicalTokens": [],
+      "inlineRolls": [],
       "technicalCoreHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "sourceImagePaths": [],
       "sourceLinkPaths": [],
@@ -2381,7 +2513,6 @@
   },
   "actorTechnical": {
     "0qGYozu96uCyqwwv/description": [],
-    "0qGYozu96uCyqwwv/descriptionGM": [],
     "0qGYozu96uCyqwwv/items/T8jQXV4jxIhvfS14/description": [
       "@UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered}"
     ],
@@ -2393,7 +2524,6 @@
       "@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}"
     ],
     "2NqZ8BEB8kmwzZae/description": [],
-    "2NqZ8BEB8kmwzZae/descriptionGM": [],
     "2NqZ8BEB8kmwzZae/items/v90WRjELLiKF57vr/description": [
       "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
       "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}"
@@ -2405,7 +2535,6 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}"
     ],
     "2gOOtPSWXJtql8i2/description": [],
-    "2gOOtPSWXJtql8i2/descriptionGM": [],
     "2gOOtPSWXJtql8i2/items/f4Mkjn4uAW6nabJR/description": [
       "@UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal}"
     ],
@@ -2440,13 +2569,11 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
     ],
     "62aTwXuLWWrqZXxW/description": [],
-    "62aTwXuLWWrqZXxW/descriptionGM": [],
     "62aTwXuLWWrqZXxW/items/T8jQXV4jxIhvfS14/description": [
       "@UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered}"
     ],
     "62aTwXuLWWrqZXxW/items/6BFQljbOQZkiMjjS/description": [],
     "63tNsYHRrIaRASKj/description": [],
-    "63tNsYHRrIaRASKj/descriptionGM": [],
     "63tNsYHRrIaRASKj/items/VxA7WerDGElBkdYj/description": [],
     "63tNsYHRrIaRASKj/items/8LvVStEHJB30KVCE/description": [
       "@Template[type:emanation|distance:30]{30 feet}",
@@ -2469,7 +2596,7 @@
     ],
     "7dgKzWxcJUJmLsXF/description": [],
     "7dgKzWxcJUJmLsXF/items/a5L9zwEbTQnPprg5/description": [
-      "@Damage[2d6[piercing]",
+      "@Damage[2d6[piercing]]",
       "@Check[type:reflex|dc:21|basic:true]"
     ],
     "7dgKzWxcJUJmLsXF/items/GFEimWK8niicOioN/description": [
@@ -2480,8 +2607,8 @@
     ],
     "91bdPT5tIEDZvQB2/items/xcV4iG9yR2uKSGdL/description": [
       "@Check[type:reflex|dc:20|traits:damaging-effect]",
-      "@Damage[2d10[piercing]",
-      "@Damage[(2d10+13)[piercing]"
+      "@Damage[2d10[piercing]]",
+      "@Damage[(2d10+13)[piercing]]"
     ],
     "9CqQbPyKUk3G39o2/items/a5X5gNKg3MIEGsZ9/description": [],
     "9CqQbPyKUk3G39o2/items/tfriWcHgXqM6QLkB/description": [
@@ -2491,9 +2618,8 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}"
     ],
     "9XwV6EhK14DtMxOw/description": [],
-    "9XwV6EhK14DtMxOw/descriptionGM": [],
     "9XwV6EhK14DtMxOw/items/9SboqcQona3PXQIx/description": [
-      "@Damage[4d6[sonic]",
+      "@Damage[4d6[sonic]]",
       "@Template[type:emanation|distance:15]",
       "@Check[type:fortitude|dc:19|basic:true]",
       "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}"
@@ -2532,8 +2658,16 @@
     "AvjfX6ybUeejKsjJ/items/5gY8gk28J2srHl1t/description": [
       "@UUID[Compendium.pf2e.spells-srd.Item.D2nPKbIS67m9199U]{Ethereal Jaunt}"
     ],
+    "CL4YCcPhKegUvEVx/description": [],
     "CL4YCcPhKegUvEVx/items/6kZm8XnYELAQFppU/description": [],
     "CL4YCcPhKegUvEVx/items/lnftcCa5nWLimB4r/description": [],
+    "DT8LYKyMTa0BzUgx/items/Ol0Loh0Ty7YBWXWb/description": [],
+    "HAvLmkB43aC56r10/descriptionGM": [
+      "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
+    ],
+    "HC7Y5q8vZFEdhXHm/descriptionGM": [
+      "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
+    ],
     "HzvHFXBKD1uAlHWc/description": [],
     "HzvHFXBKD1uAlHWc/items/sYzEwjtXD4GsP03b/description": [
       "@UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]{Lifesense}"
@@ -2541,7 +2675,7 @@
     "HzvHFXBKD1uAlHWc/items/rsf1q6ooMNJFjdfh/description": [],
     "HzvHFXBKD1uAlHWc/items/D13sjvjuSrxFEe35/description": [],
     "HzvHFXBKD1uAlHWc/items/AMnTAvqDDSvhK4rN/description": [
-      "@Damage[4d6[acid]"
+      "@Damage[4d6[acid]]"
     ],
     "HzvHFXBKD1uAlHWc/items/L17R2FDChGWE5pgD/description": [
       "@Check[type:fortitude|dc:17]",
@@ -2563,24 +2697,22 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "KeknT5gCKZUR0WM7/description": [],
-    "KeknT5gCKZUR0WM7/descriptionGM": [],
     "KeknT5gCKZUR0WM7/items/GhnXpFtWM1vyvu8V/description": [],
-    "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/description": [],
     "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/gm": [],
     "M72Bl8X3Ue4v2dB4/items/97l0hEJqbFlmWhUZ/description": [],
     "M72Bl8X3Ue4v2dB4/items/QXmns8bw5DBlNJ9D/description": [
       "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
     ],
+    "MIYeIfCPevjN1DeE/items/3ENHDKMsNbHIr68E/description": [],
     "N0nSDzkMv7OwGumH/description": [],
     "N0nSDzkMv7OwGumH/items/mdEZdShzE63nlTQK/description": [
-      "@Damage[4d6[acid]",
+      "@Damage[4d6[acid]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}"
     ],
     "N0nSDzkMv7OwGumH/items/19Ayra6rX2M49iPG/description": [
       "@UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}"
     ],
     "NWJvhxgboK7Kj0gw/description": [],
-    "NWJvhxgboK7Kj0gw/descriptionGM": [],
     "NWJvhxgboK7Kj0gw/items/VxA7WerDGElBkdYj/description": [],
     "NWJvhxgboK7Kj0gw/items/8LvVStEHJB30KVCE/description": [
       "@Template[type:emanation|distance:30]{30 feet}",
@@ -2593,13 +2725,12 @@
     ],
     "Q3ciH3AHZlb1Dc3E/description": [],
     "ShWcSAzHjKnQ8MJX/description": [],
-    "ShWcSAzHjKnQ8MJX/descriptionGM": [],
     "ShWcSAzHjKnQ8MJX/items/PIjZTZsbQlriq5X3/description": [
       "@Check[type:fortitude|dc:14]",
-      "@Damage[1d6[poison]",
-      "@Damage[1d8[poison]",
+      "@Damage[1d6[poison]]",
+      "@Damage[1d8[poison]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}",
-      "@Damage[1d12[poison]",
+      "@Damage[1d12[poison]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}"
     ],
     "TIP8DD2dLKxFfqHf/items/y7VNs5A41UH94zX1/description": [
@@ -2612,6 +2743,8 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
       "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
     ],
+    "TOxjJfmAB5MdXlCQ/items/5bze6qT12qLzg9j8/description": [],
+    "TOxjJfmAB5MdXlCQ/items/5bze6qT12qLzg9j8/gm": [],
     "UoeLlR2PwtJUZjGD/description": [],
     "UoeLlR2PwtJUZjGD/items/MuiyXm8KyQF57NaW/description": [
       "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
@@ -2641,42 +2774,44 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
       "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}",
       "@Check[type:will|dc:20]",
-      "@Damage[1d6[mental]",
-      "@Damage[2d6[mental]",
+      "@Damage[1d6[mental]]",
+      "@Damage[2d6[mental]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
       "@UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}"
     ],
     "XZX1TpeWYkI14qLj/description": [],
-    "XZX1TpeWYkI14qLj/descriptionGM": [],
     "XZX1TpeWYkI14qLj/items/983mBG3qwmzQKGS2/description": [
-      "@Damage[1d6[mental]"
+      "@Damage[1d6[mental]]"
     ],
     "XZX1TpeWYkI14qLj/items/3wLOdV2RXEY5pnF5/description": [
       "@Check[type:fortitude|dc:21]",
       "@UUID[Compendium.pf2e.bestiary-effects.Item.LgZx5xotO08JzhVc]{Effect: Mutilating Bite}"
     ],
     "XZX1TpeWYkI14qLj/items/4cx1d9efogHuWe26/description": [],
+    "XuZn83gLb7juT0UG/descriptionGM": [
+      "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
+    ],
     "Y133Sx0joIm2DZ3g/description": [],
     "Y133Sx0joIm2DZ3g/items/D2ezhwANZLcMNbz9/description": [],
     "Y133Sx0joIm2DZ3g/items/We6LladGR4C687q0/description": [
       "@Check[type:fortitude|dc:17]",
-      "@Damage[1d6[poison]",
+      "@Damage[1d6[poison]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
-      "@Damage[1d6[poison]",
+      "@Damage[1d6[poison]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
     ],
     "ZIUG2ArW9SCBrgd2/description": [],
     "ZIUG2ArW9SCBrgd2/items/V8UhxFNrr8B2m7UP/description": [
-      "@Damage[3d6[mental]"
+      "@Damage[3d6[mental]]"
     ],
     "ZIUG2ArW9SCBrgd2/items/fzTUnlrMpxSgmSAy/description": [],
     "ZIUG2ArW9SCBrgd2/items/TZig28UcpE4GS2P0/description": [
       "@UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm}",
-      "@Damage[2d6[untyped]"
+      "@Damage[2d6[untyped]]"
     ],
     "ZIUG2ArW9SCBrgd2/items/w9Owf4Jdub9WbuFx/description": [
       "@Template[type:cone|distance:15]",
-      "@Damage[3d6[piercing]",
+      "@Damage[3d6[piercing]]",
       "@Check[type:reflex|dc:22|basic:true]"
     ],
     "ZIUG2ArW9SCBrgd2/items/Q0Sd9sqnUeL32Jw9/description": [
@@ -2699,14 +2834,14 @@
       "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
     ],
     "ZoP9C7TGVQm1tmiR/items/UK9gsjbHYgmKZze9/description": [
-      "@Damage[1d12[piercing]",
+      "@Damage[1d12[piercing]]",
       "@Template[type:emanation|distance:5]{5-foot radius}",
       "@Check[type:reflex|dc:17|basic:true]",
       "@Check[type:thievery|dc:17|traits:action:disable-a-device]",
       "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
     ],
     "ZoP9C7TGVQm1tmiR/items/hAK9kJGhzP6DASJX/description": [
-      "@Damage[1d4[persistent,bleed]",
+      "@Damage[1d4[persistent,bleed]]",
       "@Check[type:fortitude|dc:17]"
     ],
     "bRXpyT68VI3n9eWv/description": [],
@@ -2731,19 +2866,23 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}"
     ],
     "dbMmGE7Deitzsuz6/items/xdQJFj57QglkQXeG/description": [
-      "@Damage[1d6[bleed]"
+      "@Damage[1d6[bleed]]"
     ],
+    "ejs3JWhzdnj0pVAT/description": [],
+    "ejs3JWhzdnj0pVAT/items/qIRZdfRLhqBnYMWt/description": [
+      "@Check[type:sailing-lore|dc:22]{Sailing Lore}"
+    ],
+    "ejs3JWhzdnj0pVAT/items/Hw1KYT6hIaAHcXkI/description": [],
     "fnjgFygP2p6zj1Fc/items/PFa0h9BekFPB4Eoh/description": [
       "@Check[type:reflex|dc:17|traits:damaging-effect]",
-      "@Damage[(1d6+3)[bludgeoning]",
+      "@Damage[(1d6+3)[bludgeoning]]",
       "@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}",
-      "@Damage[(2d6+5)[bludgeoning]",
+      "@Damage[(2d6+5)[bludgeoning]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}",
-      "@Damage[(2d6+5)[bludgeoning]",
+      "@Damage[(2d6+5)[bludgeoning]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "hU8Z9Z6b0fD8ftvk/description": [],
-    "hU8Z9Z6b0fD8ftvk/descriptionGM": [],
     "hU8Z9Z6b0fD8ftvk/items/momzHh7zAZRC7Hob/description": [],
     "hU8Z9Z6b0fD8ftvk/items/up8Xcig2FrwgbFfb/description": [
       "@Template[type:emanation|distance:30]{30 feet}",
@@ -2755,10 +2894,13 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
     ],
     "hzjZKJLz1sLAeHtq/items/yf2VZtO2S4eV7fKZ/description": [
-      "@Damage[10[bludgeoning]",
+      "@Damage[10[bludgeoning]]",
       "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}",
       "@Check[type:reflex|dc:20]",
       "@Check[type:reflex|dc:22]"
+    ],
+    "jYYF0l6exscSwmP9/descriptionGM": [
+      "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Osprey Cove}"
     ],
     "kqGEpdTaiZtovqbm/description": [],
     "kqGEpdTaiZtovqbm/items/edVyMro5viX5rgD9/description": [
@@ -2775,32 +2917,30 @@
     "kqGEpdTaiZtovqbm/items/IvUr6AnOtG8K2BSD/description": [],
     "lCNsglj9xoQfBl3p/description": [],
     "lCNsglj9xoQfBl3p/items/0Himurdx3RL3D4gk/description": [
-      "@Damage[1d6[bleed]"
+      "@Damage[1d6[bleed]]"
     ],
     "lCNsglj9xoQfBl3p/items/wFnxNcpjZQq97vyn/description": [],
     "lCNsglj9xoQfBl3p/items/Og5zTgT13s8QIGgb/description": [],
     "ltfi8ZCUvuN84qSS/description": [],
-    "ltfi8ZCUvuN84qSS/descriptionGM": [],
     "ltfi8ZCUvuN84qSS/items/uldVZLVdwiLD1q6v/description": [],
     "ltfi8ZCUvuN84qSS/items/ZDJkjnIor7qxsiSU/description": [
       "@Check[type:athletics|traits:action:grapple,action:strangle]",
       "@UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grab}",
-      "@Damage[(1d6+6)[bludgeoning]"
+      "@Damage[(1d6+6)[bludgeoning]]"
     ],
     "mKuegTrL8zIoab0o/items/8tVnSA2uTOLAmycM/description": [
       "@Check[type:fortitude|dc:20|traits:damaging-effect]",
-      "@Damage[1d10[bludgeoning]",
+      "@Damage[1d10[bludgeoning]]",
       "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}",
-      "@Damage[(1d10+6)[bludgeoning]",
+      "@Damage[(1d10+6)[bludgeoning]]",
       "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}"
     ],
     "oDTP0oNCRCovqkNy/items/xcV4iG9yR2uKSGdL/description": [
       "@Check[type:reflex|dc:20|traits:damaging-effect]",
-      "@Damage[2d10[piercing]",
-      "@Damage[(2d10+13)[piercing]"
+      "@Damage[2d10[piercing]]",
+      "@Damage[(2d10+13)[piercing]]"
     ],
     "oeM8EcS1F5NIkd30/description": [],
-    "oeM8EcS1F5NIkd30/descriptionGM": [],
     "q3dCj5gJoOW22HMd/description": [],
     "q3dCj5gJoOW22HMd/items/hk7qH9BpvzM7rFGe/description": [],
     "q3dCj5gJoOW22HMd/items/MpNlJrdPvv9bECNE/description": [
@@ -2808,6 +2948,22 @@
       "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
       "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}",
       "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}"
+    ],
+    "qcoQw8vZOpYX5V0V/description": [],
+    "qcoQw8vZOpYX5V0V/items/ma0kNlN1eN2YPKXO/description": [
+      "@Template[type:burst|distance:5]",
+      "@Damage[2d6[bludgeoning]]",
+      "@Check[type:reflex|dc:13|basic:true]"
+    ],
+    "qcoQw8vZOpYX5V0V/items/FmriI9fZfj3I2QS1/description": [
+      "@UUID[Compendium.pf2e.equipment-srd.Item.UMAXLDpI6YLSfYX1]{Alcohol}",
+      "@UUID[Compendium.pf2e.equipment-srd.Item.UMAXLDpI6YLSfYX1]{Alcohol}",
+      "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}",
+      "@UUID[Compendium.pf2e.bestiary-effects.Item.HArljmKc2IR7rtfc]{Effect: Swig}"
+    ],
+    "rWV6SIL5lXsJufgs/items/RGvHZCOahA9qXRKF/description": [],
+    "rWV6SIL5lXsJufgs/items/RGvHZCOahA9qXRKF/gm": [
+      "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0100000]{Handout #1}"
     ],
     "rXjtkRiFj00HzPAG/description": [],
     "rXjtkRiFj00HzPAG/items/uNH8ZKqCgsh6qYis/description": [
@@ -2820,39 +2976,252 @@
       "@Check[type:will|dc:20]",
       "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}"
     ],
+    "rsQ4PbiIKDOKAXWf/items/6ZWaAlaTCBSQ652y/description": [
+      "@UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]{Create Undead}",
+      "@UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Inveigle}",
+      "@UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]{Handout #2}"
+    ],
+    "rsQ4PbiIKDOKAXWf/items/d0HNBc9szRrLtMSR/description": [],
+    "slPGAdJR86h6DnaL/items/zvWFQXu4MhU0UWAw/gm": [],
     "viyUBIwO7gFRqwVG/description": [],
-    "viyUBIwO7gFRqwVG/descriptionGM": [],
     "viyUBIwO7gFRqwVG/items/9yu44cM7W0Xg2Q36/description": [],
     "zb2LebobKQWXeVQ1/items/htliQ05jVKwfE22v/description": [
       "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
     ],
     "zb2LebobKQWXeVQ1/items/UDhWMhJzdEJtykvO/description": [],
     "zj4VyFf9wYB6xO6S/description": [],
-    "zj4VyFf9wYB6xO6S/descriptionGM": [],
     "zj4VyFf9wYB6xO6S/items/Y2DikEsO4R95MHFo/description": [
       "@Template[type:emanation|distance:30]"
     ],
     "zj4VyFf9wYB6xO6S/items/LCFMKpxw0iDxWGXu/description": [
       "@Template[type:emanation|distance:15]",
       "@Check[type:fortitude|dc:16|traits:damaging-effect]",
-      "@Damage[1[persistent,poison]"
+      "@Damage[1[persistent,poison]]"
     ],
+    "zj4VyFf9wYB6xO6S/items/ARWbmjbxbCd0JMUv/description": []
+  },
+  "actorInlineRolls": {
+    "0qGYozu96uCyqwwv/description": [],
+    "0qGYozu96uCyqwwv/items/T8jQXV4jxIhvfS14/description": [],
+    "0qGYozu96uCyqwwv/items/6BFQljbOQZkiMjjS/description": [
+      "[[/r {4}]]{4 damage}"
+    ],
+    "2EVDrnEMPs0TKcdN/description": [],
+    "2EVDrnEMPs0TKcdN/items/zMkrKhyfRWFrFfuv/description": [],
+    "2NqZ8BEB8kmwzZae/description": [],
+    "2NqZ8BEB8kmwzZae/items/v90WRjELLiKF57vr/description": [],
+    "2NqZ8BEB8kmwzZae/items/eulyI60JHNUYs39w/description": [],
+    "2g8LSm8VMWFoOK8U/items/CNpPqhgSIEamhwFL/description": [],
+    "2gOOtPSWXJtql8i2/description": [],
+    "2gOOtPSWXJtql8i2/items/f4Mkjn4uAW6nabJR/description": [],
+    "3PAJHNWNs2LrPhhx/description": [],
+    "3PAJHNWNs2LrPhhx/items/hk7qH9BpvzM7rFGe/description": [],
+    "3PAJHNWNs2LrPhhx/items/MpNlJrdPvv9bECNE/description": [],
+    "4Zwt3eqjMo0EQUrq/items/0rwXFzCG58mrENRi/description": [],
+    "4ajJbWhiX1V5jrCg/description": [],
+    "4ajJbWhiX1V5jrCg/items/KjLaF8NJBaPjsRAz/description": [],
+    "4ajJbWhiX1V5jrCg/items/oxpwAUYEbjv8nf4R/description": [],
+    "5uoigpUArRCSWArQ/description": [],
+    "5uoigpUArRCSWArQ/items/hk7qH9BpvzM7rFGe/description": [],
+    "5uoigpUArRCSWArQ/items/MpNlJrdPvv9bECNE/description": [],
+    "62aTwXuLWWrqZXxW/description": [],
+    "62aTwXuLWWrqZXxW/items/T8jQXV4jxIhvfS14/description": [],
+    "62aTwXuLWWrqZXxW/items/6BFQljbOQZkiMjjS/description": [
+      "[[/r {4}]]{4 damage}"
+    ],
+    "63tNsYHRrIaRASKj/description": [],
+    "63tNsYHRrIaRASKj/items/VxA7WerDGElBkdYj/description": [],
+    "63tNsYHRrIaRASKj/items/8LvVStEHJB30KVCE/description": [],
+    "63tNsYHRrIaRASKj/items/kGQg9F0ZgW7fp4DB/description": [],
+    "6AiPO2aKOFN6qipW/items/htliQ05jVKwfE22v/description": [],
+    "6AiPO2aKOFN6qipW/items/UDhWMhJzdEJtykvO/description": [],
+    "7dO0tWbAmPOFpKAi/description": [],
+    "7dO0tWbAmPOFpKAi/items/zMkrKhyfRWFrFfuv/description": [],
+    "7dgKzWxcJUJmLsXF/description": [],
+    "7dgKzWxcJUJmLsXF/items/a5L9zwEbTQnPprg5/description": [],
+    "7dgKzWxcJUJmLsXF/items/GFEimWK8niicOioN/description": [],
+    "91bdPT5tIEDZvQB2/items/xcV4iG9yR2uKSGdL/description": [],
+    "9CqQbPyKUk3G39o2/items/a5X5gNKg3MIEGsZ9/description": [],
+    "9CqQbPyKUk3G39o2/items/tfriWcHgXqM6QLkB/description": [],
+    "9XwV6EhK14DtMxOw/description": [],
+    "9XwV6EhK14DtMxOw/items/9SboqcQona3PXQIx/description": [
+      "[[/br 1d4 #Recharge Destructive Croak]]{1d4 rounds}"
+    ],
+    "9XwV6EhK14DtMxOw/items/80CuEcGtDQ6fUIyY/description": [],
+    "9XwV6EhK14DtMxOw/items/xBIoPO0Yl00JwtXW/description": [],
+    "9XwV6EhK14DtMxOw/items/z8bl09rqF4yCJDy4/description": [],
+    "9XwV6EhK14DtMxOw/items/A33mGw1DCgRJRDSe/description": [],
+    "Aoll0FdVcKcL1Ucd/description": [],
+    "Aoll0FdVcKcL1Ucd/items/UGFoKIvbXM0ZSdiU/description": [],
+    "Aoll0FdVcKcL1Ucd/items/Kv1pkf5Ma30A8n58/description": [],
+    "AvjfX6ybUeejKsjJ/description": [],
+    "AvjfX6ybUeejKsjJ/items/0Rn8CE4JcrTxdKqN/description": [],
+    "AvjfX6ybUeejKsjJ/items/5gY8gk28J2srHl1t/description": [],
+    "CL4YCcPhKegUvEVx/description": [],
+    "CL4YCcPhKegUvEVx/items/6kZm8XnYELAQFppU/description": [],
+    "CL4YCcPhKegUvEVx/items/lnftcCa5nWLimB4r/description": [],
+    "DT8LYKyMTa0BzUgx/items/Ol0Loh0Ty7YBWXWb/description": [],
+    "HAvLmkB43aC56r10/descriptionGM": [],
+    "HC7Y5q8vZFEdhXHm/descriptionGM": [],
+    "HzvHFXBKD1uAlHWc/description": [],
+    "HzvHFXBKD1uAlHWc/items/sYzEwjtXD4GsP03b/description": [
+      "[[/br 1d4 #minutes]]{1d4 minutes}"
+    ],
+    "HzvHFXBKD1uAlHWc/items/rsf1q6ooMNJFjdfh/description": [],
+    "HzvHFXBKD1uAlHWc/items/D13sjvjuSrxFEe35/description": [],
+    "HzvHFXBKD1uAlHWc/items/AMnTAvqDDSvhK4rN/description": [],
+    "HzvHFXBKD1uAlHWc/items/L17R2FDChGWE5pgD/description": [
+      "[[/br 2d4 #hours]]{2d4 hours}"
+    ],
+    "IWrJeX5D8wFcy2JW/description": [],
+    "IWrJeX5D8wFcy2JW/items/80CuEcGtDQ6fUIyY/description": [],
+    "IWrJeX5D8wFcy2JW/items/xBIoPO0Yl00JwtXW/description": [],
+    "IWrJeX5D8wFcy2JW/items/z8bl09rqF4yCJDy4/description": [],
+    "IWrJeX5D8wFcy2JW/items/A33mGw1DCgRJRDSe/description": [],
+    "KeknT5gCKZUR0WM7/description": [],
+    "KeknT5gCKZUR0WM7/items/GhnXpFtWM1vyvu8V/description": [],
+    "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/gm": [],
+    "M72Bl8X3Ue4v2dB4/items/97l0hEJqbFlmWhUZ/description": [],
+    "M72Bl8X3Ue4v2dB4/items/QXmns8bw5DBlNJ9D/description": [],
+    "MIYeIfCPevjN1DeE/items/3ENHDKMsNbHIr68E/description": [],
+    "N0nSDzkMv7OwGumH/description": [],
+    "N0nSDzkMv7OwGumH/items/mdEZdShzE63nlTQK/description": [],
+    "N0nSDzkMv7OwGumH/items/19Ayra6rX2M49iPG/description": [],
+    "NWJvhxgboK7Kj0gw/description": [],
+    "NWJvhxgboK7Kj0gw/items/VxA7WerDGElBkdYj/description": [],
+    "NWJvhxgboK7Kj0gw/items/8LvVStEHJB30KVCE/description": [],
+    "NWJvhxgboK7Kj0gw/items/kGQg9F0ZgW7fp4DB/description": [],
+    "Q3ciH3AHZlb1Dc3E/description": [],
+    "ShWcSAzHjKnQ8MJX/description": [],
+    "ShWcSAzHjKnQ8MJX/items/PIjZTZsbQlriq5X3/description": [],
+    "TIP8DD2dLKxFfqHf/items/y7VNs5A41UH94zX1/description": [],
+    "TIP8DD2dLKxFfqHf/items/SHmm4Z4oVUEYADth/description": [],
+    "TOxjJfmAB5MdXlCQ/items/5bze6qT12qLzg9j8/description": [],
+    "TOxjJfmAB5MdXlCQ/items/5bze6qT12qLzg9j8/gm": [],
+    "UoeLlR2PwtJUZjGD/description": [],
+    "UoeLlR2PwtJUZjGD/items/MuiyXm8KyQF57NaW/description": [],
+    "UoeLlR2PwtJUZjGD/items/a2pZeef5wn9y5xAA/description": [],
+    "UoeLlR2PwtJUZjGD/items/PmrOcp7IYi6XPIer/description": [],
+    "WV7XAaNpm5w8kVZW/items/0tDhCne8RVvfJHxv/gm": [],
+    "WV7XAaNpm5w8kVZW/items/2tLWKbKmJp9SzebT/description": [],
+    "Wk9c3TwlnHoQo03B/description": [],
+    "Wk9c3TwlnHoQo03B/items/zMkrKhyfRWFrFfuv/description": [],
+    "XCkK3Xrz8Yoi4SMG/description": [],
+    "XCkK3Xrz8Yoi4SMG/items/HhUe0MpfzNrigkps/description": [],
+    "XCkK3Xrz8Yoi4SMG/items/fJ34aqwTiZbTv92E/description": [
+      "[[/r 1d20+12 #Counteract]]{+12}",
+      "[[/br 2d6 #Temp HP]]"
+    ],
+    "XCkK3Xrz8Yoi4SMG/items/FDCXS4bVC2F1PdGz/description": [],
+    "XZX1TpeWYkI14qLj/description": [],
+    "XZX1TpeWYkI14qLj/items/983mBG3qwmzQKGS2/description": [],
+    "XZX1TpeWYkI14qLj/items/3wLOdV2RXEY5pnF5/description": [],
+    "XZX1TpeWYkI14qLj/items/4cx1d9efogHuWe26/description": [],
+    "XuZn83gLb7juT0UG/descriptionGM": [],
+    "Y133Sx0joIm2DZ3g/description": [],
+    "Y133Sx0joIm2DZ3g/items/D2ezhwANZLcMNbz9/description": [],
+    "Y133Sx0joIm2DZ3g/items/We6LladGR4C687q0/description": [],
+    "ZIUG2ArW9SCBrgd2/description": [],
+    "ZIUG2ArW9SCBrgd2/items/V8UhxFNrr8B2m7UP/description": [],
+    "ZIUG2ArW9SCBrgd2/items/fzTUnlrMpxSgmSAy/description": [
+      "[[/r 2d6[healing]]]",
+      "[[/r 4d6[healing]]]"
+    ],
+    "ZIUG2ArW9SCBrgd2/items/TZig28UcpE4GS2P0/description": [],
+    "ZIUG2ArW9SCBrgd2/items/w9Owf4Jdub9WbuFx/description": [
+      "[[/br 1d4 #rounds]]{1d4 rounds}"
+    ],
+    "ZIUG2ArW9SCBrgd2/items/Q0Sd9sqnUeL32Jw9/description": [],
+    "ZLdZe3qKjR6xoN4Z/description": [],
+    "ZLdZe3qKjR6xoN4Z/items/K8HY6MgNzIvDLuDT/description": [],
+    "ZLdZe3qKjR6xoN4Z/items/uMNXrK8Is6PAzNEB/description": [],
+    "ZoP9C7TGVQm1tmiR/description": [],
+    "ZoP9C7TGVQm1tmiR/items/lL49wJa4ig4V0ag1/description": [],
+    "ZoP9C7TGVQm1tmiR/items/zdb8RR0jcIIol6on/description": [],
+    "ZoP9C7TGVQm1tmiR/items/UK9gsjbHYgmKZze9/description": [],
+    "ZoP9C7TGVQm1tmiR/items/hAK9kJGhzP6DASJX/description": [],
+    "bRXpyT68VI3n9eWv/description": [],
+    "bRXpyT68VI3n9eWv/items/qtsF75k2Zterahrt/description": [
+      "[[/r {10}]]{10 damage}"
+    ],
+    "bRXpyT68VI3n9eWv/items/36QKwrAooz1cygR4/description": [],
+    "buu375tJJutZ9xT2/items/rmbTeX3cdnck9oQ2/description": [],
+    "dbMmGE7Deitzsuz6/description": [],
+    "dbMmGE7Deitzsuz6/items/p6uToNU7wgFDgDDH/description": [
+      "[[/br 1d4 #Actions Regained]]{1d4}"
+    ],
+    "dbMmGE7Deitzsuz6/items/Lb8baU3vfeAtn1Nw/description": [],
+    "dbMmGE7Deitzsuz6/items/h8caQJMnKj4F22zZ/description": [],
+    "dbMmGE7Deitzsuz6/items/xdQJFj57QglkQXeG/description": [],
+    "ejs3JWhzdnj0pVAT/description": [],
+    "ejs3JWhzdnj0pVAT/items/qIRZdfRLhqBnYMWt/description": [],
+    "ejs3JWhzdnj0pVAT/items/Hw1KYT6hIaAHcXkI/description": [
+      "[[/r {1d6}]]{1d6 weapon damage}"
+    ],
+    "fnjgFygP2p6zj1Fc/items/PFa0h9BekFPB4Eoh/description": [],
+    "hU8Z9Z6b0fD8ftvk/description": [],
+    "hU8Z9Z6b0fD8ftvk/items/momzHh7zAZRC7Hob/description": [],
+    "hU8Z9Z6b0fD8ftvk/items/up8Xcig2FrwgbFfb/description": [],
+    "hU8Z9Z6b0fD8ftvk/items/MEAPfylvHHHbTqOf/description": [],
+    "hzjZKJLz1sLAeHtq/items/yf2VZtO2S4eV7fKZ/description": [],
+    "jYYF0l6exscSwmP9/descriptionGM": [],
+    "kqGEpdTaiZtovqbm/description": [],
+    "kqGEpdTaiZtovqbm/items/edVyMro5viX5rgD9/description": [],
+    "kqGEpdTaiZtovqbm/items/fH4zN6EufktPqbW4/description": [],
+    "kqGEpdTaiZtovqbm/items/pyDc4hD647pfgYEk/description": [
+      "[[/r 1d20+18 #Counteract]]{+18}"
+    ],
+    "kqGEpdTaiZtovqbm/items/IvUr6AnOtG8K2BSD/description": [],
+    "lCNsglj9xoQfBl3p/description": [],
+    "lCNsglj9xoQfBl3p/items/0Himurdx3RL3D4gk/description": [],
+    "lCNsglj9xoQfBl3p/items/wFnxNcpjZQq97vyn/description": [],
+    "lCNsglj9xoQfBl3p/items/Og5zTgT13s8QIGgb/description": [],
+    "ltfi8ZCUvuN84qSS/description": [],
+    "ltfi8ZCUvuN84qSS/items/uldVZLVdwiLD1q6v/description": [
+      "[[/r {8}]]{8 damage}"
+    ],
+    "ltfi8ZCUvuN84qSS/items/ZDJkjnIor7qxsiSU/description": [],
+    "mKuegTrL8zIoab0o/items/8tVnSA2uTOLAmycM/description": [],
+    "oDTP0oNCRCovqkNy/items/xcV4iG9yR2uKSGdL/description": [],
+    "oeM8EcS1F5NIkd30/description": [],
+    "q3dCj5gJoOW22HMd/description": [],
+    "q3dCj5gJoOW22HMd/items/hk7qH9BpvzM7rFGe/description": [],
+    "q3dCj5gJoOW22HMd/items/MpNlJrdPvv9bECNE/description": [],
+    "qcoQw8vZOpYX5V0V/description": [],
+    "qcoQw8vZOpYX5V0V/items/ma0kNlN1eN2YPKXO/description": [],
+    "qcoQw8vZOpYX5V0V/items/FmriI9fZfj3I2QS1/description": [],
+    "rWV6SIL5lXsJufgs/items/RGvHZCOahA9qXRKF/description": [],
+    "rWV6SIL5lXsJufgs/items/RGvHZCOahA9qXRKF/gm": [],
+    "rXjtkRiFj00HzPAG/description": [],
+    "rXjtkRiFj00HzPAG/items/uNH8ZKqCgsh6qYis/description": [
+      "[[/br 1d4 #rounds]]{1d4 rounds}"
+    ],
+    "rXjtkRiFj00HzPAG/items/MgWi09fDy6GgzHJM/description": [],
+    "rsQ4PbiIKDOKAXWf/items/6ZWaAlaTCBSQ652y/description": [],
+    "rsQ4PbiIKDOKAXWf/items/d0HNBc9szRrLtMSR/description": [],
+    "slPGAdJR86h6DnaL/items/zvWFQXu4MhU0UWAw/gm": [],
+    "viyUBIwO7gFRqwVG/description": [],
+    "viyUBIwO7gFRqwVG/items/9yu44cM7W0Xg2Q36/description": [],
+    "zb2LebobKQWXeVQ1/items/htliQ05jVKwfE22v/description": [],
+    "zb2LebobKQWXeVQ1/items/UDhWMhJzdEJtykvO/description": [],
+    "zj4VyFf9wYB6xO6S/description": [],
+    "zj4VyFf9wYB6xO6S/items/Y2DikEsO4R95MHFo/description": [
+      "[[/r 2d8[healing]]]"
+    ],
+    "zj4VyFf9wYB6xO6S/items/LCFMKpxw0iDxWGXu/description": [],
     "zj4VyFf9wYB6xO6S/items/ARWbmjbxbCd0JMUv/description": []
   },
   "actorHtml": {
     "0qGYozu96uCyqwwv/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "0qGYozu96uCyqwwv/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "0qGYozu96uCyqwwv/items/T8jQXV4jxIhvfS14/description": "8803785599ac00d52debf372a9893147940d4ba8563758abbf7fedb1010d9f9d",
     "0qGYozu96uCyqwwv/items/6BFQljbOQZkiMjjS/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "2EVDrnEMPs0TKcdN/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
     "2EVDrnEMPs0TKcdN/items/zMkrKhyfRWFrFfuv/description": "a2b31adc16b6fcd8c76f47b1ebba21a530942879ffdd8110c54b0e093063386f",
     "2NqZ8BEB8kmwzZae/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "2NqZ8BEB8kmwzZae/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "2NqZ8BEB8kmwzZae/items/v90WRjELLiKF57vr/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
     "2NqZ8BEB8kmwzZae/items/eulyI60JHNUYs39w/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "2g8LSm8VMWFoOK8U/items/CNpPqhgSIEamhwFL/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "2gOOtPSWXJtql8i2/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "2gOOtPSWXJtql8i2/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "2gOOtPSWXJtql8i2/items/f4Mkjn4uAW6nabJR/description": "e93f64dbc8a91340563ead13addda301f0c80499366aa3f9d53e627316665430",
     "3PAJHNWNs2LrPhhx/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
     "3PAJHNWNs2LrPhhx/items/hk7qH9BpvzM7rFGe/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
@@ -2865,11 +3234,9 @@
     "5uoigpUArRCSWArQ/items/hk7qH9BpvzM7rFGe/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "5uoigpUArRCSWArQ/items/MpNlJrdPvv9bECNE/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
     "62aTwXuLWWrqZXxW/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "62aTwXuLWWrqZXxW/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "62aTwXuLWWrqZXxW/items/T8jQXV4jxIhvfS14/description": "8803785599ac00d52debf372a9893147940d4ba8563758abbf7fedb1010d9f9d",
     "62aTwXuLWWrqZXxW/items/6BFQljbOQZkiMjjS/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "63tNsYHRrIaRASKj/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "63tNsYHRrIaRASKj/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "63tNsYHRrIaRASKj/items/VxA7WerDGElBkdYj/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "63tNsYHRrIaRASKj/items/8LvVStEHJB30KVCE/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "63tNsYHRrIaRASKj/items/kGQg9F0ZgW7fp4DB/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
@@ -2884,7 +3251,6 @@
     "9CqQbPyKUk3G39o2/items/a5X5gNKg3MIEGsZ9/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
     "9CqQbPyKUk3G39o2/items/tfriWcHgXqM6QLkB/description": "1cf8c187006f1c02de1010a973c57695357c1918d705e1b8302c221f783895f5",
     "9XwV6EhK14DtMxOw/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "9XwV6EhK14DtMxOw/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "9XwV6EhK14DtMxOw/items/9SboqcQona3PXQIx/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
     "9XwV6EhK14DtMxOw/items/80CuEcGtDQ6fUIyY/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
     "9XwV6EhK14DtMxOw/items/xBIoPO0Yl00JwtXW/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
@@ -2896,8 +3262,12 @@
     "AvjfX6ybUeejKsjJ/description": "cb05046ab632c36faec4334ad471d8cb0930bcc8a2cf4591f4a9a2f6532afadb",
     "AvjfX6ybUeejKsjJ/items/0Rn8CE4JcrTxdKqN/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
     "AvjfX6ybUeejKsjJ/items/5gY8gk28J2srHl1t/description": "b6a6be7c21780cbd72d37d8a71bc60c2288bd78b4917ea0ed035b42d1e78c9bb",
+    "CL4YCcPhKegUvEVx/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
     "CL4YCcPhKegUvEVx/items/6kZm8XnYELAQFppU/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "CL4YCcPhKegUvEVx/items/lnftcCa5nWLimB4r/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "DT8LYKyMTa0BzUgx/items/Ol0Loh0Ty7YBWXWb/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "HAvLmkB43aC56r10/descriptionGM": "8fb4ccc94a7fce010d7f6645bef269ec32408c154511501dc9ca274912190820",
+    "HC7Y5q8vZFEdhXHm/descriptionGM": "8fb4ccc94a7fce010d7f6645bef269ec32408c154511501dc9ca274912190820",
     "HzvHFXBKD1uAlHWc/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "HzvHFXBKD1uAlHWc/items/sYzEwjtXD4GsP03b/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
     "HzvHFXBKD1uAlHWc/items/rsf1q6ooMNJFjdfh/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
@@ -2910,26 +3280,25 @@
     "IWrJeX5D8wFcy2JW/items/z8bl09rqF4yCJDy4/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "IWrJeX5D8wFcy2JW/items/A33mGw1DCgRJRDSe/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "KeknT5gCKZUR0WM7/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "KeknT5gCKZUR0WM7/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "KeknT5gCKZUR0WM7/items/GhnXpFtWM1vyvu8V/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
-    "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/description": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "M72Bl8X3Ue4v2dB4/items/oHYtarmUC2qQjUtU/gm": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
     "M72Bl8X3Ue4v2dB4/items/97l0hEJqbFlmWhUZ/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "M72Bl8X3Ue4v2dB4/items/QXmns8bw5DBlNJ9D/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
+    "MIYeIfCPevjN1DeE/items/3ENHDKMsNbHIr68E/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "N0nSDzkMv7OwGumH/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
     "N0nSDzkMv7OwGumH/items/mdEZdShzE63nlTQK/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "N0nSDzkMv7OwGumH/items/19Ayra6rX2M49iPG/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
     "NWJvhxgboK7Kj0gw/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "NWJvhxgboK7Kj0gw/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "NWJvhxgboK7Kj0gw/items/VxA7WerDGElBkdYj/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "NWJvhxgboK7Kj0gw/items/8LvVStEHJB30KVCE/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "NWJvhxgboK7Kj0gw/items/kGQg9F0ZgW7fp4DB/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "Q3ciH3AHZlb1Dc3E/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
     "ShWcSAzHjKnQ8MJX/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "ShWcSAzHjKnQ8MJX/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ShWcSAzHjKnQ8MJX/items/PIjZTZsbQlriq5X3/description": "84bd8554e9bc69b292ac2294072b44b2ce381fb6b14348f600f8f91d1be95493",
     "TIP8DD2dLKxFfqHf/items/y7VNs5A41UH94zX1/description": "8fe34dc6ef3cee7638e5b46240c3cf09e9cd96b33054e2fbbba2e24dcc97e9ab",
     "TIP8DD2dLKxFfqHf/items/SHmm4Z4oVUEYADth/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+    "TOxjJfmAB5MdXlCQ/items/5bze6qT12qLzg9j8/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "TOxjJfmAB5MdXlCQ/items/5bze6qT12qLzg9j8/gm": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "UoeLlR2PwtJUZjGD/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
     "UoeLlR2PwtJUZjGD/items/MuiyXm8KyQF57NaW/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
     "UoeLlR2PwtJUZjGD/items/a2pZeef5wn9y5xAA/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
@@ -2943,10 +3312,10 @@
     "XCkK3Xrz8Yoi4SMG/items/fJ34aqwTiZbTv92E/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
     "XCkK3Xrz8Yoi4SMG/items/FDCXS4bVC2F1PdGz/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
     "XZX1TpeWYkI14qLj/description": "dab2172f51d5d53095e8c4a52489223cadf3681afc1cb9d3b6d8ffbdee65124c",
-    "XZX1TpeWYkI14qLj/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "XZX1TpeWYkI14qLj/items/983mBG3qwmzQKGS2/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "XZX1TpeWYkI14qLj/items/3wLOdV2RXEY5pnF5/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
     "XZX1TpeWYkI14qLj/items/4cx1d9efogHuWe26/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "XuZn83gLb7juT0UG/descriptionGM": "8fb4ccc94a7fce010d7f6645bef269ec32408c154511501dc9ca274912190820",
     "Y133Sx0joIm2DZ3g/description": "9038883be00331b755103df530c15f9e5206e99d2f67419fd4f24ac8894d7641",
     "Y133Sx0joIm2DZ3g/items/D2ezhwANZLcMNbz9/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
     "Y133Sx0joIm2DZ3g/items/We6LladGR4C687q0/description": "841af20b5a4bcbb70160942234862dbb078a23cfdc1812f40f391441027beb40",
@@ -2973,13 +3342,16 @@
     "dbMmGE7Deitzsuz6/items/Lb8baU3vfeAtn1Nw/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "dbMmGE7Deitzsuz6/items/h8caQJMnKj4F22zZ/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "dbMmGE7Deitzsuz6/items/xdQJFj57QglkQXeG/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "ejs3JWhzdnj0pVAT/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "ejs3JWhzdnj0pVAT/items/qIRZdfRLhqBnYMWt/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "ejs3JWhzdnj0pVAT/items/Hw1KYT6hIaAHcXkI/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "fnjgFygP2p6zj1Fc/items/PFa0h9BekFPB4Eoh/description": "7efb9e4c8961642eeacbd050edff06bc53aad5614a75dcfee58e30ebb5a8067a",
     "hU8Z9Z6b0fD8ftvk/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "hU8Z9Z6b0fD8ftvk/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "hU8Z9Z6b0fD8ftvk/items/momzHh7zAZRC7Hob/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "hU8Z9Z6b0fD8ftvk/items/up8Xcig2FrwgbFfb/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "hU8Z9Z6b0fD8ftvk/items/MEAPfylvHHHbTqOf/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "hzjZKJLz1sLAeHtq/items/yf2VZtO2S4eV7fKZ/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "jYYF0l6exscSwmP9/descriptionGM": "8fb4ccc94a7fce010d7f6645bef269ec32408c154511501dc9ca274912190820",
     "kqGEpdTaiZtovqbm/description": "c2bef1cf65181998020b6fe4888ac9c5f87a4d18e9ca11b7431a181835cdcf83",
     "kqGEpdTaiZtovqbm/items/edVyMro5viX5rgD9/description": "001dff8cc83a39f0c14c98c6788adf0dc121831c1b6f2f82e811c84f3aa3af08",
     "kqGEpdTaiZtovqbm/items/fH4zN6EufktPqbW4/description": "32e0e6e246036fba10a12609d7d353b090db479c4207d4078ced679164d0b5bd",
@@ -2990,28 +3362,89 @@
     "lCNsglj9xoQfBl3p/items/wFnxNcpjZQq97vyn/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "lCNsglj9xoQfBl3p/items/Og5zTgT13s8QIGgb/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "ltfi8ZCUvuN84qSS/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "ltfi8ZCUvuN84qSS/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "ltfi8ZCUvuN84qSS/items/uldVZLVdwiLD1q6v/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "ltfi8ZCUvuN84qSS/items/ZDJkjnIor7qxsiSU/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
     "mKuegTrL8zIoab0o/items/8tVnSA2uTOLAmycM/description": "a4d3edf2b506287ee0e0835b46c26932373ce9e1d3c463f1f8c205c20e86bffe",
     "oDTP0oNCRCovqkNy/items/xcV4iG9yR2uKSGdL/description": "349d59ed53eaff29b8953257340d2886efdbd81a2007899c65da218330ebeff4",
     "oeM8EcS1F5NIkd30/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "oeM8EcS1F5NIkd30/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "q3dCj5gJoOW22HMd/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
     "q3dCj5gJoOW22HMd/items/hk7qH9BpvzM7rFGe/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "q3dCj5gJoOW22HMd/items/MpNlJrdPvv9bECNE/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+    "qcoQw8vZOpYX5V0V/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
+    "qcoQw8vZOpYX5V0V/items/ma0kNlN1eN2YPKXO/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+    "qcoQw8vZOpYX5V0V/items/FmriI9fZfj3I2QS1/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+    "rWV6SIL5lXsJufgs/items/RGvHZCOahA9qXRKF/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "rWV6SIL5lXsJufgs/items/RGvHZCOahA9qXRKF/gm": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "rXjtkRiFj00HzPAG/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
     "rXjtkRiFj00HzPAG/items/uNH8ZKqCgsh6qYis/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
     "rXjtkRiFj00HzPAG/items/MgWi09fDy6GgzHJM/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "rsQ4PbiIKDOKAXWf/items/6ZWaAlaTCBSQ652y/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+    "rsQ4PbiIKDOKAXWf/items/d0HNBc9szRrLtMSR/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+    "slPGAdJR86h6DnaL/items/zvWFQXu4MhU0UWAw/gm": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "viyUBIwO7gFRqwVG/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
-    "viyUBIwO7gFRqwVG/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "viyUBIwO7gFRqwVG/items/9yu44cM7W0Xg2Q36/description": "8bb8a37897205b15d90a87dd938270a946a13e916112fb5c78635bdc5a0c4162",
     "zb2LebobKQWXeVQ1/items/htliQ05jVKwfE22v/description": "91c4a616206c8e541fd82430697ea1a64db0990d5ce1dfa79966ef0d89aa64c7",
     "zb2LebobKQWXeVQ1/items/UDhWMhJzdEJtykvO/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "zj4VyFf9wYB6xO6S/description": "fd9603abbf0ef49e305e53d7f86e5b822fd89805ad077c2e1c13d84b17d0dea0",
-    "zj4VyFf9wYB6xO6S/descriptionGM": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "zj4VyFf9wYB6xO6S/items/Y2DikEsO4R95MHFo/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "zj4VyFf9wYB6xO6S/items/LCFMKpxw0iDxWGXu/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
     "zj4VyFf9wYB6xO6S/items/ARWbmjbxbCd0JMUv/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d"
+  },
+  "macroCommandHashes": {
+    "3wy22D3zvUyaE5nn": "f1cf179b76012fea6640ba90fb8d9e960358702e9b75b33afe641fd6fc82398f",
+    "5mD9z9Yiup58CiRy": "5eec72c1198202a7d8dc5c9aa939f5d1833036364b40ecfa64292694ebd21129",
+    "6Yy26IWXmlinmKYy": "05c6b59485e7ffe215a0e8ed126a7959df7adbe18a13a165c2a0d56ba9c3a066",
+    "7EafD8vAffBYm1QX": "17951804f00d2dd5894a0894ae4b5862bf56e82dbdd291e9b311d3e1eb4ec4b4",
+    "8ACUEK7rfUq1Tyes": "517cfbfaa68de5f036427777ae9220ef2639574fdd189fb263bd267372bce6cc",
+    "H7C74E1a3JJl9Eyk": "ac1fa0bb8ffbdbdce88383bc8bd9deeb72871a79046a806182b90ce2d1eabf28",
+    "NQIG03UFlBT1wxTe": "cf07b5964b400d46dd0abcbffeb361ad41869f07348f6487815bfb3d00f50cd7",
+    "OgpGrBEI2nchZQUC": "ea97628e49025b2d0cc9bb2af79b70c1b36eac3bab72e5bbfd2f040874d47ec2",
+    "U92Yu8YJE5rXY9HM": "71dbc21dbbede60592cdd2f3d807d713b5e293c4c8d8130f6b0351f69a929407",
+    "Ux1rgTJLEw9H7MKh": "f4dbfe6728ee9ebc8c65ef2d1a79bd87bee5b1bd810fe12cf8ec5701e2337d6d",
+    "XQUSLhjmMKghWAyq": "95b7e72d05da823c1506e79253224c5b1edf31f594dc6c1bcc343a38d2bcf329",
+    "y6oepvhdPrtiv7Tk": "68d8a592d2421f78ff3ec8b122ef168ae1dec6dbd3e506e8614748ccfca9e474",
+    "zyWxuo7Th8gYNBkv": "03613b0006f3c605b1435ae6158046f288e55b74945ab36fb363771b57c272de"
+  },
+  "playlistSounds": {
+    "Ze7VkZs6zYN2isgz": [
+      "aP4F8y0mHZB66Trx",
+      "qaVam9ooAgqROEMa",
+      "8WXn4c3MY5f4H6Qh",
+      "yUaGL90OfnWUq8Uj",
+      "HWIoRvWtGNb8tL9d",
+      "mvHqFvy3I04HNWgE",
+      "sAi9t3AmPTDCgAo7",
+      "m3HL2EYdI5nOo19Y",
+      "tKHqvrynlIflfma4",
+      "UAPiBfFOylCMGjls",
+      "cAzmUNf4ruRjQoTr"
+    ],
+    "jLkyG393Ph8wMnRo": [
+      "Idt2r4WZpM5hF7qR",
+      "osLbTCRBOrVtfEM2",
+      "WKEOJOJnTYZv0bvt",
+      "dehpMVVw9zxrHkva",
+      "mNpnQW0nZLWzRSvP",
+      "KeTuK4yOyRiqUMoG",
+      "MAbUjs4pbFAnncJ6",
+      "xwmdt6I8K6aIm3xW",
+      "E2vE4LDdS8xfZHxn",
+      "0AxYWprT8g78UtW3",
+      "Lq29TVnsB4Of8adI",
+      "E5rXkerZQWQ9gmYf",
+      "Oxp3ZDzoUL4E6CC6",
+      "xhOjtFqV5w9NwTMp",
+      "7rRtxemsU5TxkkWv",
+      "xL3Fj6jqsXuXPO39",
+      "eSRzJoS545rJMuM3"
+    ],
+    "rxsf0vQ3EmoZJo72": [
+      "X1tQQG8zr7pmlxJ2",
+      "JQMKfPV7FEzu3xSL",
+      "YkgvxtNk4Fwqnfg3",
+      "qFxQDRmAs1EWAOtk",
+      "aMHaYeS8jDuYKbQM",
+      "iSLMb2mQWm21RCcD"
+    ]
   }
 }
