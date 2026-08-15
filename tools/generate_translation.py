@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Собирает Babele-перевод Rusthenge 14.1.0 из локальных источников.
 
 Исходные файлы Paizo и PDF никогда не копируются в модуль. В репозиторий
@@ -416,6 +417,125 @@ CARD_REPLACEMENTS = {
     "Varies": "Разная",
 }
 
+# Эти карточки содержат самостоятельный игровой текст. Его нельзя удалять как
+# дублирующее английское описание: в старом русском Adventure соответствующие
+# статблоки были вырезаны при очистке PDF-разметки.
+MANUAL_ACTION_CARDS: dict[tuple[str, int], str] = {
+    ("02optionalstar00", 0): '''<section class="action">
+  <h2 class="split"><span>Бухта Скопы</span><span>Поселение 2</span></h2>
+  <ul class="traits">
+    <li class="trait alignment">ХД</li>
+    <li class="trait size">Деревня</li>
+  </ul>
+  <p>Изолированная рыбацкая община</p>
+  <p><strong>Правительство</strong> Старейшины (община)</p>
+  <p><strong>Население</strong> 120 (85% людей, 15% прочих)</p>
+  <p><strong>Языки</strong> Общий, Варисийский</p>
+  <hr>
+  <p><strong>Религии</strong> @UUID[Compendium.pf2e.deities.Item.JgqH3BhuEuA4Zyqs]{Десна}, @UUID[Compendium.pf2e.deities.Item.v67fHklTZ6LoU54q]{Кайден Кайлин}</p>
+  <p><strong>Угрозы</strong> вражда с @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02ironharbor0000#iron-harborsettlement-2]{Айрон-Харбором}, вмешательство Нового Тассилона, сезонные штормы</p>
+  <p><strong>Дружная община</strong> Хотя жители Бухты Скопы обращаются за советом к старейшинам, они управляют собой как единая община. Жители охотно помогают друг другу, ведь успех одного — это успех всех. Проверки Заработка ограничены заданиями не выше 2-го уровня, но любая попытка Заработать доход в Бухте Скопы получает ситуативный бонус +1 благодаря помощи соседей.</p>
+  <hr>
+  <p><strong>Старейшина Анлоргог</strong> (НД небинарная ундина-следопыт 2-го уровня) помогает руководить рыбной ловлей в деревне</p>
+  <p><strong>Старейшина Бо-Мел</strong> (ХД женщина-дварф, фермер 3-го уровня) помогает руководить сельским хозяйством и строительством</p>
+  <p><strong>Старейшина Йохейда</strong> (ХД женщина-полуэльф, оракул 3-го уровня) служит главной целительницей Бухты Скопы</p>
+  <p><strong>Старейшина Ордви</strong> (ХД женщина-человек, жрица 2-го уровня) — самая молодая старейшина, ещё осваивающаяся в новой роли</p>
+  <p><strong>Старейшина Вандус</strong> (ХН мужчина-человек, рыбак 3-го уровня) — старейший из деревенских старейшин, хранитель записей и историк</p>
+</section>''',
+    ("02elderordwi0000", 0): '''<section class="action">
+  <h2 class="split no-toc"><span>@UUID[Actor.6AiPO2aKOFN6qipW]{Ордви}</span><span>Существо 2</span></h2>
+  <p>Женщина-человек, жрица Кайдена Кайлина</p>
+</section>''',
+    ("02sneakingonbo00", 0): '''<section class="action">
+  <h2>Отвлечь экипаж</h2>
+  <ul class="traits">
+    <li class="trait">Концентрация</li>
+    <li class="trait">Исследование</li>
+    <li class="trait">Ментальный</li>
+  </ul>
+  <p class="no-indent">Пытаясь завязать с экипажем «Рыбы-меч» сумбурный разговор с пирса, устроить отвлекающее происшествие, расспросить о причинах их пребывания или просто поболтать, существо в течение 10 минут старается отвлечь охрану на палубе и повысить шансы тех, кто пробирается на борт. Попросите персонажа описать свои действия и определите, какую проверку он должен пройти: @Check[deception|dc:15|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew], @Check[diplomacy|dc:17|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew], @Check[performance|dc:13|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew] или @Check[xin-edasseril-lore|dc:13|trait:concentrate,exploration,mental,action:distract-crew|name:Distract Crew]. Одновременно можно предпринять только одну попытку Отвлечь экипаж, но другие персонажи могут Помочь ей.</p>
+  <p><strong>Критический успех</strong> Экипаж отвлекается. Все попытки Обыскать корабль в течение этих 10 минут получают ситуативный бонус +1.</p>
+  <p><strong>Успех</strong> Экипаж отвлекается.</p>
+  <p><strong>Провал</strong> Экипаж не отвлекается.</p>
+  <p><strong>Критический провал</strong> Экипаж настораживается, и все попытки Обыскать корабль в течение этих 10 минут получают ситуативный штраф –1.</p>
+</section>''',
+    ("02sneakingonbo00", 1): '''<section class="action">
+  <h2>Обыскать корабль</h2>
+  <ul class="traits">
+    <li class="trait">Концентрация</li>
+    <li class="trait">Исследование</li>
+  </ul>
+  <p class="no-indent">Персонаж пробирается на «Рыбу-меч» и в течение 10 минут крадётся по кораблю в поисках улик. Если экипаж не отвлечён, персонаж проходит @Check[stealth|dc:15|trait:concentrate,exploration,action:search-ship|name:Search Ship] или @Check[sailing-lore|dc:13|trait:concentrate,exploration,action:search-ship|name:Search Ship]. Если экипаж отвлечён, СЛ уменьшается на 5. Если экипаж насторожен, СЛ увеличивается на 5.</p>
+  <p><strong>Критический успех</strong> Персонаж делает несколько открытий. Трижды бросьте по таблице находок «Рыбы-меч».</p>
+  <p><strong>Успех</strong> Персонаж делает открытие! Один раз бросьте по таблице находок «Рыбы-меч».</p>
+  <p><strong>Провал</strong> Персонаж ничего не находит, но экипаж его не замечает.</p>
+  <p><strong>Критический провал</strong> Персонаж ничего не находит, и его замечает матрос! Он может начать переговоры (перейдите к разделу @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingtoth00]{«Разговор с экипажем»}), атаковать (перейдите к разделу @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02gettinginafi00]{«Ввязаться в драку»}) или попытаться сбежать, пройдя ещё одну проверку Скрытности с той же СЛ. При успехе он избегает захвата, но экипаж «Рыбы-меч» остаётся настороженным и больше не может быть отвлечён. При провале персонажа загоняют в угол, и ему придётся сражаться, говорить или сдаться.</p>
+</section>''',
+    ("02ironharbor0000", 0): '''<section class="action">
+  <h2 class="split"><span>Айрон-Харбор</span><span>Поселение 2</span></h2>
+  <ul class="traits">
+    <li class="trait alignment">ХН</li>
+    <li class="trait size">Деревня</li>
+  </ul>
+  <p>Отдалённое поселение горумитов</p>
+  <p><strong>Правительство</strong> Верховный жрец (духовенство)</p>
+  <p><strong>Население</strong> 80 (90% людей, 10% прочих)</p>
+  <p><strong>Языки</strong> Общий, Варисийский</p>
+  <hr>
+  <p><strong>Религии</strong> @UUID[Compendium.pf2e.deities.Item.88vRw2ZVPax4hhga]{Горум}</p>
+  <p><strong>Угрозы</strong> культ Ксар-Азмака, сезонные штормы</p>
+  <p><strong>Деревня горумитов</strong> Как и следовало ожидать от деревни, возглавляемой поклонниками Горума, оружие и доспехи здесь достать проще. Для покупки оружия, доспехов, боеприпасов и сопутствующих предметов считайте Айрон-Харбор поселением 3-го уровня.</p>
+  <hr>
+  <p><strong>Кнурр Рагнульф</strong> (ХН мужчина-дварф, бывший жрец Горума 2-го уровня) — лидер Айрон-Харбора, недавно обращённый культом Ксар-Азмака</p>
+  <p><strong>Элси</strong> (ХН женщина-полурослик, алхимик 3-го уровня) — местная алхимик, пекарь и возможная союзница</p>
+</section>''',
+    ("02rustcreep00000", 0): '''<section class="action">
+  <h2 class="no-toc split"><span>Ползучая ржавчина</span><span>Болезнь 2</span></h2>
+  <ul class="traits">
+    <li class="trait rare">Редкий</li>
+    <li class="trait">Болезнь</li>
+    <li class="trait">Сакральный</li>
+    <li class="trait">Трансмутация</li>
+  </ul>
+  <p class="no-indent">У заражённых ползучей ржавчиной на теле появляются болезненные ржаво-коричневые синяки, а всё тело болит, как после долгой тренировки. По мере развития болезни тело, одежда и переносимые предметы всё сильнее разрушаются, пока не наступает мучительная смерть. Персонаж, успешно сопротивлявшийся заражению или излечившийся от ползучей ржавчины, получает временный иммунитет к новым заражениям на 24 часа.</p>
+  <p>
+    <strong>Спасбросок</strong> @Check[fortitude|dc:15|trait:rare,disease,divine,transmutation];<br>
+    <strong>Стадия 1</strong> штраф состояния –1 к проверкам Атлетики (1 день);<br>
+    <strong>Стадия 2</strong> как стадия 1 (1 день);<br>
+    <strong>Стадия 3</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1} (1 день);<br>
+    <strong>Стадия 4</strong> @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1} и @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}; кроме того, все переносимые доспехи, одежда и предметы, чей уровень не выше уровня болезни, получают состояние @UUID[Compendium.pf2e.conditionitems.Item.6dNUvdb1dhToNDj3]{Сломан} из-за распространяющегося разрушения (1 день; предметы остаются сломанными);<br>
+    <strong>Стадия 5</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания} (1 день);<br>
+    <strong>Стадия 6</strong> @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания} (1 день);<br>
+    <strong>Стадия 7</strong> смерть
+  </p>
+</section>''',
+    ("02securestorag00", 0): '''<section class="action">
+  <h2 class="split no-toc"><span>@UUID[Actor.Q3ciH3AHZlb1Dc3E]{Аколиты Горума (3)}</span><span>Существо 1</span></h2>
+  <p>Вариант аколита Нэфиса</p>
+</section>''',
+    ("02stables0000000", 0): '''<section class="action">
+  <h2 class="split no-toc"><span>@UUID[Actor.lCNsglj9xoQfBl3p]{Ида}</span><span>Существо 1</span></h2>
+  <p>Ослабленный баран «Розовый шип»</p>
+</section>''',
+    ("04bedroompriso00", 0): '''<section class="action">
+  <h2 class="split no-toc"><span>@UUID[Actor.zb2LebobKQWXeVQ1]{Ордви}</span><span>Существо 2</span></h2>
+  <p>Женщина-человек, жрица Кайдена Кайлина</p>
+</section>''',
+}
+
+EXISTING_PAGE_TEXT_REPAIRS = {
+    "02sneakingonbo00": (
+        (
+            'исследования "Обыск Корабля"',
+            'исследования @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02sneakingonbo00#search-ship]{«Обыскать корабль»}',
+        ),
+        (
+            'активность "Отвлечь Экипаж"',
+            'активность @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02sneakingonbo00#distract-crew]{«Отвлечь экипаж»}',
+        ),
+    ),
+}
+
 FOLDER_NAMES = {
     "Rusthenge": "Растхендж",
     "Original Maps": "Оригинальные карты",
@@ -602,12 +722,18 @@ def translate_token_label(
 
 def translate_card(
     block: str,
+    page_id: str,
+    card_index: int,
     source_name: str,
     translated_page_name: str,
     page_names: dict[str, str],
     journal_names: dict[str, str],
     actor_names: dict[str, str],
 ) -> str:
+    opening = block.lstrip().lower().split(">", 1)[0]
+    manual = MANUAL_ACTION_CARDS.get((page_id, card_index)) if 'class="action' in opening else None
+    if manual is not None:
+        return manual
     # Оставляем интерактивную шапку карточки; английское описание заменяет русский основной текст.
     block = re.sub(r"<p\b[^>]*>.*?</p>", "", block, flags=re.I | re.S)
     block = re.sub(r'<ul\b[^>]*class="[^"]*traits[^"]*"[^>]*>.*?</ul>', "", block, flags=re.I | re.S)
@@ -648,6 +774,7 @@ def translate_card(
 
 def source_functional_cards(
     value: str,
+    page_id: str,
     source_name: str,
     translated_page_name: str,
     page_names: dict[str, str],
@@ -658,9 +785,12 @@ def source_functional_cards(
     for block in top_level_blocks(value):
         opening = block.lstrip().lower().split(">", 1)[0]
         if opening.startswith("<section") and ('class="encounter' in opening or 'class="action' in opening):
+            card_index = sum(1 for existing in cards if existing.lstrip().lower().startswith('<section class="action'))
             cards.append(
                 translate_card(
                     block,
+                    page_id,
+                    card_index,
                     source_name,
                     translated_page_name,
                     page_names,
@@ -1063,6 +1193,7 @@ def make_translation(
                 media = source_media(source_html)
                 cards = source_functional_cards(
                     source_html,
+                    pid,
                     page["name"],
                     name,
                     translated_page_names,
@@ -1276,19 +1407,106 @@ def make_translation(
     return translation, index
 
 
+ACTION_SECTION_RE = re.compile(
+    r'<section\b[^>]*class="[^"]*action[^"]*"[^>]*>.*?</section>',
+    flags=re.I | re.S,
+)
+
+
+def repair_existing_action_cards(source: dict[str, Any], translation: dict[str, Any]) -> int:
+    """Заменяет пустые хвостовые action-карточки проверенными русскими версиями."""
+    entries = translation.get("entries", {})
+    adventure = entries.get(source.get("_id"), {})
+    journals = adventure.get("journals", {})
+    translated_pages = {
+        page_id: page
+        for journal in journals.values()
+        for page_id, page in journal.get("pages", {}).items()
+    }
+    source_pages = {
+        page["_id"]: page
+        for journal in source.get("journal", [])
+        for page in journal.get("pages", [])
+    }
+    repaired = 0
+    page_ids = sorted({page_id for page_id, _index in MANUAL_ACTION_CARDS})
+    for page_id in page_ids:
+        source_page = source_pages.get(page_id)
+        translated_page = translated_pages.get(page_id)
+        if not source_page or not translated_page:
+            raise ValueError(f"Не найдена страница для ремонта: {page_id}")
+        source_html = source_page.get("text", {}).get("content", "")
+        source_actions = ACTION_SECTION_RE.findall(source_html)
+        current_html = translated_page.get("text", "")
+        current_matches = list(ACTION_SECTION_RE.finditer(current_html))
+        if len(current_matches) < len(source_actions):
+            raise ValueError(f"{page_id}: action-карточек меньше, чем в официальном источнике")
+        offset = len(current_matches) - len(source_actions)
+        replacements: list[tuple[int, int, str]] = []
+        for card_index, source_action in enumerate(source_actions):
+            manual = MANUAL_ACTION_CARDS.get((page_id, card_index))
+            if manual is None:
+                continue
+            if Counter(technical_cores(manual)) != Counter(technical_cores(source_action)):
+                raise ValueError(f"{page_id}/{card_index}: изменены технические токены")
+            if Counter(INLINE_ROLL_RE.findall(manual)) != Counter(INLINE_ROLL_RE.findall(source_action)):
+                raise ValueError(f"{page_id}/{card_index}: изменены встроенные броски")
+            match = current_matches[offset + card_index]
+            replacements.append((match.start(), match.end(), manual))
+        for start, end, manual in reversed(replacements):
+            current_html = current_html[:start] + manual + current_html[end:]
+            repaired += 1
+        for old, new in EXISTING_PAGE_TEXT_REPAIRS.get(page_id, ()):
+            current_html = current_html.replace(old, new, 1)
+        desired_cores = Counter(technical_cores(source_html))
+        extra_cores = Counter(technical_cores(current_html)) - desired_cores
+        protected: dict[str, str] = {}
+        for index, (_start, _end, manual) in enumerate(replacements):
+            placeholder = f"@@RUSTHENGE_ACTION_CARD_{index}@@"
+            current_html = current_html.replace(manual, placeholder, 1)
+            protected[placeholder] = manual
+
+        def remove_old_duplicate(match: re.Match[str]) -> str:
+            token = match.group(0)
+            core_match = TECH_CORE_RE.fullmatch(token)
+            core = core_match.group(1) if core_match else token
+            if extra_cores[core]:
+                extra_cores[core] -= 1
+                return ""
+            return token
+
+        current_html = TECH_RE.sub(remove_old_duplicate, current_html)
+        for placeholder, manual in protected.items():
+            current_html = current_html.replace(placeholder, manual, 1)
+        if Counter(technical_cores(current_html)) != desired_cores:
+            raise ValueError(f"{page_id}: после ремонта изменён набор технических токенов")
+        translated_page["text"] = current_html
+    return repaired
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, type=Path)
-    parser.add_argument("--reference", required=True, type=Path)
-    parser.add_argument("--pdf", required=True, type=Path, help="Локальный PDF для проверки источника; не копируется")
-    parser.add_argument("--pf2e-ru", required=True, type=Path, help="Каталог data/community/pf2e/packs модуля pf2e-ru")
+    parser.add_argument("--reference", type=Path)
+    parser.add_argument("--pdf", type=Path, help="Локальный PDF для проверки источника; не копируется")
+    parser.add_argument("--pf2e-ru", type=Path, help="Каталог data/community/pf2e/packs модуля pf2e-ru")
     parser.add_argument("--output", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
     parser.add_argument("--index", type=Path, default=Path("data/source-index.json"))
+    parser.add_argument("--repair-existing", action="store_true", help="Восстановить только известные пустые action-карточки")
     args = parser.parse_args()
+    source = load_adventure(args.source)
+    if args.repair_existing:
+        translation = json.loads(args.output.read_text(encoding="utf-8"))
+        repaired = repair_existing_action_cards(source, translation)
+        args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"Восстановлено action-карточек: {repaired}")
+        return
+    if args.reference is None or args.pdf is None or args.pf2e_ru is None:
+        parser.error("для полной генерации нужны --reference, --pdf и --pf2e-ru")
     if not args.pdf.is_file() or args.pdf.read_bytes()[:4] != b"%PDF":
         raise SystemExit(f"Не найден корректный PDF: {args.pdf}")
     translation, index = make_translation(
-        load_adventure(args.source),
+        source,
         load_adventure(args.reference),
         extract_pdf_pages(args.pdf),
         load_pf2e_ru_actor_lore(args.pf2e_ru),
