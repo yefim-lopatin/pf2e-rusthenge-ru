@@ -29,6 +29,17 @@ BALANCED_TAGS = ("div", "section", "aside", "h1", "h2", "h3", "p", "details")
 CYRILLIC_CLASS_RE = re.compile(r'class="[^"]*[А-Яа-яЁё][^"]*"')
 EMPTY_LIST_RE = re.compile(r"<(?:ul|ol)\b[^>]*>\s*(?:<li\b[^>]*>\s*</li>\s*)*</(?:ul|ol)>", re.I)
 EMPTY_CONTAINER_RE = re.compile(r"<(section|div|aside|p|ul|ol|li)\b[^>]*>\s*</\1>", re.I)
+BROKEN_PROSE_RE = re.compile(
+    r"(?:провер\w*\s+(?:на\s+)?(?:[,.;)]|или\b|и\b)|"
+    r"успешн\w*\s+на\s+|КС_|_КС|Твердость_|ПП_|"
+    r"водки\s+с\s+травяным\s+поваром|конский\s+бочонок|проверок\s+на\s*[,.;)]|"
+    r"обратите\s+Восприятие|Анлоргогог|небольшие\s+небольшие|"
+    r"должн\w*\s+совершить\s+выполнить|ревностное\s+Восприятие|"
+    r"привлека\w*\s+Восприятие|достойным\s+Восприятия|начальная\s+кладовка\s+встал)",
+    re.I,
+)
+BROKEN_INLINE_MARKUP_RE = re.compile(r"<strong>\s*</strong>|`[^`]+`")
+BRACKETED_QUALITY_RE = re.compile(r"\[(?:Слабое|Малое|Малый|Слиток)\]", re.I)
 EXPECTED_COUNTS = {
     "journals": 7,
     "pages": 191,
@@ -231,6 +242,9 @@ def main() -> int:
         check.require(not EMPTY_LIST_RE.search(text), f"{page_id}: остался пустой список")
         check.require(not EMPTY_CONTAINER_RE.search(text), f"{page_id}: остался пустой HTML-контейнер")
         check.require(not re.search(r"\d+\s*ФТ\b|КБ_|Вспом\.Информ\.", text), f"{page_id}: осталась PDF-аббревиатура")
+        visible_text = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", text))))
+        check.require(not BROKEN_PROSE_RE.search(visible_text), f"{page_id}: осталась повреждённая фраза из PDF-конверсии")
+        check.require(not BRACKETED_QUALITY_RE.search(visible_text), f"{page_id}: осталось машинное название предмета")
         for tag in BALANCED_TAGS:
             opened = len(re.findall(rf"<{tag}\b", text, flags=re.I))
             closed = len(re.findall(rf"</{tag}>", text, flags=re.I))
@@ -315,6 +329,8 @@ def main() -> int:
         plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
         words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
         check.require(not words, f"{path}: в описании бестиария остался английский текст")
+        check.require(not BROKEN_PROSE_RE.search(plain), f"{path}: повреждена фраза в описании бестиария")
+        check.require(not BROKEN_INLINE_MARKUP_RE.search(value), f"{path}: повреждена разметка описания бестиария")
 
     envy = bestiary_entries.get("FUxaVKVEV8eOuTVB", {})
     envy_items = {item.get("id"): item for item in envy.get("items", [])}
@@ -454,6 +470,8 @@ def main() -> int:
             not label_words,
             f"{label}: осталась английская подпись Foundry-ссылки: {', '.join(sorted(label_words)[:8])}",
         )
+        check.require(not BROKEN_PROSE_RE.search(plain), f"{label}: повреждена фраза PDF-конверсии")
+        check.require(not BROKEN_INLINE_MARKUP_RE.search(value), f"{label}: повреждена внутренняя разметка")
     for label, values in (
         ("папка", folders.values()),
         ("макрос", [macro.get("name", "") for macro in macros.values()]),
@@ -473,6 +491,29 @@ def main() -> int:
         for macro_id, expected_hash in index.get("macroCommandHashes", {}).items():
             actual_hash = hashlib.sha256(source_macros.get(macro_id, {}).get("command", "").encode()).hexdigest()
             check.require(actual_hash == expected_hash, f"{macro_id}: команда официального макроса отличается от контрольной")
+        source_items = {
+            (actor.get("_id"), item.get("_id")): item.get("system", {}).get("description", {}).get("value", "")
+            for actor in source.get("actors", [])
+            for item in actor.get("items", [])
+        }
+        for actor_id, item in all_item_entries:
+            translated_value = item.get("description")
+            if not isinstance(translated_value, str) or not translated_value:
+                continue
+            source_value = source_items.get((actor_id, item.get("id")), "")
+            check.require(bool(source_value), f"{actor_id}/{item.get('id')}: нет элемента в официальном источнике")
+            check.require(
+                Counter(technical_cores(translated_value)) == Counter(technical_cores(source_value)),
+                f"{actor_id}/{item.get('id')}: изменены технические токены относительно Adventure",
+            )
+            check.require(
+                Counter(inline_roll_cores(translated_value)) == Counter(inline_roll_cores(source_value)),
+                f"{actor_id}/{item.get('id')}: изменены броски относительно Adventure",
+            )
+            check.require(
+                html_hash(translated_value) == html_hash(source_value),
+                f"{actor_id}/{item.get('id')}: изменена HTML-структура относительно Adventure",
+            )
 
     raw = args.translation.read_text(encoding="utf-8").lower()
     for needle in FORBIDDEN:
