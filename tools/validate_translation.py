@@ -27,6 +27,10 @@ IMAGE_PATH_RE = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"', re.I)
 LINK_PATH_RE = re.compile(r'<a\b[^>]*\bhref="([^"]+)"', re.I)
 BALANCED_TAGS = ("div", "section", "aside", "h1", "h2", "h3", "p", "details")
 CYRILLIC_CLASS_RE = re.compile(r'class="[^"]*[А-Яа-яЁё][^"]*"')
+CYRILLIC_AREA_RE = re.compile(
+    r"(?<![A-Za-zА-Яа-яЁё])([АБВГДЕ])\d{1,2}[a-bA-Bа-бА-Б]?(?![A-Za-zА-Яа-яЁё0-9])"
+)
+INVALID_AREA_RE = re.compile(r"(?<![A-Za-z0-9])(?:D0|D15b|E13)(?![A-Za-z0-9])")
 EMPTY_LIST_RE = re.compile(r"<(?:ul|ol)\b[^>]*>\s*(?:<li\b[^>]*>\s*</li>\s*)*</(?:ul|ol)>", re.I)
 EMPTY_CONTAINER_RE = re.compile(r"<(section|div|aside|p|ul|ol|li)\b[^>]*>\s*</\1>", re.I)
 BROKEN_PROSE_RE = re.compile(
@@ -35,7 +39,9 @@ BROKEN_PROSE_RE = re.compile(
     r"водки\s+с\s+травяным\s+поваром|конский\s+бочонок|проверок\s+на\s*[,.;)]|"
     r"обратите\s+Восприятие|Анлоргогог|небольшие\s+небольшие|"
     r"должн\w*\s+совершить\s+выполнить|ревностное\s+Восприятие|"
-    r"привлека\w*\s+Восприятие|достойным\s+Восприятия|начальная\s+кладовка\s+встал)",
+    r"привлека\w*\s+Восприятие|достойным\s+Восприятия|начальная\s+кладовка\s+встал|"
+    r"долж\w*\s+сделать\s*,|отда[её]т\s+сво[йюи]\s*[,.;]|"
+    r"становится\s+против\s+атак|из-за\s+взятие\s+в\s+тиски)",
     re.I,
 )
 BROKEN_INLINE_MARKUP_RE = re.compile(r"<strong>\s*</strong>|`[^`]+`")
@@ -129,6 +135,19 @@ def inline_roll_cores(value: str) -> list[str]:
     return [re.sub(r"\{[^{}]*\}$", "", roll) for roll in INLINE_ROLL_RE.findall(value)]
 
 
+def string_values(value: Any, path: str = "") -> list[tuple[str, str]]:
+    values: list[tuple[str, str]] = []
+    if isinstance(value, str):
+        values.append((path, value))
+    elif isinstance(value, list):
+        for index, item in enumerate(value):
+            values.extend(string_values(item, f"{path}[{index}]"))
+    elif isinstance(value, dict):
+        for key, item in value.items():
+            values.extend(string_values(item, f"{path}.{key}" if path else key))
+    return values
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--translation", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
@@ -149,6 +168,19 @@ def main() -> int:
     if check.errors:
         print("\n".join(f"ОШИБК: {e}" for e in check.errors), file=sys.stderr)
         return 1
+
+    for label, payload in (("Adventure", translation), ("бестиарий", bestiary_translation)):
+        for path, value in string_values(payload):
+            match = CYRILLIC_AREA_RE.search(value)
+            check.require(
+                match is None,
+                f"{label} {path}: кириллический код области {match.group(0) if match else ''}",
+            )
+            invalid = INVALID_AREA_RE.search(value)
+            check.require(
+                invalid is None,
+                f"{label} {path}: код области не совпадает с официальным модулем: {invalid.group(0) if invalid else ''}",
+            )
 
     check.require(manifest.get("id") == "pf2e-rusthenge-ru", "неверный id модуля")
     check.require(
@@ -200,6 +232,11 @@ def main() -> int:
     check.require(len(journals) == 7, "должно быть 7 журналов")
     check.require(len(scenes) == 19, "должно быть 19 сцен")
     check.require(len(actors) == 113, "должно быть 113 актёров")
+    for actor_id, actor in actors.items():
+        check.require(
+            not re.fullmatch(r"[A-F]\d{1,2}[ab]?", actor.get("name", "")),
+            f"{actor_id}: название объекта ошибочно заменено кодом области",
+        )
     check.require(len(macros) == 13, "должно быть 13 переводов названий макросов")
     check.require(set(macros) == set(index.get("macroCommandHashes", {})), "изменён набор _id макросов")
     for macro_id, macro in macros.items():
@@ -219,6 +256,13 @@ def main() -> int:
     service = set(index.get("servicePageIds", []))
     check.require(not (service & set(pages)), "служебные Credits/OGL/Audio Credits/Changelog не должны переводиться")
     check.require(set(index.get("pages", {})) <= set(pages), "не все 116 текстовых page _id есть в переводе")
+    vanda_text = pages.get("02speakingtova00", {}).get("text", "")
+    check.require("двуручный меч +1" in vanda_text, "в разговоре с Вандой потерян предмет, который она отдаёт группе")
+    rusthenge_text = pages.get("03rusthenge00000", {}).get("text", "")
+    check.require(
+        "@Check[fortitude|dc:15]{спасбросок Стойкости СЛ 15}" in rusthenge_text,
+        "на странице Растхенджа спасбросок Стойкости отделён от правила",
+    )
 
     for page_id, page_meta in index.get("pages", {}).items():
         text = pages.get(page_id, {}).get("text", "")
@@ -362,6 +406,11 @@ def main() -> int:
         actor_id: {item.get("id"): item for item in actor.get("items", [])}
         for actor_id, actor in actors.items()
     }
+    gang_up = actor_items.get("2g8LSm8VMWFoOK8U", {}).get("CNpPqhgSIEamhwFL", {})
+    check.require(
+        "застигнут врасплох} для атак ближнего боя адепта Ржавчины" in gang_up.get("description", ""),
+        "Сговориться: состояние отделено от правила или описание повреждено",
+    )
     envy_items = actor_items.get("XCkK3Xrz8Yoi4SMG", {})
     check.require(
         envy_items.get("fJ34aqwTiZbTv92E", {}).get("name") == "Конфискация заклинания",

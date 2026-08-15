@@ -50,7 +50,36 @@ def inline_roll_cores(value: str) -> list[str]:
     return [re.sub(r"\{[^{}]*\}$", "", roll) for roll in INLINE_ROLL_RE.findall(value)]
 
 # Коды локаций в старом структурированном тексте имели кириллический сдвиг.
+# Эта таблица нужна только для поиска фрагментов в старом русском источнике.
+# В готовом цифровом модуле обозначения всегда возвращаются к латинским A–F,
+# как на картах и в официальном Adventure.
 AREA_PREFIX = {"A": "А", "B": "Б", "C": "В", "D": "Г", "E": "Д", "F": "Е"}
+CYRILLIC_AREA_RE = re.compile(
+    r"(?<![A-Za-zА-Яа-яЁё])([АБВГДЕ])(\d{1,2})([a-bA-Bа-бА-Б]?)(?![A-Za-zА-Яа-яЁё0-9])"
+)
+LATIN_AREA_PREFIX = {"А": "A", "Б": "B", "В": "C", "Г": "D", "Д": "E", "Е": "F"}
+LATIN_AREA_SUFFIX = {"а": "a", "б": "b", "А": "a", "Б": "b", "A": "a", "B": "b", "a": "a", "b": "b"}
+
+
+def restore_latin_area_codes(value: str) -> str:
+    """Возвращает печатные кириллические коды областей к обозначениям карт A–F."""
+
+    def replacement(match: re.Match[str]) -> str:
+        prefix, number, suffix = match.groups()
+        normalized_suffix = LATIN_AREA_SUFFIX.get(suffix, "")
+        return f"{LATIN_AREA_PREFIX[prefix]}{int(number)}{normalized_suffix}"
+
+    return CYRILLIC_AREA_RE.sub(replacement, value)
+
+
+def normalize_area_codes_tree(value: Any) -> Any:
+    if isinstance(value, str):
+        return restore_latin_area_codes(value)
+    if isinstance(value, list):
+        return [normalize_area_codes_tree(item) for item in value]
+    if isinstance(value, dict):
+        return {key: normalize_area_codes_tree(item) for key, item in value.items()}
+    return value
 
 JOURNAL_NAMES = {
     "pf2sa06401frontm": "Вводная часть",
@@ -237,6 +266,7 @@ ACTOR_NAMES = {
 }
 
 ACTOR_NAMES.update({
+    "East Weapon Racks": "Восточные стойки с оружием", "West Arrows": "Стрелы на западе",
     "South Roof Barrel": "Бочка на южной крыше", "North Roof Barrel": "Бочка на северной крыше", "Wall": "Стена",
     "Janis' Reward": "Награда Янис", "Fishing Hut": "Рыбацкая хижина", "Quarters": "Покои",
     "East Guard Station": "Восточный пост стражи", "West Guard Station": "Западный пост стражи", "Anvil": "Наковальня",
@@ -696,6 +726,7 @@ MANUAL_ITEM_HTML_BY_ID = {
 # Foundry-команды от слов, к которым они относятся. HTML и команды повторяют
 # официальный документ; формулировки правил сверены с pf2e-ru.
 ITEM_DESCRIPTION_REPAIRS = {
+    "CNpPqhgSIEamhwFL": '<p>Любой враг @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{застигнут врасплох} для атак ближнего боя адепта Ржавчины, как при взятии в тиски, пока он находится в пределах досягаемости адепта и одного из его союзников.</p>',
     "T8jQXV4jxIhvfS14": '<p><strong>Требования</strong> Деро-сталкер не @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{перегружен}.</p>\n<p><strong>Триггер</strong> Существо выбирает деро целью атаки, и деро видит атакующего.</p>\n<hr />\n<p><strong>Эффект</strong> Деро ловко уклоняется и получает бонус обстоятельства +2 к КБ против спровоцировавшей атаки.</p>',
     "zMkrKhyfRWFrFfuv": '<p><strong>Требования</strong> Культист получил урон, не @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{утомлён} и ещё не находится в безумии</p>\n<hr />\n<p><strong>Эффект</strong> Культист впадает в безумие на 1 минуту. В безумии он получает бонус состояния +1 к броскам атак и +2 к броскам урона, а также штраф состояния –2 к КБ. Культист не может добровольно прекратить безумие. После его окончания культист становится @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{утомлён}.</p>\n<p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Эффект: фанатичное безумие}</p>',
     "MpNlJrdPvv9bECNE": '<p>Существо, по которому порождение греха попало челюстями, должно совершить @Check[type:will|dc:18]{спасбросок Воли СЛ 18}, поскольку его одолевают греховные мысли.</p>\n<hr />\n<p><strong>Критический успех</strong> Существо не получает эффекта.</p>\n<p><strong>Успех</strong> Существо становится @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{тошнота 1}.</p>\n<p><strong>Провал</strong> Существо становится @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{тошнота 2}.</p>\n<p><strong>Критический провал</strong> Существо становится тошнота 2 и @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{ослаблено 2} на 1 минуту.</p>',
@@ -751,6 +782,11 @@ ACTOR_DESCRIPTION_REPAIRS = {
     "oeM8EcS1F5NIkd30": '<p>Самые распространённые скелеты-прислужники — простые стражи.</p>\n<hr>\n<p>Скелеты, созданные из костей, скреплённых нечестивой некромантией, относятся к самым распространённым видам нежити. Они обитают в старых подземельях и на забытых кладбищах.</p>',
     "viyUBIwO7gFRqwVG": '<p>Когда смертный умирает, его душа отправляется на Могильник во Внешних планах, где её судит Фаразма, богиня мёртвых. После суда душа получает окончательную награду или наказание и превращается в просителя. Она обретает новое тело, облик которого определяется господствующими философскими силами плана назначения. Воспоминания о прежней жизни почти полностью стираются, оставляя лишь туманные обрывки, похожие на полузабытые сны. Независимо от прежнего размера, силы и природы, в загробной жизни проситель становится существом Среднего размера.</p>\n<p>Проситель может существовать целые эоны, но это состояние не обязательно вечно. Божества, могущественные обитатели Великого Запределья и сами Внешние планы могут превратить его в чистую квинтэссенцию, расширяющую физическое воплощение плана, или в новую форму сверхъестественной жизни — небожителя, наблюдателя либо беса. После смерти тело просителя распадается, а его сущность возвращается к квинтэссенции или стихиям родного плана. Так завершается путь души: жизненная сущность возвращается в сердце Великого Запределья, чтобы вновь участвовать в создании новых душ.</p>\n<p>Личинки похожи на огромных червей с лицами, которые просители имели при жизни.</p>',
     "zj4VyFf9wYB6xO6S": '<p>Грибные лешие охраняют пещеры, болота и другие сырые тёмные места. Их грибные сады причудливы по обычным меркам, но сами лешие чрезвычайно гордятся своей работой.</p>\n<hr>\n<p>Лешие — разумные растительные существа, охраняющие уголки первозданной природы или земной силы. Первоначально их создавали могущественные феи; теперь леший появляется, когда искусный заклинатель первобытной магии, обычно друид, соединяет природного духа с тщательно выращенным телом из местной растительности. Обряды и материалы зависят от вида лешего. Обычно жизнь им дают в местах большой природной значимости: в роще древодрева, друидическом круге, кольце фей или возле великого чуда природы.</p>',
+}
+
+ACTOR_NAME_REPAIRS_BY_ID = {
+    "CQ4xqipQ5pUpZcp7": "Восточные стойки с оружием",
+    "a8mnFF6O9hewd4CH": "Стрелы на западе",
 }
 
 
@@ -811,11 +847,19 @@ def repair_translated_item_descriptions(
                     and Counter(technical_cores(candidate)) == Counter(technical_cores(structural_source))
                     and Counter(inline_roll_cores(candidate)) == Counter(inline_roll_cores(structural_source))
                 )), None)
+                if isinstance(desired, str):
+                    desired = restore_latin_area_codes(desired)
                 if desired is None or desired == current:
                     continue
                 item["description"] = desired
                 changed += 1
         for actor_id, actor in actors.items():
+            repaired_name = ACTOR_NAME_REPAIRS_BY_ID.get(actor_id)
+            if repaired_name and (actor.get("name") != repaired_name or actor.get("tokenName") != repaired_name):
+                actor["name"] = repaired_name
+                if "tokenName" in actor:
+                    actor["tokenName"] = repaired_name
+                changed += 1
             current = actor.get("description")
             desired = ACTOR_DESCRIPTION_REPAIRS.get(actor_id)
             source_actor = next(
@@ -833,6 +877,11 @@ def repair_translated_item_descriptions(
             ):
                 actor["description"] = desired
                 changed += 1
+    normalized = normalize_area_codes_tree(translation)
+    if normalized != translation:
+        translation.clear()
+        translation.update(normalized)
+        changed += 1
     return changed
 
 MANUAL_ACTOR_HTML = {
@@ -1717,6 +1766,10 @@ DIGITAL_LAYOUT_REPAIRS: dict[str, tuple[tuple[str, str], ...]] = {
     ),
     "02findingsonth00": (("обратите Восприятие", "обратите внимание"),),
     "02swordfishdis00": (("обратите Восприятие", "обратите внимание"),),
+    "03workshop000000": (
+        ("Сокровища Г15 Г15б", "Сокровища D15"),
+        ("Сокровища D15 D15b", "Сокровища D15"),
+    ),
     "04worshipchamb00": (("Обратите Восприятие, что дверь", "Обратите внимание: дверь"),),
     "04meitremarsqu00": (
         ("У северной стены встает старинная кровать", "У северной стены стоит старинная кровать"),
@@ -1744,8 +1797,8 @@ DIGITAL_LAYOUT_REPAIRS: dict[str, tuple[tuple[str, str], ...]] = {
 # переносит технические токены из конца абзаца в смысловую позицию.
 LITERARY_PARAGRAPH_REPAIRS: dict[str, tuple[tuple[str, str], ...]] = {
     "02tunneltorust00": ((
-        "Кровавая тропа исчезает из виду",
-        '<p>Этот длинный туннель уходит под уклон на юго-запад, проходя под Железной Гаванью к @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03therusteddoo00]{Гб} под @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Растхенджем}. Через несколько сотен футов от подвала кровавый след становится незаметным, но успешная @Check[survival|dc:15|traits:secret,concentrate,exploration,move,skill,action:track|name:Track]{проверка Выживания СЛ 15} при Выслеживании подтверждает, что путь продолжается. В самой низкой точке, под гаванью, со стен капает солёная вода и на полу собираются лужи глубиной до фута, но туннель прочен и ему не грозит затопление.</p>',
+        "Этот длинный туннель",
+        '<p>Этот длинный туннель уходит под уклон на юго-запад, проходя под Железной Гаванью к @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03therusteddoo00]{D1} под @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Растхенджем}. Через несколько сотен футов от подвала кровавый след становится незаметным, но успешная @Check[survival|dc:15|traits:secret,concentrate,exploration,move,skill,action:track|name:Track]{проверка Выживания СЛ 15} при Выслеживании подтверждает, что путь продолжается. В самой низкой точке, под гаванью, со стен капает солёная вода и на полу собираются лужи глубиной до фута, но туннель прочен и ему не грозит затопление.</p>',
     ),),
     "02securestorag00": (
         (
@@ -1785,6 +1838,16 @@ LITERARY_PARAGRAPH_REPAIRS: dict[str, tuple[tuple[str, str], ...]] = {
         (
             "Дальнейшее описание \"монстра с раздвоенным лицом\"",
             '<p>После разговора с ПИ Трюгве согласен покинуть Стоунхоум, если ему обеспечат безопасный выход; он говорит, что найдёт убежище у Элси. Перед уходом он может набросать план Стоунхоума, но не знает, какие опасности ждут ПИ. Подробное описание «монстра с раздвоенным лицом» позволяет опознать порождение греха при успешной @Check[occultism|dc:16|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]{проверке Оккультизма СЛ 16} при Вспоминании информации. Уходя, Трюгве дарит ПИ свой двуручный меч из холодного железа, прося по возможности использовать его только для убийства Мейтремара, а также ключ от @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02securestorag00]{защищённого хранилища В21}.</p>',
+        ),
+    ),
+    "02speakingtova00": (
+        (
+            "Если Ванда попала в плен",
+            '<p>Если Ванда попала в плен, она может сообщить почти те же сведения, что и @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02speakingwith00]{Трюгве (C6)}, но также предупреждает ПИ о судьбе капитана Перриоса и его команды. Когда речь заходит о старейшине Ордви, Ванда краснеет от стыда и рассказывает о случившемся. Прибыв в Стоунхоум, она и другие павшие послушники взяли Ордви в плен, а затем передали её самому опасному агенту Мейтремара в здании — исчадию греха Азоми. Ванда знает, что Азоми утащил Ордви в подвал, но не знает, что с ней стало впоследствии.</p>',
+        ),
+        (
+            "В обмен на милосердие Ванда",
+            '<p>В обмен на милосердие Ванда будет сопровождать ПИ и помогать им в оставшихся делах в Стоунхоуме, особенно если это связано с убийством Азоми. Однако её храбрость пропадает, когда речь заходит об исследовании самого @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03rusthenge00000]{Растхенджа}. Вместо этого она отдаёт группе свой двуручный меч +1, чтобы помочь в дальнейших приключениях.</p>',
         ),
     ),
     "02streamoutlet00": ((
@@ -1925,10 +1988,24 @@ LITERARY_PARAGRAPH_REPAIRS.update({
         "Пока комната пуста",
         '<p>Кнурр Рагнульф переоборудовал эту тренировочную комнату в импровизированную тюрьму для пленников, доставленных в подземелье. Сейчас комната пуста, но ПИ, который проведёт здесь Поиск и успешно выполнит @Check[perception|dc:20|traits:concentrate,exploration,secret,action:search|name:Search]{проверку Внимания СЛ 20}, обнаружит спрятанную в одной из кроватей записку. Её оставила @UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elderordwi0000]{старейшина Ордви}, написав собственной кровью: «Кнурр примкнул к культу. Предупредите Бухту Скопы! Боюсь, скоро они заберут меня вниз». Подпись нацарапана дрожащей рукой.</p>',
     ),),
-    "04summoningcha00": ((
-        "Если ход Мейтремара происходит до демона",
-        '<p>Если ход Мейтремара происходит раньше хода демона, он сначала пытается Деморализовать его, для чего нужна @Check[intimidation|dc:23|traits:auditory,concentrate,emotion,fear,mental,action:demoralize|name:Demoralize]{проверка Запугивания СЛ 23}, а затем активирует @UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Рог Ржавчины}. Если демон уже атаковал, Мейтремар осознаёт свою ошибку и вскрикивает от ужаса: он становится Испуган 1 и тратит первое действие на Перемещение как можно дальше от демона, прежде чем активировать рог. В конце раунда напряжённая магия вынуждает влориака вернуться в Бездну. Оставшаяся часть боя — это сражение с зомби и, вероятно, раненым Мейтремаром. Это умеренное столкновение 3-го уровня. Для драматического эффекта после гибели Мейтремар может сразу превратиться в Ржавого зомби, когда остаточная энергия Бездны наполнит его останки.</p>',
+    "03cultistquart00": ((
+        "В этих комнатах живут Ржавые Посвященные",
+        '<p>Эти комнаты занимают адепты Ржавчины — тассилонские культисты, сопровождавшие Мейтремара в Железную Гавань. Когда ПИ впервые входят в комплекс, адепты распределены между поверхностью Растхенджа, @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03grandaltar0000]{D3} и @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]{D13}.</p>',
     ),),
+    "04summoningcha00": (
+        (
+            "Вход в эту комнату из F13",
+            '<p>Вход в эту комнату из @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04ritualprepar00]{F13} перекрыт @UUID[Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo]{силовой стеной}. Маловероятно, что у ПИ есть способ её обойти, но после уничтожения Тейлтемара стена рассеивается. Обратите внимание: во втором абзаце приведённого ниже текста для чтения вслух описывается продолжающийся ритуал Мейтремара — при необходимости измените текст.</p>',
+        ),
+        (
+            "Для проведения ритуала Мейтремар использует шесть источников",
+            '<p>Для проведения ритуала Мейтремар использует шесть источников внешней энергии: взаимодействие Влорианских шпилей с влорианским цитниготом на поверхности (@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03sacrificekee00]{Жертвенные хранители}); демоническую энергию, собранную древним аппаратом на @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03grandaltar0000]{большом алтаре (D3)}; мучения просителя Бездны в @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03ritualroom0000]{ритуальной комнате (D13)}; зловещую энергию из @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03researchlab000]{исследовательской лаборатории (D20)} и @UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]{тайной лаборатории (D21)}; а также фокусирующие самоцветы в глазах статуи Ксар-Азмака в @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{зале поклонения (E5)}. В этих местах ПИ могут получить до 6 очков прерывания, но даже если нарушить работу всех источников, ритуал Мейтремара продолжится.</p>',
+        ),
+        (
+            "Если ход Мейтремара происходит до демона",
+            '<p>Если ход Мейтремара происходит раньше хода демона, он сначала пытается Деморализовать его, для чего нужна @Check[intimidation|dc:23|traits:auditory,concentrate,emotion,fear,mental,action:demoralize|name:Demoralize]{проверка Запугивания СЛ 23}, а затем активирует @UUID[JournalEntry.pf2sa06405advent.JournalEntryPage.05thehornofrus00]{Рог Ржавчины}. Если демон уже атаковал, Мейтремар осознаёт свою ошибку и вскрикивает от ужаса: он становится Испуган 1 и тратит первое действие на Перемещение как можно дальше от демона, прежде чем активировать рог. В конце раунда напряжённая магия вынуждает влориака вернуться в Бездну. Оставшаяся часть боя — это сражение с зомби и, вероятно, раненым Мейтремаром. Это умеренное столкновение 3-го уровня. Для драматического эффекта после гибели Мейтремар может сразу превратиться в Ржавого зомби, когда остаточная энергия Бездны наполнит его останки.</p>',
+        ),
+    ),
     "04rusteddoor0000": ((
         "Большая ржавая дверь в этой стене",
         '<p><strong>Опасность:</strong> Большая ржавая дверь в этой стене выглядит так же, как дверь к @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{Д5} в храме выше, но она заперта. Чтобы взломать замок, нужно успешно выполнить три @Check[thievery|dc:20|traits:manipulate,skill,action:pick-a-lock|name:Pick a Lock]{проверки Воровства СЛ 20}. Кроме того, дверь защищает ржавый шипомёт.</p>',
@@ -2015,9 +2092,14 @@ LITERARY_PARAGRAPH_REPAIRS.update({
             '<p>@UUID[Actor.MwHZ9llX4RCpTqzc]{Полки} В ящиках и бочках хранятся еда и питьё для культистов. На полках ПИ находит истлевший кожаный мешочек с 45 мм и 1 см, десятки пустых флаконов из-под зелий и эликсиров, одно малое зелье исцеления с тассилонской этикеткой «яд», покрытый грязью оккультный кулон и покрытый пылью талисман «кулон плачущего ангела».</p>',
         ),
     ),
-    "03rusthenge00000": ((
-        "Семь разрушенных каменных образований",
-            '<p>Семь разрушенных каменных фигур в кольце железных шпилей когда-то изображали семь рун греха, которыми пользовались тассилонские волшебники. ПИ, потративший несколько минут на осмотр, распознаёт их при успешной @Check[arcana|dc:20]{проверке Арканы СЛ 20} или подходящей проверке Знаний, например @Check[xin-edasseril-lore|dc:20]{Знаний о Ксин-Эдассериле СЛ 20}.</p>',
+    "03rusthenge00000": (
+        (
+            "Семь разрушенных",
+            '<p>Семь разрушенных скальных образований в кольце железных шпилей когда-то были скульптурами семи рун греха, которыми пользовались тассилонские маги. ПИ, потративший несколько минут на изучение этого места, может распознать их при успешной @Check[arcana|dc:20]{проверке Арканы СЛ 20} или подходящей @Check[xin-edasseril-lore|dc:20]{проверке Знаний о Ксин-Эдассериле СЛ 20}.</p>',
+        ),
+        (
+            "Наконец, сами Влорианские Шпили",
+            '<p>Наконец, сами Влорианские шпили излучают слабую тревожную ауру, от которой становится не по себе каждому, кто входит в кольцо шпилей. Как только ПИ ступает внутрь кольца, он должен успешно пройти @Check[fortitude|dc:15]{спасбросок Стойкости СЛ 15}, чтобы не получить состояние @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{тошнота 1} (или @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{ослаблен 1} на 24 часа при критическом провале). После попытки спасброска ПИ получает иммунитет к этому эффекту независимо от результата.</p>',
         ),
     ),
     "03startingthis00": ((
@@ -2033,6 +2115,7 @@ PARAGRAPH_RE = re.compile(r"<p\b[^>]*>.*?</p>", flags=re.I | re.S)
 
 def replace_literary_paragraph(text: str, page_id: str, anchor: str, replacement: str) -> str:
     """Заменяет один абзац и переносит в него те же макросы Foundry."""
+    replacement = restore_latin_area_codes(replacement)
     current = next((match for match in PARAGRAPH_RE.finditer(text) if anchor in match.group(0)), None)
     if current is None:
         if replacement in text:
@@ -2138,7 +2221,13 @@ def cleanup_digital_layout(
             if text != page["text"]:
                 page["text"] = text
                 changed += 1
-    return changed + repair_translated_item_descriptions(translation, source)
+    changed += repair_translated_item_descriptions(translation, source)
+    normalized = normalize_area_codes_tree(translation)
+    if normalized != translation:
+        translation.clear()
+        translation.update(normalized)
+        changed += 1
+    return changed
 
 
 ACTOR_EXTRA_FIELDS: tuple[tuple[str, tuple[str, ...]], ...] = (
