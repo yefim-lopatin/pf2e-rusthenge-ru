@@ -74,6 +74,15 @@ def technical_tokens(value: str) -> list[str]:
     return TECH_RE.findall(value)
 
 
+def technical_label_words(value: str) -> set[str]:
+    words: set[str] = set()
+    for token in TECH_RE.findall(value):
+        match = re.search(r"\{([^{}]*)\}$", token)
+        if match:
+            words.update(word.lower() for word in LATIN_RE.findall(match.group(1)))
+    return words - ALLOWED_LATIN
+
+
 def visible_words(value: str) -> list[str]:
     plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
     return re.findall(r"[A-Za-zА-Яа-яЁё'’-]+", plain)
@@ -114,6 +123,20 @@ def main() -> int:
     check.require(manifest.get("download") == expected_download, "download-ссылка не совпадает с версией")
     required = {r.get("id") for r in manifest.get("relationships", {}).get("requires", [])}
     check.require(required == {"pf2e-rusthenge", "babele", "pf2e-ru", "ru-ru"}, "изменён набор обязательных модулей")
+    register_path = args.module.parent / "scripts" / "register.js"
+    try:
+        register_source = register_path.read_text(encoding="utf-8")
+    except OSError as error:
+        register_source = ""
+        check.errors.append(f"{register_path}: {error}")
+    check.require(
+        'description: "system.details.publicNotes"' in register_source,
+        "Babele не сопоставляет публичные заметки PF2e",
+    )
+    check.require(
+        all(needle in register_source for needle in ('converter: "document"', 'documentType: "Item"', 'cardinality: "many"')),
+        "Babele не сопоставляет вложенные предметы актёров Adventure",
+    )
     check.require(index.get("source", {}).get("version") == "14.1.0", "индекс не от Rusthenge 14.1.0")
     for key, expected in EXPECTED_COUNTS.items():
         check.require(index.get("expected", {}).get(key) == expected, f"контрольное число {key} не равно {expected}")
@@ -191,6 +214,15 @@ def main() -> int:
         actor_id: {item.get("id"): item for item in actor.get("items", [])}
         for actor_id, actor in actors.items()
     }
+    envy_items = actor_items.get("XCkK3Xrz8Yoi4SMG", {})
+    check.require(
+        envy_items.get("fJ34aqwTiZbTv92E", {}).get("name") == "Конфискация заклинания",
+        "неверный перевод Confiscate Spell",
+    )
+    check.require(
+        envy_items.get("FDCXS4bVC2F1PdGz", {}).get("name") == "Вытягивание заклинания",
+        "неверный перевод Spell Drain",
+    )
     for path, expected_tokens in index.get("actorTechnical", {}).items():
         parts = path.split("/")
         actor_id = parts[0]
@@ -243,6 +275,11 @@ def main() -> int:
         plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
         words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
         check.require(not words, f"{label}: остался английский текст: {', '.join(sorted(words)[:8])}")
+        label_words = technical_label_words(value)
+        check.require(
+            not label_words,
+            f"{label}: осталась английская подпись Foundry-ссылки: {', '.join(sorted(label_words)[:8])}",
+        )
     for label, values in (
         ("папка", folders.values()),
         ("макрос", [macro.get("name", "") for macro in macros.values()]),

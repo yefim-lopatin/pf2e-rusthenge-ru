@@ -198,6 +198,12 @@ SIMPLE_NAMES = {
     "Rusted Door": "Ржавая дверь", "Ritual Preparation Chamber": "Зал подготовки ритуала", "Summoning Chamber": "Зал призыва",
 }
 
+SIMPLE_NAMES.update({
+    "Magic Sense": "Магическое чутьё",
+    "Confiscate Spell": "Конфискация заклинания",
+    "Spell Drain": "Вытягивание заклинания",
+})
+
 ACTOR_NAMES = {
     "Sydri": "Сидри", "Rustsworn Cultist": "Культист Ржавой Клятвы", "Zombie Shambler": "Шаркающий зомби",
     "Rustsworn Initiate": "Посвящённый Ржавой Клятвы", "Haniver": "Хэнивер", "Vanda": "Ванда", "Envyspawn": "Порождение Зависти",
@@ -603,6 +609,9 @@ MANUAL_ITEM_DESCRIPTIONS = {
     "Meitremar's Journal": {"description": "Журнал Мейтремара, написанный на тассилонском, открыт на последней записи без даты. Этот древний журнал некогда принадлежал его деду; прежние записи рассказывают об истории мастерской небесного металла, Влорийских шпилей и плане Тейлтемара воскресить Ксар-Азмака. Упоминается и пребывание Тейлтемара в Дисе во время неудачного нападения Ксар-Азмака: бежав обратно к Влорийским шпилям, он сумел унести один из отломленных рогов повелителя демонов. В середине журнала записаны два ритуала: @UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]{Создание нежити} и @UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Обольщение}.\n\nМейтремар продолжил записи после того, как через год после возвращения Ксин-Эдассерила в современную эпоху нашёл журнал в доме деда. Его увлекла мысль, что Рог Ржавчины скрыт глубоко под Растхенджем, и он задумал отправиться туда с последователями. Записи после прибытия в Айрон-Харбор кратки. В одной он ликует, что нашёл Рог Ржавчины в «великом храме», и упоминает тайную дверь за огромной статуей Ксар-Азмака. Последняя, более длинная запись воспроизведена в @UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]{раздаточном материале №2}."},
     "Key to E3": {"description": "Ключ от спальни-тюрьмы."},
     "Tiny Brass Key set with Small Gemstones": {"gm": "По вашему усмотрению этот ключ может сыграть важную роль в будущем приключении. В частности, если группа продолжит приключения в «Семи погибелях Сэндпойнта», он может оказаться ключом к таинственной заводной певчей птице, которую герои будут постепенно восстанавливать."},
+    "Magic Sense": {"description": "Первородная зависть обнаруживает магические ауры, предметы и заклинателей в пределах 30 футов."},
+    "Confiscate Spell": {"description": "Триггер: Существо в пределах 30 футов, которое чувствует Первородная Зависть, Сотворяет заклинание. Эффект: Поверхность Первородной Зависти переливается калейдоскопом цветов, озаряющим спровоцировавшее существо. Первородная Зависть пытается противодействовать заклинанию с модификатором +12. При успехе заклинанию удаётся противодействовать, а Первородная Зависть получает 2d6 временных ОЗ."},
+    "Spell Drain": {"description": "Первородная Зависть пытается вытянуть магию из заклинателя, которого она Схватила или Сдерживает. Заклинатель должен совершить спасбросок Воли КС 20. Критический успех: Существо не подвергается эффекту и получает временный иммунитет к Вытягиванию заклинания на 24 часа. Успех: Существо получает 1d6 ментального урона. Провал: Существо получает 2d6 ментального урона и становится Одурманено 1 на 1 час. Критический провал: Как провал, но одно из несотворённых заклинаний или неиспользованных слотов заклинаний существа теряется, как если бы существо его сотворило. Теряется одно из заклинаний наивысшего ранга, которое существо может сотворить; если подготовлено несколько таких заклинаний, выберите случайное. Если вытянуты чары, заклинатель теряет доступ к ним на 10 минут. Первородная Зависть становится Ускорена на 1 раунд и может потратить дополнительное действие только на Перемещение или Удар."},
 }
 
 MANUAL_ACTOR_NOTES = {
@@ -636,6 +645,9 @@ MANUAL_ITEM_HTML = {
     "Meitremar's Journal": {"description": "<p>Журнал Мейтремара, написанный на тассилонском, открыт на последней записи без даты. Этот древний журнал некогда принадлежал его деду; прежние записи рассказывают об истории мастерской небесного металла, Влорийских шпилей и плане Тейлтемара воскресить Ксар-Азмака. Упоминается и пребывание Тейлтемара в Дисе во время неудачного нападения Ксар-Азмака: бежав обратно к Влорийским шпилям, он сумел унести один из отломленных рогов повелителя демонов. В середине журнала записаны два ритуала: @UUID[Compendium.pf2e.spells-srd.Item.c3b6LdLlQDPngNIb]{Создание нежити} и @UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{Обольщение}.</p>\n<p>Мейтремар продолжил записи после того, как через год после возвращения Ксин-Эдассерила в современную эпоху нашёл журнал в доме деда. Его увлекла мысль, что Рог Ржавчины скрыт глубоко под Растхенджем, и он задумал отправиться туда с последователями. Записи после прибытия в Айрон-Харбор кратки. В одной он ликует, что нашёл Рог Ржавчины в «великом храме», и упоминает тайную дверь за огромной статуей Ксар-Азмака. Последняя, более длинная запись воспроизведена в @UUID[JournalEntry.pf2sa06406handou.JournalEntryPage.06handout0200000]{раздаточном материале №2}.</p>"},
     "Key to E3": {"description": "<p>Ключ от спальни-тюрьмы.</p>"},
     "Tiny Brass Key set with Small Gemstones": {"gm": "<p>По вашему усмотрению этот ключ может сыграть важную роль в будущем приключении. В частности, если группа продолжит приключения в «Семи погибелях Сэндпойнта», он может оказаться ключом к таинственной заводной певчей птице, которую герои будут постепенно восстанавливать.</p>"},
+    "Magic Sense": {"description": "<p>Первородная зависть обнаруживает магические ауры, предметы и заклинателей в пределах 30 футов.</p>"},
+    "Confiscate Spell": {"description": "<p><strong>Триггер</strong> Существо в пределах 30 футов, которое чувствует Первородная Зависть, Сотворяет заклинание</p>\n<hr />\n<p><strong>Эффект</strong> Поверхность Первородной Зависти переливается калейдоскопом цветов, озаряющим спровоцировавшее существо. Первородная Зависть пытается противодействовать заклинанию с модификатором [[/r 1d20+12 #Counteract]]{+12}. При успехе заклинанию удаётся противодействовать, а Первородная Зависть получает [[/br 2d6 #Temp HP]] временных ОЗ.</p>"},
+    "Spell Drain": {"description": "<p>Первородная Зависть пытается вытянуть магию из заклинателя, которого она @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схватила} или @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Сдерживает}. Заклинатель должен совершить @Check[type:will|dc:20] спасбросок.</p>\n<hr />\n<p><strong>Критический успех</strong> Существо не подвергается эффекту и получает временный иммунитет к Вытягиванию заклинания на 24 часа.</p>\n<p><strong>Успех</strong> Существо получает @Damage[1d6[mental]] ментального урона.</p>\n<p><strong>Провал</strong> Существо получает @Damage[2d6[mental]] ментального урона и становится @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманено 1} на 1 час.</p>\n<p><strong>Критический провал</strong> Как провал, но одно из несотворённых заклинаний или неиспользованных слотов заклинаний существа теряется, как если бы существо его сотворило. Теряется одно из заклинаний наивысшего ранга, которое существо может сотворить; если подготовлено несколько таких заклинаний, выберите случайное. Если вытянуты чары, заклинатель теряет доступ к ним на 10 минут. Первородная Зависть становится @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Ускорена} на 1 раунд и может потратить дополнительное действие только на Перемещение или Удар.</p>"},
     "Rusting Death": {"description": "<p>Когда Тейлтемар уничтожен, некромантическая энергия, удерживающая его кости, высвобождается и заставляет их взорваться. Ржавая кольчуга разлетается вместе с ними, разбрасывая во все стороны зазубренные металлические осколки. Существа рядом получают @Damage[2d6[piercing]] колющего урона (@Check[type:reflex|dc:21|basic:true]{простой спасбросок Рефлекса}) и подвергаются воздействию ползучей ржавчины. Когда останки оседают на пол, силовая стена, преграждающая путь в область <strong>F14</strong>, мерцает и исчезает.</p>"},
     "Destructive Croak": {"description": "<p>Болотный мудрец издаёт могучее кваканье, которое наносит @Damage[4d6[sonic]] урона звуком всем не-боггардам в @Template[type:emanation|distance:15] (@Check[type:fortitude|dc:19|basic:true]{простой спасбросок Стойкости}).</p>\n<p>Любое существо в состоянии @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{испуга} получает дополнительный урон звуком, равный удвоенному значению этого состояния.</p>\n<p>Боггард не может снова использовать «Разрушительное кваканье» в течение [[/br 1d4 #Recharge Destructive Croak]]{1d4 раундов}.</p>"},
     "Hibernation": {"description": "<p>Проведя без пищи 3 дня или больше, аката может выделить смолу, заключающую её в кокон из ноквала. Кокон имеет Твёрдость 9, 40 ОЗ и Предел Поломки 18, а также сопротивление 5 урону от магических источников. Пока кокон цел, акате нельзя навредить и ей не требуется есть или пить.</p>\n<p>Внутри кокона аката получает @UUID[Compendium.pf2e.bestiary-ability-glossary-srd.Item.sebk9XseMCRkDqRg]{чувство жизни} на 30 футов.</p>\n<p>Аката остаётся в спячке, пока не подвергнется воздействию чрезвычайно высокой температуры или не почувствует живое существо; после этого она может вырваться из кокона за [[/br 1d4 #minutes]]{1d4 минуты}.</p>"},
@@ -673,6 +685,15 @@ PF2E_RU_ACTOR_DONORS = {
     "Ida": ("pf2e.pathfinder-bestiary-3.json", "Rosethorn Ram"),
 }
 
+PF2E_LABEL_OVERRIDES = {
+    "30 feet": "30 футов",
+    "25 feet": "25 футов",
+    "5-foot radius": "радиус 5 футов",
+    "Magic Wand": "Магическая палочка",
+    "Effect: Fanatical Frenzy": "Эффект: фанатичное безумие",
+    "Effect: Mutilating Bite": "Эффект: увечащий укус",
+}
+
 
 def load_pf2e_ru_actor_lore(root: Path) -> dict[str, str]:
     lore: dict[str, str] = {}
@@ -684,6 +705,39 @@ def load_pf2e_ru_actor_lore(root: Path) -> dict[str, str]:
             raise ValueError(f"В pf2e-ru не найден перевод {entry_name} ({path})")
         lore[actor_name] = description
     return lore
+
+
+def load_pf2e_ru_names(root: Path) -> dict[str, str]:
+    """Собирает русские имена документов по английским ключам Babele."""
+    names: dict[str, str] = {}
+    for path in sorted(root.glob("*.json")):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for original, entry in data.get("entries", {}).items():
+            if isinstance(entry, dict) and isinstance(entry.get("name"), str):
+                names.setdefault(original, entry["name"].replace("(*)", "").strip())
+    return names
+
+
+def localize_pf2e_markup_labels(value: str, names: dict[str, str]) -> str:
+    """Переводит видимую подпись Foundry, не изменяя техническое ядро."""
+    def replace(match: re.Match[str]) -> str:
+        token = match.group(0)
+        core_match = TECH_CORE_RE.fullmatch(token)
+        label_match = re.search(r"\{([^{}]*)\}$", token)
+        if not core_match or not label_match:
+            return token
+        core = core_match.group(1)
+        label = label_match.group(1)
+        translated = PF2E_LABEL_OVERRIDES.get(label)
+        if translated is None and core.startswith("@UUID[Compendium.pf2e."):
+            translated = names.get(label)
+        if translated is None:
+            numbered = re.fullmatch(r"(.+?)\s+(\d+)", label)
+            if numbered and numbered.group(1) in names:
+                translated = f"{names[numbered.group(1)]} {numbered.group(2)}"
+        return f"{core}{{{translated}}}" if translated else token
+
+    return TECH_RE.sub(replace, value)
 
 
 def translate_token_label(
@@ -1096,6 +1150,7 @@ def make_translation(
     reference: dict[str, Any],
     pdf_pages: list[str],
     pf2e_ru_actor_lore: dict[str, str],
+    pf2e_ru_names: dict[str, str],
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     ref_pages = {p["name"]: p for j in reference["journal"] for p in j.get("pages", [])}
     ref_areas = {reference_area_code(p["name"]): p for p in ref_pages.values() if reference_area_code(p["name"])}
@@ -1306,6 +1361,7 @@ def make_translation(
                     translated_value = html.unescape(TAG_RE.sub(" ", TECH_RE.sub(" ", clean_ru(reference_value))))
                 if source_value and translated_value:
                     rendered = manual_html.get(output_key) or reflow_preserving_html(source_value, translated_value)
+                    rendered = localize_pf2e_markup_labels(rendered, pf2e_ru_names)
                     if html_tags(rendered) != html_tags(source_value):
                         raise ValueError(f"{item['name']}/{output_key}: ручной HTML не совпадает со структурой источника")
                     item_entry[output_key] = rendered
@@ -1510,6 +1566,7 @@ def main() -> None:
         load_adventure(args.reference),
         extract_pdf_pages(args.pdf),
         load_pf2e_ru_actor_lore(args.pf2e_ru),
+        load_pf2e_ru_names(args.pf2e_ru),
     )
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.index.parent.mkdir(parents=True, exist_ok=True)
