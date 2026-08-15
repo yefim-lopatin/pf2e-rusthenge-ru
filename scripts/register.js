@@ -9,8 +9,26 @@ Hooks.once("babele.init", (babele) => {
   // своё глобальное сопоставление раньше нас.
   babele.registerMapping({
     Actor: {
+      blurb: "system.details.blurb",
       description: "system.details.publicNotes",
       descriptionGM: "system.details.privateNotes",
+      language: "system.details.languages.details",
+      senses: "system.perception.details",
+      descriptionHazard: "system.details.description",
+      disable: "system.details.disable",
+      reset: "system.details.reset",
+      routine: "system.details.routine",
+      stealth: "system.attributes.stealth.details",
+      hp: "system.attributes.hp.details",
+      ac: "system.attributes.ac.details",
+      allSaves: "system.attributes.allSaves.value",
+      speed: "system.attributes.speed.details",
+      willSave: "system.saves.will.saveDetail",
+      skillAcrobatics: "system.skills.acrobatics.special.0.label",
+      skillAthletics: "system.skills.athletics.special.0.label",
+      skillCrafting: "system.skills.crafting.special.0.label",
+      skillStealth: "system.skills.stealth.special.0.label",
+      skillThievery: "system.skills.thievery.special.0.label",
       items: {
         path: "items",
         converter: "document",
@@ -19,7 +37,10 @@ Hooks.once("babele.init", (babele) => {
       }
     },
     Item: {
-      gm: "system.description.gm"
+      gm: "system.description.gm",
+      unidentifiedName: "system.identification.unidentified.name",
+      unidentifiedDescription: "system.identification.unidentified.data.description.value",
+      ruleLabel0: "system.rules.0.label"
     }
   });
 

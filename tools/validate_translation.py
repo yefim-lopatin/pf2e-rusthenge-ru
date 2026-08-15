@@ -46,6 +46,25 @@ EXPECTED_COUNTS = {
     "actorPrivateNotes": 4,
     "itemPublicDescriptions": 125,
     "itemGMDescriptions": 5,
+    "actorBlurbs": 33,
+    "actorLanguageDetails": 8,
+    "actorSenseDetails": 2,
+    "hazardDescriptions": 8,
+    "hazardDisable": 8,
+    "hazardReset": 8,
+    "hazardRoutine": 1,
+    "actorStealthDetails": 7,
+    "actorHpDetails": 6,
+    "actorAcDetails": 1,
+    "actorAllSaveDetails": 5,
+    "actorSpeedDetails": 6,
+    "actorSaveDetails": 3,
+    "actorSkillLabels": 7,
+    "itemUnidentifiedNames": 42,
+    "itemUnidentifiedDescriptions": 6,
+    "itemRuleLabels": 5,
+    "linkedItemNames": 393,
+    "linkedItemOverrides": 393,
 }
 
 
@@ -137,6 +156,14 @@ def main() -> int:
         all(needle in register_source for needle in ('converter: "document"', 'documentType: "Item"', 'cardinality: "many"')),
         "Babele не сопоставляет вложенные предметы актёров Adventure",
     )
+    for needle in (
+        'blurb: "system.details.blurb"',
+        'descriptionHazard: "system.details.description"',
+        'allSaves: "system.attributes.allSaves.value"',
+        'unidentifiedName: "system.identification.unidentified.name"',
+        'ruleLabel0: "system.rules.0.label"',
+    ):
+        check.require(needle in register_source, f"Babele mapping не содержит {needle}")
     check.require(index.get("source", {}).get("version") == "14.1.0", "индекс не от Rusthenge 14.1.0")
     for key, expected in EXPECTED_COUNTS.items():
         check.require(index.get("expected", {}).get(key) == expected, f"контрольное число {key} не равно {expected}")
@@ -207,8 +234,26 @@ def main() -> int:
         words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
         if page_id not in {"01rusthenge00000", "01landing0000000"}:
             check.require(not words, f"{page_id}: остался английский текст: {', '.join(sorted(words)[:8])}")
+            label_words = technical_label_words(text)
+            check.require(
+                not label_words,
+                f"{page_id}: осталась английская подпись Foundry: {', '.join(sorted(label_words)[:8])}",
+            )
 
-    custom_items = [item for actor in actors.values() for item in actor.get("items", [])]
+    linked_overrides = set(index.get("linkedItemOverrides", []))
+    all_item_entries = [
+        (actor_id, item)
+        for actor_id, actor in actors.items()
+        for item in actor.get("items", [])
+    ]
+    custom_items = [
+        item for actor_id, item in all_item_entries
+        if f"{actor_id}/{item.get('id')}" not in linked_overrides
+    ]
+    linked_items = [
+        item for actor_id, item in all_item_entries
+        if f"{actor_id}/{item.get('id')}" in linked_overrides
+    ]
     check.require(len(custom_items) == 271, "должно быть 271 перевод встроенных несистемных элементов")
     actor_items = {
         actor_id: {item.get("id"): item for item in actor.get("items", [])}
@@ -256,6 +301,7 @@ def main() -> int:
     for label, values in (
         ("актёр", [a.get("name", "") for a in actors.values()]),
         ("встроенный элемент", [i.get("name", "") for i in custom_items]),
+        ("системный элемент", [i.get("name", "") for i in linked_items]),
         ("страница", [p.get("name", "") for p in pages.values()]),
     ):
         for value in values:
@@ -266,11 +312,52 @@ def main() -> int:
     check.require(sum("descriptionGM" in actor for actor in actors.values()) == 4, "неполный перевод приватных заметок актёров")
     check.require(sum("description" in item for item in custom_items) == 125, "неполный перевод описаний встроенных элементов")
     check.require(sum("gm" in item for item in custom_items) == 5, "неполный перевод GM-описаний встроенных элементов")
+    field_counts = {
+        "actorBlurbs": sum("blurb" in actor for actor in actors.values()),
+        "actorLanguageDetails": sum("language" in actor for actor in actors.values()),
+        "actorSenseDetails": sum("senses" in actor for actor in actors.values()),
+        "hazardDescriptions": sum("descriptionHazard" in actor for actor in actors.values()),
+        "hazardDisable": sum("disable" in actor for actor in actors.values()),
+        "hazardReset": sum("reset" in actor for actor in actors.values()),
+        "hazardRoutine": sum("routine" in actor for actor in actors.values()),
+        "actorStealthDetails": sum("stealth" in actor for actor in actors.values()),
+        "actorHpDetails": sum("hp" in actor for actor in actors.values()),
+        "actorAcDetails": sum("ac" in actor for actor in actors.values()),
+        "actorAllSaveDetails": sum("allSaves" in actor for actor in actors.values()),
+        "actorSpeedDetails": sum("speed" in actor for actor in actors.values()),
+        "actorSaveDetails": sum("willSave" in actor for actor in actors.values()),
+        "actorSkillLabels": sum(
+            key in actor
+            for actor in actors.values()
+            for key in ("skillAcrobatics", "skillAthletics", "skillCrafting", "skillStealth", "skillThievery")
+        ),
+        "itemUnidentifiedNames": sum("unidentifiedName" in item for _actor, item in all_item_entries),
+        "itemUnidentifiedDescriptions": sum("unidentifiedDescription" in item for _actor, item in all_item_entries),
+        "itemRuleLabels": sum("ruleLabel0" in item for _actor, item in all_item_entries),
+        "linkedItemNames": sum("name" in item for item in linked_items),
+        "linkedItemOverrides": len(linked_overrides),
+    }
+    for key, actual in field_counts.items():
+        check.require(actual == EXPECTED_COUNTS[key], f"неполный перевод {key}: {actual} вместо {EXPECTED_COUNTS[key]}")
     for label, value in [
         *[(f"актёр {actor.get('name', '')}", actor.get("description", "")) for actor in actors.values()],
         *[(f"GM актёра {actor.get('name', '')}", actor.get("descriptionGM", "")) for actor in actors.values()],
+        *[
+            (f"поле {key} актёра {actor.get('name', '')}", actor.get(key, ""))
+            for actor in actors.values()
+            for key in (
+                "blurb", "language", "senses", "descriptionHazard", "disable", "reset", "routine",
+                "stealth", "hp", "ac", "allSaves", "speed", "willSave", "skillAcrobatics",
+                "skillAthletics", "skillCrafting", "skillStealth", "skillThievery",
+            )
+        ],
         *[(f"элемент {item.get('name', '')}", item.get("description", "")) for item in custom_items],
         *[(f"GM элемента {item.get('name', '')}", item.get("gm", "")) for item in custom_items],
+        *[
+            (f"поле {key} элемента {item.get('name', item.get('id', ''))}", item.get(key, ""))
+            for _actor, item in all_item_entries
+            for key in ("unidentifiedName", "unidentifiedDescription", "ruleLabel0")
+        ],
     ]:
         plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
         words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
