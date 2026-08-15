@@ -3,7 +3,7 @@
   "type": "module",
   "title": "Растхендж — неофициальный русский перевод",
   "description": "<p>Бесплатный неофициальный русский Babele-перевод Rusthenge. Требует законно приобретённый официальный модуль. Не опубликован, не одобрен и не утверждён Paizo.</p>",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "authors": [
     {
       "name": "Yefim Lopatin",
@@ -70,5 +70,5 @@
   ],
   "url": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru",
   "manifest": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/latest/download/module.json",
-  "download": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/download/v0.4.0/pf2e-rusthenge-ru.zip"
+  "download": "https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/download/v0.4.1/pf2e-rusthenge-ru.zip"
 }
