@@ -1061,7 +1061,7 @@
             {
               "id": "T8jQXV4jxIhvfS14",
               "name": "Ловкое уклонение",
-              "description": "<p><strong>Требования:</strong>Деро-сталкер не ; @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered}</p><p><strong>Триггер:</strong>Существо целится в деро-сталкера атакой и деро может видеть атакующего;</p><hr /><p><strong>Эффект:</strong>Деро ловко уворачивается, получая против спровоцировавшей атаки бонус обстоятельства +2 КБ.</p>"
+              "description": "<p><strong>Требования:</strong>Деро-сталкер не ; @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Перегружен}</p><p><strong>Триггер:</strong>Существо целится в деро-сталкера атакой и деро может видеть атакующего;</p><hr /><p><strong>Эффект:</strong>Деро ловко уворачивается, получая против спровоцировавшей атаки бонус обстоятельства +2 КБ.</p>"
             },
             {
               "id": "6BFQljbOQZkiMjjS",
@@ -1094,7 +1094,7 @@
             {
               "id": "zMkrKhyfRWFrFfuv",
               "name": "Фанатичное безумие",
-              "description": "<p><strong>Требования:</strong>Культист получил урон и не , либо находится в безумии Эффект: @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}</p><hr /><p><strong>Культист</strong>впадает в безумие, длящееся 1 минуту. В безумии, он получает бонус состояния +1 к броскам атак и бонус состояния +2 к броскам урона, а также штраф состояния -2 к КБ. Культист не может добровольно остановить безумие. После безумия, культист . @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}</p>"
+              "description": "<p><strong>Требования:</strong>Культист получил урон и не , либо находится в безумии Эффект: @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Утомление}</p><hr /><p><strong>Культист</strong>впадает в безумие, длящееся 1 минуту. В безумии, он получает бонус состояния +1 к броскам атак и бонус состояния +2 к броскам урона, а также штраф состояния -2 к КБ. Культист не может добровольно остановить безумие. После безумия, культист . @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Утомление}</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Эффект: фанатичное безумие}</p>"
             },
             {
               "id": "4NNvg2SM3AoqAWLt",
@@ -1114,12 +1114,12 @@
             {
               "id": "v90WRjELLiKF57vr",
               "name": "Челюсти",
-              "description": "<p><strong>Требования:</strong>У зомби есть или существо. @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>"
+              "description": "<p><strong>Требования:</strong>У зомби есть или существо. @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Сдерживаем}</p>"
             },
             {
               "id": "eulyI60JHNUYs39w",
               "name": "Медленный",
-              "description": "<p>Зомби постоянно и не может использовать реакции. @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}</p>"
+              "description": "<p>Зомби постоянно и не может использовать реакции. @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Замедлен 1}</p>"
             }
           ]
         },
@@ -1142,7 +1142,7 @@
             {
               "id": "CNpPqhgSIEamhwFL",
               "name": "Сговориться",
-              "description": "<p>Враг становится против атак ближнего боя Ржавого Посвященного из-за взятие в тиски до тех пор, пока враг находится в пределах его досягаемости и досягаемости его союзника. @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}</p>"
+              "description": "<p>Враг становится против атак ближнего боя Ржавого Посвященного из-за взятие в тиски до тех пор, пока враг находится в пределах его досягаемости и досягаемости его союзника. @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Застигнут врасплох}</p>"
             }
           ]
         },
@@ -1162,7 +1162,7 @@
             {
               "id": "f4Mkjn4uAW6nabJR",
               "name": "Перемешать пожитки",
-              "description": "<p><span class=\"action-glyph\"></span>A<span class=\"action-glyph\"></span></p><p>или D Хэнивер пытается у цели небольшой объект. При успехе он еще перебирает и перемешивает содержимое карманов, подсумков и других контейнеров цели. В следующий раз, @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Steal}</p><p>когда цель попытается достать оружие или извлечь надетый предмет, для этого потребуется 2 действия вместо 1. Используя это действие</p><p>хэнивер может \"Украсть\" предмет, который тщательно охраняется, без штрафа −5, но не такие объекты, изъятие которых будет очень заметно или займет много времени. Он может</p><p>потратить 2 действия вместо 1, чтобы использовать это умение для кражи у существа, находящегося в бою или начеку.</p>"
+              "description": "<p><span class=\"action-glyph\"></span>A<span class=\"action-glyph\"></span></p><p>или D Хэнивер пытается у цели небольшой объект. При успехе он еще перебирает и перемешивает содержимое карманов, подсумков и других контейнеров цели. В следующий раз, @UUID[Compendium.pf2e.actionspf2e.Item.RDXXE7wMrSPCLv5k]{Украсть}</p><p>когда цель попытается достать оружие или извлечь надетый предмет, для этого потребуется 2 действия вместо 1. Используя это действие</p><p>хэнивер может \"Украсть\" предмет, который тщательно охраняется, без штрафа −5, но не такие объекты, изъятие которых будет очень заметно или займет много времени. Он может</p><p>потратить 2 действия вместо 1, чтобы использовать это умение для кражи у существа, находящегося в бою или начеку.</p>"
             }
           ]
         },
@@ -1205,7 +1205,7 @@
             {
               "id": "MpNlJrdPvv9bECNE",
               "name": "Греховный Укус",
-              "description": "<p>Существо по которому попадает челюстей порождение греха, должно совершить , так как на него нахлынули греховные мысли. Крит.Успех: @Check[type:will|dc:18]</p><hr /><p><strong>Невредимо Успех:</strong>Провал:</p><p><strong>Крит.Провал:</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}</p><p><strong>,</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}</p><p><strong>а так</strong>же на 1 минуту @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}</p>"
+              "description": "<p>Существо по которому попадает челюстей порождение греха, должно совершить , так как на него нахлынули греховные мысли. Крит.Успех: @Check[type:will|dc:18]</p><hr /><p><strong>Невредимо Успех:</strong>Провал:</p><p><strong>Крит.Провал:</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 1}</p><p><strong>,</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 2}</p><p><strong>а так</strong>же на 1 минуту @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 2}</p>"
             }
           ]
         },
@@ -1216,7 +1216,7 @@
             {
               "id": "0rwXFzCG58mrENRi",
               "name": "Заразить Ползучей Ржавчиной",
-              "description": "<p><strong></strong>Триггер: Существо, не являющееся</p><hr /><p><strong></strong>поклонником Ксар-Азмака, пытается открыть дверь или наносит</p><hr /><p>ей урон ударом в ближнем бою Существо подвергается воздействию , когда усики ржаво-красной энергии словно выползают</p><p><strong></strong>@Check[type:fortitude|dc:15|traits:disease,divine,transmutation]</p><p><strong></strong>из ржавых</p><p><strong></strong>пятен</p><p><strong></strong>@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong></strong>на двери и странно нежно скребут по открытой @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong></strong>@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p><p><strong></strong>коже.</p><p><strong></strong></p>"
+              "description": "<p><strong></strong>Триггер: Существо, не являющееся</p><hr /><p><strong></strong>поклонником Ксар-Азмака, пытается открыть дверь или наносит</p><hr /><p>ей урон ударом в ближнем бою Существо подвергается воздействию , когда усики ржаво-красной энергии словно выползают</p><p><strong></strong>@Check[type:fortitude|dc:15|traits:disease,divine,transmutation]</p><p><strong></strong>из ржавых</p><p><strong></strong>пятен</p><p><strong></strong>@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong></strong>на двери и странно нежно скребут по открытой @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p><p><strong></strong>@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p><p><strong></strong>коже.</p><p><strong></strong></p>"
             }
           ]
         },
@@ -1237,7 +1237,7 @@
             {
               "id": "oxpwAUYEbjv8nf4R",
               "name": "Ползучая Ржавчина",
-              "description": "<p>Эти нежити вызывают ржавчину своими ударами челюстей. Существо, получившее урон от удара челюстями или скрежета одной из этих отрубленных голов, должно успешно выполнить Спас.СТК_КС_15 или заразиться Ползучей Ржавчиной. У пораженных Ползучей Ржавчиной</p><p>появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам Атлетики</p><hr /><p><strong>(1</strong></p><p><strong>день) Стадия</strong>@Check[type:fortitude|dc:15]</p><p><strong>2:</strong>как стадия 1 (1 день) Стадия</p><p><strong>3:</strong>(1 день) Стадия</p><p><strong>4:</strong>и @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong>,</strong>а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
+              "description": "<p>Эти нежити вызывают ржавчину своими ударами челюстей. Существо, получившее урон от удара челюстями или скрежета одной из этих отрубленных голов, должно успешно выполнить Спас.СТК_КС_15 или заразиться Ползучей Ржавчиной. У пораженных Ползучей Ржавчиной</p><p>появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам Атлетики</p><hr /><p><strong>(1</strong></p><p><strong>день) Стадия</strong>@Check[type:fortitude|dc:15]</p><p><strong>2:</strong>как стадия 1 (1 день) Стадия</p><p><strong>3:</strong>(1 день) Стадия</p><p><strong>4:</strong>и @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong>,</strong>а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
             }
           ]
         },
@@ -1270,7 +1270,7 @@
             {
               "id": "MpNlJrdPvv9bECNE",
               "name": "Греховный Укус",
-              "description": "<p>Существо по которому попадает челюстей порождение греха, должно совершить , так как на него нахлынули греховные мысли. Крит.Успех: @Check[type:will|dc:18]</p><hr /><p><strong>Невредимо Успех:</strong>Провал:</p><p><strong>Крит.Провал:</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}</p><p><strong>,</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}</p><p><strong>а так</strong>же на 1 минуту @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}</p>"
+              "description": "<p>Существо по которому попадает челюстей порождение греха, должно совершить , так как на него нахлынули греховные мысли. Крит.Успех: @Check[type:will|dc:18]</p><hr /><p><strong>Невредимо Успех:</strong>Провал:</p><p><strong>Крит.Провал:</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 1}</p><p><strong>,</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 2}</p><p><strong>а так</strong>же на 1 минуту @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 2}</p>"
             }
           ]
         },
@@ -1298,7 +1298,7 @@
             {
               "id": "T8jQXV4jxIhvfS14",
               "name": "Ловкое уклонение",
-              "description": "<p><strong>Требования:</strong>Деро-сталкер не ; @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Encumbered}</p><p><strong>Триггер:</strong>Существо целится в деро-сталкера атакой и деро может видеть атакующего;</p><hr /><p><strong>Эффект:</strong>Деро ловко уворачивается, получая против спровоцировавшей атаки бонус обстоятельства +2 КБ.</p>"
+              "description": "<p><strong>Требования:</strong>Деро-сталкер не ; @UUID[Compendium.pf2e.conditionitems.Item.D5mg6Tc7Jzrj6ro7]{Перегружен}</p><p><strong>Триггер:</strong>Существо целится в деро-сталкера атакой и деро может видеть атакующего;</p><hr /><p><strong>Эффект:</strong>Деро ловко уворачивается, получая против спровоцировавшей атаки бонус обстоятельства +2 КБ.</p>"
             },
             {
               "id": "6BFQljbOQZkiMjjS",
@@ -1332,12 +1332,12 @@
             {
               "id": "8LvVStEHJB30KVCE",
               "name": "Ужасающее кваканье",
-              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30]{30 feet} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} @Check[type:will|dc:17]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
+              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30]{30 футов} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 1} @Check[type:will|dc:17]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
             },
             {
               "id": "kGQg9F0ZgW7fp4DB",
               "name": "Захват языком",
-              "description": "<p>Если боггард-разведчик попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо может @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}</p><p>отсечь язык, если попадет по КБ 13 и нанесет не менее 2 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
+              "description": "<p>Если боггард-разведчик попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо может @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Обездвижен}</p><p>отсечь язык, если попадет по КБ 13 и нанесет не менее 2 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
             }
           ]
         },
@@ -1360,7 +1360,7 @@
             {
               "id": "htliQ05jVKwfE22v",
               "name": "Божественная сила",
-              "description": "<p><em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</em></p>"
+              "description": "<p><em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Исцеление}</em></p>"
             },
             {
               "id": "UDhWMhJzdEJtykvO",
@@ -1389,7 +1389,7 @@
             {
               "id": "zMkrKhyfRWFrFfuv",
               "name": "Фанатичное безумие",
-              "description": "<p><strong>Требования:</strong>Культист получил урон и не , либо находится в безумии Эффект: @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}</p><hr /><p><strong>Культист</strong>впадает в безумие, длящееся 1 минуту. В безумии, он получает бонус состояния +1 к броскам атак и бонус состояния +2 к броскам урона, а также штраф состояния -2 к КБ. Культист не может добровольно остановить безумие. После безумия, культист . @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}</p>"
+              "description": "<p><strong>Требования:</strong>Культист получил урон и не , либо находится в безумии Эффект: @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Утомление}</p><hr /><p><strong>Культист</strong>впадает в безумие, длящееся 1 минуту. В безумии, он получает бонус состояния +1 к броскам атак и бонус состояния +2 к броскам урона, а также штраф состояния -2 к КБ. Культист не может добровольно остановить безумие. После безумия, культист . @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Утомление}</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Эффект: фанатичное безумие}</p>"
             },
             {
               "id": "4NNvg2SM3AoqAWLt",
@@ -1418,7 +1418,7 @@
             {
               "id": "GFEimWK8niicOioN",
               "name": "Ползучая Ржавчина",
-              "description": "<p>У пораженных Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам</p><p><strong>Атлетики (1</strong>@Check[type:fortitude|dc:15]</p><p><strong>день)</strong>Стадия 2: как стадия 1 (1</p><p><strong>день)</strong>Стадия 3: (1</p><p><strong>день)</strong>Стадия @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong>4:</strong>и , а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
+              "description": "<p>У пораженных Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам</p><p><strong>Атлетики (1</strong>@Check[type:fortitude|dc:15]</p><p><strong>день)</strong>Стадия 2: как стадия 1 (1</p><p><strong>день)</strong>Стадия 3: (1</p><p><strong>день)</strong>Стадия @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong>4:</strong>и , а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
             }
           ]
         },
@@ -1463,7 +1463,7 @@
             {
               "id": "tfriWcHgXqM6QLkB",
               "name": "Столбняк",
-              "description": "<p>Столбняк - инфекция, занесенная через открытые раны, которая может вызвать скованность, мышечные спазмы, достаточно сильные, чтобы сломать кости, и в конечном итоге смерть. Возникновение: 10</p><p><strong>дней Стадия</strong>@Check[type:fortitude|dc:14]</p><p><strong>1: (1</strong>неделя)</p><p><strong>Стадия</strong>2: @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}</p><p><strong>и неспособность</strong>говорить (1 день) Стадия 3: @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}</p><p><strong>со</strong>спазмами (1 день) Стадия @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}</p><p><strong>4:</strong>смерть</p>"
+              "description": "<p>Столбняк - инфекция, занесенная через открытые раны, которая может вызвать скованность, мышечные спазмы, достаточно сильные, чтобы сломать кости, и в конечном итоге смерть. Возникновение: 10</p><p><strong>дней Стадия</strong>@Check[type:fortitude|dc:14]</p><p><strong>1: (1</strong>неделя)</p><p><strong>Стадия</strong>2: @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Неуклюжесть 1}</p><p><strong>и неспособность</strong>говорить (1 день) Стадия 3: @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Неуклюжесть 2}</p><p><strong>со</strong>спазмами (1 день) Стадия @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Парализован}</p><p><strong>4:</strong>смерть</p>"
             }
           ]
         },
@@ -1502,12 +1502,12 @@
             {
               "id": "z8bl09rqF4yCJDy4",
               "name": "Ужасающий Квак",
-              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30] @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} @Check[type:will|dc:19]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
+              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30] @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 1} @Check[type:will|dc:19]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
             },
             {
               "id": "A33mGw1DCgRJRDSe",
               "name": "Захват языком",
-              "description": "<p>Если боггард болотный мудрец попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}</p><p>может отсечь язык, если попадет по КБ 15 и нанесет не менее 4 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
+              "description": "<p>Если боггард болотный мудрец попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Обездвижен}</p><p>может отсечь язык, если попадет по КБ 15 и нанесет не менее 4 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
             }
           ]
         },
@@ -1527,12 +1527,12 @@
             {
               "id": "UGFoKIvbXM0ZSdiU",
               "name": "Ползучая Ржавчина",
-              "description": "<p>Существо, укушенное вларианским цитниготом, становится пораженным Ползучей Ржавчиной, если не получит успех в Спас.СТК_КС_20 У пораженных</p><hr /><p>Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам Атлетики</p><p><strong>(1 день)</strong>@Check[type:fortitude|dc:20|traits:divine,transmutation]</p><p><strong>Стадия</strong>2: как стадия 1 (1 день)</p><p><strong>Стадия</strong>3: (1 день)</p><p><strong>Стадия</strong>4: @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong>и</strong>, а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
+              "description": "<p>Существо, укушенное вларианским цитниготом, становится пораженным Ползучей Ржавчиной, если не получит успех в Спас.СТК_КС_20 У пораженных</p><hr /><p>Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам Атлетики</p><p><strong>(1 день)</strong>@Check[type:fortitude|dc:20|traits:divine,transmutation]</p><p><strong>Стадия</strong>2: как стадия 1 (1 день)</p><p><strong>Стадия</strong>3: (1 день)</p><p><strong>Стадия</strong>4: @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong>и</strong>, а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
             },
             {
               "id": "Kv1pkf5Ma30A8n58",
               "name": "Мерзкое зрелище",
-              "description": "<p>Цитнигот полностью демонстрирует свой ужасный вид, и существа в должны совершить . Как только существо совершает этот спасбросок, оно на @Template[type:emanation|distance:10] @Check[type:will|dc:20]</p><hr /><p><strong>1 минуту</strong>становится временно иммунным</p><p><strong></strong>к дальнейшим \"Мерзким зрелищам\". Крит.Успех: @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}</p><p><strong>Существо</strong>невредимо. Успех: Существо до своего следующего хода. Провал: Существо получает @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}</p><p><strong>и</strong>пока испытывает `тошноту`. Крит.Провал: Существо получает и пока испытывает `тошноту`. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}</p>"
+              "description": "<p>Цитнигот полностью демонстрирует свой ужасный вид, и существа в должны совершить . Как только существо совершает этот спасбросок, оно на @Template[type:emanation|distance:10] @Check[type:will|dc:20]</p><hr /><p><strong>1 минуту</strong>становится временно иммунным</p><p><strong></strong>к дальнейшим \"Мерзким зрелищам\". Крит.Успех: @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Застигнут врасплох}</p><p><strong>Существо</strong>невредимо. Успех: Существо до своего следующего хода. Провал: Существо получает @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 1}</p><p><strong>и</strong>пока испытывает `тошноту`. Крит.Провал: Существо получает и пока испытывает `тошноту`. @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 2}</p>"
             }
           ]
         },
@@ -1556,12 +1556,12 @@
             {
               "id": "0Rn8CE4JcrTxdKqN",
               "name": "Легко Призвать",
-              "description": "<p>Уровень эсипила считается на уровня 2 ниже для того, чтобы быть призванным<em>@UUID[Compendium.pf2e.spells-srd.Item.2ykmAVKrsAWcazcC]{Binding Circle}</em>ритуалом (и, возможно, другими ритуалами, на усмотрение ГМ), но он всегда может свободно атаковать или уйти вместо переговоров, если проверка основного заклинатель не была критическим успехом.</p>"
+              "description": "<p>Уровень эсипила считается на уровня 2 ниже для того, чтобы быть призванным<em>@UUID[Compendium.pf2e.spells-srd.Item.2ykmAVKrsAWcazcC]{Призывной круг}</em>ритуалом (и, возможно, другими ритуалами, на усмотрение ГМ), но он всегда может свободно атаковать или уйти вместо переговоров, если проверка основного заклинатель не была критическим успехом.</p>"
             },
             {
               "id": "5gY8gk28J2srHl1t",
               "name": "Ходить Между",
-              "description": "<p>Эсипил осуществляет движение из Материального плана в Эфирный или наоборот, с эффектами , за исключением того,<em>@UUID[Compendium.pf2e.spells-srd.Item.D2nPKbIS67m9199U]{Ethereal Jaunt}</em>что эффект имеет неограниченную продолжительность и может быть развеян. `Призванный` эсипил</p><p>не может совершать \"Ходить между\"</p>"
+              "description": "<p>Эсипил осуществляет движение из Материального плана в Эфирный или наоборот, с эффектами , за исключением того,<em>@UUID[Compendium.pf2e.spells-srd.Item.D2nPKbIS67m9199U]{Эфирная прогулка}</em>что эффект имеет неограниченную продолжительность и может быть развеян. `Призванный` эсипил</p><p>не может совершать \"Ходить между\"</p>"
             }
           ]
         },
@@ -1715,12 +1715,12 @@
             {
               "id": "z8bl09rqF4yCJDy4",
               "name": "Ужасающий Квак",
-              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30] @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} @Check[type:will|dc:19]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
+              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30] @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 1} @Check[type:will|dc:19]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
             },
             {
               "id": "A33mGw1DCgRJRDSe",
               "name": "Захват языком",
-              "description": "<p>Если боггард болотный мудрец попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}</p><p>может отсечь язык, если попадет по КБ 15 и нанесет не менее 4 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
+              "description": "<p>Если боггард болотный мудрец попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Обездвижен}</p><p>может отсечь язык, если попадет по КБ 15 и нанесет не менее 4 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
             }
           ]
         },
@@ -1781,7 +1781,7 @@
             {
               "id": "QXmns8bw5DBlNJ9D",
               "name": "Коронное Заклинание",
-              "description": "<p>Мейтремар может свободно<em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</em>усиливать заклинание</p>"
+              "description": "<p>Мейтремар может свободно<em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Исцеление}</em>усиливать заклинание</p>"
             }
           ]
         },
@@ -1816,12 +1816,12 @@
             {
               "id": "mdEZdShzE63nlTQK",
               "name": "Уязвимость к Соленой Воде",
-              "description": "<p>Соленая вода действует как чрезвычайно сильная кислота на личиночную акату внутри пустотного зомби. Полное погружение в соленую воду наносит за раунд. В любой раунд, когда зомби получает урон от слабости к соленой воде, личиночная аката отступает в глубины тела зомби, в результате чего зомби становится до конца своего следующего хода. @Damage[4d6[acid]] @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}</p>"
+              "description": "<p>Соленая вода действует как чрезвычайно сильная кислота на личиночную акату внутри пустотного зомби. Полное погружение в соленую воду наносит за раунд. В любой раунд, когда зомби получает урон от слабости к соленой воде, личиночная аката отступает в глубины тела зомби, в результате чего зомби становится до конца своего следующего хода. @Damage[4d6[acid]] @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Замедлен 1}</p>"
             },
             {
               "id": "19Ayra6rX2M49iPG",
               "name": "Питаться кровью",
-              "description": "<p><strong>Требование:</strong>Предыдущим действием Пустоиного зомби был успешный Удар Кормящееся Усико по целевому</p><hr /><p><strong>существу</strong>Пустотный Зомби использует свой Кормящееся Усико, чтобы выкачать кровь из пораженного существа. Пустотный Зомби восстанавливает , а существо , пока не получит исцеление любого вида или количества. @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Drained 1}</p>"
+              "description": "<p><strong>Требование:</strong>Предыдущим действием Пустоиного зомби был успешный Удар Кормящееся Усико по целевому</p><hr /><p><strong>существу</strong>Пустотный Зомби использует свой Кормящееся Усико, чтобы выкачать кровь из пораженного существа. Пустотный Зомби восстанавливает , а существо , пока не получит исцеление любого вида или количества. @UUID[Compendium.pf2e.conditionitems.Item.4D2KBtexWXa6oUMR]{Истощён 1}</p>"
             }
           ]
         },
@@ -1850,12 +1850,12 @@
             {
               "id": "8LvVStEHJB30KVCE",
               "name": "Ужасающее кваканье",
-              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30]{30 feet} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} @Check[type:will|dc:17]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
+              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30]{30 футов} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 1} @Check[type:will|dc:17]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
             },
             {
               "id": "kGQg9F0ZgW7fp4DB",
               "name": "Захват языком",
-              "description": "<p>Если боггард-разведчик попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо может @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}</p><p>отсечь язык, если попадет по КБ 13 и нанесет не менее 2 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
+              "description": "<p>Если боггард-разведчик попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо может @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Обездвижен}</p><p>отсечь язык, если попадет по КБ 13 и нанесет не менее 2 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
             }
           ]
         },
@@ -1898,7 +1898,7 @@
             {
               "id": "PIjZTZsbQlriq5X3",
               "name": "Яд гигантской многоножки",
-              "description": "<p><strong>Спасбросок: Макс.продолжительность:</strong>@Check[type:fortitude|dc:14]</p><hr /><p><strong>6 раундов</strong>Стадия</p><p><strong>1:</strong>(1 раунд) @Damage[1d6[poison]]</p><p><strong>Стадия 2:</strong>и (1 раунд) @Damage[1d8[poison]] @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}</p><p><strong>Стадия</strong>3: , и (1 раунд) @Damage[1d12[poison]] @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}</p>"
+              "description": "<p><strong>Спасбросок: Макс.продолжительность:</strong>@Check[type:fortitude|dc:14]</p><hr /><p><strong>6 раундов</strong>Стадия</p><p><strong>1:</strong>(1 раунд) @Damage[1d6[poison]]</p><p><strong>Стадия 2:</strong>и (1 раунд) @Damage[1d8[poison]] @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Застигнут врасплох}</p><p><strong>Стадия</strong>3: , и (1 раунд) @Damage[1d12[poison]] @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Неуклюжесть 1}</p>"
             }
           ]
         },
@@ -1913,7 +1913,7 @@
             {
               "id": "y7VNs5A41UH94zX1",
               "name": "Вращение",
-              "description": "<p><strong>Триггер:</strong>Древний аппарат получает урон или попытка вывести его из строя</p><hr /><p><strong>проваливается</strong>Древний аппарат начинает скрежетать и вращаться быстрее. Его тихое тиканье перерастает в диссонансное жужжание, и все вокруг начинает светиться тревожным светом цвета ржавчины. Все `живые` существа в области Г3<strong></strong>ощущают во рту неприятный привкус ржавчины и должны совершить выполнить , чтобы избежать . Затем древний аппарат бросает инициативу. @Check[type:fortitude|dc:18] @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}</p>"
+              "description": "<p><strong>Триггер:</strong>Древний аппарат получает урон или попытка вывести его из строя</p><hr /><p><strong>проваливается</strong>Древний аппарат начинает скрежетать и вращаться быстрее. Его тихое тиканье перерастает в диссонансное жужжание, и все вокруг начинает светиться тревожным светом цвета ржавчины. Все `живые` существа в области Г3<strong></strong>ощущают во рту неприятный привкус ржавчины и должны совершить выполнить , чтобы избежать . Затем древний аппарат бросает инициативу. @Check[type:fortitude|dc:18] @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 1}</p>"
             },
             {
               "id": "su62px9iEqMlJsNN",
@@ -1922,7 +1922,7 @@
             {
               "id": "SHmm4Z4oVUEYADth",
               "name": "Ползучая Ржавчина",
-              "description": "<p>У пораженных Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам</p><p><strong>Атлетики (1</strong>@Check[type:fortitude|dc:15]</p><p><strong>день)</strong>Стадия 2: как стадия 1 (1</p><p><strong>день)</strong>Стадия 3: (1</p><p><strong>день)</strong>Стадия @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong>4:</strong>и , а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
+              "description": "<p>У пораженных Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам</p><p><strong>Атлетики (1</strong>@Check[type:fortitude|dc:15]</p><p><strong>день)</strong>Стадия 2: как стадия 1 (1</p><p><strong>день)</strong>Стадия 3: (1</p><p><strong>день)</strong>Стадия @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong>4:</strong>и , а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
             }
           ]
         },
@@ -1950,17 +1950,17 @@
             {
               "id": "MuiyXm8KyQF57NaW",
               "name": "Челюсти",
-              "description": "<p><strong>Требования:</strong>Только по существу, что зомби делает или @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}</p>"
+              "description": "<p><strong>Требования:</strong>Только по существу, что зомби делает или @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Сдерживаем}</p>"
             },
             {
               "id": "a2pZeef5wn9y5xAA",
               "name": "Медленный",
-              "description": "<p>Зомби постоянно и не может использовать реакции. @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}</p>"
+              "description": "<p>Зомби постоянно и не может использовать реакции. @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Замедлен 1}</p>"
             },
             {
               "id": "PmrOcp7IYi6XPIer",
               "name": "Ползучая Ржавчина",
-              "description": "<p>У пораженных Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам</p><p><strong>Атлетики (1</strong>@Check[type:fortitude|dc:15]</p><p><strong>день)</strong>Стадия 2: как стадия 1 (1</p><p><strong>день)</strong>Стадия 3: (1</p><p><strong>день)</strong>Стадия @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong>4:</strong>и , а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
+              "description": "<p>У пораженных Ползучей Ржавчиной появляются неприятные синяки ржавого цвета на плоти и боль во всем теле, подобная той, которую можно испытать после длительной тренировки. По мере прогрессирования недуга их тела, а также одежда и предметы, которые они носят, все больше разрушаются, пока не наступает мучительная смерть. Если ПИ успешно выдерживает сопротивление заражению Ползучей Ржавчине или выздоравливает от нее, то на 24 часа он получает временный иммунитет к будущим заражениям Ползучей Ржавчине. Стадия 1: Штраф состояния -1 к проверкам</p><p><strong>Атлетики (1</strong>@Check[type:fortitude|dc:15]</p><p><strong>день)</strong>Стадия 2: как стадия 1 (1</p><p><strong>день)</strong>Стадия 3: (1</p><p><strong>день)</strong>Стадия @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong>4:</strong>и , а также все доспехи, одежда и предметы, которые вы носите и уровень которых равен или меньше уровня болезни, становятся по мере распространения на них разложения (1 день; сломанные предметы остаются ) Стадия 5: (1 день) @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p><p><strong>Стадия</strong>6: @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p><p><strong>(1</strong>день) Стадия</p><p><strong>7:</strong>Смерть</p>"
             }
           ]
         },
@@ -2016,7 +2016,7 @@
             {
               "id": "zMkrKhyfRWFrFfuv",
               "name": "Фанатичное безумие",
-              "description": "<p><strong>Требования:</strong>Культист получил урон и не , либо находится в безумии Эффект: @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}</p><hr /><p><strong>Культист</strong>впадает в безумие, длящееся 1 минуту. В безумии, он получает бонус состояния +1 к броскам атак и бонус состояния +2 к броскам урона, а также штраф состояния -2 к КБ. Культист не может добровольно остановить безумие. После безумия, культист . @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Effect: Fanatical Frenzy}</p>"
+              "description": "<p><strong>Требования:</strong>Культист получил урон и не , либо находится в безумии Эффект: @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Утомление}</p><hr /><p><strong>Культист</strong>впадает в безумие, длящееся 1 минуту. В безумии, он получает бонус состояния +1 к броскам атак и бонус состояния +2 к броскам урона, а также штраф состояния -2 к КБ. Культист не может добровольно остановить безумие. После безумия, культист . @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Утомление}</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.3Wtzyb0ZgkaC7vHY]{Эффект: фанатичное безумие}</p>"
             },
             {
               "id": "4NNvg2SM3AoqAWLt",
@@ -2035,18 +2035,18 @@
             },
             {
               "id": "HhUe0MpfzNrigkps",
-              "name": "Ощущение Магии",
-              "description": "<p>Первородная Зависть может обнаруживать магические ауры, предметы и заклинателей в радиусе 30 футов.</p>"
+              "name": "Магическое чутьё",
+              "description": "<p>Первородная зависть обнаруживает магические ауры, предметы и заклинателей в пределах 30 футов.</p>"
             },
             {
               "id": "fJ34aqwTiZbTv92E",
-              "name": "Конфискация Заклинания",
-              "description": "<p><strong>Триггер:</strong>Существо в радиусе 30ФТ, которое чувствует Первородная</p><hr /><p><strong></strong>Зависть совершает Поверхность Первородной Зависти переливается цветным калейдоскопом, который освещает существо, провоцирующее заклинаниес. Первородная Зависть пытается заклинанию Мод. . При успехе заклинание прерывается, и Первородная Зависть получает [[/r 1d20+12 #Counteract]]{+12} [[/br 2d6 #Temp HP]]</p>"
+              "name": "Конфискация заклинания",
+              "description": "<p><strong>Триггер</strong> Существо в пределах 30 футов, которое чувствует Первородная Зависть, Сотворяет заклинание</p><hr /><p><strong>Эффект</strong> Поверхность Первородной Зависти переливается калейдоскопом цветов, озаряющим спровоцировавшее существо. Первородная Зависть пытается противодействовать заклинанию с модификатором [[/r 1d20+12 #Counteract]]{+12}. При успехе заклинанию удаётся противодействовать, а Первородная Зависть получает [[/br 2d6 #Temp HP]] временных ОЗ.</p>"
             },
             {
               "id": "FDCXS4bVC2F1PdGz",
-              "name": "Выпить Заклинание",
-              "description": "<p>Первородная Зависть пытается истощить магию из существа, которое она держит или . Заклинатель должен совершить Крит.Успех: Существо невредимо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained} @Check[type:will|dc:20]</p><hr /><p><strong>и получает</strong>временный иммунитет к Выпить Заклинание на 24 часа. Успех: Существо получает</p><p><strong>Провал</strong>Существо получает и становится @Damage[1d6[mental]]</p><p><strong></strong>на 1 час. Крит.Провал: Как Провал, но одно @Damage[2d6[mental]] @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p><p><strong>из</strong>неиспользованных заклинаний или слотов заклинаний существа теряется, как если бы оно его сотворило. Потерянное заклинание или слот заклинаний - это одно из заклинаний самого высокого уровня, которое может сотворить существо, определяемое случайным образом, если доступно несколько подготовленных заклинаний. Если удалось выпить только чары, то заклинатель теряет доступ к нему на 10 минут. Первородная Зависть становится на 1 раунд и может использовать дополнительное действие для или . @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}</p>"
+              "name": "Вытягивание заклинания",
+              "description": "<p>Первородная Зависть пытается вытянуть магию из заклинателя, которого она @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схватила} или @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Сдерживает}. Заклинатель должен совершить @Check[type:will|dc:20] спасбросок.</p><hr /><p><strong>Критический успех</strong> Существо не подвергается эффекту и получает временный иммунитет к Вытягиванию заклинания на 24 часа.</p><p><strong>Успех</strong> Существо получает @Damage[1d6[mental]] ментального урона.</p><p><strong>Провал</strong> Существо получает @Damage[2d6[mental]] ментального урона и становится @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманено 1} на 1 час.</p><p><strong>Критический провал</strong> Как провал, но одно из несотворённых заклинаний или неиспользованных слотов заклинаний существа теряется, как если бы существо его сотворило. Теряется одно из заклинаний наивысшего ранга, которое существо может сотворить; если подготовлено несколько таких заклинаний, выберите случайное. Если вытянуты чары, заклинатель теряет доступ к ним на 10 минут. Первородная Зависть становится @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Ускорена} на 1 раунд и может потратить дополнительное действие только на Перемещение или Удар.</p>"
             }
           ]
         },
@@ -2079,7 +2079,7 @@
             {
               "id": "3wLOdV2RXEY5pnF5",
               "name": "Увечащий укус",
-              "description": "<p>Когда абрикандил попадает по существу челюстями, это существо должно совершить успешный спасбросок , иначе будет физически изувечено. После @Check[type:fortitude|dc:21]</p><p>этого существо получает штраф состояния -1 к проверкам на основе Харизмы. Этот штраф накапливается вплоть до -3 и остается даже, если эти раны исцелены. Штраф</p><p>снижается на 1 каждый 24 часа, пока не достигнет 0.</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.LgZx5xotO08JzhVc]{Effect: Mutilating Bite}</p>"
+              "description": "<p>Когда абрикандил попадает по существу челюстями, это существо должно совершить успешный спасбросок , иначе будет физически изувечено. После @Check[type:fortitude|dc:21]</p><p>этого существо получает штраф состояния -1 к проверкам на основе Харизмы. Этот штраф накапливается вплоть до -3 и остается даже, если эти раны исцелены. Штраф</p><p>снижается на 1 каждый 24 часа, пока не достигнет 0.</p><p>@UUID[Compendium.pf2e.bestiary-effects.Item.LgZx5xotO08JzhVc]{Эффект: увечащий укус}</p>"
             },
             {
               "id": "4cx1d9efogHuWe26",
@@ -2110,7 +2110,7 @@
             {
               "id": "We6LladGR4C687q0",
               "name": "Яд Рифокогтя",
-              "description": "<p><strong>Макс.Продолж.: 4</strong>@Check[type:fortitude|dc:17]</p><hr /><p><strong>раунда Стадия</strong>1:</p><p><strong>и</strong>(1 раунд) Стадия @Damage[1d6[poison]] @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}</p><p><strong>2:</strong>и (1 раунд) @Damage[1d6[poison]] @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}</p>"
+              "description": "<p><strong>Макс.Продолж.: 4</strong>@Check[type:fortitude|dc:17]</p><hr /><p><strong>раунда Стадия</strong>1:</p><p><strong>и</strong>(1 раунд) Стадия @Damage[1d6[poison]] @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 1}</p><p><strong>2:</strong>и (1 раунд) @Damage[1d6[poison]] @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 2}</p>"
             }
           ]
         },
@@ -2148,7 +2148,7 @@
             {
               "id": "TZig28UcpE4GS2P0",
               "name": "Нанести Ржавчину",
-              "description": "<p>Слюна Влориака вызывает быстрое ржавление металла. При успехе Языком или Влориак наносит (удваивается при крит.попадании) металлическому предмету, который носит или держит Цель, игнорируя его Твердость. Если Влориак попадает по металлическому предмету, находящемуся без присмотра, предмет получает этот урон автоматически. Если Существо использует реакцию с металлическим щитом против атаки языка, щит автоматически ломается, но ни один другой предмет не ржавеет при этой атаке. @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Disarm} @Damage[2d6[untyped]]</p>"
+              "description": "<p>Слюна Влориака вызывает быстрое ржавление металла. При успехе Языком или Влориак наносит (удваивается при крит.попадании) металлическому предмету, который носит или держит Цель, игнорируя его Твердость. Если Влориак попадает по металлическому предмету, находящемуся без присмотра, предмет получает этот урон автоматически. Если Существо использует реакцию с металлическим щитом против атаки языка, щит автоматически ломается, но ни один другой предмет не ржавеет при этой атаке. @UUID[Compendium.pf2e.actionspf2e.Item.Dt6B1slsBy8ipJu9]{Разоружить} @Damage[2d6[untyped]]</p>"
             },
             {
               "id": "w9Owf4Jdub9WbuFx",
@@ -2158,7 +2158,7 @@
             {
               "id": "Q0Sd9sqnUeL32Jw9",
               "name": "Столбняк",
-              "description": "<p>Занесенная через раны инфекция столбняка может вызвать ригидность, мышечные спазмы, достаточно сильные, чтобы сломать кости, и, в конечном счете, смерть. Возникновение: 10 дней</p><p><strong>Стадия 1: (1</strong>@Check[type:fortitude|dc:14]</p><p><strong>неделя)</strong>Стадия</p><p><strong>2:</strong>и @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}</p><p><strong>невозможность</strong>говорить (1 день) Стадия 3: @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}</p><p><strong>со</strong>спазмами (1 день) Стадия @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}</p><p><strong>4:</strong>Смерть</p>"
+              "description": "<p>Занесенная через раны инфекция столбняка может вызвать ригидность, мышечные спазмы, достаточно сильные, чтобы сломать кости, и, в конечном счете, смерть. Возникновение: 10 дней</p><p><strong>Стадия 1: (1</strong>@Check[type:fortitude|dc:14]</p><p><strong>неделя)</strong>Стадия</p><p><strong>2:</strong>и @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Неуклюжесть 1}</p><p><strong>невозможность</strong>говорить (1 день) Стадия 3: @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Неуклюжесть 2}</p><p><strong>со</strong>спазмами (1 день) Стадия @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Парализован}</p><p><strong>4:</strong>Смерть</p>"
             }
           ]
         },
@@ -2217,17 +2217,17 @@
             {
               "id": "lL49wJa4ig4V0ag1",
               "name": "Запись Звука",
-              "description": "<p>Шпион с часовым механизмом записывает все звуки в на маленький драгоценный камень стоимостью 1 ЗМ, вмонтированный в его тело. Шпион с заводным механизмом может записать на один камень до 1 часа звуков. Начав запись, он не может прекратить ее раньше времени, равно как и записать звук на камень, на @Template[type:emanation|distance:25]{25 feet}</p><p>котором уже есть запись. Некоторые шпионы с заводным механизмом содержат несколько драгоценных камней, что позволяет производить серию записей. Поскольку шпионы с заодным механизмом не обладают Разумом, им необходимо отдавать простые команды о том, когда начинать запись звуков. Шпион с заводным механизмом может различать различные виды</p><p>существ, но не конкретных людей. Шпион может запустить или остановить воспроизведение записанного звука, потратив одно действие. Для удаления драгоценного камня или установки его в заводной шпион требуется успешная проверка на ; в случае провала камень не повреждается, но все записанные звуки стираются, и камень не может быть использован для новой записи. @Check[type:thievery|dc:14|traits:action:disable-a-device] @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}</p>"
+              "description": "<p>Шпион с часовым механизмом записывает все звуки в на маленький драгоценный камень стоимостью 1 ЗМ, вмонтированный в его тело. Шпион с заводным механизмом может записать на один камень до 1 часа звуков. Начав запись, он не может прекратить ее раньше времени, равно как и записать звук на камень, на @Template[type:emanation|distance:25]{25 футов}</p><p>котором уже есть запись. Некоторые шпионы с заводным механизмом содержат несколько драгоценных камней, что позволяет производить серию записей. Поскольку шпионы с заодным механизмом не обладают Разумом, им необходимо отдавать простые команды о том, когда начинать запись звуков. Шпион с заводным механизмом может различать различные виды</p><p>существ, но не конкретных людей. Шпион может запустить или остановить воспроизведение записанного звука, потратив одно действие. Для удаления драгоценного камня или установки его в заводной шпион требуется успешная проверка на ; в случае провала камень не повреждается, но все записанные звуки стираются, и камень не может быть использован для новой записи. @Check[type:thievery|dc:14|traits:action:disable-a-device] @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства}</p>"
             },
             {
               "id": "zdb8RR0jcIIol6on",
               "name": "Завод",
-              "description": "<p>24 часа, @Check[type:thievery|dc:17|traits:action:disable-a-device]</p><hr /><p>, `ожидание` Чтобы заводной механизм начал действовать, он должен быть заведен уникальным ключом другим существом. Это занимает 1 минуту. После завода он остается в рабочем состоянии в течение указанного времени, обычно 24 часа, после чего перестает осознавать окружающую обстановку и не может действовать до тех пор, пока его снова не заведут. Способности некоторых заводных механизмов требуют от них тратить часть оставшегося рабочего времени. Они не могут потратить больше, чем у них есть, и немедленно отключаются, как только у них остается 0 времени. Если неизвестно, когда заводной механизм был заведен в последний раз, то большинство хранителей заводных механизмов заводят их в определенное время, обычно</p><p>в 8 часов утра. Заводной механизм, у которого в записи о заводе указано `ожидание`, может перейти в режим ожидания, выполнив 3 действия. Время его работы в режиме ожидания не уменьшается, но он может ощущать окружающую обстановку (со штрафом -2 к Восприятию). Он не может действовать, за одним исключением: когда он видит существо, он может выйти из режима ожидания</p><p>как реакция (бросок инициативы, если это необходимо). Существо может попытаться , чтобы завести заводной механизм (КС указан в записи о заводе). При каждом успехе заводной механизм теряет 1 час рабочего времени. Это можно сделать, даже если заводной механизм находится в режиме ожидания. @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}</p>"
+              "description": "<p>24 часа, @Check[type:thievery|dc:17|traits:action:disable-a-device]</p><hr /><p>, `ожидание` Чтобы заводной механизм начал действовать, он должен быть заведен уникальным ключом другим существом. Это занимает 1 минуту. После завода он остается в рабочем состоянии в течение указанного времени, обычно 24 часа, после чего перестает осознавать окружающую обстановку и не может действовать до тех пор, пока его снова не заведут. Способности некоторых заводных механизмов требуют от них тратить часть оставшегося рабочего времени. Они не могут потратить больше, чем у них есть, и немедленно отключаются, как только у них остается 0 времени. Если неизвестно, когда заводной механизм был заведен в последний раз, то большинство хранителей заводных механизмов заводят их в определенное время, обычно</p><p>в 8 часов утра. Заводной механизм, у которого в записи о заводе указано `ожидание`, может перейти в режим ожидания, выполнив 3 действия. Время его работы в режиме ожидания не уменьшается, но он может ощущать окружающую обстановку (со штрафом -2 к Восприятию). Он не может действовать, за одним исключением: когда он видит существо, он может выйти из режима ожидания</p><p>как реакция (бросок инициативы, если это необходимо). Существо может попытаться , чтобы завести заводной механизм (КС указан в записи о заводе). При каждом успехе заводной механизм теряет 1 час рабочего времени. Это можно сделать, даже если заводной механизм находится в режиме ожидания. @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства}</p>"
             },
             {
               "id": "UK9gsjbHYgmKZze9",
               "name": "Самоуничтожение",
-              "description": "<p>Требование: Заводной шпион может совершать эту реакцию, если иное не</p><p><strong>запрограммировано</strong>его создателем. Триггер: Шпион с заводным</p><hr /><p><strong>механизмом</strong>уменьшается до 0 ОЗ Шпион мечется и издает истошный крик, за которым следует равномерное тиканье. В начале следующего хода шпион с заводным механизмом взрывается, нанося Драгоценный камень уничтожается вместе с содержащейся в нем @Damage[1d12[piercing]] @Template[type:emanation|distance:5]{5-foot radius} @Check[type:reflex|dc:17|basic:true]</p><p>информацией. Находящееся рядом существо может отменить последовательность самоуничтожения, успешно выполнив на @Check[type:thievery|dc:17|traits:action:disable-a-device] @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}</p>"
+              "description": "<p>Требование: Заводной шпион может совершать эту реакцию, если иное не</p><p><strong>запрограммировано</strong>его создателем. Триггер: Шпион с заводным</p><hr /><p><strong>механизмом</strong>уменьшается до 0 ОЗ Шпион мечется и издает истошный крик, за которым следует равномерное тиканье. В начале следующего хода шпион с заводным механизмом взрывается, нанося Драгоценный камень уничтожается вместе с содержащейся в нем @Damage[1d12[piercing]] @Template[type:emanation|distance:5]{радиус 5 футов} @Check[type:reflex|dc:17|basic:true]</p><p>информацией. Находящееся рядом существо может отменить последовательность самоуничтожения, успешно выполнив на @Check[type:thievery|dc:17|traits:action:disable-a-device] @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства}</p>"
             },
             {
               "id": "hAK9kJGhzP6DASJX",
@@ -2269,7 +2269,7 @@
             {
               "id": "36QKwrAooz1cygR4",
               "name": "Цителешский взгляд",
-              "description": "<p><strong>Частота:</strong>1/Раунд; Магистр фокусирует свой</p><hr /><p><strong>пристальный</strong>взгляд на существе, которое он может видеть в пределах 30 футов. Цель на 1 раунд и должна совершить успешный спасбросок , иначе будет в на 1 раунд. @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} @Check[type:will|dc:21] @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}</p>"
+              "description": "<p><strong>Частота:</strong>1/Раунд; Магистр фокусирует свой</p><hr /><p><strong>пристальный</strong>взгляд на существе, которое он может видеть в пределах 30 футов. Цель на 1 раунд и должна совершить успешный спасбросок , иначе будет в на 1 раунд. @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Ослеплён} @Check[type:will|dc:21] @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Одурманен 1}</p>"
             }
           ]
         },
@@ -2284,7 +2284,7 @@
             {
               "id": "rmbTeX3cdnck9oQ2",
               "name": "Запугивающий удар",
-              "description": "<p>Ваш удар не только ранит существо, но так же вселяет в него неуверенность. Сделайте ближнего боя. Если вы попали и нанесли урон, цель получаете состояние или при крит.попадании. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}</p>"
+              "description": "<p>Ваш удар не только ранит существо, но так же вселяет в него неуверенность. Сделайте ближнего боя. Если вы попали и нанесли урон, цель получаете состояние или при крит.попадании. @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 1} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 2}</p>"
             }
           ]
         },
@@ -2322,17 +2322,17 @@
             {
               "id": "p6uToNU7wgFDgDDH",
               "name": "Лень",
-              "description": "<p>В начале каждого хода дретча кидайте . Результат является количеством действий, которое он восстанавливает на этот ход (максимум 3). Такие [[/br 1d4 #Actions Regained]]{1d4}</p><p>эффекты как состояние могут и дальше снизить его количество действий. @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}</p>"
+              "description": "<p>В начале каждого хода дретча кидайте . Результат является количеством действий, которое он восстанавливает на этот ход (максимум 3). Такие [[/br 1d4 #Actions Regained]]{1d4}</p><p>эффекты как состояние могут и дальше снизить его количество действий. @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Замедлен}</p>"
             },
             {
               "id": "Lb8baU3vfeAtn1Nw",
               "name": "Съежиться",
-              "description": "<p>Дретч становится маленьким на сколько возможно, защищая конечностями свои жизненно важные органы. Он получает бонус обстоятельства +4 к КБ, но штраф -2 к броскам атак. Это длится пока дретч не сдвинется со своего текущего пространства, или закончит эффект свободным действием. @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}</p>"
+              "description": "<p>Дретч становится маленьким на сколько возможно, защищая конечностями свои жизненно важные органы. Он получает бонус обстоятельства +4 к КБ, но штраф -2 к броскам атак. Это длится пока дретч не сдвинется со своего текущего пространства, или закончит эффект свободным действием. @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Без сознания}</p>"
             },
             {
               "id": "h8caQJMnKj4F22zZ",
               "name": "Бешеные удары",
-              "description": "<p>Дретч наносит 3 когтями, каждый со штрафом -2, целясь ими в одно и то же существо. Штраф множественной атаки дретча не увеличивается пока он не закончит</p><p>все 3 атаки. Дретч получает состояние до начала своего следующего хода. @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}</p>"
+              "description": "<p>Дретч наносит 3 когтями, каждый со штрафом -2, целясь ими в одно и то же существо. Штраф множественной атаки дретча не увеличивается пока он не закончит</p><p>все 3 атаки. Дретч получает состояние до начала своего следующего хода. @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Неуклюжесть 2}</p>"
             },
             {
               "id": "xdQJFj57QglkQXeG",
@@ -2395,7 +2395,7 @@
             {
               "id": "PFa0h9BekFPB4Eoh",
               "name": "Падение Клетки",
-              "description": "<p><strong>Триггер:</strong>Существо проходит под клеткой и шагает по нажимной</p><hr /><p><strong>плите</strong>Клетка падает с потолка и заманивает в ловушку сработавшее существо, которое должно @Check[type:reflex|dc:17|traits:damaging-effect]</p><hr /><p><strong>совершить</strong>Крит.Успех: Существо избегает ловушки и возвращается в то пространство, которое только что покинуло, а не</p><p><strong>попадает</strong>в пространство ловушки. Успех: Как и при крит.успехе, но падение ловушки наносит существу скользящий удар @Damage[(1d6+3)[bludgeoning]]</p><p><strong>,</strong>когда оно оступается. Провал: Ловушка приземляется на сработавшее существо. `Среднее` или меньшее существо оказывается запертым в клетке ( ). `Большое` или более крупное существо получает и падает , так как клетка @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape} @Damage[(2d6+5)[bludgeoning]] @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}</p><p><strong>отскакивает</strong>от тела существа, разрушаясь при этом. Крит.Провал: Как Провал, но `среднее` или меньшее существо также поражается клеткой, падает , получает и приземлившейся клеткой @Damage[(2d6+5)[bludgeoning]] @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}</p>"
+              "description": "<p><strong>Триггер:</strong>Существо проходит под клеткой и шагает по нажимной</p><hr /><p><strong>плите</strong>Клетка падает с потолка и заманивает в ловушку сработавшее существо, которое должно @Check[type:reflex|dc:17|traits:damaging-effect]</p><hr /><p><strong>совершить</strong>Крит.Успех: Существо избегает ловушки и возвращается в то пространство, которое только что покинуло, а не</p><p><strong>попадает</strong>в пространство ловушки. Успех: Как и при крит.успехе, но падение ловушки наносит существу скользящий удар @Damage[(1d6+3)[bludgeoning]]</p><p><strong>,</strong>когда оно оступается. Провал: Ловушка приземляется на сработавшее существо. `Среднее` или меньшее существо оказывается запертым в клетке ( ). `Большое` или более крупное существо получает и падает , так как клетка @UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Вырваться} @Damage[(2d6+5)[bludgeoning]] @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Ничком}</p><p><strong>отскакивает</strong>от тела существа, разрушаясь при этом. Крит.Провал: Как Провал, но `среднее` или меньшее существо также поражается клеткой, падает , получает и приземлившейся клеткой @Damage[(2d6+5)[bludgeoning]] @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Обездвижен}</p>"
             }
           ]
         },
@@ -2432,12 +2432,12 @@
             {
               "id": "up8Xcig2FrwgbFfb",
               "name": "Ужасающее кваканье",
-              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30]{30 feet} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1} @Check[type:will|dc:18]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
+              "description": "<p>Боггард издает ужасающее кваканье. Любой, в пределах , не являющийся боггардом, должен совершить успешный спасбросок , иначе станет @Template[type:emanation|distance:30]{30 футов} @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Напуган 1} @Check[type:will|dc:18]</p><p>; при критическом успехе, существо временно иммунно на 1 минуту.</p>"
             },
             {
               "id": "MEAPfylvHHHbTqOf",
               "name": "Захват языком",
-              "description": "<p>Если боггард болотный мудрец попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}</p><p>может отсечь язык, если попадет по КБ 15 и нанесет не менее 3 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
+              "description": "<p>Если боггард болотный мудрец попадает по существу своим языком, то это существо становится боггардом. В отличие от обычного захвата, существо не , но оно не может двигаться за пределы досягаемости языка боггарда. Существо @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Схвачен} @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Обездвижен}</p><p>может отсечь язык, если попадет по КБ 15 и нанесет не менее 3 рубящего урона. Хотя это не наносит боггарду никакого урона, однако лишает его возможности использовать свой \"Удар\" языком, пока он не отрастит язык, что занимает неделю.</p>"
             }
           ]
         },
@@ -2448,7 +2448,7 @@
             {
               "id": "yf2VZtO2S4eV7fKZ",
               "name": "Падение",
-              "description": "<p><strong>Триггер:</strong>Существо или другой большой груз (например, оттолкнутый бурлящими водами из предыдущей ловушки) передвигается в пространство ловушки Существо</p><hr /><p><strong>или</strong>объект, спровоцировавший триггер, падает внутрь и получает урон от падения ( ), а также становится целью Шипа. Падуещее существа может совершить , сделав (если в яму хлынут бурлящие воды, то ) @Damage[10[bludgeoning]] @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge} @Check[type:reflex|dc:20] @Check[type:reflex|dc:22]</p>"
+              "description": "<p><strong>Триггер:</strong>Существо или другой большой груз (например, оттолкнутый бурлящими водами из предыдущей ловушки) передвигается в пространство ловушки Существо</p><hr /><p><strong>или</strong>объект, спровоцировавший триггер, падает внутрь и получает урон от падения ( ), а также становится целью Шипа. Падуещее существа может совершить , сделав (если в яму хлынут бурлящие воды, то ) @Damage[10[bludgeoning]] @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Схватиться за уступ} @Check[type:reflex|dc:20] @Check[type:reflex|dc:22]</p>"
             },
             {
               "id": "O1Kgn1bbKLAm2ZL1",
@@ -2503,12 +2503,12 @@
             {
               "id": "edVyMro5viX5rgD9",
               "name": "Завод",
-              "description": "<p>24 часа, @Check[type:thievery|dc:21|traits:action:disable-a-device]</p><hr /><p>, `ожидание` Чтобы заводной механизм начал действовать, он должен быть заведен уникальным ключом другим существом. Это занимает 1 минуту. После завода он остается в рабочем состоянии в течение указанного времени, обычно 24 часа, после чего перестает осознавать окружающую обстановку и не может действовать до тех пор, пока его снова не заведут. Способности некоторых заводных механизмов требуют от них тратить часть оставшегося рабочего времени. Они не могут потратить больше, чем у них есть, и немедленно отключаются, как только у них остается 0 времени. Если неизвестно, когда заводной механизм был заведен в последний раз, то большинство хранителей заводных механизмов заводят их в определенное время, обычно</p><p>в 8 часов утра. Заводной механизм, у которого в записи о заводе указано `ожидание`, может перейти в режим ожидания, выполнив 3 действия. Время его работы в режиме ожидания не уменьшается, но он может ощущать окружающую обстановку (со штрафом -2 к Восприятию). Он не может действовать, за одним исключением: когда он видит существо, он может выйти из режима ожидания</p><p>как реакция (бросок инициативы, если это необходимо). Существо может попытаться , чтобы завести заводной механизм (КС указан в записи о заводе). При каждом успехе заводной механизм теряет 1 час рабочего времени. Это можно сделать, даже если заводной механизм находится в режиме ожидания. @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}</p>"
+              "description": "<p>24 часа, @Check[type:thievery|dc:21|traits:action:disable-a-device]</p><hr /><p>, `ожидание` Чтобы заводной механизм начал действовать, он должен быть заведен уникальным ключом другим существом. Это занимает 1 минуту. После завода он остается в рабочем состоянии в течение указанного времени, обычно 24 часа, после чего перестает осознавать окружающую обстановку и не может действовать до тех пор, пока его снова не заведут. Способности некоторых заводных механизмов требуют от них тратить часть оставшегося рабочего времени. Они не могут потратить больше, чем у них есть, и немедленно отключаются, как только у них остается 0 времени. Если неизвестно, когда заводной механизм был заведен в последний раз, то большинство хранителей заводных механизмов заводят их в определенное время, обычно</p><p>в 8 часов утра. Заводной механизм, у которого в записи о заводе указано `ожидание`, может перейти в режим ожидания, выполнив 3 действия. Время его работы в режиме ожидания не уменьшается, но он может ощущать окружающую обстановку (со штрафом -2 к Восприятию). Он не может действовать, за одним исключением: когда он видит существо, он может выйти из режима ожидания</p><p>как реакция (бросок инициативы, если это необходимо). Существо может попытаться , чтобы завести заводной механизм (КС указан в записи о заводе). При каждом успехе заводной механизм теряет 1 час рабочего времени. Это можно сделать, даже если заводной механизм находится в режиме ожидания. @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства}</p>"
             },
             {
               "id": "fH4zN6EufktPqbW4",
               "name": "Заводная палочка",
-              "description": "<p>Заводной маг использует механическую палочку в качестве фокусирующего устройства для направления магической энергии. Палочка встроена в грудь мага-часовика, и только кристалл на ее конце открыт. Маг может , чтобы снять палочку, или кто-то другой может снять ее с помощью проверки на . Заводной маг не может сотворять никаких заклинаний, кроме чар, пока палочка @Check[type:thievery|dc:25|traits:action:disable-a-device] @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}</p><p>извлечена. После извлечения заводной палочки<em>@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{Magic Wand}</em>превращается в волшебную палочку, содержащую последнее врожденное заклинание ранг 1,<em>@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}</em>произнесенное заводным магом ( , если Заводной Белимариус еще не сотворил это заклинание). Заклинания помещаются в палочку во время создания мага, и создатель может заменить их другими арканными заклинаниями соответствующего уровня.</p>"
+              "description": "<p>Заводной маг использует механическую палочку в качестве фокусирующего устройства для направления магической энергии. Палочка встроена в грудь мага-часовика, и только кристалл на ее конце открыт. Маг может , чтобы снять палочку, или кто-то другой может снять ее с помощью проверки на . Заводной маг не может сотворять никаких заклинаний, кроме чар, пока палочка @Check[type:thievery|dc:25|traits:action:disable-a-device] @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства}</p><p>извлечена. После извлечения заводной палочки<em>@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{Магическая палочка}</em>превращается в волшебную палочку, содержащую последнее врожденное заклинание ранг 1,<em>@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Страх}</em>произнесенное заводным магом ( , если Заводной Белимариус еще не сотворил это заклинание). Заклинания помещаются в палочку во время создания мага, и создатель может заменить их другими арканными заклинаниями соответствующего уровня.</p>"
             },
             {
               "id": "pyDc4hD647pfgYEk",
@@ -2589,7 +2589,7 @@
             {
               "id": "ZDJkjnIor7qxsiSU",
               "name": "Душить",
-              "description": "<p><strong>Требования:</strong>У деро должны быть 2 свободные руки, либо владеть аклисом и 1 свободную руку; Эффект:</p><hr /><p><strong>Деро</strong>совершает проверку , чтобы с бонусом обстоятельства +2. При успехе, цель получает , либо двойной урон при критическом успехе. @Check[type:athletics|traits:action:grapple,action:strangle] @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Grab} @Damage[(1d6+6)[bludgeoning]]</p>"
+              "description": "<p><strong>Требования:</strong>У деро должны быть 2 свободные руки, либо владеть аклисом и 1 свободную руку; Эффект:</p><hr /><p><strong>Деро</strong>совершает проверку , чтобы с бонусом обстоятельства +2. При успехе, цель получает , либо двойной урон при критическом успехе. @Check[type:athletics|traits:action:grapple,action:strangle] @UUID[Compendium.pf2e.actionspf2e.Item.PMbdMWc2QroouFGD]{Захват} @Damage[(1d6+6)[bludgeoning]]</p>"
             }
           ]
         },
@@ -2600,7 +2600,7 @@
             {
               "id": "8tVnSA2uTOLAmycM",
               "name": "Ударный Поток",
-              "description": "<p><strong>Триггер:</strong>Существо входит в область к югу от кольца камней, отмеченного на</p><hr /><p><strong></strong>карте Бурлящий поток воды поднимается из кольца камней, затем с силой течет по проходу и стекает в яму<strong></strong>в Е1б. `Большие` и малые существа, оказавшиеся на пути воды, должны попытаться сделать спасбросок на . Бурлящие воды мгновенно исчезают, ударившись о дно @Check[type:fortitude|dc:20|traits:damaging-effect]</p><hr /><p><strong>ямы,</strong>но оставляют там все мокрым. Крит.Успех: Существо выдерживает воздействие бурлящих</p><p><strong>вод</strong>и остается незатронутым Успех: Существо получает Провал: Существо падает , @Damage[1d10[bludgeoning]]</p><p><strong>получает</strong>, и его толкает вода к ловушке в виде Шипастой Ямы, что приводит к активации ловушки Крит.Провал: Как и @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone} @Damage[(1d10+6)[bludgeoning]]</p><p><strong>провал, но</strong>существо не может попытаться , если попадет в ловушку с Шипастой Ямой @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}</p>"
+              "description": "<p><strong>Триггер:</strong>Существо входит в область к югу от кольца камней, отмеченного на</p><hr /><p><strong></strong>карте Бурлящий поток воды поднимается из кольца камней, затем с силой течет по проходу и стекает в яму<strong></strong>в Е1б. `Большие` и малые существа, оказавшиеся на пути воды, должны попытаться сделать спасбросок на . Бурлящие воды мгновенно исчезают, ударившись о дно @Check[type:fortitude|dc:20|traits:damaging-effect]</p><hr /><p><strong>ямы,</strong>но оставляют там все мокрым. Крит.Успех: Существо выдерживает воздействие бурлящих</p><p><strong>вод</strong>и остается незатронутым Успех: Существо получает Провал: Существо падает , @Damage[1d10[bludgeoning]]</p><p><strong>получает</strong>, и его толкает вода к ловушке в виде Шипастой Ямы, что приводит к активации ловушки Крит.Провал: Как и @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Ничком} @Damage[(1d10+6)[bludgeoning]]</p><p><strong>провал, но</strong>существо не может попытаться , если попадет в ловушку с Шипастой Ямой @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Схватиться за уступ}</p>"
             }
           ]
         },
@@ -2667,7 +2667,7 @@
             {
               "id": "MpNlJrdPvv9bECNE",
               "name": "Греховный Укус",
-              "description": "<p>Существо по которому попадает челюстей порождение греха, должно совершить , так как на него нахлынули греховные мысли. Крит.Успех: @Check[type:will|dc:18]</p><hr /><p><strong>Невредимо Успех:</strong>Провал:</p><p><strong>Крит.Провал:</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}</p><p><strong>,</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}</p><p><strong>а так</strong>же на 1 минуту @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 2}</p>"
+              "description": "<p>Существо по которому попадает челюстей порождение греха, должно совершить , так как на него нахлынули греховные мысли. Крит.Успех: @Check[type:will|dc:18]</p><hr /><p><strong>Невредимо Успех:</strong>Провал:</p><p><strong>Крит.Провал:</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 1}</p><p><strong>,</strong>@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Тошнота 2}</p><p><strong>а так</strong>же на 1 минуту @UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Ослаблен 2}</p>"
             }
           ]
         },
@@ -2849,7 +2849,7 @@
             {
               "id": "htliQ05jVKwfE22v",
               "name": "Божественная сила",
-              "description": "<p><em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}</em></p>"
+              "description": "<p><em>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Исцеление}</em></p>"
             },
             {
               "id": "UDhWMhJzdEJtykvO",

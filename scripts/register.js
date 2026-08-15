@@ -3,12 +3,20 @@ const SOURCE_MODULE_ID = "pf2e-rusthenge";
 const TESTED_SOURCE_VERSION = "14.1.0";
 
 Hooks.once("babele.init", (babele) => {
-  // PF2e хранит отдельные заметки ведущего вне стандартного поля Babele.
-  // Регистрируем только недостающие текстовые пути; команды макросов и другие
-  // технические данные официального приключения это сопоставление не затрагивает.
+  // Babele фиксирует сопоставление в момент регистрации переводимого
+  // компендиума. Поэтому описания PF2e и вложенные предметы задаются здесь
+  // явно: модуль не должен зависеть от того, успел ли pf2e-ru зарегистрировать
+  // своё глобальное сопоставление раньше нас.
   babele.registerMapping({
     Actor: {
-      descriptionGM: "system.details.privateNotes"
+      description: "system.details.publicNotes",
+      descriptionGM: "system.details.privateNotes",
+      items: {
+        path: "items",
+        converter: "document",
+        documentType: "Item",
+        cardinality: "many"
+      }
     },
     Item: {
       gm: "system.description.gm"
