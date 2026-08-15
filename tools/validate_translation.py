@@ -28,6 +28,7 @@ LINK_PATH_RE = re.compile(r'<a\b[^>]*\bhref="([^"]+)"', re.I)
 BALANCED_TAGS = ("div", "section", "aside", "h1", "h2", "h3", "p", "details")
 CYRILLIC_CLASS_RE = re.compile(r'class="[^"]*[А-Яа-яЁё][^"]*"')
 EMPTY_LIST_RE = re.compile(r"<(?:ul|ol)\b[^>]*>\s*(?:<li\b[^>]*>\s*</li>\s*)*</(?:ul|ol)>", re.I)
+EMPTY_CONTAINER_RE = re.compile(r"<(section|div|aside|p|ul|ol|li)\b[^>]*>\s*</\1>", re.I)
 EXPECTED_COUNTS = {
     "journals": 7,
     "pages": 191,
@@ -65,6 +66,8 @@ EXPECTED_COUNTS = {
     "itemRuleLabels": 5,
     "linkedItemNames": 393,
     "linkedItemOverrides": 393,
+    "bestiaryActors": 25,
+    "bestiaryEmbeddedItems": 218,
 }
 
 
@@ -120,12 +123,18 @@ def main() -> int:
     parser.add_argument("--translation", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
     parser.add_argument("--index", type=Path, default=Path("data/source-index.json"))
     parser.add_argument("--module", type=Path, default=Path("module.json"))
+    parser.add_argument(
+        "--bestiary-translation",
+        type=Path,
+        default=Path("translations/pf2e.rusthenge-bestiary.json"),
+    )
     parser.add_argument("--source", type=Path, help="Официальный Adventure для локальной проверки команд макросов")
     args = parser.parse_args()
     check = Validation()
     translation = load_json(args.translation, check)
     index = load_json(args.index, check)
     manifest = load_json(args.module, check)
+    bestiary_translation = load_json(args.bestiary_translation, check)
     if check.errors:
         print("\n".join(f"ОШИБК: {e}" for e in check.errors), file=sys.stderr)
         return 1
@@ -220,6 +229,8 @@ def main() -> int:
         check.require("rusthenge-ru-controls" not in text, f"{page_id}: технические элементы вынесены в общий подвал")
         check.require(not CYRILLIC_CLASS_RE.search(text), f"{page_id}: остался класс старого PDF-конвертера")
         check.require(not EMPTY_LIST_RE.search(text), f"{page_id}: остался пустой список")
+        check.require(not EMPTY_CONTAINER_RE.search(text), f"{page_id}: остался пустой HTML-контейнер")
+        check.require(not re.search(r"\d+\s*ФТ\b|КБ_|Вспом\.Информ\.", text), f"{page_id}: осталась PDF-аббревиатура")
         for tag in BALANCED_TAGS:
             opened = len(re.findall(rf"<{tag}\b", text, flags=re.I))
             closed = len(re.findall(rf"</{tag}>", text, flags=re.I))
@@ -239,6 +250,82 @@ def main() -> int:
                 not label_words,
                 f"{page_id}: осталась английская подпись Foundry: {', '.join(sorted(label_words)[:8])}",
             )
+
+    layout_forbidden = {
+        "02sneakingonbo00": ("<h4>Отвлечь Экипаж</h4>", "<h4>Обыск Корабля</h4>", "75ФТ"),
+        "02elderordwi0000": ("<h3>Старейшина Ордви</h3>",),
+        "05sinsludge00000": ("<h2>Грехошлам</h2>",),
+        "05thehornofrus00": (" / Предмет 5",),
+    }
+    for page_id, fragments in layout_forbidden.items():
+        text = pages.get(page_id, {}).get("text", "")
+        for fragment in fragments:
+            check.require(fragment not in text, f"{page_id}: остался PDF-артефакт {fragment!r}")
+
+    # Отдельный пак обязателен: официальный импортёр Rusthenge заменяет актёров Adventure
+    # данными из pf2e.rusthenge-bestiary уже после перевода Adventure.
+    bestiary_entries = bestiary_translation.get("entries", {})
+    bestiary_meta = index.get("bestiary", {})
+    check.require(bestiary_translation.get("label") == "Растхендж — бестиарий", "неверная метка перевода бестиария")
+    bestiary_mapping = bestiary_translation.get("mapping", {})
+    check.require(
+        bestiary_mapping.get("description") == "system.details.publicNotes",
+        "бестиарий не сопоставляет публичные заметки",
+    )
+    check.require(
+        bestiary_mapping.get("items", {}).get("converter") == "document",
+        "бестиарий не сопоставляет вложенные Item",
+    )
+    check.require(set(bestiary_entries) == set(bestiary_meta.get("actors", {})), "изменён набор ID актёров бестиария")
+    check.require(len(bestiary_entries) == 25, "в бестиарии должно быть 25 актёров")
+    bestiary_items: dict[str, dict[str, dict[str, Any]]] = {}
+    for actor_id, actor_meta in bestiary_meta.get("actors", {}).items():
+        actor = bestiary_entries.get(actor_id, {})
+        items = {item.get("id"): item for item in actor.get("items", [])}
+        bestiary_items[actor_id] = items
+        check.require(set(items) == set(actor_meta.get("itemIds", [])), f"{actor_id}: изменён набор ID элементов бестиария")
+        for value in [actor.get("name", ""), *[item.get("name", "") for item in items.values()]]:
+            words = {word.lower() for word in LATIN_RE.findall(value)} - ALLOWED_LATIN
+            check.require(not words, f"{actor_id}: не переведено имя бестиария {value!r}")
+    check.require(sum(len(items) for items in bestiary_items.values()) == 218, "в бестиарии должно быть 218 вложенных элементов")
+    check.require(
+        sum("description" in item for items in bestiary_items.values() for item in items.values()) == 50,
+        "в бестиарии должно быть 50 локальных описаний уникальных элементов",
+    )
+
+    def bestiary_value(path: str) -> str:
+        parts = path.split("/")
+        if len(parts) == 2:
+            return bestiary_entries.get(parts[0], {}).get(parts[1], "")
+        return bestiary_items.get(parts[0], {}).get(parts[2], {}).get(parts[3], "")
+
+    for path, expected_tokens in bestiary_meta.get("technical", {}).items():
+        check.require(
+            technical_cores(bestiary_value(path)) == technical_cores(" ".join(expected_tokens)),
+            f"{path}: изменены технические токены бестиария",
+        )
+    for path, expected_rolls in bestiary_meta.get("inlineRolls", {}).items():
+        check.require(
+            inline_roll_cores(bestiary_value(path)) == inline_roll_cores(" ".join(expected_rolls)),
+            f"{path}: изменены встроенные броски бестиария",
+        )
+    for path, expected_hash in bestiary_meta.get("html", {}).items():
+        check.require(html_hash(bestiary_value(path)) == expected_hash, f"{path}: изменена HTML-структура бестиария")
+        value = bestiary_value(path)
+        plain = html.unescape(TAG_RE.sub(" ", INLINE_ROLL_RE.sub(" ", TECH_RE.sub(" ", value))))
+        words = {word.lower() for word in LATIN_RE.findall(plain)} - ALLOWED_LATIN
+        check.require(not words, f"{path}: в описании бестиария остался английский текст")
+
+    envy = bestiary_entries.get("FUxaVKVEV8eOuTVB", {})
+    envy_items = {item.get("id"): item for item in envy.get("items", [])}
+    for item_id, expected_name in {
+        "HhUe0MpfzNrigkps": "Ощущение магии",
+        "fJ34aqwTiZbTv92E": "Конфискация заклинания",
+        "FDCXS4bVC2F1PdGz": "Вытягивание заклинания",
+    }.items():
+        item = envy_items.get(item_id, {})
+        check.require(item.get("name") == expected_name, f"Первобытная зависть: неверное имя {item_id}")
+        check.require(bool(item.get("description")), f"Первобытная зависть: нет описания {item_id}")
 
     linked_overrides = set(index.get("linkedItemOverrides", []))
     all_item_entries = [

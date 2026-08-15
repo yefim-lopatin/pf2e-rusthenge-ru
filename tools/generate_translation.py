@@ -45,6 +45,10 @@ TAG_RE = re.compile(r"<[^>]+>")
 INLINE_ROLL_RE = re.compile(r"\[\[/[a-z]+\s+(?:[^\[\]]|\[[^\[\]]*\])*\]\](?:\{[^{}]*\})?", re.I)
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
+
+def inline_roll_cores(value: str) -> list[str]:
+    return [re.sub(r"\{[^{}]*\}$", "", roll) for roll in INLINE_ROLL_RE.findall(value)]
+
 # Коды локаций в старом структурированном тексте имели кириллический сдвиг.
 AREA_PREFIX = {"A": "А", "B": "Б", "C": "В", "D": "Г", "E": "Д", "F": "Е"}
 
@@ -1507,6 +1511,67 @@ ACTION_SECTION_RE = re.compile(
     flags=re.I | re.S,
 )
 
+EMPTY_CONTAINER_RE = re.compile(
+    r"<(section|div|aside|p|ul|ol|li)\b[^>]*>\s*</\1>",
+    flags=re.I,
+)
+
+# Точечные артефакты старой PDF-конверсии. Они не содержатся в
+# официальном HTML и дублируют заголовки/карточки в цифровом журнале.
+DIGITAL_LAYOUT_REPAIRS: dict[str, tuple[tuple[str, str], ...]] = {
+    "02sneakingonbo00": (
+        ('<h4>Отвлечь Экипаж</h4><h4>Обыск Корабля</h4>', ""),
+        ('Меч-Рыба" - это корабль длиной 75ФТ', '«Рыба-меч» — это корабль длиной 75 футов'),
+        ('#search-ship]{Б2. Меч-Рыба}', '#search-ship]{Обыскать корабль}'),
+        ('#distract-crew]{Б2. Меч-Рыба}', '#distract-crew]{Отвлечь экипаж}'),
+    ),
+    "02elderordwi0000": (("<h3>Старейшина Ордви</h3>", ""),),
+    "05sinsludge00000": (("<h2>Грехошлам</h2>", ""),),
+    "05demonvloriak00": (
+        ('<span class="keepme">Бестиарий: Влориак</span>', '<span class="keepme">Влорианское влияние</span>'),
+    ),
+    "05thehornofrus00": (("<h4><span> / Предмет 5</span></h4>", ""),),
+}
+
+
+def cleanup_digital_layout(translation: dict[str, Any]) -> int:
+    """Удаляет печатные артефакты, не меняя технические токены."""
+    changed = 0
+    for adventure in translation.get("entries", {}).values():
+        pages = {
+            page_id: page
+            for journal in adventure.get("journals", {}).values()
+            for page_id, page in journal.get("pages", {}).items()
+        }
+        for page_id, page in pages.items():
+            text = page.get("text")
+            if not isinstance(text, str):
+                continue
+            before_cores = Counter(technical_cores(text))
+            for old, new in DIGITAL_LAYOUT_REPAIRS.get(page_id, ()):
+                text = text.replace(old, new)
+            text = EMPTY_CONTAINER_RE.sub("", text)
+            text = re.sub(r"(\d+)\s*ФТ\b", r"\1 футов", text)
+            text = text.replace("КБ_", "КБ ").replace("Вспом.Информ.", "Вспомнить информацию")
+
+            # Карточка аколитов была добавлена в конец страницы вместо пустого
+            # места из PDF. Возвращаем её к абзацу о существах, как в официальном HTML.
+            if page_id == "02securestorag00":
+                cards = list(ACTION_SECTION_RE.finditer(text))
+                creature = next((m for m in cards if "Actor.Q3ciH3AHZlb1Dc3E" in m.group(0)), None)
+                marker = "</p><p>Трое выживших пленников"
+                if creature and marker in text and creature.start() > text.index(marker):
+                    card = creature.group(0)
+                    text = text[:creature.start()] + text[creature.end():]
+                    text = text.replace(marker, f"</p>{card}<p>Трое выживших пленников", 1)
+
+            if Counter(technical_cores(text)) != before_cores:
+                raise ValueError(f"{page_id}: очистка вёрстки изменила технические токены")
+            if text != page["text"]:
+                page["text"] = text
+                changed += 1
+    return changed
+
 
 ACTOR_EXTRA_FIELDS: tuple[tuple[str, tuple[str, ...]], ...] = (
     ("blurb", ("system", "details", "blurb")),
@@ -1802,6 +1867,269 @@ def repair_existing_action_cards(source: dict[str, Any], translation: dict[str, 
     return repaired
 
 
+BESTIARY_MAPPING = {
+    "description": "system.details.publicNotes",
+    "descriptionGM": "system.details.privateNotes",
+    "blurb": "system.details.blurb",
+    "language": "system.details.languages.details",
+    "senses": "system.perception.details",
+    "descriptionHazard": "system.details.description",
+    "disable": "system.details.disable",
+    "reset": "system.details.reset",
+    "routine": "system.details.routine",
+    "stealth": "system.attributes.stealth.details",
+    "hp": "system.attributes.hp.details",
+    "ac": "system.attributes.ac.details",
+    "allSaves": "system.attributes.allSaves.value",
+    "speed": "system.attributes.speed.details",
+    "willSave": "system.saves.will.saveDetail",
+    "skillAcrobatics": "system.skills.acrobatics.special.0.label",
+    "skillAthletics": "system.skills.athletics.special.0.label",
+    "skillCrafting": "system.skills.crafting.special.0.label",
+    "skillStealth": "system.skills.stealth.special.0.label",
+    "skillThievery": "system.skills.thievery.special.0.label",
+    "items": {
+        "path": "items",
+        "converter": "document",
+        "documentType": "Item",
+        "cardinality": "many",
+    },
+}
+
+BESTIARY_ACTOR_FIELD_PATHS = {
+    "description": ("system", "details", "publicNotes"),
+    "descriptionGM": ("system", "details", "privateNotes"),
+    **{field: path for field, path in ACTOR_EXTRA_FIELDS},
+}
+
+BESTIARY_DESCRIPTION_OVERRIDES = {
+    "PFa0h9BekFPB4Eoh": '<p><strong>Триггер</strong> Существо проходит под клеткой и наступает на нажимную плиту</p><hr /><p><strong>Эффект</strong> Клетка падает с потолка, пытаясь поймать спровоцировавшее существо; оно должно совершить спасбросок @Check[reflex|dc:17|traits:damaging-effect].</p><hr /><p><strong>Критический успех</strong> Существо избегает ловушки и возвращается в пространство, которое только что покинуло, вместо того чтобы войти в пространство ловушки.</p><p><strong>Успех</strong> Как критический успех, но падающая ловушка задевает существо и наносит ему @Damage[(1d6+3)[bludgeoning]] дробящего урона, когда оно отшатывается.</p><p><strong>Провал</strong> Падающая ловушка накрывает спровоцировавшее существо. Существо среднего размера или меньше оказывается заперто в клетке ([[/act escape dc=20]]{Вырваться, СЛ 20}). Существо большого размера или больше получает @Damage[(2d6+5)[bludgeoning]] дробящего урона и падает @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{ничком}, а клетка отскакивает от его тела и разрушается.</p><p><strong>Критический провал</strong> Как провал, но существо среднего размера или меньше также получает удар клеткой, падает ничком, получает @Damage[(2d6+5)[bludgeoning]] дробящего урона и становится @UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{обездвижено}, поскольку клетка придавливает его конечность.</p>',
+    "lL49wJa4ig4V0ag1": '<p>Заводной шпион записывает все звуки в @Template[emanation|distance:25]{25-футовой эманации} на маленький самоцвет стоимостью 1 зм, встроенный в его тело. На один самоцвет можно записать до 1 часа звука. Начав запись, шпион не может остановить её досрочно или записать что-либо на самоцвет, где уже есть запись.</p><p>Некоторые заводные шпионы содержат несколько самоцветов и могут сделать серию записей. Поскольку они неразумны, им нужно дать простые указания, когда начинать запись. Заводной шпион различает виды существ, но не отдельных личностей.</p><p>Шпион может одним действием начать или остановить воспроизведение записи. Чтобы извлечь или установить самоцвет, нужно успешно пройти проверку [[/act disable-device dc=14]]{Воровства СЛ 14} для действия @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключить устройство}. При провале самоцвет не повреждается, но запись стирается, и самоцвет по-прежнему нельзя использовать для новой записи.</p>',
+    "zdb8RR0jcIIol6on": '<p>24 часа, [[/act disable-device dc=17]]{Воровство СЛ 17}, режим ожидания</p><hr /><p>Чтобы заводной механизм мог действовать, другое существо должно завести его уникальным ключом; это занимает 1 минуту. После завода механизм работает указанное время, обычно 24 часа, затем перестаёт воспринимать окружение и не может действовать, пока его не заведут снова. Некоторые способности расходуют оставшееся рабочее время. Механизм не может потратить больше времени, чем у него есть, и немедленно отключается, когда время заканчивается. Если неизвестно, когда его заводили в последний раз, считается, что смотритель заводит механизмы в установленное время, обычно в 8 утра.</p><p>Механизм с режимом ожидания может перейти в него активностью за 3 действия. В этом режиме рабочее время не уменьшается, механизм воспринимает окружение со штрафом –2 к Восприятию и не может действовать, кроме одного случая: заметив существо, он может реакцией выйти из режима ожидания и при необходимости бросить инициативу.</p><p>Существо может попытаться выполнить @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства} с указанной СЛ, чтобы постепенно остановить механизм. При каждом успехе механизм теряет 1 час рабочего времени. Это можно делать и в режиме ожидания.</p>',
+    "QXmns8bw5DBlNJ9D": '<p>Мейтремар может свободно усиливать заклинания @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Исцеление}.</p>',
+    "0rwXFzCG58mrENRi": '<p><strong>Триггер</strong> Не поклоняющееся Ксар-Азмаку существо пытается открыть дверь или наносит ей урон Ударом ближнего боя</p><hr /><p><strong>Эффект</strong> Спровоцировавшее существо подвергается воздействию ползучей ржавчины: из ржавых пятен на двери выползают усики ржаво-красной энергии и странно нежно скребут открытую кожу.</p>',
+    "edVyMro5viX5rgD9": '<p>24 часа, [[/act disable-device dc=21]]{Воровство СЛ 21}, режим ожидания</p><hr /><p>Чтобы заводной механизм мог действовать, другое существо должно завести его уникальным ключом; это занимает 1 минуту. После завода механизм работает указанное время, обычно 24 часа, затем перестаёт воспринимать окружение и не может действовать, пока его не заведут снова. Некоторые способности расходуют оставшееся рабочее время. Механизм не может потратить больше времени, чем у него есть, и немедленно отключается, когда время заканчивается. Если неизвестно, когда его заводили в последний раз, считается, что смотритель заводит механизмы в установленное время, обычно в 8 утра.</p><p>Механизм с режимом ожидания может перейти в него активностью за 3 действия. В этом режиме рабочее время не уменьшается, механизм воспринимает окружение со штрафом –2 к Восприятию и не может действовать, кроме одного случая: заметив существо, он может реакцией выйти из режима ожидания и при необходимости бросить инициативу.</p><p>Существо может попытаться выполнить @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключение устройства} с указанной СЛ, чтобы постепенно остановить механизм. При каждом успехе механизм теряет 1 час рабочего времени. Это можно делать и в режиме ожидания.</p>',
+    "fH4zN6EufktPqbW4": '<p>Заводной маг использует механическую палочку как фокус для направления магической энергии. Палочка встроена в грудь мага, наружу выступает только кристалл на её конце. Маг может Взаимодействовать, чтобы извлечь палочку; другое существо может сделать это, успешно пройдя проверку @Check[thievery|dc:25|traits:action:disable-a-device] для действия @UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Отключить устройство}. Без палочки заводной маг может сотворять только чары.</p><p>После извлечения заводная палочка становится <em>@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{магической палочкой}</em>, содержащей последнее сотворённое заводным магом врождённое заклинание 1-го ранга (@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Страх}, если заводной Белимариус ещё не сотворял в этом приключении заклинаний 1-го ранга). Заклинания закладываются в палочку при создании мага; создатель может заменить их другими арканными заклинаниями соответствующего ранга.</p>',
+    "qtsF75k2Zterahrt": '<p>Деро-магистр получает @Damage[10[untyped]] урона за каждый час пребывания под солнечным светом.</p>',
+    "htliQ05jVKwfE22v": '<p>@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Исцеление}</p>',
+    "UDhWMhJzdEJtykvO": '<p>Когда Ордви сотворяет @UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Исцеление}, она бросает d10 вместо d8.</p>',
+}
+
+BESTIARY_ACTOR_FIELD_OVERRIDES = {
+    ("Tvz5JKAE8rrCF5qW", "reset"): "<p>Существа всё ещё могут упасть в яму, но закрывающую её шкуру нужно натянуть вручную (10-минутная активность), чтобы ловушка снова стала скрытой.</p>",
+}
+
+DISEASE_TEXT_REPLACEMENTS = (
+    ("These undead inflict rust creep with their jaws Strikes. A creature damaged by a jaws Strike or a Gnash from one of these severed heads must succeed at a DC 15 Fortitude save or contract rust creep.",
+     "Эти неживые существа заражают ползучей ржавчиной ударами челюстей. Существо, получившее урон от Удара челюстями или Скрежета одной из этих отрубленных голов, должно успешно пройти спасбросок Стойкости СЛ 15, иначе оно заражается ползучей ржавчиной."),
+    ("A creature bitten by the Vlorian cythnigot becomes afflicted by rust creep, but with a DC 20 Fortitude save.",
+     "Существо, укушенное влорианским цитниготом, заражается ползучей ржавчиной, но проходит спасбросок Стойкости СЛ 20."),
+    ("Those afflicted by rust creep develop uncomfortable rust-colored bruises on their flesh and endure full-body aches like those one might experience after a long workout. As the affliction progresses, their bodies—as well as the clothing and items they wear or carry—increasingly break down until a painful death occurs. If a character successfully resists contracting rust creep, or recovers from a case of rust creep, they are temporarily immune to future rust creep infections for 24 hours.",
+     "У заражённых ползучей ржавчиной на теле появляются болезненные ржаво-коричневые синяки, а всё тело болит, словно после долгой тренировки. По мере развития болезни тело, одежда и переносимые предметы всё сильнее разрушаются, пока не наступает мучительная смерть. Персонаж, успешно сопротивлявшийся заражению или излечившийся от ползучей ржавчины, получает временный иммунитет к новым заражениям на 24 часа."),
+    ("An infection introduced through open wounds, tetanus can produce stiffness, muscle spasms strong enough to break bones, and ultimately death.",
+     "Столбняк — инфекция, попадающая в организм через открытые раны и вызывающая скованность, мышечные спазмы, способные ломать кости, и в конечном счёте смерть."),
+    ("Rustcreep", "Ползучая ржавчина"),
+    ("Saving Throw", "Спасбросок"),
+    ("Onset", "Начало действия"),
+    ("Stage 1", "Стадия 1"),
+    ("Stage 2", "Стадия 2"),
+    ("Stage 3", "Стадия 3"),
+    ("Stage 4", "Стадия 4"),
+    ("Stage 5", "Стадия 5"),
+    ("Stage 6", "Стадия 6"),
+    ("Stage 7", "Стадия 7"),
+    ("–1 status penalty to Athletics checks (1 day)", "штраф состояния –1 к проверкам Атлетики (1 день)"),
+    ("as stage 1 (1 day)", "как стадия 1 (1 день)"),
+    ("enfeebled 1 and ", "ослаблен 1 и "),
+    (", plus any armor, clothing and items you carry and that are of a level equal to or less than the disease become broken as the decay spreads to them (1 day; broken items remain broken)",
+     ", а все переносимые доспехи, одежда и предметы с уровнем не выше уровня болезни получают состояние сломан из-за распространяющегося разрушения (1 день; предметы остаются сломанными)"),
+    ("unconscious (1 day)", "без сознания (1 день)"),
+    ("death", "смерть"),
+    ("10 days", "10 дней"),
+    (" and can't speak (1 day)", " и не может говорить (1 день)"),
+    (" with spasms (1 day)", " со спазмами (1 день)"),
+    (" (1 week)", " (1 неделя)"),
+    ("(1 day)", "(1 день)"),
+)
+
+
+def translated_disease_description(item: dict[str, Any], pf2e_ru_names: dict[str, str]) -> str | None:
+    if item.get("name") not in {"Rust Creep", "Tetanus"}:
+        return None
+    source_value = nested_value(item, ("system", "description", "value"))
+    if not isinstance(source_value, str) or not source_value:
+        return None
+    value = source_value
+    for old, new in DISEASE_TEXT_REPLACEMENTS:
+        value = value.replace(old, new)
+    value = localize_pf2e_markup_labels(value, pf2e_ru_names)
+    if html_tags(value) != html_tags(source_value) or technical_cores(value) != technical_cores(source_value):
+        raise ValueError(f"{item.get('name')}: перевод болезни изменил HTML или технические токены")
+    return value
+
+
+def rebase_technical_markup(translated: str, current_source: str) -> str | None:
+    """Переносит русские подписи на актуальные команды PF2e 8.4 по их порядку."""
+    if html_tags(translated) != html_tags(current_source):
+        return None
+    source_tokens = TECH_RE.findall(current_source)
+    translated_tokens = TECH_RE.findall(translated)
+    source_rolls = INLINE_ROLL_RE.findall(current_source)
+    translated_rolls = INLINE_ROLL_RE.findall(translated)
+    if len(source_tokens) != len(translated_tokens) or len(source_rolls) != len(translated_rolls):
+        return None
+
+    token_index = 0
+    def replace_token(match: re.Match[str]) -> str:
+        nonlocal token_index
+        source_token = source_tokens[token_index]
+        token_index += 1
+        source_core = TECH_CORE_RE.fullmatch(source_token).group(1)
+        translated_label = re.search(r"\{([^{}]*)\}$", match.group(0))
+        return source_core + (f"{{{translated_label.group(1)}}}" if translated_label else "")
+
+    roll_index = 0
+    def replace_roll(match: re.Match[str]) -> str:
+        nonlocal roll_index
+        source_roll = source_rolls[roll_index]
+        roll_index += 1
+        source_core = re.sub(r"\{[^{}]*\}$", "", source_roll)
+        translated_label = re.search(r"\{([^{}]*)\}$", match.group(0))
+        return source_core + (f"{{{translated_label.group(1)}}}" if translated_label else "")
+
+    return INLINE_ROLL_RE.sub(replace_roll, TECH_RE.sub(replace_token, translated))
+
+
+def build_bestiary_translation(
+    source: dict[str, Any],
+    adventure_translation: dict[str, Any],
+    bestiary_actors: list[dict[str, Any]],
+    pf2e_ru_names: dict[str, str],
+) -> tuple[dict[str, Any], dict[str, Any]]:
+    """Создаёт перевод исходного пака, которым импортёр Rusthenge заменяет актёров."""
+    source_actors = source.get("actors", [])
+    translated_actors = adventure_translation["entries"][source["_id"]]["actors"]
+    source_by_pack_id: dict[str, dict[str, Any]] = {}
+    for actor in source_actors:
+        actor_source = item_source(actor) or ""
+        if actor_source.startswith("Compendium.pf2e.rusthenge-bestiary.Actor."):
+            source_by_pack_id.setdefault(actor_source.rsplit(".", 1)[-1], actor)
+
+    # Резервный поиск по английскому имени нужен только для элементов, чей ID
+    # изменился при миграции PF2e. Актёры всегда сопоставляются по UUID/ID.
+    item_candidates_by_name: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = {}
+    for actor in source_actors:
+        tr_items = {item.get("id"): item for item in translated_actors.get(actor["_id"], {}).get("items", [])}
+        for item in actor.get("items", []):
+            translated = tr_items.get(item["_id"])
+            if translated:
+                item_candidates_by_name.setdefault(item.get("name", ""), []).append((item, translated))
+
+    entries: dict[str, Any] = {}
+    metadata: dict[str, Any] = {"actors": {}, "technical": {}, "inlineRolls": {}, "html": {}}
+    for actor in bestiary_actors:
+        actor_id = actor["_id"]
+        representative = source_by_pack_id.get(actor_id)
+        if representative is None:
+            raise ValueError(f"В Adventure нет актёра из pf2e.rusthenge-bestiary: {actor_id}")
+        representative_translation = translated_actors[representative["_id"]]
+        entry: dict[str, Any] = {
+            "name": representative_translation.get("name", translated_name(actor.get("name", "")))
+        }
+        for field, path in BESTIARY_ACTOR_FIELD_PATHS.items():
+            source_value = nested_value(actor, path)
+            translated_value = representative_translation.get(field)
+            if isinstance(source_value, str) and source_value and isinstance(translated_value, str) and translated_value:
+                current_override = BESTIARY_ACTOR_FIELD_OVERRIDES.get((actor_id, field))
+                if current_override is not None:
+                    if html_tags(current_override) != html_tags(source_value):
+                        raise ValueError(f"{actor_id}/{field}: ручной перевод изменил HTML-структуру")
+                    rebased = current_override
+                else:
+                    rebased = rebase_technical_markup(translated_value, source_value)
+                if rebased is None:
+                    continue
+                entry[field] = rebased
+                key = f"{actor_id}/{field}"
+                metadata["technical"][key] = TECH_RE.findall(source_value)
+                metadata["inlineRolls"][key] = INLINE_ROLL_RE.findall(source_value)
+                metadata["html"][key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
+
+        representative_items = {item["_id"]: item for item in representative.get("items", [])}
+        representative_item_translations = {
+            item.get("id"): item for item in representative_translation.get("items", [])
+        }
+        item_entries: list[dict[str, Any]] = []
+        for item in actor.get("items", []):
+            source_candidate = representative_items.get(item["_id"])
+            translated_candidate = representative_item_translations.get(item["_id"])
+            if translated_candidate is None:
+                for candidate_source, candidate_translation in item_candidates_by_name.get(item.get("name", ""), []):
+                    source_candidate, translated_candidate = candidate_source, candidate_translation
+                    break
+            item_entry: dict[str, Any] = {"id": item["_id"]}
+            canonical_name = (
+                (translated_candidate or {}).get("name")
+                or LINKED_ITEM_NAMES.get(item.get("name", ""))
+                or pf2e_ru_names.get(item.get("name", ""))
+                or translated_name(item.get("name", ""))
+            )
+            if canonical_name == item.get("name") and re.search(r"[A-Za-z]", canonical_name):
+                raise ValueError(f"Нет перевода имени элемента бестиария: {canonical_name!r}")
+            item_entry["name"] = canonical_name
+
+            current_description = nested_value(item, ("system", "description", "value"))
+            special_description = translated_disease_description(item, pf2e_ru_names)
+            current_override = BESTIARY_DESCRIPTION_OVERRIDES.get(item["_id"])
+            if current_override:
+                if html_tags(current_override) != html_tags(current_description):
+                    raise ValueError(f"{actor_id}/{item['_id']}: ручной перевод изменил HTML-структуру")
+                if technical_cores(current_override) != technical_cores(current_description):
+                    raise ValueError(f"{actor_id}/{item['_id']}: ручной перевод изменил технические токены")
+                if inline_roll_cores(current_override) != inline_roll_cores(current_description):
+                    raise ValueError(f"{actor_id}/{item['_id']}: ручной перевод изменил встроенные броски")
+                item_entry["description"] = current_override
+            elif special_description:
+                item_entry["description"] = special_description
+            elif translated_candidate and source_candidate:
+                candidate_source_description = nested_value(source_candidate, ("system", "description", "value"))
+                candidate_translation = translated_candidate.get("description")
+                if (
+                    isinstance(current_description, str) and current_description
+                    and isinstance(candidate_translation, str) and candidate_translation
+                ):
+                    rebased = rebase_technical_markup(candidate_translation, current_description)
+                    if rebased is not None:
+                        item_entry["description"] = rebased
+
+            for field, source_key in (("description", "value"), ("gm", "gm")):
+                source_value = nested_value(item, ("system", "description", source_key))
+                translated_value = item_entry.get(field)
+                if not isinstance(source_value, str) or not source_value or not isinstance(translated_value, str):
+                    continue
+                if html_tags(source_value) != html_tags(translated_value):
+                    raise ValueError(f"{actor_id}/{item['_id']}/{field}: изменена HTML-структура")
+                key = f"{actor_id}/items/{item['_id']}/{field}"
+                metadata["technical"][key] = TECH_RE.findall(source_value)
+                metadata["inlineRolls"][key] = INLINE_ROLL_RE.findall(source_value)
+                metadata["html"][key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
+            item_entries.append(item_entry)
+        entry["items"] = item_entries
+        entries[actor_id] = entry
+        metadata["actors"][actor_id] = {
+            "sourceName": actor.get("name", ""),
+            "itemIds": [item["_id"] for item in actor.get("items", [])],
+        }
+
+    metadata["actorCount"] = len(entries)
+    metadata["itemCount"] = sum(len(entry["items"]) for entry in entries.values())
+    return {
+        "label": "Растхендж — бестиарий",
+        "mapping": BESTIARY_MAPPING,
+        "entries": entries,
+    }, metadata
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, type=Path)
@@ -1810,7 +2138,15 @@ def main() -> None:
     parser.add_argument("--pf2e-ru", type=Path, help="Каталог data/community/pf2e/packs модуля pf2e-ru")
     parser.add_argument("--output", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
     parser.add_argument("--index", type=Path, default=Path("data/source-index.json"))
+    parser.add_argument("--bestiary", type=Path, help="JSON-массив актёров пака pf2e.rusthenge-bestiary")
+    parser.add_argument(
+        "--bestiary-output",
+        type=Path,
+        default=Path("translations/pf2e.rusthenge-bestiary.json"),
+    )
     parser.add_argument("--repair-existing", action="store_true", help="Восстановить только известные пустые action-карточки")
+    parser.add_argument("--cleanup-layout", action="store_true", help="Удалить печатные артефакты из журналов")
+    parser.add_argument("--build-bestiary", action="store_true", help="Собрать перевод исходного бестиария PF2e")
     parser.add_argument(
         "--complete-existing",
         action="store_true",
@@ -1818,6 +2154,35 @@ def main() -> None:
     )
     args = parser.parse_args()
     source = load_adventure(args.source)
+    if args.cleanup_layout:
+        translation = json.loads(args.output.read_text(encoding="utf-8"))
+        changed = cleanup_digital_layout(translation)
+        args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"Очищено страниц: {changed}")
+        return
+    if args.build_bestiary:
+        if args.pf2e_ru is None or args.bestiary is None:
+            parser.error("для --build-bestiary нужны --pf2e-ru и --bestiary")
+        translation = json.loads(args.output.read_text(encoding="utf-8"))
+        index = json.loads(args.index.read_text(encoding="utf-8"))
+        bestiary_source = json.loads(args.bestiary.read_text(encoding="utf-8"))
+        if not isinstance(bestiary_source, list):
+            raise ValueError("--bestiary должен содержать JSON-массив актёров")
+        bestiary_translation, metadata = build_bestiary_translation(
+            source, translation, bestiary_source, load_pf2e_ru_names(args.pf2e_ru)
+        )
+        index["bestiary"] = metadata
+        index.setdefault("expected", {}).update({
+            "bestiaryActors": metadata["actorCount"],
+            "bestiaryEmbeddedItems": metadata["itemCount"],
+        })
+        args.bestiary_output.parent.mkdir(parents=True, exist_ok=True)
+        args.bestiary_output.write_text(
+            json.dumps(bestiary_translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
+        args.index.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"Собран бестиарий: {metadata['actorCount']} актёров, {metadata['itemCount']} элементов")
+        return
     if args.repair_existing:
         translation = json.loads(args.output.read_text(encoding="utf-8"))
         repaired = repair_existing_action_cards(source, translation)
@@ -1830,6 +2195,7 @@ def main() -> None:
         translation = json.loads(args.output.read_text(encoding="utf-8"))
         index = json.loads(args.index.read_text(encoding="utf-8"))
         counts = complete_existing_translation(source, translation, index, load_pf2e_ru_names(args.pf2e_ru))
+        cleanup_digital_layout(translation)
         args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         args.index.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(counts, ensure_ascii=False, indent=2))
@@ -1845,6 +2211,7 @@ def main() -> None:
         load_pf2e_ru_actor_lore(args.pf2e_ru),
         load_pf2e_ru_names(args.pf2e_ru),
     )
+    cleanup_digital_layout(translation)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.index.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

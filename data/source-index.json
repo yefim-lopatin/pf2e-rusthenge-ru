@@ -42,7 +42,9 @@
     "itemUnidentifiedDescriptions": 6,
     "itemRuleLabels": 5,
     "linkedItemOverrides": 393,
-    "linkedItemNames": 393
+    "linkedItemNames": 393,
+    "bestiaryActors": 25,
+    "bestiaryEmbeddedItems": 218
   },
   "servicePageIds": [
     "00changelog00000",
@@ -4216,5 +4218,837 @@
     "zj4VyFf9wYB6xO6S/amSvuFJZrW9kA3mr",
     "zj4VyFf9wYB6xO6S/d0rdYMltT1ZmbABn",
     "zj4VyFf9wYB6xO6S/ki3C4xNREH5G9Knv"
-  ]
+  ],
+  "bestiary": {
+    "actors": {
+      "1oVJFDY5BJQxO3k9": {
+        "sourceName": "Trygve",
+        "itemIds": [
+          "uk3B0HGUIRdsA4rr",
+          "nDZuRY0U1WHb53Rw",
+          "0tDhCne8RVvfJHxv",
+          "LnabQ1JhwFYxawU1",
+          "bR88FUEonSl2mfyu",
+          "2tLWKbKmJp9SzebT",
+          "2oy1yZEmeL1w16ON"
+        ]
+      },
+      "33irjDlbW0pXhxiS": {
+        "sourceName": "Rushing Waters",
+        "itemIds": [
+          "8tVnSA2uTOLAmycM"
+        ]
+      },
+      "5WblkuUbhqpFk7iu": {
+        "sourceName": "Knurr Ragnulf",
+        "itemIds": [
+          "lSblp5y9NRpZCYVA",
+          "8Vsw2ffOvalaAN5C",
+          "o01ndzz2CTEgptbf",
+          "rmbTeX3cdnck9oQ2"
+        ]
+      },
+      "ARjMJb6LCtwdNDM6": {
+        "sourceName": "Rustsworn Initiate",
+        "itemIds": [
+          "jPxHpK1ssx3amTzz",
+          "wvvCIz1agcEpCMBk",
+          "PM94uqOyI3X2qPcU",
+          "eAKQMYgUrUJKTmeN",
+          "CNpPqhgSIEamhwFL"
+        ]
+      },
+      "AyrDqMSjq43T3P5j": {
+        "sourceName": "Rusted Cage Trap",
+        "itemIds": [
+          "PFa0h9BekFPB4Eoh"
+        ]
+      },
+      "BXS36BprDgzSnXuZ": {
+        "sourceName": "Severed Head",
+        "itemIds": [
+          "jBnvJizQVNlbpByJ",
+          "MODzmDCzn3MDbT9X",
+          "KjLaF8NJBaPjsRAz",
+          "oxpwAUYEbjv8nf4R"
+        ]
+      },
+      "DetuCfGXs1UGdVdz": {
+        "sourceName": "Clockwork Serpent Spy",
+        "itemIds": [
+          "xt4bQy0cnsmUHdm8",
+          "lL49wJa4ig4V0ag1",
+          "zdb8RR0jcIIol6on",
+          "UK9gsjbHYgmKZze9",
+          "hAK9kJGhzP6DASJX"
+        ]
+      },
+      "FPIjWBVNisjWRXHp": {
+        "sourceName": "Meitremar",
+        "itemIds": [
+          "4t5XvSdzxMt0dvuc",
+          "wy6MelxfzLoSJxmq",
+          "n2f7wZbZhpqknWmY",
+          "5yYDfck2p9vUm0hu",
+          "fdhlxFZmmHP23al6",
+          "i9d40hamx6P5fWk0",
+          "wcyy84HXw7PE64CL",
+          "8wnJrEwH9sR5P1I9",
+          "gNgba8bdg7cerfCH",
+          "CQdsZLgbTKP4D5o7",
+          "5By9fzBa43XTaBgW",
+          "SDKNwHJlPqE2qnpC",
+          "L9RfH5LVaYXS19X4",
+          "IEeOHRrAEtd5V8fZ",
+          "Qo5wLXC9NAappBjw",
+          "lTaW578DodCRnsPq",
+          "rtE91M4zGTo9M5Bx",
+          "b87Jn1U96sLvQI6O",
+          "Bh8DBoQdUYah3mpk",
+          "jkNiHwasyHBISJRx",
+          "OIfP1D2R4MCZnxzY",
+          "BcTshfIDNU2joXjC",
+          "1UkMRLPkSdLUW5xK",
+          "oHYtarmUC2qQjUtU",
+          "me4FpDefTGC3cqRe",
+          "cK4qTaCXRhCx8ZJo",
+          "bgQMWH9nQHUERk88",
+          "97l0hEJqbFlmWhUZ",
+          "QXmns8bw5DBlNJ9D"
+        ]
+      },
+      "FUxaVKVEV8eOuTVB": {
+        "sourceName": "Primordial Envy",
+        "itemIds": [
+          "Kq8uzXECxifZXQ6b",
+          "HhUe0MpfzNrigkps",
+          "yM6vQmTRvxoXYPqj",
+          "fJ34aqwTiZbTv92E",
+          "FDCXS4bVC2F1PdGz",
+          "ii80pyHfCh7uKPOS"
+        ]
+      },
+      "GIwPBuGtPofF1rXO": {
+        "sourceName": "Ancient Apparatus",
+        "itemIds": [
+          "SHmm4Z4oVUEYADth",
+          "su62px9iEqMlJsNN",
+          "y7VNs5A41UH94zX1"
+        ]
+      },
+      "GtI25Mqe9uQxandy": {
+        "sourceName": "Glutu",
+        "itemIds": [
+          "6nw2PBjIOywRn2EZ",
+          "MxwilCvsVsLCDOsR",
+          "H3P0GC4k3uLswANE",
+          "2y8vTsPwvXGAvUqG",
+          "XevHxHglgmZX6kOX",
+          "HfPxBLvMG5D3qjVu",
+          "JRdQZehuSNWAaj30",
+          "nonpV66dAVOH6lyt",
+          "DNjIXDzkQqAWADx9",
+          "kZQ7MjgvDXHakX5i",
+          "l5ltfxmvzsvPn0LH",
+          "TuF25xqBmV2KidL5",
+          "XNxveXiVJ369yWuM",
+          "dFXqD8akFFIQVREc",
+          "80CuEcGtDQ6fUIyY",
+          "xBIoPO0Yl00JwtXW",
+          "z8bl09rqF4yCJDy4",
+          "A33mGw1DCgRJRDSe"
+        ]
+      },
+      "H3Ma71C2ZEku2RdG": {
+        "sourceName": "Vanda",
+        "itemIds": [
+          "vbtESi9EfX0x7rLa",
+          "okM3wxestkqcaKtC",
+          "jq8Y2TGAEMxRQftr",
+          "6qzOiSDcFG0PaPEU"
+        ]
+      },
+      "LGcNyvqAKnhwEzuf": {
+        "sourceName": "Rusty Spike Launcher",
+        "itemIds": [
+          "TOxNV0Ksvd8lEg7j",
+          "xcV4iG9yR2uKSGdL"
+        ]
+      },
+      "LeN4l03TAmPiAjdK": {
+        "sourceName": "Fallen Acolyte",
+        "itemIds": [
+          "VzPhKoiUMmVMKvtC",
+          "O1svUiD61M95RQoA",
+          "Cek9eHPYmF3GkfmO",
+          "FT0uhNMVsTTe7eGF"
+        ]
+      },
+      "OtEXlDLoTT7nW2H9": {
+        "sourceName": "Rusted Door",
+        "itemIds": [
+          "0rwXFzCG58mrENRi",
+          "qm5fECYwi6fAl37z"
+        ]
+      },
+      "RnqXo9fN1ST0kOZ5": {
+        "sourceName": "Theiltemar",
+        "itemIds": [
+          "oOfSZDYCpCwStkdB",
+          "E0W5NhfPBsYUmOst",
+          "JUnS0QLmJHgbA9uP",
+          "FAfeQOqgQJ45ALOO",
+          "qzW2rMR48AcKBBDH",
+          "viTHguLeGJopybP2",
+          "7IBrvnPjL9cjez8u",
+          "4nDDjJ54MUgS7FGI",
+          "lLI1n1hXBj8GUf2f",
+          "oU4rt6G8GVUV1GFR",
+          "FDNzBKsVm6CBCK1j",
+          "luRE6HqhMrStuCvV",
+          "PZSjHJazt439cIkD",
+          "kTV4qqeTgJJxD9eQ",
+          "xukqweotozm6rcvt",
+          "a5L9zwEbTQnPprg5",
+          "hJqwMBdBQecpuWU8",
+          "GFEimWK8niicOioN"
+        ]
+      },
+      "Tvz5JKAE8rrCF5qW": {
+        "sourceName": "Spiky Pit Trap",
+        "itemIds": [
+          "O1Kgn1bbKLAm2ZL1",
+          "yf2VZtO2S4eV7fKZ"
+        ]
+      },
+      "UMDbYqoMhnLZQ2gf": {
+        "sourceName": "Rust Zombie",
+        "itemIds": [
+          "xe58zyk07wl19azb",
+          "tvnn3d6VCprLkoQ2",
+          "MuiyXm8KyQF57NaW",
+          "a2pZeef5wn9y5xAA",
+          "Jcl5rz38QkHYDfHx",
+          "PmrOcp7IYi6XPIer",
+          "MRMj6jc7E8e5c7UF"
+        ]
+      },
+      "h6yNkGx8q5ITD3a3": {
+        "sourceName": "Rusty Floor Spikes",
+        "itemIds": [
+          "MCZLim5uCGG5bLkg",
+          "a5X5gNKg3MIEGsZ9",
+          "tfriWcHgXqM6QLkB"
+        ]
+      },
+      "heYhZGnVa9XSFuUN": {
+        "sourceName": "Vlorian Cythnigot",
+        "itemIds": [
+          "FWHFEirBNdz22BqV",
+          "RTeh4LQFOtu2dfFY",
+          "Cvcdr8l0DxG0Fszv",
+          "fGdHkWCD2CrB0Pot",
+          "sKmHwzlv4UfZs7CS",
+          "6H89y4nwsrC7o3X5",
+          "YGcSWGHQ23i4cezW",
+          "Y3O7AOvH1wkpSV2Z",
+          "1qBTVbPZxVREvpnT",
+          "UGFoKIvbXM0ZSdiU",
+          "Kv1pkf5Ma30A8n58"
+        ]
+      },
+      "otBXbd41vVLZW1xv": {
+        "sourceName": "Starving Werebat",
+        "itemIds": [
+          "HWXuHVykPjfsTiYH",
+          "XsoviG4MphXHKUIa",
+          "d1cyC0vptbTtXFE2",
+          "Wo73VHAjF7M37ttK",
+          "6kZm8XnYELAQFppU",
+          "lnftcCa5nWLimB4r",
+          "EhuGQeaf8C8WswTy",
+          "v88O0NAy45VWmtTO",
+          "N6z6E7Ly3t7eFBoU"
+        ]
+      },
+      "romVSuOVkSVFwsN4": {
+        "sourceName": "Clockwork Belimarius",
+        "itemIds": [
+          "60deOo2mPqEopbvy",
+          "0uP0B0abMW2C3oCF",
+          "OjsWQRj3OIwjDeSY",
+          "Ob1Whq4XKznU5eqm",
+          "XJH7nyTSPGl6Jlei",
+          "4XEEsDmNblamB0M7",
+          "39ZLNGk94E2Ntipj",
+          "emLL1emgN1gOgcV7",
+          "8zVcKcO19xk93UXt",
+          "Wz63TgYADlZxkXwy",
+          "LNRtNrzHIseTefIq",
+          "WQOlDXTuTi9ft8ls",
+          "edVyMro5viX5rgD9",
+          "fH4zN6EufktPqbW4",
+          "pyDc4hD647pfgYEk",
+          "IvUr6AnOtG8K2BSD"
+        ]
+      },
+      "vQeUoEfY80yBs0Bb": {
+        "sourceName": "Zaiox",
+        "itemIds": [
+          "YuejnaqH1UUSFEtm",
+          "bKldotvWkspZfjHv",
+          "sMARhZT9LlEbyj9A",
+          "TAYmc59V4sXfSfw5",
+          "HkdEGyFCz3KJQDFe",
+          "TuM7xwEDIHACG7NZ",
+          "C2rsbTOD3F9y6irF",
+          "0XoylDkAv1amxtQB",
+          "OmcfUYyCkGRjSKmB",
+          "cIbdrH5jcFj8t5ik",
+          "p8EZCiPuYDGVa8gR",
+          "Va0XfogT4F60cFwg",
+          "VQBSvBNauoUtz1yW",
+          "qfUlje8uIZvyiwdl",
+          "Gw1aL6nvi3vctrVz",
+          "rlUeL3r4Q1tTG2zt",
+          "p7M7UC9dplhPVlfb",
+          "zXqiG5p6MwIqhfOo",
+          "T5RTOEKfn1xH57j3",
+          "7IjR4hMNtoS1jTfK",
+          "ghVPWzR0nSUyYXOz",
+          "6N6oDDqKb0CaILEx",
+          "saoVl2MlopNbuTo8",
+          "qtsF75k2Zterahrt",
+          "36QKwrAooz1cygR4"
+        ]
+      },
+      "ye8Niis34NfY30TS": {
+        "sourceName": "Ordwi",
+        "itemIds": [
+          "byGy8WeeprOm4nwb",
+          "kiCT3SIcgPIBLg7h",
+          "favrQlUoHErC3KCl",
+          "v3LmIBb4HQpiKDtg",
+          "j1LalS1XgANCE491",
+          "5rZgScmhTb2oHDi5",
+          "yCN5vbIFoFQOtwDD",
+          "fz35P7gsZdhhCdXJ",
+          "AIJf0XcwzexNFxqt",
+          "PlbmKaRX84OVd7BY",
+          "QNrJiFnDAcAf1EEx",
+          "JR9rDE3OjVCSZCgv",
+          "C7rt9frNIOpSJ6FG",
+          "0rb0FqsjNt2Nyk86",
+          "kmzXulF3eDFPKBbJ",
+          "pX5ZVU58hBa0MsKY",
+          "G9G16E2ytvArWDU1",
+          "htliQ05jVKwfE22v",
+          "UDhWMhJzdEJtykvO"
+        ]
+      },
+      "yscVNbJvyotk9NLG": {
+        "sourceName": "Dretch",
+        "itemIds": [
+          "gOiaDjo5WK8ESJHN",
+          "kXNpZJNwP0OyD0ds",
+          "JMVuOemee69jwYP3",
+          "ugATBRw6Dd80sfYi",
+          "uDh9HYtI9AukuNOk",
+          "oQ1wQPUo6g2iysB1",
+          "wncZzBRw5mBr1I3b",
+          "krTijhbyuSJ6RpE4",
+          "EbsFN4gbz3zpDwft",
+          "p6uToNU7wgFDgDDH",
+          "Lb8baU3vfeAtn1Nw",
+          "h8caQJMnKj4F22zZ",
+          "xdQJFj57QglkQXeG"
+        ]
+      }
+    },
+    "technical": {
+      "1oVJFDY5BJQxO3k9/blurb": [],
+      "1oVJFDY5BJQxO3k9/items/2tLWKbKmJp9SzebT/description": [],
+      "33irjDlbW0pXhxiS/descriptionHazard": [],
+      "33irjDlbW0pXhxiS/reset": [],
+      "33irjDlbW0pXhxiS/stealth": [],
+      "33irjDlbW0pXhxiS/items/8tVnSA2uTOLAmycM/description": [
+        "@Check[fortitude|dc:20|options:area-effect,damaging-effect,forced-movement,inflicts:prone]",
+        "@Damage[1d10[bludgeoning]|options:area-damage]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}",
+        "@Damage[(1d10+6)[bludgeoning]|options:area-damage]",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}"
+      ],
+      "5WblkuUbhqpFk7iu/items/rmbTeX3cdnck9oQ2/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 2}"
+      ],
+      "ARjMJb6LCtwdNDM6/blurb": [],
+      "ARjMJb6LCtwdNDM6/items/CNpPqhgSIEamhwFL/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}"
+      ],
+      "AyrDqMSjq43T3P5j/descriptionHazard": [],
+      "AyrDqMSjq43T3P5j/disable": [
+        "@Check[thievery|dc:13]",
+        "@Check[thievery|dc:20]",
+        "@Check[athletics|dc:20]",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.SkZAQRkLLkmBQNB9]{Escape}",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.SjmKHgI7a5Z9JzBx]{Force Open}"
+      ],
+      "AyrDqMSjq43T3P5j/reset": [],
+      "AyrDqMSjq43T3P5j/items/PFa0h9BekFPB4Eoh/description": [
+        "@Check[reflex|dc:17|traits:damaging-effect]",
+        "@Damage[(1d6+3)[bludgeoning]]",
+        "@Damage[(2d6+5)[bludgeoning]]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{Prone}",
+        "@Damage[(2d6+5)[bludgeoning]]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
+      ],
+      "BXS36BprDgzSnXuZ/blurb": [],
+      "BXS36BprDgzSnXuZ/hp": [],
+      "BXS36BprDgzSnXuZ/skillAcrobatics": [],
+      "BXS36BprDgzSnXuZ/items/KjLaF8NJBaPjsRAz/description": [],
+      "BXS36BprDgzSnXuZ/items/oxpwAUYEbjv8nf4R/description": [
+        "@Check[fortitude|dc:15]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "DetuCfGXs1UGdVdz/blurb": [],
+      "DetuCfGXs1UGdVdz/items/lL49wJa4ig4V0ag1/description": [
+        "@Template[emanation|distance:25]{25 feet}",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
+      ],
+      "DetuCfGXs1UGdVdz/items/zdb8RR0jcIIol6on/description": [
+        "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
+      ],
+      "DetuCfGXs1UGdVdz/items/UK9gsjbHYgmKZze9/description": [
+        "@Damage[1d12[piercing]|options:area-damage]",
+        "@Template[emanation|distance:5]{5-foot radius}",
+        "@Check[reflex|dc:17|basic|options:area-effect]",
+        "@Check[thievery|dc:17|traits:action:disable-a-device]",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
+      ],
+      "DetuCfGXs1UGdVdz/items/hAK9kJGhzP6DASJX/description": [
+        "@Damage[1d4[persistent,bleed]]",
+        "@Check[fortitude|dc:17]"
+      ],
+      "FPIjWBVNisjWRXHp/blurb": [],
+      "FPIjWBVNisjWRXHp/items/97l0hEJqbFlmWhUZ/description": [],
+      "FPIjWBVNisjWRXHp/items/QXmns8bw5DBlNJ9D/description": [
+        "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
+      ],
+      "FUxaVKVEV8eOuTVB/senses": [],
+      "FUxaVKVEV8eOuTVB/allSaves": [],
+      "FUxaVKVEV8eOuTVB/items/HhUe0MpfzNrigkps/description": [],
+      "FUxaVKVEV8eOuTVB/items/fJ34aqwTiZbTv92E/description": [],
+      "FUxaVKVEV8eOuTVB/items/FDCXS4bVC2F1PdGz/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}",
+        "@Check[will|dc:20|options:damaging-effect,inflicts:stupefied]",
+        "@Damage[1d6[mental]]",
+        "@Damage[2d6[mental]]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened}"
+      ],
+      "GIwPBuGtPofF1rXO/descriptionHazard": [],
+      "GIwPBuGtPofF1rXO/disable": [
+        "@Check[thievery|dc:18]",
+        "@Check[religion|dc:21]"
+      ],
+      "GIwPBuGtPofF1rXO/reset": [],
+      "GIwPBuGtPofF1rXO/routine": [],
+      "GIwPBuGtPofF1rXO/stealth": [],
+      "GIwPBuGtPofF1rXO/items/SHmm4Z4oVUEYADth/description": [
+        "@Check[fortitude|dc:15]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "GIwPBuGtPofF1rXO/items/y7VNs5A41UH94zX1/description": [
+        "@Check[fortitude|dc:18]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}"
+      ],
+      "GtI25Mqe9uQxandy/blurb": [],
+      "GtI25Mqe9uQxandy/speed": [],
+      "GtI25Mqe9uQxandy/items/80CuEcGtDQ6fUIyY/description": [
+        "@Check[performance]"
+      ],
+      "GtI25Mqe9uQxandy/items/xBIoPO0Yl00JwtXW/description": [],
+      "GtI25Mqe9uQxandy/items/z8bl09rqF4yCJDy4/description": [
+        "@Template[emanation|distance:30]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}",
+        "@Check[will|dc:19]"
+      ],
+      "GtI25Mqe9uQxandy/items/A33mGw1DCgRJRDSe/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.eIcWbB5o3pP6OIMe]{Immobilized}"
+      ],
+      "LGcNyvqAKnhwEzuf/descriptionHazard": [],
+      "LGcNyvqAKnhwEzuf/reset": [],
+      "LGcNyvqAKnhwEzuf/stealth": [],
+      "LGcNyvqAKnhwEzuf/items/TOxNV0Ksvd8lEg7j/description": [
+        "@Check[fortitude|dc:14]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}"
+      ],
+      "LGcNyvqAKnhwEzuf/items/xcV4iG9yR2uKSGdL/description": [
+        "@Check[reflex|dc:20|traits:damaging-effect]",
+        "@Damage[2d10[piercing]]",
+        "@Damage[(2d10+13)[piercing]]"
+      ],
+      "LeN4l03TAmPiAjdK/blurb": [],
+      "OtEXlDLoTT7nW2H9/descriptionHazard": [],
+      "OtEXlDLoTT7nW2H9/disable": [
+        "@Check[thievery|dc:18]",
+        "@Check[religion|dc:21]"
+      ],
+      "OtEXlDLoTT7nW2H9/reset": [],
+      "OtEXlDLoTT7nW2H9/stealth": [],
+      "OtEXlDLoTT7nW2H9/items/0rwXFzCG58mrENRi/description": [],
+      "OtEXlDLoTT7nW2H9/items/qm5fECYwi6fAl37z/description": [
+        "@Check[fortitude|dc:15]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "RnqXo9fN1ST0kOZ5/description": [],
+      "RnqXo9fN1ST0kOZ5/blurb": [],
+      "RnqXo9fN1ST0kOZ5/hp": [],
+      "RnqXo9fN1ST0kOZ5/items/a5L9zwEbTQnPprg5/description": [
+        "@Damage[2d6[piercing]]",
+        "@Check[reflex|dc:21|basic]"
+      ],
+      "RnqXo9fN1ST0kOZ5/items/GFEimWK8niicOioN/description": [
+        "@Check[fortitude|dc:15]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "Tvz5JKAE8rrCF5qW/descriptionHazard": [],
+      "Tvz5JKAE8rrCF5qW/disable": [
+        "@Check[thievery|dc:18]",
+        "@Check[thievery|dc:25]"
+      ],
+      "Tvz5JKAE8rrCF5qW/reset": [],
+      "Tvz5JKAE8rrCF5qW/stealth": [],
+      "Tvz5JKAE8rrCF5qW/items/yf2VZtO2S4eV7fKZ/description": [
+        "@Damage[10[bludgeoning]|options:fall-damage]",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Grab an Edge}",
+        "@Check[reflex|dc:20]",
+        "@Check[reflex|dc:22]"
+      ],
+      "UMDbYqoMhnLZQ2gf/hp": [],
+      "UMDbYqoMhnLZQ2gf/items/MuiyXm8KyQF57NaW/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}"
+      ],
+      "UMDbYqoMhnLZQ2gf/items/a2pZeef5wn9y5xAA/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed 1}"
+      ],
+      "UMDbYqoMhnLZQ2gf/items/PmrOcp7IYi6XPIer/description": [
+        "@Check[fortitude|dc:15]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "h6yNkGx8q5ITD3a3/descriptionHazard": [],
+      "h6yNkGx8q5ITD3a3/disable": [
+        "@Check[thievery|dc:18]"
+      ],
+      "h6yNkGx8q5ITD3a3/reset": [],
+      "h6yNkGx8q5ITD3a3/stealth": [],
+      "h6yNkGx8q5ITD3a3/items/a5X5gNKg3MIEGsZ9/description": [],
+      "h6yNkGx8q5ITD3a3/items/tfriWcHgXqM6QLkB/description": [
+        "@Check[fortitude|dc:14]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{Paralyzed}"
+      ],
+      "heYhZGnVa9XSFuUN/description": [],
+      "heYhZGnVa9XSFuUN/blurb": [],
+      "heYhZGnVa9XSFuUN/language": [],
+      "heYhZGnVa9XSFuUN/items/UGFoKIvbXM0ZSdiU/description": [
+        "@Check[fortitude|dc:20|traits:divine,transmutation]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.MIRkyAjyBeXivMa7]{Enfeebled 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "heYhZGnVa9XSFuUN/items/Kv1pkf5Ma30A8n58/description": [
+        "@Template[emanation|distance:10]",
+        "@Check[will|dc:20]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}",
+        "@UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 2}"
+      ],
+      "otBXbd41vVLZW1xv/blurb": [],
+      "otBXbd41vVLZW1xv/language": [],
+      "otBXbd41vVLZW1xv/items/6kZm8XnYELAQFppU/description": [],
+      "otBXbd41vVLZW1xv/items/lnftcCa5nWLimB4r/description": [],
+      "romVSuOVkSVFwsN4/blurb": [],
+      "romVSuOVkSVFwsN4/items/edVyMro5viX5rgD9/description": [
+        "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}"
+      ],
+      "romVSuOVkSVFwsN4/items/fH4zN6EufktPqbW4/description": [
+        "@Check[thievery|dc:25|traits:action:disable-a-device]",
+        "@UUID[Compendium.pf2e.actionspf2e.Item.cYdz2grcOcRt4jk6]{Disable a Device}",
+        "@UUID[Compendium.pf2e.equipment-srd.Item.vJZ49cgi8szuQXAD]{Magic Wand}",
+        "@UUID[Compendium.pf2e.spells-srd.Item.4koZzrnMXhhosn0D]{Fear}"
+      ],
+      "romVSuOVkSVFwsN4/items/pyDc4hD647pfgYEk/description": [],
+      "romVSuOVkSVFwsN4/items/IvUr6AnOtG8K2BSD/description": [],
+      "vQeUoEfY80yBs0Bb/blurb": [],
+      "vQeUoEfY80yBs0Bb/items/qtsF75k2Zterahrt/description": [
+        "@Damage[10[untyped]]"
+      ],
+      "vQeUoEfY80yBs0Bb/items/36QKwrAooz1cygR4/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled}",
+        "@Check[will|dc:21]",
+        "@UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1}"
+      ],
+      "ye8Niis34NfY30TS/blurb": [],
+      "ye8Niis34NfY30TS/items/htliQ05jVKwfE22v/description": [
+        "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
+      ],
+      "ye8Niis34NfY30TS/items/UDhWMhJzdEJtykvO/description": [
+        "@UUID[Compendium.pf2e.spells-srd.Item.rfZpqmj0AIIdkVIs]{Heal}"
+      ],
+      "yscVNbJvyotk9NLG/language": [],
+      "yscVNbJvyotk9NLG/items/p6uToNU7wgFDgDDH/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed}"
+      ],
+      "yscVNbJvyotk9NLG/items/Lb8baU3vfeAtn1Nw/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{Unconscious}"
+      ],
+      "yscVNbJvyotk9NLG/items/h8caQJMnKj4F22zZ/description": [
+        "@UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{Clumsy 2}"
+      ],
+      "yscVNbJvyotk9NLG/items/xdQJFj57QglkQXeG/description": [
+        "@Damage[1d6[bleed]]"
+      ]
+    },
+    "inlineRolls": {
+      "1oVJFDY5BJQxO3k9/blurb": [],
+      "1oVJFDY5BJQxO3k9/items/2tLWKbKmJp9SzebT/description": [],
+      "33irjDlbW0pXhxiS/descriptionHazard": [],
+      "33irjDlbW0pXhxiS/reset": [],
+      "33irjDlbW0pXhxiS/stealth": [],
+      "33irjDlbW0pXhxiS/items/8tVnSA2uTOLAmycM/description": [],
+      "5WblkuUbhqpFk7iu/items/rmbTeX3cdnck9oQ2/description": [],
+      "ARjMJb6LCtwdNDM6/blurb": [],
+      "ARjMJb6LCtwdNDM6/items/CNpPqhgSIEamhwFL/description": [],
+      "AyrDqMSjq43T3P5j/descriptionHazard": [],
+      "AyrDqMSjq43T3P5j/disable": [],
+      "AyrDqMSjq43T3P5j/reset": [],
+      "AyrDqMSjq43T3P5j/items/PFa0h9BekFPB4Eoh/description": [
+        "[[/act escape dc=20]]"
+      ],
+      "BXS36BprDgzSnXuZ/blurb": [],
+      "BXS36BprDgzSnXuZ/hp": [],
+      "BXS36BprDgzSnXuZ/skillAcrobatics": [],
+      "BXS36BprDgzSnXuZ/items/KjLaF8NJBaPjsRAz/description": [],
+      "BXS36BprDgzSnXuZ/items/oxpwAUYEbjv8nf4R/description": [],
+      "DetuCfGXs1UGdVdz/blurb": [],
+      "DetuCfGXs1UGdVdz/items/lL49wJa4ig4V0ag1/description": [
+        "[[/act disable-device dc=14]]{DC 14 Thievery}"
+      ],
+      "DetuCfGXs1UGdVdz/items/zdb8RR0jcIIol6on/description": [
+        "[[/act disable-device dc=17]]{DC 17 Thievery}"
+      ],
+      "DetuCfGXs1UGdVdz/items/UK9gsjbHYgmKZze9/description": [],
+      "DetuCfGXs1UGdVdz/items/hAK9kJGhzP6DASJX/description": [],
+      "FPIjWBVNisjWRXHp/blurb": [],
+      "FPIjWBVNisjWRXHp/items/97l0hEJqbFlmWhUZ/description": [],
+      "FPIjWBVNisjWRXHp/items/QXmns8bw5DBlNJ9D/description": [],
+      "FUxaVKVEV8eOuTVB/senses": [],
+      "FUxaVKVEV8eOuTVB/allSaves": [],
+      "FUxaVKVEV8eOuTVB/items/HhUe0MpfzNrigkps/description": [],
+      "FUxaVKVEV8eOuTVB/items/fJ34aqwTiZbTv92E/description": [
+        "[[/r 1d20+12 #Counteract]]{+12}",
+        "[[/br 2d6 #Temp HP]]"
+      ],
+      "FUxaVKVEV8eOuTVB/items/FDCXS4bVC2F1PdGz/description": [],
+      "GIwPBuGtPofF1rXO/descriptionHazard": [],
+      "GIwPBuGtPofF1rXO/disable": [],
+      "GIwPBuGtPofF1rXO/reset": [],
+      "GIwPBuGtPofF1rXO/routine": [],
+      "GIwPBuGtPofF1rXO/stealth": [],
+      "GIwPBuGtPofF1rXO/items/SHmm4Z4oVUEYADth/description": [],
+      "GIwPBuGtPofF1rXO/items/y7VNs5A41UH94zX1/description": [],
+      "GtI25Mqe9uQxandy/blurb": [],
+      "GtI25Mqe9uQxandy/speed": [],
+      "GtI25Mqe9uQxandy/items/80CuEcGtDQ6fUIyY/description": [],
+      "GtI25Mqe9uQxandy/items/xBIoPO0Yl00JwtXW/description": [],
+      "GtI25Mqe9uQxandy/items/z8bl09rqF4yCJDy4/description": [],
+      "GtI25Mqe9uQxandy/items/A33mGw1DCgRJRDSe/description": [],
+      "LGcNyvqAKnhwEzuf/descriptionHazard": [],
+      "LGcNyvqAKnhwEzuf/reset": [],
+      "LGcNyvqAKnhwEzuf/stealth": [],
+      "LGcNyvqAKnhwEzuf/items/TOxNV0Ksvd8lEg7j/description": [],
+      "LGcNyvqAKnhwEzuf/items/xcV4iG9yR2uKSGdL/description": [],
+      "LeN4l03TAmPiAjdK/blurb": [],
+      "OtEXlDLoTT7nW2H9/descriptionHazard": [],
+      "OtEXlDLoTT7nW2H9/disable": [],
+      "OtEXlDLoTT7nW2H9/reset": [],
+      "OtEXlDLoTT7nW2H9/stealth": [],
+      "OtEXlDLoTT7nW2H9/items/0rwXFzCG58mrENRi/description": [],
+      "OtEXlDLoTT7nW2H9/items/qm5fECYwi6fAl37z/description": [],
+      "RnqXo9fN1ST0kOZ5/description": [],
+      "RnqXo9fN1ST0kOZ5/blurb": [],
+      "RnqXo9fN1ST0kOZ5/hp": [],
+      "RnqXo9fN1ST0kOZ5/items/a5L9zwEbTQnPprg5/description": [],
+      "RnqXo9fN1ST0kOZ5/items/GFEimWK8niicOioN/description": [],
+      "Tvz5JKAE8rrCF5qW/descriptionHazard": [],
+      "Tvz5JKAE8rrCF5qW/disable": [],
+      "Tvz5JKAE8rrCF5qW/reset": [],
+      "Tvz5JKAE8rrCF5qW/stealth": [],
+      "Tvz5JKAE8rrCF5qW/items/yf2VZtO2S4eV7fKZ/description": [],
+      "UMDbYqoMhnLZQ2gf/hp": [],
+      "UMDbYqoMhnLZQ2gf/items/MuiyXm8KyQF57NaW/description": [],
+      "UMDbYqoMhnLZQ2gf/items/a2pZeef5wn9y5xAA/description": [],
+      "UMDbYqoMhnLZQ2gf/items/PmrOcp7IYi6XPIer/description": [],
+      "h6yNkGx8q5ITD3a3/descriptionHazard": [],
+      "h6yNkGx8q5ITD3a3/disable": [],
+      "h6yNkGx8q5ITD3a3/reset": [],
+      "h6yNkGx8q5ITD3a3/stealth": [],
+      "h6yNkGx8q5ITD3a3/items/a5X5gNKg3MIEGsZ9/description": [],
+      "h6yNkGx8q5ITD3a3/items/tfriWcHgXqM6QLkB/description": [],
+      "heYhZGnVa9XSFuUN/description": [],
+      "heYhZGnVa9XSFuUN/blurb": [],
+      "heYhZGnVa9XSFuUN/language": [],
+      "heYhZGnVa9XSFuUN/items/UGFoKIvbXM0ZSdiU/description": [],
+      "heYhZGnVa9XSFuUN/items/Kv1pkf5Ma30A8n58/description": [],
+      "otBXbd41vVLZW1xv/blurb": [],
+      "otBXbd41vVLZW1xv/language": [],
+      "otBXbd41vVLZW1xv/items/6kZm8XnYELAQFppU/description": [],
+      "otBXbd41vVLZW1xv/items/lnftcCa5nWLimB4r/description": [],
+      "romVSuOVkSVFwsN4/blurb": [],
+      "romVSuOVkSVFwsN4/items/edVyMro5viX5rgD9/description": [
+        "[[/act disable-device dc=21]]{DC 21 Thievery}"
+      ],
+      "romVSuOVkSVFwsN4/items/fH4zN6EufktPqbW4/description": [],
+      "romVSuOVkSVFwsN4/items/pyDc4hD647pfgYEk/description": [
+        "[[/r 1d20+18 #Counteract]]{+18}"
+      ],
+      "romVSuOVkSVFwsN4/items/IvUr6AnOtG8K2BSD/description": [],
+      "vQeUoEfY80yBs0Bb/blurb": [],
+      "vQeUoEfY80yBs0Bb/items/qtsF75k2Zterahrt/description": [],
+      "vQeUoEfY80yBs0Bb/items/36QKwrAooz1cygR4/description": [],
+      "ye8Niis34NfY30TS/blurb": [],
+      "ye8Niis34NfY30TS/items/htliQ05jVKwfE22v/description": [],
+      "ye8Niis34NfY30TS/items/UDhWMhJzdEJtykvO/description": [],
+      "yscVNbJvyotk9NLG/language": [],
+      "yscVNbJvyotk9NLG/items/p6uToNU7wgFDgDDH/description": [
+        "[[/gmr 1d4 #Actions Regained]]{1d4}"
+      ],
+      "yscVNbJvyotk9NLG/items/Lb8baU3vfeAtn1Nw/description": [],
+      "yscVNbJvyotk9NLG/items/h8caQJMnKj4F22zZ/description": [],
+      "yscVNbJvyotk9NLG/items/xdQJFj57QglkQXeG/description": []
+    },
+    "html": {
+      "1oVJFDY5BJQxO3k9/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "1oVJFDY5BJQxO3k9/items/2tLWKbKmJp9SzebT/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "33irjDlbW0pXhxiS/descriptionHazard": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "33irjDlbW0pXhxiS/reset": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "33irjDlbW0pXhxiS/stealth": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "33irjDlbW0pXhxiS/items/8tVnSA2uTOLAmycM/description": "a4d3edf2b506287ee0e0835b46c26932373ce9e1d3c463f1f8c205c20e86bffe",
+      "5WblkuUbhqpFk7iu/items/rmbTeX3cdnck9oQ2/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "ARjMJb6LCtwdNDM6/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ARjMJb6LCtwdNDM6/items/CNpPqhgSIEamhwFL/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "AyrDqMSjq43T3P5j/descriptionHazard": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "AyrDqMSjq43T3P5j/disable": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "AyrDqMSjq43T3P5j/reset": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+      "AyrDqMSjq43T3P5j/items/PFa0h9BekFPB4Eoh/description": "7efb9e4c8961642eeacbd050edff06bc53aad5614a75dcfee58e30ebb5a8067a",
+      "BXS36BprDgzSnXuZ/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "BXS36BprDgzSnXuZ/hp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "BXS36BprDgzSnXuZ/skillAcrobatics": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "BXS36BprDgzSnXuZ/items/KjLaF8NJBaPjsRAz/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "BXS36BprDgzSnXuZ/items/oxpwAUYEbjv8nf4R/description": "4a5647763e80b90d6a3f276c1ead628b50eea087d82fd0af6db9d49e08601419",
+      "DetuCfGXs1UGdVdz/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "DetuCfGXs1UGdVdz/items/lL49wJa4ig4V0ag1/description": "64577dc2c6a488adc04dd571ad5bb0b01b73c77e01052f95afa50aa62bc4249a",
+      "DetuCfGXs1UGdVdz/items/zdb8RR0jcIIol6on/description": "001dff8cc83a39f0c14c98c6788adf0dc121831c1b6f2f82e811c84f3aa3af08",
+      "DetuCfGXs1UGdVdz/items/UK9gsjbHYgmKZze9/description": "2c2084603de2eb9ae7b7602547d270dcb72f9a5602afe4789f32b0ea1c5d3b1e",
+      "DetuCfGXs1UGdVdz/items/hAK9kJGhzP6DASJX/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "FPIjWBVNisjWRXHp/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FPIjWBVNisjWRXHp/items/97l0hEJqbFlmWhUZ/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "FPIjWBVNisjWRXHp/items/QXmns8bw5DBlNJ9D/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "FUxaVKVEV8eOuTVB/senses": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FUxaVKVEV8eOuTVB/allSaves": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "FUxaVKVEV8eOuTVB/items/HhUe0MpfzNrigkps/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "FUxaVKVEV8eOuTVB/items/fJ34aqwTiZbTv92E/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "FUxaVKVEV8eOuTVB/items/FDCXS4bVC2F1PdGz/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+      "GIwPBuGtPofF1rXO/descriptionHazard": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "GIwPBuGtPofF1rXO/disable": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "GIwPBuGtPofF1rXO/reset": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "GIwPBuGtPofF1rXO/routine": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+      "GIwPBuGtPofF1rXO/stealth": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "GIwPBuGtPofF1rXO/items/SHmm4Z4oVUEYADth/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+      "GIwPBuGtPofF1rXO/items/y7VNs5A41UH94zX1/description": "8fe34dc6ef3cee7638e5b46240c3cf09e9cd96b33054e2fbbba2e24dcc97e9ab",
+      "GtI25Mqe9uQxandy/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GtI25Mqe9uQxandy/speed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GtI25Mqe9uQxandy/items/80CuEcGtDQ6fUIyY/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "GtI25Mqe9uQxandy/items/xBIoPO0Yl00JwtXW/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "GtI25Mqe9uQxandy/items/z8bl09rqF4yCJDy4/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+      "GtI25Mqe9uQxandy/items/A33mGw1DCgRJRDSe/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+      "LGcNyvqAKnhwEzuf/descriptionHazard": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "LGcNyvqAKnhwEzuf/reset": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "LGcNyvqAKnhwEzuf/stealth": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "LGcNyvqAKnhwEzuf/items/TOxNV0Ksvd8lEg7j/description": "1cf8c187006f1c02de1010a973c57695357c1918d705e1b8302c221f783895f5",
+      "LGcNyvqAKnhwEzuf/items/xcV4iG9yR2uKSGdL/description": "349d59ed53eaff29b8953257340d2886efdbd81a2007899c65da218330ebeff4",
+      "LeN4l03TAmPiAjdK/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "OtEXlDLoTT7nW2H9/descriptionHazard": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "OtEXlDLoTT7nW2H9/disable": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "OtEXlDLoTT7nW2H9/reset": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "OtEXlDLoTT7nW2H9/stealth": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "OtEXlDLoTT7nW2H9/items/0rwXFzCG58mrENRi/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "OtEXlDLoTT7nW2H9/items/qm5fECYwi6fAl37z/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+      "RnqXo9fN1ST0kOZ5/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "RnqXo9fN1ST0kOZ5/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "RnqXo9fN1ST0kOZ5/hp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "RnqXo9fN1ST0kOZ5/items/a5L9zwEbTQnPprg5/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+      "RnqXo9fN1ST0kOZ5/items/GFEimWK8niicOioN/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+      "Tvz5JKAE8rrCF5qW/descriptionHazard": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "Tvz5JKAE8rrCF5qW/disable": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "Tvz5JKAE8rrCF5qW/reset": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "Tvz5JKAE8rrCF5qW/stealth": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "Tvz5JKAE8rrCF5qW/items/yf2VZtO2S4eV7fKZ/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "UMDbYqoMhnLZQ2gf/hp": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "UMDbYqoMhnLZQ2gf/items/MuiyXm8KyQF57NaW/description": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+      "UMDbYqoMhnLZQ2gf/items/a2pZeef5wn9y5xAA/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "UMDbYqoMhnLZQ2gf/items/PmrOcp7IYi6XPIer/description": "b140404c9313b9fc1980a154b2363eb2e859f676f6bbed6c0585621fe271bf40",
+      "h6yNkGx8q5ITD3a3/descriptionHazard": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+      "h6yNkGx8q5ITD3a3/disable": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "h6yNkGx8q5ITD3a3/reset": "7333d7a958db852028d53acbe834dd8169355ef60333729725b0fd2c9a746636",
+      "h6yNkGx8q5ITD3a3/stealth": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "h6yNkGx8q5ITD3a3/items/a5X5gNKg3MIEGsZ9/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "h6yNkGx8q5ITD3a3/items/tfriWcHgXqM6QLkB/description": "1cf8c187006f1c02de1010a973c57695357c1918d705e1b8302c221f783895f5",
+      "heYhZGnVa9XSFuUN/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "heYhZGnVa9XSFuUN/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "heYhZGnVa9XSFuUN/language": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "heYhZGnVa9XSFuUN/items/UGFoKIvbXM0ZSdiU/description": "0cca2d2b81ab40a3a3d408d67a1cde8f7dd2247fc067cc988fcd826cdb0f3f3a",
+      "heYhZGnVa9XSFuUN/items/Kv1pkf5Ma30A8n58/description": "2e52b15f66fab76a673ba7852d87657a03052c0b8a04eff7270429d5ae3ecd97",
+      "otBXbd41vVLZW1xv/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "otBXbd41vVLZW1xv/language": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "otBXbd41vVLZW1xv/items/6kZm8XnYELAQFppU/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "otBXbd41vVLZW1xv/items/lnftcCa5nWLimB4r/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "romVSuOVkSVFwsN4/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "romVSuOVkSVFwsN4/items/edVyMro5viX5rgD9/description": "001dff8cc83a39f0c14c98c6788adf0dc121831c1b6f2f82e811c84f3aa3af08",
+      "romVSuOVkSVFwsN4/items/fH4zN6EufktPqbW4/description": "1b87f0c1c0aae7b551f6f970342c2fb93613554fea54e227ed49d07ed829f473",
+      "romVSuOVkSVFwsN4/items/pyDc4hD647pfgYEk/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "romVSuOVkSVFwsN4/items/IvUr6AnOtG8K2BSD/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "vQeUoEfY80yBs0Bb/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vQeUoEfY80yBs0Bb/items/qtsF75k2Zterahrt/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "vQeUoEfY80yBs0Bb/items/36QKwrAooz1cygR4/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "ye8Niis34NfY30TS/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "ye8Niis34NfY30TS/items/htliQ05jVKwfE22v/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "ye8Niis34NfY30TS/items/UDhWMhJzdEJtykvO/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "yscVNbJvyotk9NLG/language": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "yscVNbJvyotk9NLG/items/p6uToNU7wgFDgDDH/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+      "yscVNbJvyotk9NLG/items/Lb8baU3vfeAtn1Nw/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
+      "yscVNbJvyotk9NLG/items/h8caQJMnKj4F22zZ/description": "47fb6be4f7ca1029819548caeafb9c055a8590d2a632f6d2b493bd101b45abe5",
+      "yscVNbJvyotk9NLG/items/xdQJFj57QglkQXeG/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d"
+    },
+    "actorCount": 25,
+    "itemCount": 218
+  }
 }
