@@ -18,6 +18,20 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 
+from translation_overrides import (
+    ACTOR_BLURBS,
+    ACTOR_DESCRIPTION_OVERRIDES,
+    ACTOR_SHORT_FIELDS,
+    CANONICAL_ACTOR_NAMES,
+    CANONICAL_VISIBLE_REPLACEMENTS,
+    HAZARD_FIELDS,
+    LINK_LABELS,
+    LINKED_ITEM_NAMES,
+    RULE_LABELS,
+    UNIDENTIFIED_DESCRIPTIONS,
+    UNIDENTIFIED_NAMES,
+)
+
 SERVICE_PAGE_IDS = {
     "00credits0000000",
     "01opengamelice00",
@@ -245,6 +259,17 @@ ACTOR_NAMES.update({
     "Elder Johedia": "Старейшина Йохейда", "Elder Bo-Mel": "Старейшина Бо-Мел", "Elder Anlorgog": "Старейшина Анлоргог", "Durgon": "Дургон",
     "Esipil (Calico Cat Form)": "Эсипил (облик трёхцветной кошки)", "Captain Perrio's Head": "Голова капитана Перрио", "Bolgus": "Болгус", "Birger Frodeson": "Биргер Фродесон",
     "Azmakian Animated Armor": "Азмакианский оживлённый доспех", "Abrikandilu": "Абрикандилу",
+})
+
+# Для приключенческих имён приоритет имеет официальный русский PDF. Системные
+# названия правил по-прежнему берутся из pf2e-ru по UUID.
+ACTOR_NAMES.update(CANONICAL_ACTOR_NAMES)
+ACTOR_NAMES.update(LINK_LABELS)
+ACTOR_NAMES.update({
+    "Janis' Reward": "Награда Дженис",
+    "First Mate Janis": "Первый помощник Дженис",
+    "Petitioner (the Larvae)": "Петиционер (личинка)",
+    "Haniver Gremlin": "Гремлин-ханивер",
 })
 
 
@@ -1134,7 +1159,13 @@ def reference_area_code(name: str) -> str | None:
 
 
 def translated_name(name: str) -> str:
-    return SIMPLE_NAMES.get(name, ACTOR_NAMES.get(name, clean_ru(name)))
+    return SIMPLE_NAMES.get(
+        name,
+        ACTOR_NAMES.get(
+            name,
+            LINK_LABELS.get(name, SOUND_NAMES.get(name, MACRO_NAMES.get(name, clean_ru(name)))),
+        ),
+    )
 
 
 def item_source(item: dict[str, Any]) -> str | None:
@@ -1306,7 +1337,9 @@ def make_translation(
     custom_items_translated = 0
     for actor in source.get("actors", []):
         ref_actor = ref_actors_by_source.get(item_source(actor)) or ref_actors_by_id.get(actor["_id"])
-        actor_name = clean_ru(ref_actor["name"]) if ref_actor else ACTOR_NAMES.get(actor["name"], translated_name(actor["name"]))
+        actor_name = ACTOR_NAMES.get(actor["name"])
+        if actor_name is None:
+            actor_name = clean_ru(ref_actor["name"]) if ref_actor else translated_name(actor["name"])
         entry: dict[str, Any] = {"name": actor_name, "tokenName": actor_name}
         source_details = actor.get("system", {}).get("details", {})
         ref_details = ref_actor.get("system", {}).get("details", {}) if ref_actor else {}
@@ -1342,9 +1375,14 @@ def make_translation(
                 continue  # pf2e-ru переводит системный Compendium UUID.
             custom_items += 1
             ref_item = ref_items_by_id.get(item["_id"])
+            manual_item_name = translated_name(item["name"])
             item_entry = {
                 "id": item["_id"],
-                "name": translated_name(clean_ru(ref_item["name"])) if ref_item else translated_name(item["name"]),
+                "name": (
+                    manual_item_name
+                    if manual_item_name != item["name"]
+                    else translated_name(clean_ru(ref_item["name"])) if ref_item else manual_item_name
+                ),
             }
             source_desc = item.get("system", {}).get("description", {})
             ref_desc = ref_item.get("system", {}).get("description", {}) if ref_item else {}
@@ -1460,6 +1498,7 @@ def make_translation(
             for playlist in source.get("playlists", [])
         },
     }
+    complete_existing_translation(source, translation, index, pf2e_ru_names)
     return translation, index
 
 
@@ -1467,6 +1506,229 @@ ACTION_SECTION_RE = re.compile(
     r'<section\b[^>]*class="[^"]*action[^"]*"[^>]*>.*?</section>',
     flags=re.I | re.S,
 )
+
+
+ACTOR_EXTRA_FIELDS: tuple[tuple[str, tuple[str, ...]], ...] = (
+    ("blurb", ("system", "details", "blurb")),
+    ("language", ("system", "details", "languages", "details")),
+    ("senses", ("system", "perception", "details")),
+    ("descriptionHazard", ("system", "details", "description")),
+    ("disable", ("system", "details", "disable")),
+    ("reset", ("system", "details", "reset")),
+    ("routine", ("system", "details", "routine")),
+    ("stealth", ("system", "attributes", "stealth", "details")),
+    ("hp", ("system", "attributes", "hp", "details")),
+    ("ac", ("system", "attributes", "ac", "details")),
+    ("allSaves", ("system", "attributes", "allSaves", "value")),
+    ("speed", ("system", "attributes", "speed", "details")),
+    ("willSave", ("system", "saves", "will", "saveDetail")),
+    ("skillAcrobatics", ("system", "skills", "acrobatics", "special", "0", "label")),
+    ("skillAthletics", ("system", "skills", "athletics", "special", "0", "label")),
+    ("skillCrafting", ("system", "skills", "crafting", "special", "0", "label")),
+    ("skillStealth", ("system", "skills", "stealth", "special", "0", "label")),
+    ("skillThievery", ("system", "skills", "thievery", "special", "0", "label")),
+)
+
+
+def nested_value(data: Any, path: tuple[str, ...]) -> Any:
+    current = data
+    for part in path:
+        if isinstance(current, list):
+            try:
+                current = current[int(part)]
+            except (ValueError, IndexError):
+                return ""
+        elif isinstance(current, dict):
+            current = current.get(part, "")
+        else:
+            return ""
+    return current
+
+
+def normalize_visible_text(value: str) -> str:
+    for old, new in CANONICAL_VISIBLE_REPLACEMENTS:
+        value = value.replace(old, new)
+    return value
+
+
+def normalize_translation_tree(value: Any) -> Any:
+    if isinstance(value, str):
+        return normalize_visible_text(value)
+    if isinstance(value, list):
+        return [normalize_translation_tree(item) for item in value]
+    if isinstance(value, dict):
+        return {key: normalize_translation_tree(item) for key, item in value.items()}
+    return value
+
+
+def translate_actor_extra(value: str, field: str) -> str:
+    if field == "blurb":
+        translated = ACTOR_BLURBS.get(value)
+    elif field in {"descriptionHazard", "disable", "reset", "routine"}:
+        translated = HAZARD_FIELDS.get(value)
+    else:
+        translated = ACTOR_SHORT_FIELDS.get(value)
+    if translated is None:
+        raise ValueError(f"Нет проверенного перевода Actor.{field}: {value!r}")
+    return translated
+
+
+def complete_existing_translation(
+    source: dict[str, Any],
+    translation: dict[str, Any],
+    index: dict[str, Any],
+    pf2e_ru_names: dict[str, str],
+) -> dict[str, int]:
+    """Дозаполняет все видимые текстовые поля актёров и их предметов по ID."""
+    adventure = translation["entries"][source["_id"]]
+    normalized = normalize_translation_tree(adventure)
+    adventure.clear()
+    adventure.update(normalized)
+    actors = adventure["actors"]
+    actor_technical = index.setdefault("actorTechnical", {})
+    actor_inline_rolls = index.setdefault("actorInlineRolls", {})
+    actor_html = index.setdefault("actorHtml", {})
+    counts: Counter[str] = Counter()
+
+    canonical_actor_names = {
+        actor["_id"]: ACTOR_NAMES.get(actor["name"], actors[actor["_id"]].get("name", actor["name"]))
+        for actor in source.get("actors", [])
+    }
+    for actor in source.get("actors", []):
+        actor_id = actor["_id"]
+        entry = actors[actor_id]
+        entry["name"] = canonical_actor_names[actor_id]
+        entry["tokenName"] = canonical_actor_names[actor_id]
+        if actor["name"] in ACTOR_DESCRIPTION_OVERRIDES:
+            value = ACTOR_DESCRIPTION_OVERRIDES[actor["name"]]
+            source_value = nested_value(actor, ("system", "details", "publicNotes"))
+            if html_tags(value) != html_tags(source_value):
+                raise ValueError(f"{actor['name']}/description: изменена HTML-структура")
+            entry["description"] = value
+            key = f"{actor_id}/description"
+            actor_technical[key] = TECH_RE.findall(source_value)
+            actor_inline_rolls[key] = INLINE_ROLL_RE.findall(source_value)
+            actor_html[key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
+
+        for output_key, path in ACTOR_EXTRA_FIELDS:
+            source_value = nested_value(actor, path)
+            if not isinstance(source_value, str) or not source_value:
+                continue
+            translated = translate_actor_extra(source_value, output_key)
+            entry[output_key] = translated
+            counts[output_key] += 1
+            key = f"{actor_id}/{output_key}"
+            actor_technical[key] = TECH_RE.findall(source_value)
+            actor_inline_rolls[key] = INLINE_ROLL_RE.findall(source_value)
+            actor_html[key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
+
+        item_entries = entry.setdefault("items", [])
+        translated_items = {item.get("id"): item for item in item_entries}
+        for item in actor.get("items", []):
+            item_entry = translated_items.get(item["_id"])
+            linked = bool(item_source(item))
+            unidentified = nested_value(item, ("system", "identification", "unidentified"))
+            rules = nested_value(item, ("system", "rules"))
+            original_unidentified_name = unidentified.get("name", "") if isinstance(unidentified, dict) else ""
+            original_unidentified_description = (
+                nested_value(unidentified, ("data", "description", "value"))
+                if isinstance(unidentified, dict)
+                else ""
+            )
+            original_rule_label = (
+                rules[0].get("label", "")
+                if isinstance(rules, list) and rules and isinstance(rules[0], dict)
+                else ""
+            )
+            needs_local_override = bool(
+                linked
+                or original_unidentified_name
+                or original_unidentified_description
+                or original_rule_label in RULE_LABELS
+            )
+            if item_entry is None and needs_local_override:
+                item_entry = {"id": item["_id"]}
+                item_entries.append(item_entry)
+                translated_items[item["_id"]] = item_entry
+                if linked:
+                    index.setdefault("linkedItemOverrides", []).append(f"{actor_id}/{item['_id']}")
+                    counts["linkedItemOverrides"] += 1
+            if item_entry is None:
+                continue
+            canonical_item_name = (
+                LINKED_ITEM_NAMES.get(item["name"])
+                or pf2e_ru_names.get(item["name"])
+                or translated_name(item["name"])
+            )
+            if linked and canonical_item_name == item["name"]:
+                raise ValueError(f"Нет перевода имени системного элемента: {item['name']!r}")
+            if canonical_item_name != item["name"]:
+                item_entry["name"] = canonical_item_name
+                if linked:
+                    counts["linkedItemNames"] += 1
+            if isinstance(unidentified, dict):
+                original_name = original_unidentified_name
+                if original_name:
+                    if original_name not in UNIDENTIFIED_NAMES:
+                        raise ValueError(f"Нет перевода неопознанного имени: {original_name!r}")
+                    item_entry["unidentifiedName"] = UNIDENTIFIED_NAMES[original_name]
+                    counts["itemUnidentifiedNames"] += 1
+                original_description = original_unidentified_description
+                if original_description:
+                    if original_description not in UNIDENTIFIED_DESCRIPTIONS:
+                        raise ValueError(f"Нет перевода неопознанного описания: {original_description!r}")
+                    item_entry["unidentifiedDescription"] = UNIDENTIFIED_DESCRIPTIONS[original_description]
+                    counts["itemUnidentifiedDescriptions"] += 1
+                    key = f"{actor_id}/items/{item['_id']}/unidentifiedDescription"
+                    actor_technical[key] = TECH_RE.findall(original_description)
+                    actor_inline_rolls[key] = INLINE_ROLL_RE.findall(original_description)
+                    actor_html[key] = hashlib.sha256("\n".join(html_tags(original_description)).encode()).hexdigest()
+            if isinstance(rules, list) and rules:
+                original_label = original_rule_label
+                if original_label in RULE_LABELS:
+                    item_entry["ruleLabel0"] = RULE_LABELS[original_label]
+                    counts["itemRuleLabels"] += 1
+
+    page_names = {
+        page_id: page.get("name", "")
+        for journal in adventure.get("journals", {}).values()
+        for page_id, page in journal.get("pages", {}).items()
+    }
+    journal_names = {journal_id: journal.get("name", "") for journal_id, journal in adventure.get("journals", {}).items()}
+    for journal in adventure.get("journals", {}).values():
+        for page in journal.get("pages", {}).values():
+            if "text" in page:
+                page["text"] = TECH_RE.sub(
+                    lambda match: translate_token_label(
+                        match.group(0), page_names, journal_names, canonical_actor_names
+                    ),
+                    normalize_visible_text(page["text"]),
+                )
+
+    expected = index.setdefault("expected", {})
+    expected.update({
+        "actorBlurbs": counts["blurb"],
+        "actorLanguageDetails": counts["language"],
+        "actorSenseDetails": counts["senses"],
+        "hazardDescriptions": counts["descriptionHazard"],
+        "hazardDisable": counts["disable"],
+        "hazardReset": counts["reset"],
+        "hazardRoutine": counts["routine"],
+        "actorStealthDetails": counts["stealth"],
+        "actorHpDetails": counts["hp"],
+        "actorAcDetails": counts["ac"],
+        "actorAllSaveDetails": counts["allSaves"],
+        "actorSpeedDetails": counts["speed"],
+        "actorSaveDetails": counts["willSave"],
+        "actorSkillLabels": sum(counts[key] for key in counts if key.startswith("skill")),
+        "itemUnidentifiedNames": counts["itemUnidentifiedNames"],
+        "itemUnidentifiedDescriptions": counts["itemUnidentifiedDescriptions"],
+        "itemRuleLabels": counts["itemRuleLabels"],
+        "linkedItemNames": counts["linkedItemNames"],
+        "linkedItemOverrides": len(set(index.get("linkedItemOverrides", []))),
+    })
+    index["linkedItemOverrides"] = sorted(set(index.get("linkedItemOverrides", [])))
+    return dict(counts)
 
 
 def repair_existing_action_cards(source: dict[str, Any], translation: dict[str, Any]) -> int:
@@ -1549,6 +1811,11 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("translations/pf2e-rusthenge.adventures.json"))
     parser.add_argument("--index", type=Path, default=Path("data/source-index.json"))
     parser.add_argument("--repair-existing", action="store_true", help="Восстановить только известные пустые action-карточки")
+    parser.add_argument(
+        "--complete-existing",
+        action="store_true",
+        help="Дозаполнить актёров, опасности и предметы в существующем переводе",
+    )
     args = parser.parse_args()
     source = load_adventure(args.source)
     if args.repair_existing:
@@ -1556,6 +1823,16 @@ def main() -> None:
         repaired = repair_existing_action_cards(source, translation)
         args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"Восстановлено action-карточек: {repaired}")
+        return
+    if args.complete_existing:
+        if args.pf2e_ru is None:
+            parser.error("для --complete-existing нужен --pf2e-ru")
+        translation = json.loads(args.output.read_text(encoding="utf-8"))
+        index = json.loads(args.index.read_text(encoding="utf-8"))
+        counts = complete_existing_translation(source, translation, index, load_pf2e_ru_names(args.pf2e_ru))
+        args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        args.index.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(json.dumps(counts, ensure_ascii=False, indent=2))
         return
     if args.reference is None or args.pdf is None or args.pf2e_ru is None:
         parser.error("для полной генерации нужны --reference, --pdf и --pf2e-ru")

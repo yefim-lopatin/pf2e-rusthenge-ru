@@ -1,9 +1,38 @@
 .rusthenge .rusthenge-ru-content,
 .rusthenge-wrapper .rusthenge-ru-content {
+  font-family: Vollkorn, Georgia, serif;
   hyphens: none;
   min-width: 0;
   overflow-wrap: break-word;
   word-break: normal;
+}
+
+.rusthenge .rusthenge-ru-content h1,
+.rusthenge .rusthenge-ru-content h2,
+.rusthenge .rusthenge-ru-content h3,
+.rusthenge .rusthenge-ru-content h4,
+.rusthenge .rusthenge-ru-content table,
+.rusthenge .rusthenge-ru-content .action,
+.rusthenge .rusthenge-ru-content .encounter,
+.rusthenge .rusthenge-ru-content .read-aloud,
+.rusthenge .rusthenge-ru-content .sidebar,
+.rusthenge .rusthenge-ru-content .trait,
+.rusthenge-wrapper .rusthenge-ru-content h1,
+.rusthenge-wrapper .rusthenge-ru-content h2,
+.rusthenge-wrapper .rusthenge-ru-content h3,
+.rusthenge-wrapper .rusthenge-ru-content h4,
+.rusthenge-wrapper .rusthenge-ru-content table,
+.rusthenge-wrapper .rusthenge-ru-content .action,
+.rusthenge-wrapper .rusthenge-ru-content .encounter,
+.rusthenge-wrapper .rusthenge-ru-content .read-aloud,
+.rusthenge-wrapper .rusthenge-ru-content .sidebar,
+.rusthenge-wrapper .rusthenge-ru-content .trait {
+  font-family: "Roboto Condensed", Roboto, sans-serif;
+}
+
+.rusthenge .rusthenge-ru-content .handout,
+.rusthenge-wrapper .rusthenge-ru-content .handout {
+  font-family: Roboto, sans-serif;
 }
 
 .rusthenge .rusthenge-ru-content p,
