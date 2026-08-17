@@ -798,6 +798,17 @@ ITEM_DESCRIPTION_REPAIRS.update({
     "h8caQJMnKj4F22zZ": '<p>Дретч наносит три Удара когтями по одному существу, каждый со штрафом –2. Штраф множественной атаки дретча не увеличивается, пока он не завершит все три атаки.</p>\n<p>До начала своего следующего хода дретч получает состояние @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{неуклюжесть 2}.</p>',
 })
 
+# Эти экземпляры настроены в Rusthenge. Общий перевод их исходного
+# системного Item содержит шаблонные dc:0, dc:, 0d6 или +x, поэтому
+# локальный слой обязан сохранить точные значения официального Adventure.
+ITEM_DESCRIPTION_REPAIRS.update({
+    "pHf9s6Kk9Sg2No4f": '<p>Яд гигантской сороконожки вызывает сильное оцепенение мышц.</p>\n<p><strong>Активация</strong> <span class="action-glyph">D</span> Взаимодействие (ранение)</p>\n<p><strong>Спасбросок</strong> @Check[type:fortitude|dc:17]</p>\n<p><strong>Максимальная продолжительность</strong> 6 раундов</p>\n<p><strong>Стадия 1</strong> @Damage[1d6[poison]] урона ядом (1 раунд)</p>\n<p><strong>Стадия 2</strong> @Damage[1d8[poison]] урона ядом и @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{застигнут врасплох} (1 раунд)</p>\n<p><strong>Стадия 3</strong> @Damage[1d12[poison]] урона ядом, @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{неуклюжесть 1} и застигнут врасплох (1 раунд)</p>',
+    "eI1CqQ6uSb4iGiLS": '<p>Деро-сталкер наносит 1d6 дополнительного точного урона существам, @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{застигнутым врасплох}.</p>',
+    "iUcqbwAXsz9BBt5U": '<ul>\n<li><strong>Человек</strong>\n<ul>\n<li><strong>Ближний бой</strong> кулак [[/r 1d20+10 #Fist]]{+10}/[[/r 1d20+5 #Fist]]{+5}/[[/r 1d20 #Fist]]{+0} (быстрое, несмертельное), <strong>Урон</strong> @Damage[(1d4+2)[bludgeoning]] дробящего урона</li>\n<li><strong>Скорость</strong> 25 футов</li>\n</ul>\n</li>\n<li><strong>Гигантская летучая мышь</strong>\n<ul>\n<li><strong>Скорость</strong> 15 футов, полёт 30 футов</li>\n</ul>\n</li>\n</ul>\n<hr />\n<p>Вероборотень принимает облик гуманоида, гибрида или животного. Каждый облик имеет определённую неизменную внешность. Естественный облик истинного вероборотня — гибридный.</p>\n<p>В гуманоидном облике вероборотень использует свой исходный размер гуманоида, теряет Удары челюстями и когтями и получает ближний Удар кулаком, наносящий дробящий урон, равный рубящему урону его когтей.</p>\n<p>В облике животного его Скорость и размер изменяются до значений этого животного; вероборотень получает все особые эффекты Ударов животного, которых у него ещё не было (например, Захват), и теряет Удары оружием.</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>',
+    "v88O0NAy45VWmtTO": '<p>Это проклятие действует только на гуманоидов.</p>\n<hr />\n<p><strong>Спасбросок</strong> @Check[type:fortitude|dc:15]</p>\n<p>В каждое полнолуние проклятое существо должно снова успешно пройти спасбросок Стойкости, иначе до рассвета превращается в вероборотня. Существо находится под управлением Мастера и буйствует полночи, после чего теряет сознание до рассвета.</p>',
+    "eIQH5yy2l8qe0bvR": '<p>@Damage[1d6[bludgeoning]] дробящего урона, @Check[type:fortitude|dc:17|basic:true]{простой спасбросок Стойкости СЛ 17}</p>\n<hr />\n<p>@Localize[PF2E.NPC.Abilities.Glossary.Constrict]</p>',
+})
+
 ACTOR_DESCRIPTION_REPAIRS = {
     "oeM8EcS1F5NIkd30": '<p>Самые распространённые скелеты-прислужники — простые стражи.</p>\n<hr>\n<p>Скелеты, созданные из костей, скреплённых нечестивой некромантией, относятся к самым распространённым видам нежити. Они обитают в старых подземельях и на забытых кладбищах.</p>',
     "viyUBIwO7gFRqwVG": '<p>Когда смертный умирает, его душа отправляется на Могильник во Внешних планах, где её судит Фаразма, богиня мёртвых. После суда душа получает окончательную награду или наказание и превращается в просителя. Она обретает новое тело, облик которого определяется господствующими философскими силами плана назначения. Воспоминания о прежней жизни почти полностью стираются, оставляя лишь туманные обрывки, похожие на полузабытые сны. Независимо от прежнего размера, силы и природы, в загробной жизни проситель становится существом Среднего размера.</p>\n<p>Проситель может существовать целые эоны, но это состояние не обязательно вечно. Божества, могущественные обитатели Великого Запределья и сами Внешние планы могут превратить его в чистую квинтэссенцию, расширяющую физическое воплощение плана, или в новую форму сверхъестественной жизни — небожителя, наблюдателя либо беса. После смерти тело просителя распадается, а его сущность возвращается к квинтэссенции или стихиям родного плана. Так завершается путь души: жизненная сущность возвращается в сердце Великого Запределья, чтобы вновь участвовать в создании новых душ.</p>\n<p>Личинки похожи на огромных червей с лицами, которые просители имели при жизни.</p>',
@@ -834,9 +845,9 @@ def repair_translated_item_descriptions(
         for actor_id, actor in actors.items():
             for item in actor.get("items", []):
                 current = item.get("description")
-                if not isinstance(current, str) or not current:
-                    continue
                 source_item = source_item_docs.get((actor_id, item.get("id")))
+                if (not isinstance(current, str) or not current) and source_item is None:
+                    continue
                 structural_source = (
                     source_item.get("system", {}).get("description", {}).get("value", "")
                     if source_item else current
@@ -2168,8 +2179,78 @@ LITERARY_PARAGRAPH_REPAIRS.update({
     ),
 })
 
+# В старом русском структурированном источнике к F7 было добавлено служебное
+# примечание об эффекте смены токена. В официальном Adventure 14.1.0 и русском
+# PDF такого эффекта нет. Одновременно возвращаем ссылки F1a/F1b/F2a из
+# ошибочного хвоста в те абзацы, где они находятся в официальном HTML.
+LITERARY_PARAGRAPH_REPAIRS.update({
+    "04werebatcamp000": (
+        (
+            "В этом маленьком лагере",
+            '<p>В этом маленьком лагере спрятались три свирфнеблина-вернетопыря, ослабевшие от голода. Союз между деро и культистами подорвал их численность, а неудачные попытки заключить перемирие с боггардами Чёрного озера привели к тому, что три вернетопыря отчаялись. Если сработает одна из ловушек в @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1a} или @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04darklandslan00]{F1b}, вернетопыри несколько минут молча ждут, прежде чем подкрасться к ПИ, но, заметив ПИ, рычат, плюются и принимают гибридную форму, готовые к бою.</p>',
+        ),
+        (
+            "Атакуют они при малейшей провокации",
+            '<p>Атакуют они при малейшей провокации, но если ПИ ведут себя спокойно и пытаются общаться, то вернетопыри готовы к разговору. Они требуют, чтобы ПИ убили деро на западе, и обещают дать им особую награду, если они это сделают. Если ПИ согласятся, один из вернетопырей перелетит через пропасть в область @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04thedespoiled00]{F2a} и заберёт там сокровища в качестве награды. После гибели деро вернетопыри чувствуют себя в безопасности и сразу же отправляются в разлом на поиски пищи. По вашему желанию дружественные вернетопыри могут помочь ПИ в борьбе с культистами, но с тем же успехом они могут обернуться против ПИ и атаковать их, чтобы защитить отвоёванную территорию.</p>',
+        ),
+        (
+            "Примечание: в разделе «Предметы → Эффекты»",
+            "",
+        ),
+    ),
+})
+
 
 PARAGRAPH_RE = re.compile(r"<p\b[^>]*>.*?</p>", flags=re.I | re.S)
+
+# Ссылки, которые старое пропорциональное распределение токенов поместило в
+# соседний абзац или технический хвост. Каждый элемент задаёт абзац-якорь,
+# видимый фрагмент и точную функциональную разметку из Adventure 14.1.0.
+TECHNICAL_TOKEN_PLACEMENT_REPAIRS: dict[str, tuple[tuple[str, str, str], ...]] = {
+    "02seniorbarrac00": (
+        ("Хотя последние сто лет", "C14", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02duelingbalco00]{C14}"),
+        ("Сестра Ванда патрулирует", "C17", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02defensivebat00]{C17}"),
+    ),
+    "02stonehome00001": (
+        ("После прибытия «Рыбы-меч»", "Бухту Скопы", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02optionalstar00#osprey-covesettlement-2]{Бухту Скопы}"),
+        ("После прибытия «Рыбы-меч»", "ритуала «Обольщение»", "ритуала @UUID[Compendium.pf2e.spells-srd.Item.5pwK2FZX6QwgtfqX]{«Обольщение»}"),
+        ("После прибытия «Рыбы-меч»", "молельном зале (C4)", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02worshiphall000]{молельном зале (C4)}"),
+        ("После прибытия «Рыбы-меч»", "Ползучей Ржавчиной", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02rustcreep00000]{Ползучей ржавчиной}"),
+    ),
+    "02ironharbor0000": (
+        ("Деревня Железная Гавань", "B6", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02fisherspoint00]{B6}"),
+        ("Деревня Железная Гавань", "B7", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02thunderheadi00]{B7}"),
+        ("Старая Побережная дорога", "B5", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02goldsruin00000]{B5}"),
+        ("В поселке находится верфь", "B1", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02elsies00000000]{B1}"),
+        ("В поселке находится верфь", "B3", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02drydock0000000]{B3}"),
+    ),
+    "03secretlab00000": (
+        ("Лестница ведет вниз", "E1", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04grandgallery00]{E1}"),
+    ),
+    "03dininghall0000": (
+        ("Боггарды, называющие себя", "D10", "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}"),
+        ("Боггарды, называющие себя", "F10", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04theblacklake00]{F10}"),
+        ("В комнате остались два разведчика", "Капающая комната", "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{Капающая комната}"),
+        ("Если ПИ успешно произведут впечатление", "D12", "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03magicalstora00]{D12}"),
+        ("Если ПИ успешно произведут впечатление", "D21", "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03secretlab00000]{D21}"),
+        ("Если ПИ не удастся договориться", "D10", "@UUID[JournalEntry.pf2sa06403therus.JournalEntryPage.03drippingroom00]{D10}"),
+    ),
+    "03therusteddoo00": (
+        ("Лестница на западе ведет", "C22", "@UUID[JournalEntry.pf2sa06402messag.JournalEntryPage.02tunneltorust00]{C22}"),
+        ("Огромная ржавая дверь", "проверку  на Вспомнить информацию", "@Check[religion|dc:25|traits:concentrate,secret,skill,action:recall-knowledge|name:Recall Knowledge]{проверку Религии СЛ 25 при Вспоминании информации}"),
+    ),
+    "04ritualprepar00": (
+        ("Мерцающая стена красновато-коричневого света", "стена силы", "@UUID[Compendium.pf2e.spells-srd.Item.7Iela4GgVeO3LfAo]{силовая стена}"),
+        ("Исследуя эту комнату", "F14", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"),
+        ("После броска инициативы", "F14", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04summoningcha00]{F14}"),
+    ),
+    "04darklandslan00": (
+        ("Винтовая лестница из", "E5", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04worshipchamb00]{E5}"),
+        ("ПИ, исследующий пол", "Лагерь вернетопырей", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04werebatcamp000]{Лагерь вернетопырей}"),
+        ("В рамках сделки с деро", "F3-F6", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04watchpost00000]{F3}, @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04deroencampme00]{F4}, @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04derobarracks00]{F5} и @UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04zaioxsnook0000]{F6}"),
+        ("Кольцо из камней", "F7", "@UUID[JournalEntry.pf2sa06404ressur.JournalEntryPage.04werebatcamp000]{F7}"),
+    ),
+}
 
 
 def replace_literary_paragraph(text: str, page_id: str, anchor: str, replacement: str) -> str:
@@ -2229,6 +2310,60 @@ def replace_literary_paragraph(text: str, page_id: str, anchor: str, replacement
     return text[:current.start()] + replacement + text[current.end():]
 
 
+def relocate_technical_tokens(text: str, page_id: str) -> str:
+    """Возвращает известные UUID и проверки в соответствующие им абзацы."""
+    placements = TECHNICAL_TOKEN_PLACEMENT_REPAIRS.get(page_id, ())
+    if not placements:
+        return text
+    before_cores = Counter(technical_cores(text))
+
+    def paragraph(anchor: str) -> re.Match[str]:
+        match = next((value for value in PARAGRAPH_RE.finditer(text) if anchor in value.group(0)), None)
+        if match is None:
+            raise ValueError(f"{page_id}: не найден абзац для переноса токена: {anchor!r}")
+        return match
+
+    for anchor, literal, replacement in placements:
+        target = paragraph(anchor)
+        desired_cores = Counter(technical_cores(replacement))
+        target_cores = Counter(technical_cores(target.group(0)))
+        missing = desired_cores - target_cores
+        if not missing:
+            continue
+
+        for core, count in missing.items():
+            for _ in range(count):
+                protected: list[tuple[int, int]] = []
+                for protected_anchor, _literal, protected_replacement in placements:
+                    if core not in technical_cores(protected_replacement):
+                        continue
+                    protected_paragraph = paragraph(protected_anchor)
+                    if core in technical_cores(protected_paragraph.group(0)):
+                        protected.append((protected_paragraph.start(), protected_paragraph.end()))
+                candidate = next(
+                    (
+                        match
+                        for match in TECH_RE.finditer(text)
+                        if TECH_CORE_RE.fullmatch(match.group(0)).group(1) == core
+                        and not any(start <= match.start() < end for start, end in protected)
+                    ),
+                    None,
+                )
+                if candidate is None:
+                    raise ValueError(f"{page_id}: не найден перемещаемый токен {core}")
+                text = text[:candidate.start()] + text[candidate.end():]
+
+        target = paragraph(anchor)
+        if literal not in target.group(0):
+            raise ValueError(f"{page_id}: не найден текст для вставки токена: {literal!r}")
+        updated = target.group(0).replace(literal, replacement, 1)
+        text = text[:target.start()] + updated + text[target.end():]
+
+    if Counter(technical_cores(text)) != before_cores:
+        raise ValueError(f"{page_id}: перенос изменил набор технических токенов")
+    return text
+
+
 def cleanup_digital_layout(
     translation: dict[str, Any],
     source: dict[str, Any] | None = None,
@@ -2253,6 +2388,7 @@ def cleanup_digital_layout(
                 text = text.replace(old, new)
             for anchor, replacement in LITERARY_PARAGRAPH_REPAIRS.get(page_id, ()):
                 text = replace_literary_paragraph(text, page_id, anchor, replacement)
+            text = relocate_technical_tokens(text, page_id)
             if page_id == "02swordfishdis00":
                 table_match = re.search(r"<table\b[^>]*>.*?</table>", text, flags=re.I | re.S)
                 if table_match is None:
@@ -2684,6 +2820,7 @@ BESTIARY_DESCRIPTION_OVERRIDES = {
 }
 
 BESTIARY_DESCRIPTION_OVERRIDES.update({
+    "EhuGQeaf8C8WswTy": '<ul><li><p><strong>Человек</strong></p><ul><li><strong>Ближний бой</strong> кулак +8 <strong>Урон</strong> 1d4</li><li>без Скорости полёта</li></ul></li><li><p><strong>Гигантская летучая мышь</strong></p><ul><li><strong>Скорость</strong> 15 футов, полёт 30 футов</li></ul></li></ul><hr /><p>Вероборотень принимает облик гуманоида, гибрида или животного. Каждый облик имеет определённую неизменную внешность. Естественный облик истинного вероборотня — гибридный.</p> <p>В гуманоидном облике вероборотень использует свой исходный размер гуманоида, теряет Удары челюстями и когтями и получает ближний Удар кулаком, наносящий дробящий урон, равный рубящему урону его когтей.</p> <p>В облике животного его Скорость и размер изменяются до значений этого животного; вероборотень получает все особые эффекты Ударов животного, которых у него ещё не было (например, Захват), и теряет Удары оружием.</p><hr /><p>@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]</p>',
     "p6uToNU7wgFDgDDH": '<p>В начале каждого хода дретча бросьте [[/gmr 1d4 #Actions Regained]]{1d4}. Результат равен числу действий, которые он восстанавливает в этот ход (максимум 3).</p>\n<p>Такие эффекты, как состояние @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{замедлен}, могут дополнительно уменьшить число его действий.</p>',
     "h8caQJMnKj4F22zZ": ITEM_DESCRIPTION_REPAIRS["h8caQJMnKj4F22zZ"],
     "8tVnSA2uTOLAmycM": '<p><strong>Триггер</strong> Существо входит в область к югу от отмеченного на карте кольца камней</p><hr /><p><strong>Эффект</strong> Из кольца камней вырывается поток воды, с силой несётся по проходу и стекает в яму в области <strong>Е1б</strong>. Все существа Большого или меньшего размера на пути воды должны совершить @Check[fortitude|dc:20|options:area-effect,damaging-effect,forced-movement,inflicts:prone]{спасбросок Стойкости СЛ 20}. Достигнув дна ямы, вода мгновенно исчезает, но всё вокруг остаётся промокшим.</p><hr /><p><strong>Критический успех</strong> Существо выдерживает напор и не получает эффекта.</p><p><strong>Успех</strong> Поток ударяет существо о стену пещеры, нанося @Damage[1d10[bludgeoning]|options:area-damage] дробящего урона.</p><p><strong>Провал</strong> Поток сбивает существо @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{ничком}, наносит @Damage[(1d10+6)[bludgeoning]|options:area-damage] дробящего урона и толкает к шипастой яме, активируя ловушку.</p><p><strong>Критический провал</strong> Как провал, но при падении в шипастую яму существо не может попытаться @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Схватиться за уступ}.</p>',

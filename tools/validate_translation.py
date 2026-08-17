@@ -27,6 +27,7 @@ ANCHOR_RE = re.compile(r"<a\b[^>]*>(.*?)</a>", re.I | re.S)
 IMAGE_PATH_RE = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"', re.I)
 LINK_PATH_RE = re.compile(r'<a\b[^>]*\bhref="([^"]+)"', re.I)
 BALANCED_TAGS = ("div", "section", "aside", "h1", "h2", "h3", "p", "details")
+PARAGRAPH_RE = re.compile(r"<p\b[^>]*>.*?</p>", re.I | re.S)
 CYRILLIC_CLASS_RE = re.compile(r'class="[^"]*[А-Яа-яЁё][^"]*"')
 CYRILLIC_AREA_RE = re.compile(
     r"(?<![A-Za-zА-Яа-яЁё])([АБВГДЕ])\d{1,2}[a-bA-Bа-бА-Б]?(?![A-Za-zА-Яа-яЁё0-9])"
@@ -47,6 +48,11 @@ BROKEN_PROSE_RE = re.compile(
 )
 BROKEN_INLINE_MARKUP_RE = re.compile(r"<strong>\s*</strong>|`[^`]+`")
 BRACKETED_QUALITY_RE = re.compile(r"\[(?:Слабое|Малое|Малый|Слиток)\]", re.I)
+GENERIC_MECHANIC_PLACEHOLDER_RE = re.compile(
+    r"@Check\[[^\]]*\bdc:(?:0(?=[|\]])|(?=[|\]]))|"
+    r"\b0d\d+\b|\+x\b|@Damage\[\(?0\)?\[",
+    re.I,
+)
 EXPECTED_COUNTS = {
     "journals": 7,
     "pages": 191,
@@ -312,6 +318,22 @@ def main() -> int:
     service = set(index.get("servicePageIds", []))
     check.require(not (service & set(pages)), "служебные Credits/OGL/Audio Credits/Changelog не должны переводиться")
     check.require(set(index.get("pages", {})) <= set(pages), "не все 116 текстовых page _id есть в переводе")
+    werebat_text = pages.get("04werebatcamp000", {}).get("text", "")
+    werebat_paragraphs = PARAGRAPH_RE.findall(werebat_text)
+    werebat_creatures = next((value for value in werebat_paragraphs if "В этом маленьком лагере" in value), "")
+    werebat_negotiation = next((value for value in werebat_paragraphs if "Атакуют они при малейшей провокации" in value), "")
+    check.require(
+        "Предметы → Эффекты" not in werebat_text,
+        "04werebatcamp000: осталось недостоверное примечание об эффекте смены токена",
+    )
+    check.require(
+        all(f"{{{area}}}" in werebat_creatures for area in ("F1a", "F1b")),
+        "04werebatcamp000: ссылки F1a/F1b находятся не в абзаце о существах",
+    )
+    check.require(
+        "{F2a}" in werebat_negotiation,
+        "04werebatcamp000: ссылка F2a находится не в абзаце о награде",
+    )
     vanda_text = pages.get("02speakingtova00", {}).get("text", "")
     check.require("двуручный меч +1" in vanda_text, "в разговоре с Вандой потерян предмет, который она отдаёт группе")
     rusthenge_text = pages.get("03rusthenge00000", {}).get("text", "")
@@ -425,8 +447,27 @@ def main() -> int:
             check.require(not words, f"{actor_id}: не переведено имя бестиария {value!r}")
     check.require(sum(len(items) for items in bestiary_items.values()) == 218, "в бестиарии должно быть 218 вложенных элементов")
     check.require(
-        sum("description" in item for items in bestiary_items.values() for item in items.values()) == 50,
-        "в бестиарии должно быть 50 локальных описаний уникальных элементов",
+        sum("description" in item for items in bestiary_items.values() for item in items.values()) == 52,
+        "в бестиарии должно быть 52 локальных описания уникальных элементов",
+    )
+    for actor_id, items in bestiary_items.items():
+        for item_id, item in items.items():
+            description = item.get("description", "")
+            check.require(
+                not GENERIC_MECHANIC_PLACEHOLDER_RE.search(description),
+                f"{actor_id}/{item_id}: в локальном описании бестиария остался общий шаблон механики",
+            )
+    werebat_items = bestiary_items.get("otBXbd41vVLZW1xv", {})
+    check.require(
+        all(
+            fragment in werebat_items.get("EhuGQeaf8C8WswTy", {}).get("description", "")
+            for fragment in ("кулак +8", "Урон</strong> 1d4", "полёт 30 футов")
+        ),
+        "бестиарий: у вернетопыря потеряны параметры Изменения формы",
+    )
+    check.require(
+        "@Check[fortitude|dc:15]" in werebat_items.get("v88O0NAy45VWmtTO", {}).get("description", ""),
+        "бестиарий: у Проклятия вернетопыря потеряна СЛ 15",
     )
     actor_field_counts = bestiary_meta.get("actorFieldCounts", {})
     check.require(actor_field_counts.get("description") == 11, "в исходном бестиарии должно быть 11 описаний актёров")
@@ -493,6 +534,28 @@ def main() -> int:
         actor_id: {item.get("id"): item for item in actor.get("items", [])}
         for actor_id, actor in actors.items()
     }
+    for actor_id, items in actor_items.items():
+        for item_id, item in items.items():
+            description = item.get("description", "")
+            check.require(
+                not GENERIC_MECHANIC_PLACEHOLDER_RE.search(description),
+                f"{actor_id}/{item_id}: в локальном описании Adventure остался общий шаблон механики",
+            )
+    fallback_repairs = {
+        ("0qGYozu96uCyqwwv", "pHf9s6Kk9Sg2No4f"): ("@Damage[1d6[poison]]", "@Damage[1d8[poison]]", "@Damage[1d12[poison]]"),
+        ("0qGYozu96uCyqwwv", "eI1CqQ6uSb4iGiLS"): ("1d6 дополнительного точного урона",),
+        ("62aTwXuLWWrqZXxW", "pHf9s6Kk9Sg2No4f"): ("@Damage[1d6[poison]]", "@Damage[1d8[poison]]", "@Damage[1d12[poison]]"),
+        ("62aTwXuLWWrqZXxW", "eI1CqQ6uSb4iGiLS"): ("1d6 дополнительного точного урона",),
+        ("CL4YCcPhKegUvEVx", "iUcqbwAXsz9BBt5U"): ("1d20+10", "1d20+5", "@Damage[(1d4+2)[bludgeoning]]"),
+        ("CL4YCcPhKegUvEVx", "v88O0NAy45VWmtTO"): ("@Check[type:fortitude|dc:15]",),
+        ("Y133Sx0joIm2DZ3g", "eIQH5yy2l8qe0bvR"): ("@Damage[1d6[bludgeoning]]", "@Check[type:fortitude|dc:17|basic:true]"),
+    }
+    for (actor_id, item_id), fragments in fallback_repairs.items():
+        description = actor_items.get(actor_id, {}).get(item_id, {}).get("description", "")
+        check.require(
+            all(fragment in description for fragment in fragments),
+            f"{actor_id}/{item_id}: локальный слой не сохранил механику официального Adventure",
+        )
     gang_up = actor_items.get("2g8LSm8VMWFoOK8U", {}).get("CNpPqhgSIEamhwFL", {})
     check.require(
         "застигнут врасплох} для атак ближнего боя адепта Ржавчины" in gang_up.get("description", ""),
@@ -622,6 +685,35 @@ def main() -> int:
         source = load_json(args.source, check)
         if isinstance(source, list):
             source = source[0] if len(source) == 1 else {}
+        source_pages = {
+            page.get("_id"): page.get("text", {}).get("content", "")
+            for journal in source.get("journal", [])
+            for page in journal.get("pages", [])
+            if page.get("type") == "text"
+        }
+        for page_id, source_text in source_pages.items():
+            translated_text = pages.get(page_id, {}).get("text", "")
+            translated_paragraphs = PARAGRAPH_RE.findall(translated_text)
+            for source_token in TECH_RE.findall(source_text):
+                label_match = re.search(r"\{([A-F]\d{1,2}[ab]?)\}$", source_token)
+                if label_match is None:
+                    continue
+                label = label_match.group(1)
+                core = TECH_CORE_RE.fullmatch(source_token).group(1)
+                token_paragraphs = [value for value in translated_paragraphs if core in value]
+                literal_paragraphs = [
+                    value
+                    for value in translated_paragraphs
+                    if re.search(
+                        rf"(?<![A-Za-z0-9]){re.escape(label)}(?![A-Za-z0-9])",
+                        TECH_RE.sub("", value),
+                    )
+                ]
+                if token_paragraphs and literal_paragraphs:
+                    check.require(
+                        any(value in literal_paragraphs for value in token_paragraphs),
+                        f"{page_id}: ссылка {label} вынесена из соответствующего абзаца",
+                    )
         source_macros = {macro.get("_id"): macro for macro in source.get("macros", [])}
         check.require(set(source_macros) == set(macros), "официальный источник содержит другой набор макросов")
         for macro_id, expected_hash in index.get("macroCommandHashes", {}).items():

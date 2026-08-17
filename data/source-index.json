@@ -4804,6 +4804,12 @@
       "otBXbd41vVLZW1xv/language": [],
       "otBXbd41vVLZW1xv/items/6kZm8XnYELAQFppU/description": [],
       "otBXbd41vVLZW1xv/items/lnftcCa5nWLimB4r/description": [],
+      "otBXbd41vVLZW1xv/items/EhuGQeaf8C8WswTy/description": [
+        "@Localize[PF2E.NPC.Abilities.Glossary.ChangeShape]"
+      ],
+      "otBXbd41vVLZW1xv/items/v88O0NAy45VWmtTO/description": [
+        "@Check[fortitude|dc:15]"
+      ],
       "romVSuOVkSVFwsN4/description": [],
       "romVSuOVkSVFwsN4/blurb": [],
       "romVSuOVkSVFwsN4/items/edVyMro5viX5rgD9/description": [
@@ -4952,6 +4958,8 @@
       "otBXbd41vVLZW1xv/language": [],
       "otBXbd41vVLZW1xv/items/6kZm8XnYELAQFppU/description": [],
       "otBXbd41vVLZW1xv/items/lnftcCa5nWLimB4r/description": [],
+      "otBXbd41vVLZW1xv/items/EhuGQeaf8C8WswTy/description": [],
+      "otBXbd41vVLZW1xv/items/v88O0NAy45VWmtTO/description": [],
       "romVSuOVkSVFwsN4/description": [],
       "romVSuOVkSVFwsN4/blurb": [],
       "romVSuOVkSVFwsN4/items/edVyMro5viX5rgD9/description": [
@@ -5072,6 +5080,8 @@
       "otBXbd41vVLZW1xv/language": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "otBXbd41vVLZW1xv/items/6kZm8XnYELAQFppU/description": "a8f3f95d0726146c470800bd5987ce5bf43e2377bc31aad48e5a99e3bfbc266d",
       "otBXbd41vVLZW1xv/items/lnftcCa5nWLimB4r/description": "3775b9a6017f7bb1876d5e89bf56ac9a08f6789b892390d70191d09cb0ea9aaf",
+      "otBXbd41vVLZW1xv/items/EhuGQeaf8C8WswTy/description": "3f0d48452d056eabc2faec031396b6e36c72a9b4353a648665fdabac8d57ef5e",
+      "otBXbd41vVLZW1xv/items/v88O0NAy45VWmtTO/description": "309c291b49171a2f45d08d048e33bc603782d72f667848670017ef07f08b1a9c",
       "romVSuOVkSVFwsN4/description": "603e4cb27f69ebe45491cb74f4a86d6692075018e6e2ea9fe7781d29fdd7dae2",
       "romVSuOVkSVFwsN4/blurb": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "romVSuOVkSVFwsN4/items/edVyMro5viX5rgD9/description": "001dff8cc83a39f0c14c98c6788adf0dc121831c1b6f2f82e811c84f3aa3af08",
