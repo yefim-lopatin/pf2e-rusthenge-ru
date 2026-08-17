@@ -25,9 +25,11 @@ from translation_overrides import (
     CANONICAL_ACTOR_NAMES,
     CANONICAL_VISIBLE_REPLACEMENTS,
     HAZARD_FIELDS,
+    IMAGE_ATTRIBUTE_TRANSLATIONS,
     LINK_LABELS,
     LINKED_ITEM_NAMES,
     RULE_LABELS,
+    SCENE_TEXT_TRANSLATIONS,
     UNIDENTIFIED_DESCRIPTIONS,
     UNIDENTIFIED_NAMES,
 )
@@ -42,12 +44,22 @@ SERVICE_PAGE_IDS = {
 TECH_RE = re.compile(r"@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\](?:\{[^{}]*\})?")
 TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\])(?:\{[^{}]*\})?")
 TAG_RE = re.compile(r"<[^>]+>")
+VISIBLE_ATTRIBUTE_RE = re.compile(r'\b(alt|title)="([^"]*)"', re.I)
 INLINE_ROLL_RE = re.compile(r"\[\[/[a-z]+\s+(?:[^\[\]]|\[[^\[\]]*\])*\]\](?:\{[^{}]*\})?", re.I)
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 
 def inline_roll_cores(value: str) -> list[str]:
     return [re.sub(r"\{[^{}]*\}$", "", roll) for roll in INLINE_ROLL_RE.findall(value)]
+
+
+def document_values(value: Any) -> list[dict[str, Any]]:
+    """Нормализует коллекцию документов Foundry из массива или объекта по ID."""
+    if isinstance(value, list):
+        return [item for item in value if isinstance(item, dict)]
+    if isinstance(value, dict):
+        return [item for item in value.values() if isinstance(item, dict)]
+    return []
 
 # Коды локаций в старом структурированном тексте имели кириллический сдвиг.
 # Эта таблица нужна только для поиска фрагментов в старом русском источнике.
@@ -778,6 +790,14 @@ ITEM_DESCRIPTION_REPAIRS.update({
     "LCFMKpxw0iDxWGXu": '<p>Грибной леший выпускает облако спор в @Template[type:emanation|distance:15]{15-футовой эманации}, раздражающее глаза и горло существ, не являющихся грибковыми. Каждое такое существо должно успешно пройти @Check[type:fortitude|dc:16|traits:damaging-effect]{спасбросок Стойкости СЛ 16}, иначе получает @Damage[1[persistent,poison]] продолжительного урона ядом. Пока продолжается этот урон, существо видит не дальше 20 футов, а при критическом провале — не дальше 10 футов.</p>',
 })
 
+ITEM_DESCRIPTION_REPAIRS.update({
+    "UDhWMhJzdEJtykvO": '<p>Когда Ордви сотворяет исцеление, она бросает d10 вместо d8.</p>',
+    "983mBG3qwmzQKGS2": '<p>Абрикандил ненавидит собственное отражение. Когда существо Взаимодействует с зеркалом в поле зрения демона-разрушителя, демон получает штраф –2 к спасброскам Воли против проверок Запугивания.</p>\n<p>Если абрикандил заканчивает ход рядом с зеркалом или его атакует существо с зеркалом, он получает @Damage[1d6[mental]] ментального урона; обычно после этого демон сосредоточивается на уничтожении ближайшего зеркала способностью «Крушить».</p>',
+    "4cx1d9efogHuWe26": '<p>Абрикандил наносит два Удара когтями по бесхозному объекту или удерживаемому зеркалу. Удерживаемое зеркало использует КБ держащего его персонажа.</p>\n<p>Если оба Удара попадают, объедините их урон для преодоления Твёрдости или сопротивления.</p>\n<p>Эти Удары не учитываются при расчёте штрафа множественной атаки абрикандила, и штраф к ним не применяется.</p>',
+    "p6uToNU7wgFDgDDH": '<p>В начале каждого хода дретча бросьте [[/br 1d4 #Actions Regained]]{1d4}. Результат равен числу действий, которые он восстанавливает в этот ход (максимум 3).</p>\n<p>Такие эффекты, как состояние @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{замедлен}, могут дополнительно уменьшить число его действий.</p>',
+    "h8caQJMnKj4F22zZ": '<p>Дретч наносит три Удара когтями по одному существу, каждый со штрафом –2. Штраф множественной атаки дретча не увеличивается, пока он не завершит все три атаки.</p>\n<p>До начала своего следующего хода дретч получает состояние @UUID[Compendium.pf2e.conditionitems.Item.i3OJZU2nk64Df3xm]{неуклюжесть 2}.</p>',
+})
+
 ACTOR_DESCRIPTION_REPAIRS = {
     "oeM8EcS1F5NIkd30": '<p>Самые распространённые скелеты-прислужники — простые стражи.</p>\n<hr>\n<p>Скелеты, созданные из костей, скреплённых нечестивой некромантией, относятся к самым распространённым видам нежити. Они обитают в старых подземельях и на забытых кладбищах.</p>',
     "viyUBIwO7gFRqwVG": '<p>Когда смертный умирает, его душа отправляется на Могильник во Внешних планах, где её судит Фаразма, богиня мёртвых. После суда душа получает окончательную награду или наказание и превращается в просителя. Она обретает новое тело, облик которого определяется господствующими философскими силами плана назначения. Воспоминания о прежней жизни почти полностью стираются, оставляя лишь туманные обрывки, похожие на полузабытые сны. Независимо от прежнего размера, силы и природы, в загробной жизни проситель становится существом Среднего размера.</p>\n<p>Проситель может существовать целые эоны, но это состояние не обязательно вечно. Божества, могущественные обитатели Великого Запределья и сами Внешние планы могут превратить его в чистую квинтэссенцию, расширяющую физическое воплощение плана, или в новую форму сверхъестественной жизни — небожителя, наблюдателя либо беса. После смерти тело просителя распадается, а его сущность возвращается к квинтэссенции или стихиям родного плана. Так завершается путь души: жизненная сущность возвращается в сердце Великого Запределья, чтобы вновь участвовать в создании новых душ.</p>\n<p>Личинки похожи на огромных червей с лицами, которые просители имели при жизни.</p>',
@@ -1365,6 +1385,34 @@ def translated_name(name: str) -> str:
     )
 
 
+def translated_scene_text(value: str) -> str:
+    translated = SCENE_TEXT_TRANSLATIONS.get(value)
+    if translated is not None:
+        return translated
+    region = re.fullmatch(r"Region( \(\d+\))", value)
+    if region:
+        return f"Область{region.group(1)}"
+    if re.search(r"[A-Za-z]{3,}", value):
+        raise ValueError(f"Нет перевода метаданных сцены: {value!r}")
+    return value
+
+
+def translate_visible_attributes(value: str) -> str:
+    """Переводит доступный пользователю alt/title, не меняя прочие HTML-атрибуты."""
+
+    def replacement(match: re.Match[str]) -> str:
+        attribute, original = match.groups()
+        original = html.unescape(original)
+        translated = IMAGE_ATTRIBUTE_TRANSLATIONS.get(original)
+        if translated is None:
+            if original == "MetaMorphic Digital Studio" or not re.search(r"[A-Za-z]{3,}", original):
+                return match.group(0)
+            raise ValueError(f"Нет перевода HTML-атрибута {attribute}: {original!r}")
+        return f'{attribute}="{html.escape(translated, quote=True)}"'
+
+    return VISIBLE_ATTRIBUTE_RE.sub(replacement, value)
+
+
 def item_source(item: dict[str, Any]) -> str | None:
     return (
         item.get("_stats", {}).get("compendiumSource")
@@ -1503,6 +1551,7 @@ def make_translation(
                 pdf_index, alignment_score = 0, 0.0
             area_section_used = bool(code)
             content_pdf_index = pdf_index
+            russian_html = translate_visible_attributes(russian_html)
             pages[pid] = {"name": name, "text": russian_html}
             page_index[pid] = {
                 "journalId": journal["_id"],
@@ -1567,7 +1616,7 @@ def make_translation(
                 ).hexdigest()
 
         item_entries = []
-        for item in actor.get("items", []):
+        for item in document_values(actor.get("items", [])):
             if item_source(item):
                 continue  # pf2e-ru переводит системный Compendium UUID.
             custom_items += 1
@@ -1619,9 +1668,19 @@ def make_translation(
         for note in scene.get("notes", []):
             original = note.get("text", "")
             if original:
-                notes[original] = translated_name(original)
+                notes[original] = translated_scene_text(original)
                 translated_note_labels += 1
-        regions = {r["_id"]: {"name": translated_name(r.get("name", ""))} for r in scene.get("regions", [])}
+        regions = {}
+        for region in scene.get("regions", []):
+            region_entry = {"name": translated_scene_text(region.get("name", ""))}
+            behaviors = {
+                behavior["_id"]: {"name": translated_scene_text(behavior.get("name", ""))}
+                for behavior in region.get("behaviors", [])
+                if behavior.get("name")
+            }
+            if behaviors:
+                region_entry["behaviors"] = behaviors
+            regions[region["_id"]] = region_entry
         entry = {"name": SCENE_NAMES.get(scene["name"], translated_name(scene["name"]))}
         if notes:
             entry["notes"] = notes
@@ -2268,6 +2327,7 @@ def nested_value(data: Any, path: tuple[str, ...]) -> Any:
 
 
 def normalize_visible_text(value: str) -> str:
+    value = re.sub(r"Старейшина Анлорг(?!ог)", "Старейшина Анлоргог", value)
     for old, new in CANONICAL_VISIBLE_REPLACEMENTS:
         value = value.replace(old, new)
     return value
@@ -2312,6 +2372,40 @@ def complete_existing_translation(
     actor_html = index.setdefault("actorHtml", {})
     counts: Counter[str] = Counter()
 
+    scene_index: dict[str, Any] = {}
+    translated_scenes = adventure["scenes"]
+    for scene in source.get("scenes", []):
+        scene_entry = translated_scenes[scene["_id"]]
+        notes = {
+            note["text"]: translated_scene_text(note["text"])
+            for note in scene.get("notes", [])
+            if note.get("text")
+        }
+        regions: dict[str, Any] = {}
+        for region in scene.get("regions", []):
+            region_entry: dict[str, Any] = {"name": translated_scene_text(region.get("name", ""))}
+            behaviors = {
+                behavior["_id"]: {"name": translated_scene_text(behavior.get("name", ""))}
+                for behavior in region.get("behaviors", [])
+                if behavior.get("name")
+            }
+            if behaviors:
+                region_entry["behaviors"] = behaviors
+            regions[region["_id"]] = region_entry
+            counts["translatedRegionNames"] += bool(region.get("name"))
+            counts["translatedRegionBehaviorNames"] += len(behaviors)
+        if notes:
+            scene_entry["notes"] = notes
+        else:
+            scene_entry.pop("notes", None)
+        if regions:
+            scene_entry["regions"] = regions
+        else:
+            scene_entry.pop("regions", None)
+        counts["translatedNoteLabels"] += len(notes)
+        scene_index[scene["_id"]] = {"notes": notes, "regions": regions}
+    index["sceneText"] = scene_index
+
     canonical_actor_names = {
         actor["_id"]: ACTOR_NAMES.get(actor["name"], actors[actor["_id"]].get("name", actor["name"]))
         for actor in source.get("actors", [])
@@ -2346,7 +2440,7 @@ def complete_existing_translation(
 
         item_entries = entry.setdefault("items", [])
         translated_items = {item.get("id"): item for item in item_entries}
-        for item in actor.get("items", []):
+        for item in document_values(actor.get("items", [])):
             item_entry = translated_items.get(item["_id"])
             linked = bool(item_source(item))
             unidentified = nested_value(item, ("system", "identification", "unidentified"))
@@ -2424,8 +2518,19 @@ def complete_existing_translation(
                     lambda match: translate_token_label(
                         match.group(0), page_names, journal_names, canonical_actor_names
                     ),
-                    normalize_visible_text(page["text"]),
+                    translate_visible_attributes(normalize_visible_text(page["text"])),
                 )
+
+    translated_attribute_values = set(IMAGE_ATTRIBUTE_TRANSLATIONS.values())
+    for journal in adventure.get("journals", {}).values():
+        for page in journal.get("pages", {}).values():
+            for _attribute, translated in VISIBLE_ATTRIBUTE_RE.findall(page.get("text", "")):
+                counts["imageAttributes"] += 1
+                value = html.unescape(translated)
+                if value == "MetaMorphic Digital Studio":
+                    counts["preservedCreditAttributes"] += 1
+                elif value in translated_attribute_values:
+                    counts["translatedImageAttributes"] += 1
 
     expected = index.setdefault("expected", {})
     expected.update({
@@ -2448,6 +2553,12 @@ def complete_existing_translation(
         "itemRuleLabels": counts["itemRuleLabels"],
         "linkedItemNames": counts["linkedItemNames"],
         "linkedItemOverrides": len(set(index.get("linkedItemOverrides", []))),
+        "translatedNoteLabels": counts["translatedNoteLabels"],
+        "translatedRegionNames": counts["translatedRegionNames"],
+        "translatedRegionBehaviorNames": counts["translatedRegionBehaviorNames"],
+        "imageAttributes": counts["imageAttributes"],
+        "translatedImageAttributes": counts["translatedImageAttributes"],
+        "preservedCreditAttributes": counts["preservedCreditAttributes"],
     })
     index["linkedItemOverrides"] = sorted(set(index.get("linkedItemOverrides", [])))
     return dict(counts)
@@ -2573,6 +2684,8 @@ BESTIARY_DESCRIPTION_OVERRIDES = {
 }
 
 BESTIARY_DESCRIPTION_OVERRIDES.update({
+    "p6uToNU7wgFDgDDH": '<p>В начале каждого хода дретча бросьте [[/gmr 1d4 #Actions Regained]]{1d4}. Результат равен числу действий, которые он восстанавливает в этот ход (максимум 3).</p>\n<p>Такие эффекты, как состояние @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{замедлен}, могут дополнительно уменьшить число его действий.</p>',
+    "h8caQJMnKj4F22zZ": ITEM_DESCRIPTION_REPAIRS["h8caQJMnKj4F22zZ"],
     "8tVnSA2uTOLAmycM": '<p><strong>Триггер</strong> Существо входит в область к югу от отмеченного на карте кольца камней</p><hr /><p><strong>Эффект</strong> Из кольца камней вырывается поток воды, с силой несётся по проходу и стекает в яму в области <strong>Е1б</strong>. Все существа Большого или меньшего размера на пути воды должны совершить @Check[fortitude|dc:20|options:area-effect,damaging-effect,forced-movement,inflicts:prone]{спасбросок Стойкости СЛ 20}. Достигнув дна ямы, вода мгновенно исчезает, но всё вокруг остаётся промокшим.</p><hr /><p><strong>Критический успех</strong> Существо выдерживает напор и не получает эффекта.</p><p><strong>Успех</strong> Поток ударяет существо о стену пещеры, нанося @Damage[1d10[bludgeoning]|options:area-damage] дробящего урона.</p><p><strong>Провал</strong> Поток сбивает существо @UUID[Compendium.pf2e.conditionitems.Item.j91X7x0XSomq8d60]{ничком}, наносит @Damage[(1d10+6)[bludgeoning]|options:area-damage] дробящего урона и толкает к шипастой яме, активируя ловушку.</p><p><strong>Критический провал</strong> Как провал, но при падении в шипастую яму существо не может попытаться @UUID[Compendium.pf2e.actionspf2e.Item.3yoajuKjwHZ9ApUY]{Схватиться за уступ}.</p>',
     "y7VNs5A41UH94zX1": '<p><strong>Триггер</strong> Древний аппарат получает урон или проваливается попытка Отключить его</p><hr /><p><strong>Эффект</strong> Древний аппарат начинает быстрее скрежетать и вращаться. Тихое тиканье перерастает в диссонансное жужжание, а вся конструкция озаряется тревожным светом цвета ржавчины. Все живые существа в области <strong>Г3</strong> ощущают во рту привкус ржавчины и должны успешно пройти @Check[fortitude|dc:18]{спасбросок Стойкости СЛ 18}, иначе становятся @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{тошнота 1}. Затем древний аппарат совершает проверку инициативы.</p>',
     "80CuEcGtDQ6fUIyY": '<p><strong>Триггер</strong> Болотный мудрец или один из его союзников в пределах 60 футов совершает спасбросок против слухового или звукового эффекта.</p><hr /><p><strong>Эффект</strong> Болотный мудрец издаёт кваканье, заглушающее другие звуки, и совершает @Check[performance]{проверку Выступления}. Он и союзные боггарды в области могут использовать против слухового или звукового эффекта более высокий результат: свой спасбросок или проверку Выступления мудреца.</p>',
@@ -2581,6 +2694,8 @@ BESTIARY_DESCRIPTION_OVERRIDES.update({
 })
 
 BESTIARY_ACTOR_FIELD_OVERRIDES = {
+    ("33irjDlbW0pXhxiS", "disable"): '<p>@Check[thievery|dc:20] (эксперт), чтобы стереть скрытые руны на потолке, или @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Рассеивание магии} (2-й ранг; КС противодействия 18), чтобы противодействовать ловушке</p>',
+    ("LGcNyvqAKnhwEzuf", "disable"): '<p>@Check[thievery|dc:20], чтобы отсоединить пусковые стержни, выдвигающие шипы, или @UUID[Compendium.pf2e.spells-srd.Item.9HpwDN4MYQJnW0LG]{Рассеивание магии} (2-й ранг; КС противодействия 18), чтобы противодействовать ловушке</p>',
     ("Tvz5JKAE8rrCF5qW", "reset"): "<p>Существа всё ещё могут упасть в яму, но закрывающую её шкуру нужно натянуть вручную (10-минутная активность), чтобы ловушка снова стала скрытой.</p>",
 }
 
@@ -2635,7 +2750,11 @@ def translated_disease_description(item: dict[str, Any], pf2e_ru_names: dict[str
 
 def rebase_technical_markup(translated: str, current_source: str) -> str | None:
     """Переносит русские подписи на актуальные команды PF2e 8.4 по их порядку."""
-    if html_tags(translated) != html_tags(current_source):
+    translated_tags = html_tags(translated)
+    source_tags = html_tags(current_source)
+    normalized_translated_tags = [re.sub(r"\s*/>$", ">", tag) for tag in translated_tags]
+    normalized_source_tags = [re.sub(r"\s*/>$", ">", tag) for tag in source_tags]
+    if normalized_translated_tags != normalized_source_tags:
         return None
     source_tokens = TECH_RE.findall(current_source)
     translated_tokens = TECH_RE.findall(translated)
@@ -2662,7 +2781,9 @@ def rebase_technical_markup(translated: str, current_source: str) -> str | None:
         translated_label = re.search(r"\{([^{}]*)\}$", match.group(0))
         return source_core + (f"{{{translated_label.group(1)}}}" if translated_label else "")
 
-    return INLINE_ROLL_RE.sub(replace_roll, TECH_RE.sub(replace_token, translated))
+    rebased = INLINE_ROLL_RE.sub(replace_roll, TECH_RE.sub(replace_token, translated))
+    source_tag_iterator = iter(source_tags)
+    return TAG_RE.sub(lambda _match: next(source_tag_iterator), rebased)
 
 
 def build_bestiary_translation(
@@ -2685,13 +2806,22 @@ def build_bestiary_translation(
     item_candidates_by_name: dict[str, list[tuple[dict[str, Any], dict[str, Any]]]] = {}
     for actor in source_actors:
         tr_items = {item.get("id"): item for item in translated_actors.get(actor["_id"], {}).get("items", [])}
-        for item in actor.get("items", []):
+        for item in document_values(actor.get("items", [])):
             translated = tr_items.get(item["_id"])
             if translated:
                 item_candidates_by_name.setdefault(item.get("name", ""), []).append((item, translated))
 
     entries: dict[str, Any] = {}
-    metadata: dict[str, Any] = {"actors": {}, "technical": {}, "inlineRolls": {}, "html": {}}
+    metadata: dict[str, Any] = {
+        "actors": {},
+        "technical": {},
+        "inlineRolls": {},
+        "html": {},
+        "actorFieldCounts": {
+            field: sum(bool(nested_value(actor, path)) for actor in bestiary_actors)
+            for field, path in BESTIARY_ACTOR_FIELD_PATHS.items()
+        },
+    }
     for actor in bestiary_actors:
         actor_id = actor["_id"]
         representative = source_by_pack_id.get(actor_id)
@@ -2703,29 +2833,36 @@ def build_bestiary_translation(
         }
         for field, path in BESTIARY_ACTOR_FIELD_PATHS.items():
             source_value = nested_value(actor, path)
+            if not isinstance(source_value, str) or not source_value:
+                continue
             translated_value = representative_translation.get(field)
-            if isinstance(source_value, str) and source_value and isinstance(translated_value, str) and translated_value:
-                current_override = BESTIARY_ACTOR_FIELD_OVERRIDES.get((actor_id, field))
-                if current_override is not None:
-                    if html_tags(current_override) != html_tags(source_value):
-                        raise ValueError(f"{actor_id}/{field}: ручной перевод изменил HTML-структуру")
-                    rebased = current_override
-                else:
-                    rebased = rebase_technical_markup(translated_value, source_value)
-                if rebased is None:
-                    continue
-                entry[field] = rebased
-                key = f"{actor_id}/{field}"
-                metadata["technical"][key] = TECH_RE.findall(source_value)
-                metadata["inlineRolls"][key] = INLINE_ROLL_RE.findall(source_value)
-                metadata["html"][key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
+            current_override = BESTIARY_ACTOR_FIELD_OVERRIDES.get((actor_id, field))
+            if current_override is not None:
+                if html_tags(current_override) != html_tags(source_value):
+                    raise ValueError(f"{actor_id}/{field}: ручной перевод изменил HTML-структуру")
+                if Counter(technical_cores(current_override)) != Counter(technical_cores(source_value)):
+                    raise ValueError(f"{actor_id}/{field}: ручной перевод изменил технические токены")
+                if Counter(inline_roll_cores(current_override)) != Counter(inline_roll_cores(source_value)):
+                    raise ValueError(f"{actor_id}/{field}: ручной перевод изменил встроенные броски")
+                rebased = current_override
+            elif isinstance(translated_value, str) and translated_value:
+                rebased = rebase_technical_markup(translated_value, source_value)
+            else:
+                rebased = None
+            if rebased is None:
+                raise ValueError(f"{actor_id}/{field}: нет полного перевода видимого поля бестиария")
+            entry[field] = rebased
+            key = f"{actor_id}/{field}"
+            metadata["technical"][key] = TECH_RE.findall(source_value)
+            metadata["inlineRolls"][key] = INLINE_ROLL_RE.findall(source_value)
+            metadata["html"][key] = hashlib.sha256("\n".join(html_tags(source_value)).encode()).hexdigest()
 
         representative_items = {item["_id"]: item for item in representative.get("items", [])}
         representative_item_translations = {
             item.get("id"): item for item in representative_translation.get("items", [])
         }
         item_entries: list[dict[str, Any]] = []
-        for item in actor.get("items", []):
+        for item in document_values(actor.get("items", [])):
             source_candidate = representative_items.get(item["_id"])
             translated_candidate = representative_item_translations.get(item["_id"])
             if translated_candidate is None:
@@ -2783,7 +2920,7 @@ def build_bestiary_translation(
         entries[actor_id] = entry
         metadata["actors"][actor_id] = {
             "sourceName": actor.get("name", ""),
-            "itemIds": [item["_id"] for item in actor.get("items", [])],
+            "itemIds": [item["_id"] for item in document_values(actor.get("items", []))],
         }
 
     metadata["actorCount"] = len(entries)
@@ -2869,7 +3006,7 @@ def main() -> None:
         translation = json.loads(args.output.read_text(encoding="utf-8"))
         index = json.loads(args.index.read_text(encoding="utf-8"))
         counts = complete_existing_translation(source, translation, index, load_pf2e_ru_names(args.pf2e_ru))
-        cleanup_digital_layout(translation, source)
+        repair_translated_item_descriptions(translation, source)
         args.output.write_text(json.dumps(translation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         args.index.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(counts, ensure_ascii=False, indent=2))

@@ -17,6 +17,7 @@ TECH_RE = re.compile(r"@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\](?:\{[^
 TECH_CORE_RE = re.compile(r"(@[A-Za-z][A-Za-z0-9]*\[(?:[^\[\]]|\[[^\[\]]*\])*\])(?:\{[^{}]*\})?")
 INLINE_ROLL_RE = re.compile(r"\[\[/[a-z]+\s+(?:[^\[\]]|\[[^\[\]]*\])*\]\](?:\{[^{}]*\})?", re.I)
 TAG_RE = re.compile(r"<[^>]+>")
+VISIBLE_ATTRIBUTE_RE = re.compile(r'\b(alt|title)="([^"]*)"', re.I)
 LATIN_RE = re.compile(r"\b[A-Za-z][A-Za-z'’-]{2,}\b")
 ALLOWED_LATIN = {"foundry", "pathfinder", "babele", "pf2e", "vtt", "pdf"}
 FORBIDDEN = ("pf2e-ts-adv", ".ldb", "leveldb", "%pdf", "data:image/")
@@ -54,6 +55,12 @@ EXPECTED_COUNTS = {
     "galleryPages": 71,
     "scenes": 19,
     "notes": 176,
+    "translatedNoteLabels": 6,
+    "translatedRegionNames": 20,
+    "translatedRegionBehaviorNames": 13,
+    "imageAttributes": 80,
+    "translatedImageAttributes": 60,
+    "preservedCreditAttributes": 18,
     "actors": 113,
     "tokens": 287,
     "customEmbeddedItems": 271,
@@ -232,6 +239,55 @@ def main() -> int:
     check.require(len(journals) == 7, "должно быть 7 журналов")
     check.require(len(scenes) == 19, "должно быть 19 сцен")
     check.require(len(actors) == 113, "должно быть 113 актёров")
+    scene_text = index.get("sceneText", {})
+    check.require(set(scene_text) == set(scenes), "индекс метаданных сцен не покрывает все 19 сцен")
+    region_name_count = 0
+    behavior_name_count = 0
+    note_label_count = 0
+    for scene_id, expected_scene in scene_text.items():
+        scene = scenes.get(scene_id, {})
+        expected_notes = expected_scene.get("notes", {})
+        actual_notes = scene.get("notes", {})
+        check.require(actual_notes == expected_notes, f"{scene_id}: неполный перевод подписей заметок")
+        for value in actual_notes.values():
+            check.require(not LATIN_RE.search(value), f"{scene_id}: в подписи заметки остался английский текст: {value!r}")
+        note_label_count += len(actual_notes)
+        expected_regions = expected_scene.get("regions", {})
+        actual_regions = scene.get("regions", {})
+        check.require(set(actual_regions) == set(expected_regions), f"{scene_id}: изменён набор регионов")
+        for region_id, expected_region in expected_regions.items():
+            actual_region = actual_regions.get(region_id, {})
+            check.require(
+                actual_region.get("name") == expected_region.get("name"),
+                f"{scene_id}/{region_id}: не переведено имя региона",
+            )
+            check.require(
+                not LATIN_RE.search(actual_region.get("name", "")),
+                f"{scene_id}/{region_id}: в имени региона остался английский текст",
+            )
+            region_name_count += bool(expected_region.get("name"))
+            expected_behaviors = expected_region.get("behaviors", {})
+            actual_behaviors = actual_region.get("behaviors", {})
+            check.require(
+                set(actual_behaviors) == set(expected_behaviors),
+                f"{scene_id}/{region_id}: изменён набор поведений региона",
+            )
+            for behavior_id, expected_behavior in expected_behaviors.items():
+                check.require(
+                    actual_behaviors.get(behavior_id, {}).get("name") == expected_behavior.get("name"),
+                    f"{scene_id}/{region_id}/{behavior_id}: не переведено имя поведения региона",
+                )
+                check.require(
+                    not LATIN_RE.search(actual_behaviors.get(behavior_id, {}).get("name", "")),
+                    f"{scene_id}/{region_id}/{behavior_id}: в поведении региона остался английский текст",
+                )
+                behavior_name_count += bool(expected_behavior.get("name"))
+    check.require(note_label_count == EXPECTED_COUNTS["translatedNoteLabels"], "должно быть 6 переводов подписей заметок")
+    check.require(region_name_count == EXPECTED_COUNTS["translatedRegionNames"], "должно быть 20 переводов имён регионов")
+    check.require(
+        behavior_name_count == EXPECTED_COUNTS["translatedRegionBehaviorNames"],
+        "должно быть 13 переводов поведений регионов",
+    )
     for actor_id, actor in actors.items():
         check.require(
             not re.fullmatch(r"[A-F]\d{1,2}[ab]?", actor.get("name", "")),
@@ -264,8 +320,21 @@ def main() -> int:
         "на странице Растхенджа спасбросок Стойкости отделён от правила",
     )
 
+    visible_attribute_count = 0
+    preserved_credit_attribute_count = 0
     for page_id, page_meta in index.get("pages", {}).items():
         text = pages.get(page_id, {}).get("text", "")
+        for attribute, raw_value in VISIBLE_ATTRIBUTE_RE.findall(text):
+            value = html.unescape(raw_value)
+            visible_attribute_count += 1
+            if value == "MetaMorphic Digital Studio":
+                preserved_credit_attribute_count += 1
+                continue
+            words = {word.lower() for word in LATIN_RE.findall(value)} - ALLOWED_LATIN
+            check.require(
+                not words,
+                f"{page_id}: в HTML-атрибуте {attribute} остался английский текст: {value!r}",
+            )
         cores = technical_cores(text)
         source_cores = [TECH_CORE_RE.fullmatch(token).group(1) for token in page_meta.get("technicalTokens", [])]
         check.require(
@@ -309,6 +378,15 @@ def main() -> int:
                 f"{page_id}: осталась английская подпись Foundry: {', '.join(sorted(label_words)[:8])}",
             )
 
+    check.require(
+        visible_attribute_count == EXPECTED_COUNTS["imageAttributes"],
+        f"видимых alt/title должно быть {EXPECTED_COUNTS['imageAttributes']}, найдено {visible_attribute_count}",
+    )
+    check.require(
+        preserved_credit_attribute_count == EXPECTED_COUNTS["preservedCreditAttributes"],
+        "изменилось число оригинальных подписей студии в alt/title",
+    )
+
     layout_forbidden = {
         "02sneakingonbo00": ("<h4>Отвлечь Экипаж</h4>", "<h4>Обыск Корабля</h4>", "75ФТ"),
         "02elderordwi0000": ("<h3>Старейшина Ордви</h3>",),
@@ -350,6 +428,15 @@ def main() -> int:
         sum("description" in item for items in bestiary_items.values() for item in items.values()) == 50,
         "в бестиарии должно быть 50 локальных описаний уникальных элементов",
     )
+    actor_field_counts = bestiary_meta.get("actorFieldCounts", {})
+    check.require(actor_field_counts.get("description") == 11, "в исходном бестиарии должно быть 11 описаний актёров")
+    check.require(actor_field_counts.get("disable") == 7, "в исходном бестиарии должно быть 7 полей обезвреживания")
+    for field, expected_count in actor_field_counts.items():
+        actual_count = sum(field in actor for actor in bestiary_entries.values())
+        check.require(
+            actual_count == expected_count,
+            f"неполный перевод поля бестиария {field}: {actual_count} вместо {expected_count}",
+        )
 
     def bestiary_value(path: str) -> str:
         parts = path.split("/")
