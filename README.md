@@ -17,8 +17,8 @@ https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/latest/download/modu
 
 ## Требования
 
-- Foundry VTT 14.365;
-- Pathfinder 2e 8.4.0;
+- Foundry VTT 14.367;
+- Pathfinder 2e 8.4.1;
 - Pathfinder Adventure: Rusthenge 14.1.0;
 - Babele 2.9.1;
 - `pf2e-ru` 2.2.0;
@@ -42,6 +42,9 @@ https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/latest/download/modu
 Перед обновлением сохраните резервную копию мира. Замените папку модуля новой
 версией, перезапустите Foundry и проверьте предупреждение о версии официального
 Rusthenge.
+
+Версия 0.5.6 обновляет заявленную совместимость до Foundry VTT 14.367 и
+Pathfinder 2e 8.4.1. Перевод и технические данные приключения не изменены.
 
 Версия 0.5.5 защищает настроенные механики существ от общих
 шаблонов pf2e-ru: возвращает СЛ 15 проклятия вернетопыря, его точные
