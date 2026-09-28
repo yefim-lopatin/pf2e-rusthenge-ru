@@ -17,7 +17,7 @@ https://github.com/yefim-lopatin/pf2e-rusthenge-ru/releases/latest/download/modu
 
 ## Требования
 
-- Foundry VTT 14.367;
+- Foundry VTT 14.368;
 - Pathfinder 2e 8.4.1;
 - Pathfinder Adventure: Rusthenge 14.1.0;
 - Babele 2.9.1;
